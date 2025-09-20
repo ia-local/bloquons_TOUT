@@ -170,14 +170,14 @@ app.use(cors());
 
 app.use(
   sassMiddleware({
-    src: path.join(__dirname, 'public', 'src', 'css'),
-    dest: path.join(__dirname, 'public', 'src', 'scss'),
+    src: path.join(__dirname, 'docs', 'src', 'css'),
+    dest: path.join(__dirname, 'docs', 'src', 'scss'),
     debug: true,
     outputStyle: 'compressed',
     prefix: '/src/css'
   })
 );
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 app.use('/roles', express.static(path.join(__dirname, 'docs', 'roles')));
 
 // --- Routes pour le Chatbot ---
@@ -294,14 +294,14 @@ app.use(cors());
 
 app.use(
   sassMiddleware({
-    src: path.join(__dirname, 'public', 'src', 'css'),
-    dest: path.join(__dirname, 'public', 'src', 'css'),
+    src: path.join(__dirname, 'docs', 'src', 'css'),
+    dest: path.join(__dirname, 'docs', 'src', 'css'),
     debug: true,
     outputStyle: 'compressed',
     prefix: '/src/css'
   })
 );
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 app.use('/roles', express.static(path.join(__dirname, 'docs', 'roles')));
 
 // Montez les routeurs
@@ -620,7 +620,7 @@ async function loadSatellitesData() {
         satellitesData = [];
     }
 }
-app.get('/api/public-cameras', async (req, res) => {
+app.get('/api/docs-cameras', async (req, res) => {
     const cameraPoints = database.cameras_points || [];
     res.json(cameraPoints);
 });
