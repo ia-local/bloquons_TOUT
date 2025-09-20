@@ -1,0 +1,235 @@
+/* Fichier : public/src/css/democratie.css */
+
+/* --- Variables de couleur et de typographie pour une gestion facile --- */
+:root {
+    --primary-color: #0056b3; /* Bleu foncé pour les boutons et accents */
+    --secondary-color: #6c757d; /* Gris pour les boutons secondaires */
+    --background-light: #f4f7f9; /* Arrière-plan général très clair */
+    --card-background: #ffffff; /* Fond des cartes et sections */
+    --text-color: #333; /* Couleur de texte principale */
+    --border-color: #e0e0e0; /* Couleur des bordures et séparations */
+    --font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Style de base et mise en page globale --- */
+.democratie-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-light);
+}
+
+/* --- Style de la barre latérale (Aside) --- */
+.democratie-side-menu {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    height: fit-content;
+}
+
+.democratie-side-menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.democratie-side-menu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.democratie-side-menu nav li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.democratie-side-menu nav li a:hover,
+.democratie-side-menu nav li a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Style du contenu principal (Main Content) --- */
+.democratie-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- Style de la section d'édition --- */
+.democratie-edit-section {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.editor-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#democratie-title-input,
+#democratie-content-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+#democratie-title-input:focus,
+#democratie-content-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#democratie-content-textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+.controls-editor {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #004494;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.regenerate-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* --- Style de l'aperçu du brouillon --- */
+.draft-preview {
+    background-color: var(--card-background);
+    border: 1px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.draft-preview h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.draft-content h4 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.draft-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.draft-content p {
+    line-height: 1.6;
+}
+
+/* --- Style de la galerie d'articles --- */
+.democratie-gallery-section {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.democratie-posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.democratie-post-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-background);
+}
+
+.democratie-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.democratie-post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-content {
+    padding: 1rem;
+}
+
+.post-content h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--primary-color);
+}
+
+.post-content .post-date {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}

@@ -1,0 +1,42 @@
+/* Fichier : public/src/css/chronologie.css */
+
+.map-timeline {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.map-timeline h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+}
+.timeline-list {
+    display: flex;
+}
+.timeline-event {
+    position: relative;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-event:hover {
+    background-color: #e6f7ff;
+    color: #007bff;
+    transform: translateY(-5px);
+}

@@ -1,0 +1,31 @@
+  {
+  "syndicats": [
+    {
+      "name": "Maison des Syndicats",
+      "syndicats": ["CGT", "FO"],
+      "city": "Caen",
+      "lat": 49.18331,
+      "lon": -0.3705,
+      "type": "Intersyndical",
+      "description": "Siège de l'Union Départementale de la CGT et de Force Ouvrière."
+    },
+    {
+      "name": "Syndicat Solidaires",
+      "syndicats": ["Solidaires", "SUD éducation"],
+      "city": "Caen",
+      "lat": 49.1834,
+      "lon": -0.3708,
+      "type": "Intersyndical",
+      "description": "Maison des syndicats pour les organisations du groupe Solidaires."
+    },
+    {
+      "name": "SUD PTT Solidaires",
+      "syndicats": ["SUD PTT"],
+      "city": "Caen",
+      "lat": 49.1915,
+      "lon": -0.3698,
+      "type": "Intersyndical",
+      "description": "Siège du Syndicat SUD PTT pour le Calvados."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "connections": [
+    {
+      "source_id": 1,
+      "source_ip": "192.168.1.10",
+      "target_id": 2,
+      "target_ip": "192.168.1.20",
+      "type": "direct_connect"
+    },
+    {
+      "source_id": 1,
+      "source_ip": "192.168.1.10",
+      "target_id": 3,
+      "target_ip": "192.168.1.30",
+      "type": "dchub"
+    },
+    {
+      "source_id": 2,
+      "source_ip": "192.168.1.20",
+      "target_id": 3,
+      "target_ip": "192.168.1.30",
+      "type": "dchub"
+    },
+    {
+      "source_id": 1,
+      "source_ip": "192.168.1.10",
+      "target_id": 4,
+      "target_ip": "192.168.1.40",
+      "type": "dchub"
+    }
+  ]
+}

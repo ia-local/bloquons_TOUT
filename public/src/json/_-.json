@@ -1,0 +1,63 @@
+{
+  "manifestation_points_10_septembre": [
+    { "city": "Caen", "lat": 49.183333, "lon": -0.350000, "count": 6000, "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM", "source": "Rapport local", "level": "communal", "type": "Rassemblement" },
+    { "city": "Rennes", "lat": 48.111979, "lon": -1.681864, "count": 15000, "video_link": null, "source": "Rapport local", "level": "communal", "type": "Rassemblement" },
+    { "city": "Grenoble", "lat": 45.185, "lon": 5.725, "count": 30000, "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk", "source": "Divers", "level": "communal", "type": "Rassemblement" },
+    { "city": "Paris", "lat": 48.8679, "lon": 2.3582, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk", "strategic_location": "Place de la République", "note": "Référence numérique 910", "source": "Média", "level": "national", "type": "Rassemblement" },
+    { "city": "Marseille", "lat": 43.2961, "lon": 5.3699, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=XpdhTarPyac", "source": "Vidéo YouTube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Saint-Malo", "lat": 48.6493, "lon": -2.0076, "count": 170, "video_link": null, "source": "Média local", "level": "communal", "type": "Rassemblement" },
+    { "city": "Fougères", "lat": 48.3519, "lon": -1.205, "count": 380, "video_link": null, "source": "Média local", "level": "communal", "type": "Rassemblement" },
+    { "city": "Valenciennes", "lat": 50.356, "lon": 3.523, "count": { "CGT": 1500, "Police": 700 }, "source": "Rapports syndicaux et policiers", "level": "communal", "type": "Rassemblement" },
+    { "city": "Nantes", "lat": 47.2186, "lon": -1.5541, "count": 200, "source": "Média local", "level": "communal", "type": "Rassemblement" },
+    { "city": "Tours", "lat": 47.3941, "lon": 0.6848, "count": "500", "video_link": "https://www.youtube.com/watch?v=Otqa3o64fbw", "source": "Vidéo YouTube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Amiens", "lat": 49.8965, "lon": 2.3112, "count": "Police: 6500, Syndicats: 8000", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "France 3 Hauts-de-France", "level": "communal", "type": "Rassemblement" },
+    { "city": "Lille", "lat": 50.6212, "lon": 3.0448, "count": 3000, "video_link": "https://www.youtube.com/shorts/i3G5dqi520w", "source": "RCF Hauts-de-France", "level": "communal", "type": "Rassemblement" },
+    { "city": "Rouen", "lat": 49.44, "lon": 1.09, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Le Havre", "lat": 49.4959, "lon": 0.1311, "count": 20000, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "CGT", "level": "communal", "type": "Rassemblement" },
+    { "city": "Bordeaux", "lat": 44.8415, "lon": -0.5699, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Poitiers", "lat": 46.5801, "lon": 0.3442, "count": 250, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Le7.info", "level": "communal", "type": "Rassemblement" },
+    { "city": "La Rochelle", "lat": 46.1666, "lon": -1.1500, "count": "Plus de 1500", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Foix", "lat": 42.9666, "lon": 1.6000, "count": 8000, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Orange Actu", "level": "communal", "type": "Rassemblement" },
+    { "city": "La Fare-les-Oliviers", "lat": 43.5516, "lon": 5.1947, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "local", "type": "Rassemblement" },
+    { "city": "Toulon", "lat": 43.1368, "lon": 5.9336, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Albertville", "lat": 45.6755, "lon": 6.3927, "count": 1500, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Villeurbanne", "lat": 45.7725, "lon": 4.8966, "count": "Environ 70", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Annecy", "lat": 45.8992, "lon": 6.1288, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Créteil", "lat": 48.7903, "lon": 2.4555, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Strasbourg", "lat": 48.5840, "lon": 7.7587, "count": "Police: 9500, Organisateurs: 30000", "video_link": "https://www.youtube.com/shorts/TRLPkMeydSk", "source": "Parlement Européen", "level": "communal", "type": "Rassemblement" },
+    { "city": "Reims", "lat": 49.23, "lon": 4.062, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Arbois", "lat": 46.9028, "lon": 5.7723, "count": "Environ 60", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Trente Neuf Degrés", "level": "communal", "type": "Rassemblement" },
+    { "city": "Béthune", "lat": 50.5318, "lon": 2.6377, "count": 100, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Calais La Sociale", "level": "communal", "type": "Rassemblement" },
+    { "city": "Beauvais", "lat": 49.4333, "lon": 2.0833, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Tonneins", "lat": 44.3897, "lon": 0.3083, "count": "Environ 3000", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Dailymotion", "level": "communal", "type": "Rassemblement" },
+    { "city": "Vienne", "lat": 45.5261, "lon": 4.8752, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal", "type": "Rassemblement" },
+    { "city": "Toulouse", "lat": 43.6045, "lon": 1.4442, "count": "À rechercher", "video_link": "https://www.youtube.com/shorts/8wR4VZF5UpQ", "source": "AES TV", "level": "communal", "type": "Rassemblement" },
+    { "city": "Pau", "lat": 43.2951, "lon": -0.3707, "count": "2500", "video_link": "https://www.youtube.com/watch?v=xwTfADirufs", "source": "youtube", "level": "communal", "type": "Rassemblement" },
+    { "city": "Ploërmel", "lat": 47.9292, "lon": -2.3964, "count": "500", "video_link": "https://www.youtube.com/watch?v=K9-l_Aqf3Hw", "source": "Les Infos du Pays Gallo", "level": "communal", "type": "Rassemblement" },
+    { "city": "Dublin", "country": "Irlande", "name": "Ambassade de France", "lat": 53.3387, "lon": -6.2495, "count": "1 000 000", "video_link": "https://www.youtube.com/shorts/4ecsRbPunEk", "level": "europe", "type": "Rassemblement" },
+    { "city": "Madrid", "country": "Espagne", "lat": 40.4167, "lon": -3.7037, "count": "Milliers", "source": "Divers médias espagnols", "level": "europe", "type": "Rassemblement" },
+    { "city": "Bruxelles", "country": "Belgique", "lat": 50.8503, "lon": 4.3517, "count": "Données à vérifier", "source": "Non confirmée pour cette date", "video_link": "https://www.youtube.com/shorts/BB4yltCWAFU,https://www.youtube.com/shorts/9fyJzxQ879k", "level": "europe", "type": "Rassemblement" },
+    { "city": "Berlin", "lat": 52.5200, "lon": 13.4049, "count": "Données à vérifier", "source": "Non confirmée pour cette date", "level": "europe", "type": "Rassemblement" }
+  ],
+  "manifestation_points_18_septembre": [
+    {
+      "id": "10",
+      "title": "Mobilisation et blocages nationaux",
+      "description": "Journée de mobilisation massive partout en France. Les actions ont débuté tôt le matin avec des blocages d'entreprises, de lycées et de facultés. L'intersyndicale s'est unie avec des mouvements d'indignés pour des actions coordonnées.",
+      "start_date": "2025-09-18T00:00:00Z",
+      "end_date": "2025-09-18T23:59:59Z",
+      "actions": [
+        { "type": "Blocage", "description": "Blocage de l'entreprise Intermarché du Grand Fougeray", "locations": [ { "name": "Plateforme Intermarché du Grand Fougeray", "lat": 47.7816, "lon": -1.7246 } ] },
+        { "type": "Blocage", "description": "Blocage de Carrefour", "locations": [ { "name": "Carrefour", "city": "Saint-Brieuc", "lat": 48.5135, "lon": -2.7660 } ] },
+        { "type": "Blocage", "description": "Blocage des magasins U", "locations": [ { "name": "Magasins U", "city": "Salon-de-Provence", "lat": 43.6267, "lon": 5.0991 } ] },
+        { "type": "Blocage", "description": "Blocage d'Eurolink", "locations": [ { "name": "Eurolink", "city": "Marseille", "lat": 43.2961, "lon": 5.3699 } ] },
+        { "type": "Blocage de lycée", "description": "Blocage de lycées et facultés", "locations": [ { "name": "Lycée Sèze", "city": "Saint-Pierre", "lat": -21.3387, "lon": 55.4746 } ] },
+        { "type": "Grève", "description": "Grèves massives à la RATP et la SNCF, bloquant trains, métros et trams." },
+        { "type": "Blocage", "description": "Blocage d'Ilévia, du port de Fécamp...", "locations": [ { "name": "Ilévia", "city": "Lille", "lat": 50.6292, "lon": 3.0573 } ] },
+        { "type": "Opération", "description": "Opération 'Cana' à Toulouse, Vincennes et Cherbourg." },
+        { "type": "Manifestation", "description": "Grande manifestation avec des cortèges lycéens et des alliances syndicales/indignés." },
+        { "type": "Action symbolique", "description": "Actions créatives incluant un 'canard réfractaire' en carton..." }
+      ]
+    }
+  ]
+}

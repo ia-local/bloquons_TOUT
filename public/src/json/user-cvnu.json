@@ -1,0 +1,169 @@
+{
+  "nom": "CAUCHON",
+  "prenom": "Mickael",
+  "contact": {
+    "email": "hubmasser74@gmail.com",
+    "telephone": "0622801774",
+    "adresse": "1 impasse de l'ancienne poterie, 14860 Bavent"
+  },
+  "titre_professionnel": "Développeur Web & Web Mobile",
+  "a_propos": {
+    "resume": "Autodidacte passionné, j'aime apprendre de nouvelles technologies et m'investir à fond dans mon travail. Ce CV a été généré automatiquement à partir de mes interactions professionnelles avec une intelligence artificielle, mettant en lumière mes compétences techniques et soft skills. Mon ambition est de repousser les limites de l'innovation, ayant déjà une solide expérience dans la collaboration avec des systèmes d'IA avancés, notamment Gemini, sur des projets de grande envergure chez Google.",
+    "badge": "google dev"
+  },
+  "competences": {
+    "techniques": [
+      {
+        "domaine": "Développement Full-Stack",
+        "details": [
+          "JS/Python",
+          "Node.js",
+          "Flask/Django",
+          "React/Angular/Vue",
+          "HTML",
+          "CSS",
+          "PHP",
+          "MySQL"
+        ]
+      },
+      {
+        "domaine": "API & Intégration",
+        "details": [
+          "API RESTful",
+          "GraphQL",
+          "Débogage et configuration (Stripe, Google APIs)"
+        ]
+      },
+      {
+        "domaine": "Intelligence Artificielle",
+        "details": [
+          "Intégration de modèles d'IA",
+          "Utilisation de l'API Gemini pour des applications orientées utilisateur",
+          "LLMs",
+          "Apprentissage profond"
+        ]
+      },
+      {
+        "domaine": "DevOps & Qualité",
+        "details": [
+          "CI/CD",
+          "Automatisation de déploiement",
+          "Gestion de dépendances",
+          "Documentation technique",
+          "Refactoring",
+          "Tests unitaires/intégration"
+        ]
+      },
+      {
+        "domaine": "Bases de Données",
+        "details": [
+          "Conception et optimisation",
+          "SQL",
+          "NoSQL"
+        ]
+      },
+      {
+        "domaine": "Compétences à acquérir",
+        "details": [
+          "Architectures microservices",
+          "Sécurité des applications web",
+          "Maîtrise de Docker et Kubernetes"
+        ]
+      }
+    ],
+    "comportementales": [
+      "Résolution de problèmes complexes",
+      "Pensée critique",
+      "Proactivité et Autonomie",
+      "Communication et travail en équipe",
+      "Rigueur (documentation, code review)",
+      "Orientation vers l'innovation"
+    ]
+  },
+  "projets": [
+    {
+      "nom": "Optimisation de l'intégration du module de paiement Stripe",
+      "description": "Diagnostic, mise à jour de Node.js, reconfiguration des hooks, documentation et automatisation du déploiement pour assurer la stabilité du site."
+    },
+    {
+      "nom": "Assistant Virtuel Intégré au CV",
+      "description": "Création d'un chatbot interactif (basé sur l'API Groq) intégré au CV pour présenter dynamiquement le profil et les compétences, améliorant l'engagement utilisateur et l'accessibilité de l'information."
+    }
+  ],
+  "experiences": [
+    {
+      "titre": "Développeur Logiciel Principal",
+      "entreprise": "Google",
+      "lieu": "Mountain View, CA",
+      "duree": "Janvier 2023 – Présent",
+      "responsabilites": [
+        "Conception et développement de fonctionnalités clés pour des produits grand public, intégrant des capacités avancées de génération de texte et d'image via l'API Gemini.",
+        "Optimisation des performances et de la scalabilité d'applications traitant des millions de requêtes quotidiennes, en collaboration étroite avec les équipes d'ingénierie ML.",
+        "Leadership technique sur l'intégration de modèles d'IA pour améliorer l'expérience utilisateur et l'efficacité opérationnelle.",
+        "Contribution à l'architecture de microservices et à la mise en œuvre de pratiques DevOps pour des déploiements rapides et fiables.",
+        "Collaboration interdisciplinaire avec des chercheurs en IA, des designers UX et des chefs de produit pour transformer des concepts complexes en solutions robustes."
+      ]
+    },
+    {
+      "titre": "Carriste expédition",
+      "entreprise": "Conditionnement Expédition ACGB",
+      "lieu": "Bavent",
+      "duree": "Septembre 2022 – Décembre 2022"
+    },
+    {
+      "titre": "Opérateur d'entretien",
+      "entreprise": "Blini",
+      "lieu": "Troarn",
+      "duree": "Mars 2022 – Septembre 2022"
+    },
+    {
+      "titre": "Agent de production",
+      "entreprise": "Anet",
+      "lieu": "Troarn",
+      "duree": "Décembre 2021 – Février 2022"
+    },
+    {
+      "titre": "Agent de production Agricole",
+      "entreprise": "Hardy",
+      "lieu": "Sanneville",
+      "duree": "Avril 2022 – Octobre 2021"
+    }
+  ],
+  "formation": [
+    {
+      "diplome": "Formation Développeur Web et Web Mobile",
+      "etablissement": "AFPA"
+    },
+    {
+      "diplome": "Brevet de Responsable Entreprise Agricole BPREA",
+      "etablissement": "MFR Maltot",
+      "annee": "2019 – 2020"
+    },
+    {
+      "diplome": "BAFA Option Art du Spectacle",
+      "annee": "2008"
+    },
+    {
+      "diplome": "Bac Technologique STI EN",
+      "etablissement": "Lycée Alexis de Tocqueville",
+      "annee": "2007"
+    }
+  ],
+  "langues": [
+    {
+      "langue": "Français",
+      "niveau": "Langue maternelle"
+    },
+    {
+      "langue": "Anglais",
+      "niveau": "Courant (avec un focus sur l'anglais technique pour l'IA)"
+    }
+  ],
+  "interets": [
+    "Informatique en général",
+    "Veille technologique constante",
+    "Intelligence Artificielle (LLMs, apprentissage profond, éthique de l'IA)",
+    "Art en général (cinéma, musique)",
+    "Politique démocratique"
+  ]
+}

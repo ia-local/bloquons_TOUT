@@ -1,0 +1,123 @@
+
+/* Styles généraux pour le tableau de bord */
+.dashboard-stats, .dashboard-lists, .dashboard-insights {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grilles pour les cartes */
+.stats-grid, .lists-grid, .insight-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Style de base pour toutes les cartes */
+.stat-card, .list-card, .insight-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styles pour les listes minimales */
+.minimal-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.minimal-list li {
+    font-size: 0.9em;
+    padding: 0.25rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.minimal-list li:last-child {
+    border-bottom: none;
+}
+/* Styles pour les boutons dans les listes minimalistes */
+.minimal-list li button.details-btn,
+.minimal-list li button.details-button {
+    background-color: #007bff; /* Couleur bleue */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    float: right; /* Aligne le bouton à droite */
+    margin-top: -2px;
+}
+
+.minimal-list li button.details-btn:hover,
+.minimal-list li button.details-button:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Styles pour la modale (issus du fichier detailModal.css) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Fichier : public/src/css/dashboard.css */
+
+.ascii-timestamp-container {
+    background-color: #00000000;
+    color: #ffffff00; /* Vert vif pour un effet "terminal" */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Lueur verte */
+}
+
+#ascii-timestamp {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1; /* Supprime les espaces entre les lignes */
+}

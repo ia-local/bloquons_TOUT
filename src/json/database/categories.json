@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "name": "Commerce",
+      "icon": "src/img/boycott-icon.png",
+      "items": [
+        { "name": "Leclerc", "city": "Paris", "lat": 48.86, "lon": 2.35, "type": "Distribution", "tax_id": "tax_vat", "level": "communal" },
+        { "name": "Carrefour", "city": "Lyon", "lat": 45.76, "lon": 4.83, "type": "Distribution", "tax_id": "tax_vat", "level": "communal" },
+        { "name": "Monoprix", "city": "Lyon", "lat": 45.76, "lon": 4.83, "type": "Distribution", "tax_id": "tax_vat", "level": "communal" },
+        { "name": "McDonald's", "city": "Paris", "lat": 48.867854, "lon": 2.281098, "type": "Restauration Rapide", "tax_id": "tax_vat", "level": "communal" }
+      ]
+    },
+    {
+      "name": "Économie",
+      "icon": "src/img/banque_de_france.png",
+      "items": [
+        { "name": "Banque de France", "city": "Paris", "lat": 48.8635588, "lon": 2.3397514, "type": "Banque", "tax_id": "tax_campaign", "level": "national" },
+        { "name": "HSBC", "city": "Paris", "lat": 48.8724, "lon": 2.3275, "type": "Banque", "tax_id": "tax_tfa", "level": "communal" },
+        { "name": "EUROPAFI", "city": "Bruxelles", "country": "Belgique", "lat": 50.8503, "lon": 4.3517, "type": "Holding Financière", "tax_id": "tax_tfa", "level": "europe" }
+      ]
+    },
+    {
+      "name": "Caméras",
+      "icon": "src/img/camera-icon.png",
+      "items": [
+        { "name": "Caméra de la Place Masséna", "city": "Nice", "lat": 43.6967, "lon": 7.2687, "type": "fixed", "level": "communal" },
+        { "name": "Caméra de Gare du Nord", "city": "Paris", "lat": 48.8790, "lon": 2.3551, "type": "dome", "level": "communal" }
+      ]
+    },
+    {
+      "name": "Éducation",
+      "icon": "src/img/university.png",
+      "items": [
+        { "name": "Université de la Sorbonne", "city": "Paris", "lat": 48.846, "lon": 2.345, "type": "Université", "level": "communal" }
+      ]
+    },
+    {
+      "name": "Santé",
+      "icon": "src/img/hospital.png",
+      "items": [
+        { "name": "Hôpital Lariboisière", "city": "Paris", "lat": 48.882, "lon": 2.355, "type": "Hôpital", "level": "communal" }
+      ]
+    },
+    {
+      "name": "Gouvernement",
+      "icon": "src/img/mairie-icon.png",
+      "items": [
+        { "name": "Palais de l'Élysée", "city": "Paris", "lat": 48.8703, "lon": 2.3168, "type": "Palais de l'Élysée", "level": "national" },
+        { "name": "Préfecture de Paris", "city": "Paris", "lat": 48.8566, "lon": 2.3522, "type": "Préfecture", "level": "departmental" }
+      ]
+    },
+    {
+      "name": "Manifestation",
+      "icon": "src/img/manifestation-icon.png",
+      "items": [
+        { "city": "Caen", "lat": 49.183333, "lon": -0.350000, "count": 6000, "level": "communal" },
+        { "city": "Paris", "lat": 48.8679, "lon": 2.3582, "count": "Plusieurs milliers", "level": "national" }
+      ]
+    },
+    {
+      "name": "Points Stratégiques",
+      "icon": "src/img/roundabout-icon.png",
+      "items": [
+        { "name": "Rond-point de Castorama", "city": "Caen", "lat": 49.1764, "lon": -0.3168, "type": "Rond-point de Blocage", "level": "communal" },
+        { "name": "Porte de Bagnolet", "city": "Paris", "lat": 48.8631, "lon": 2.4045, "type": "Porte de Paris", "level": "communal" }
+      ]
+    },
+    {
+      "name": "Réseaux Sociaux",
+      "icon": "src/img/telegram.png",
+      "items": [
+        { "name": "Groupe National Officiel", "city": "National", "lat": 46.603354, "lon": 1.888334, "level": "national" }
+      ]
+    }
+  ]
+}

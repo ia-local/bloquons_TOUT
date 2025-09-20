@@ -1,0 +1,99 @@
+/* Fichier : public/src/css/modalLegend.css */
+
+.modal-legend {
+    display: none; /* Masquer par défaut */
+    position: fixed;
+    z-index: 1000; /* Assurez-vous qu'elle est au-dessus du reste */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modal-legend-content {
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.modal-header p {
+    margin: 5px 0 0 0;
+    font-style: italic;
+    color: #666;
+}
+
+.modal-body {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.modal-body h4 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+.modal-body a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-body a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Styles spécifiques pour le bouton "Retour" de la légende */
+.legend-back-btn {
+    color: #007bff;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

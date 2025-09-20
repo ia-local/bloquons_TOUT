@@ -1,0 +1,68 @@
+[
+  {
+    "id": "38fb27d5-8d33-4f83-9b97-23b4d8a97212",
+    "question": "Faut-il mettre en place un revenu universel ?",
+    "description": "Cette proposition de RIC législatif vise à instaurer un revenu universel de base pour garantir à chaque citoyen une subsistance minimale, quels que soient ses revenus ou son statut professionnel. L'objectif est de réduire la précarité et de stimuler l'économie locale.",
+    "deadline": "2025-12-12",
+    "voteMethod": "voix",
+    "level": "national",
+    "votes_for": 3,
+    "votes_against": 3,
+    "status": "active"
+  },
+  {
+    "id": "c2ae12e3-de80-4327-840e-b50af370bd82",
+    "question": "Faut-il destituer le Président de la République en application de l'Article 68 de la Constitution ?",
+    "description": " Cette proposition de Référendum d'Initiative Citoyenne (RIC) révocatoire vise à engager une procédure de destitution du Président de la République pour manquement à ses devoirs, manifestement incompatible avec l'exercice de son mandat. L'objectif est de rendre les élus responsables devant les citoyens.",
+    "deadline": "2025-09-08",
+    "voteMethod": "click",
+    "level": "national",
+    "votes_for": 6,
+    "votes_against": 0,
+    "status": "active"
+  },
+  {
+    "id": "1a04600b-780a-443d-81e4-526ab3d399bb",
+    "question": "Faut-il abroger la loi Duplomb ?",
+    "description": "Cette proposition de RIC abrogatoire vise à annuler la loi controversée du plomb, jugée liberticide et nuisible à la liberté d'entreprendre. Son abrogation permettrait de restaurer un climat de confiance entre les citoyens et les institutions.",
+    "deadline": "2025-09-11",
+    "voteMethod": "click",
+    "level": "national",
+    "votes_for": 0,
+    "votes_against": 0,
+    "status": "active"
+  },
+  {
+    "id": "a48d9d56-cad5-4079-ad10-2dcb08411ffa",
+    "question": "Faut-il boycotter le beurre 'Président' ?",
+    "description": "Ce RIC de boycottage vise l'entreprise 'Président' en raison de pratiques jugées non éthiques, notamment en matière de prix et de respect des producteurs. Le boycott est un outil de pression citoyenne pour encourager les entreprises à adopter un comportement plus responsable.",
+    "deadline": "2025-09-10",
+    "voteMethod": "voix",
+    "level": "local",
+    "votes_for": 5,
+    "votes_against": 0,
+    "status": "active"
+  },
+  {
+    "id": "1ffb1702-7e6c-4e43-956e-a73a562fa5fc",
+    "question": "Faut-il abroger la loi sur l'Accord de Paris sur le climat ?",
+    "description": "Ce RIC abrogatoire conteste les fondements et l'application de la loi concernant l'Accord de Paris sur le climat. La proposition cherche à revoir les engagements de la France en matière de climat pour les rendre plus justes et équitables, en tenant compte des réalités sociales et économiques des citoyens.",
+    "deadline": "2025-12-12",
+    "voteMethod": "click",
+    "level": "national",
+    "votes_for": 2,
+    "votes_against": 0,
+    "status": "active"
+  },
+  {
+    "id": "a7c35b11-09cb-4fd2-8197-ce6d11f38281",
+    "question": "Faut-il boycotter les produits contenant de la acétamipride, dans la grande distribution en France ?",
+    "description": "Insecticide extrêmement toxique pouvant nuire à la santé du citoyen",
+    "deadline": "92025-08-08",
+    "voteMethod": "voix",
+    "level": "national",
+    "votes_for": 0,
+    "votes_against": 0,
+    "status": "active"
+  }
+]

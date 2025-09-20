@@ -1,0 +1,69 @@
+[
+    {
+        "id": "1",
+        "cnccfp": "910",
+        "name": "EN_MARCHE",
+        "parnom": "EN_MARCHE",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Paris"
+    },
+    {
+        "id": "2",
+        "cnccfp": "910",
+        "name": "RENAISSANCE",
+        "parnom": "RENAISSANCE",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Paris"
+    },
+    {
+        "id": "3",
+        "cnccfp": "1378",
+        "name": "EMP",
+        "parnom": "EMP",
+        "init": "ENSEMBLE ! (MAJORITÉ PRÉSIDENTIELLE)",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Asnières-sur-Seine"
+    },
+    {
+        "id": "4",
+        "cnccfp": "049",
+        "name": "RN",
+        "parnom": "RN",
+        "init": "RASSEMBLEMENT NATIONAL",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Asnières-sur-Seine"
+    },
+    {
+        "id": "5",
+        "cnccfp": "1038",
+        "name": "EPR",
+        "parnom": "EPR",
+        "epr": "ENSEMBLE POUR LA RÉPUBLIQUE",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Asnières-sur-Seine"
+    },
+    {
+        "id": "6",
+        "cnccfp": "976",
+        "name": "LFI",
+        "parnom": "LFI",
+        "init": "LA FRANCE INSOUMISE",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Asnières-sur-Seine"
+    },
+    {
+        "id": "7",
+        "cnccfp": "647",
+        "name": "PARTI PIRATE",
+        "parnom": "PARTI PIRATE",
+        "lat": 48.919,
+        "lon": 2.293,
+        "city": "Asnières-sur-Seine"
+    }
+]

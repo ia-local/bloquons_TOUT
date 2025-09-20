@@ -1,0 +1,189 @@
+{
+    "chronology": [
+      {
+        "year": 2017,
+        "events": [
+          {
+            "timestamp": "2017-05-07",
+            "title": "Élection présidentielle",
+            "description": "Élu président de la République française avec 66,1% des voix."
+          },
+          {
+            "timestamp": "2017-06-21",
+            "title": "Formation du gouvernement",
+            "description": "Premier gouvernement sous la présidence avec le Premier ministre nommé."
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "events": [
+          {
+            "timestamp": "2018-01-01",
+            "title": "Réformes économiques",
+            "description": "Mise en place des premières réformes économiques visant à renforcer le pouvoir d'achat."
+          },
+          {
+            "timestamp": "2018-12-17",
+            "title": "Mouvement des Gilets jaunes",
+            "description": "Protestations massives contre la hausse des taxes sur le carburant, illustrant une opposition croissante aux réformes sociales et économiques."
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "events": [
+          {
+            "timestamp": "2019-07-01",
+            "title": "Plan de transition écologique",
+            "description": "Annonce d'un plan pour la transition écologique, axé sur la réduction des émissions de carbone."
+          },
+          {
+            "timestamp": "2019-12-05",
+            "title": "Réforme des retraites",
+            "description": "Début des grèves nationales contre la réforme des retraites."
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "events": [
+          {
+            "timestamp": "2020-03-17",
+            "title": "Pandémie de COVID-19",
+            "description": "Annonce du confinement national en réponse à la pandémie de COVID-19."
+          },
+          {
+            "timestamp": "2020-10-01",
+            "title": "Plan de relance économique",
+            "description": "Mise en place d'un plan de relance économique post-COVID-19."
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "events": [
+          {
+            "timestamp": "2021-07-12",
+            "title": "Pass sanitaire",
+            "description": "Annonce du pass sanitaire pour lutter contre la propagation de la COVID-19."
+          },
+          {
+            "timestamp": "2021-09-01",
+            "title": "Poursuite des réformes sociales",
+            "description": "Continuation des réformes sur le système social et économique pour améliorer le pouvoir d'achat."
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "events": [
+          {
+            "timestamp": "2022-04-24",
+            "title": "Réélection",
+            "description": "Réélu pour un second mandat présidentiel."
+          },
+          {
+            "timestamp": "2022-12-31",
+            "title": "Projets de loi sur la sécurité",
+            "description": "Adoption de nouvelles lois sécuritaires visant à renforcer la lutte contre le terrorisme et la cybercriminalité."
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "events": [
+          {
+            "timestamp": "2023-05-01",
+            "title": "Inflation et pouvoir d'achat",
+            "description": "Mesures pour lutter contre l'inflation et renforcer le pouvoir d'achat des ménages."
+          },
+          {
+            "timestamp": "2023-10-10",
+            "title": "Transition énergétique",
+            "description": "Nouvelle phase du plan de transition énergétique pour accélérer l'adoption des énergies renouvelables."
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "events": [
+          {
+            "timestamp": "2024-05-01",
+            "title": "Élections du Parlement européen",
+            "description": "Élection des représentants français au Parlement européen."
+          },
+          {
+            "timestamp": "2024-06-15",
+            "title": "Élection des vice-présidents de la commission parlementaire européenne",
+            "description": "Élection des vice-présidents et mise en place des nouvelles commissions parlementaires européennes."
+          },
+          {
+            "timestamp": "2024-12-31",
+            "title": "Bilan économique et social",
+            "description": "Présentation du bilan intermédiaire du second mandat, avec un focus sur les réformes sociales et économiques."
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "events": [
+          {
+            "timestamp": "2025-05-01",
+            "title": "Événement 2025-1",
+            "description": "Description événement 2025-1"
+          },
+          {
+            "timestamp": "2025-06-15",
+            "title": "Événement 2025-2",
+            "description": "Description événement 2025-2"
+          },
+          {
+            "timestamp": "2025-12-31",
+            "title": "Événement 2025-3",
+            "description": "Description événement 2025-3"
+          }
+        ]
+      },
+            {
+        "year": 2026,
+        "events": [
+          {
+            "timestamp": "2026-05-01",
+            "title": "Événement 2026-1",
+            "description": "Description événement 2026-1"
+          },
+          {
+            "timestamp": "2026-06-15",
+            "title": "Événement 2026-2",
+            "description": "Description événement 2026-2"
+          },
+          {
+            "timestamp": "2026-12-31",
+            "title": "Événement 2026-3",
+            "description": "Description événement 2026-3"
+          }
+        ]
+      },
+            {
+        "year": 2027,
+        "events": [
+          {
+            "timestamp": "2027-05-01",
+            "title": "Événement 2027-1",
+            "description": "Description événement 2027-1"
+          },
+          {
+            "timestamp": "2027-06-15",
+            "title": "Événement 2027-2",
+            "description": "Description événement 2027-2"
+          },
+          {
+            "timestamp": "2027-12-31",
+            "title": "Événement 2027-3",
+            "description": "Description événement 2027-3"
+          }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "cameras": [
+    {
+      "id": "12248590279",
+      "name": "Caméra Berlin",
+      "city": "Berlin",
+      "country": "Allemagne",
+      "lat": 52.5278994,
+      "lon": 13.4026444,
+      "video_link": "http://example.com/stream/berlin",
+      "timestamp": "2024-10-13T17:17:45Z"
+    }
+  ]
+}

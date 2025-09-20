@@ -1,0 +1,117 @@
+swagger: '2.0'
+info:
+  title: Manifestation 910-2025 API
+  description: Documentation pour la plateforme citoyenne Manifestation du 10 Septembre.
+  version: 1.0.0
+host: localhost:3000
+schemes:
+  - http
+basePath: /api
+paths:
+  /blog/posts:
+    get:
+      tags:
+        - Blog
+      summary: Récupère la liste de tous les articles de blog.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Une liste d'articles de blog.
+          schema:
+            type: array
+            items:
+              type: object
+  /blog/generate:
+    get:
+      tags:
+        - Blog
+      summary: Génère un nouvel article de blog à partir d'un sujet.
+      parameters:
+        - name: topic
+          in: query
+          required: true
+          type: string
+          description: Le sujet de l'article à générer.
+      responses:
+        200:
+          description: L'article généré.
+  /cvnu/process:
+    post:
+      tags:
+        - CV Numérique Universel (CVNU)
+      summary: Analyse et traite un CV numérique pour en extraire des compétences.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: L'objet CV à traiter.
+          required: true
+          schema:
+            type: object
+      responses:
+        200:
+          description: Le résultat de l'analyse du CV.
+  /reforme/taxes:
+    get:
+      tags:
+        - Réformes Économiques
+      summary: Récupère les données sur la réforme fiscale.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Une liste de réformes fiscales.
+  /reforme/economie-circulaire:
+    get:
+      tags:
+        - Réformes Économiques
+      summary: Détails sur le modèle d'économie circulaire.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Données sur le modèle économique circulaire.
+  /rics:
+    get:
+      tags:
+        - RIC
+      summary: Récupère la liste des Référendums d'Initiative Citoyenne (RIC) en cours.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Une liste de RICs.
+  /boycotts:
+    get:
+      tags:
+        - Boycott
+      summary: Récupère la liste des entités sujettes au boycott.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Une liste d'entités boycottées.
+  /dashboard/summary:
+    get:
+      tags:
+        - Dashboard
+      summary: Récupère les statistiques clés pour le tableau de bord.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Un résumé des données de la plateforme.
+  /caisse-manifestation:
+    get:
+      tags:
+        - Caisse
+      summary: Récupère le solde de la caisse de manifestation.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Solde et transactions de la caisse.

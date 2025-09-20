@@ -1,0 +1,225 @@
+openapi: 3.0.0
+info:
+  title: API Réforme du Droit au Travail
+  description: API pour la démonstration d'une réforme du droit au travail et de son financement par la TVA et les smart contracts.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8545
+    description: Serveur de développement local
+paths:
+  /api/generate-cv:
+    post:
+      summary: Générer un CV numérique avec l'IA
+      description: Crée un CV numérique avec des compétences et une allocation basée sur une description de métier.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CVRequest'
+      responses:
+        '200':
+          description: Le CV a été généré avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVResponse'
+        '400':
+          description: Erreur de la requête. Numéro fiscal ou description manquante.
+        '500':
+          description: Erreur du serveur lors de la génération du CV.
+  /api/collect-tva:
+    post:
+      summary: Simuler une collecte de TVA
+      description: Augmente la trésorerie du smart contract avec un montant simulé.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TVACollectionRequest'
+      responses:
+        '200':
+          description: Collecte effectuée avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+  /api/decaisser-allocations:
+    get:
+      summary: Décaisser les allocations
+      description: Simule le versement des allocations aux citoyens en fonction de la trésorerie et de leurs compétences.
+      responses:
+        '200':
+          description: Décaissement effectué avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  totalVerse:
+                    type: number
+                  tresorerieRestante:
+                    type: number
+                  allocations:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        numeroFiscal:
+                          type: number
+                        montant:
+                          type: number
+  /api/contract-state:
+    get:
+      summary: Obtenir l'état du smart contract
+      description: Récupère la trésorerie actuelle et le nombre de citoyens actifs.
+      responses:
+        '200':
+          description: État du contrat récupéré avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tresorerie:
+                    type: number
+                  nombreCitoyens:
+                    type: number
+  /api/dashboard-data:
+    get:
+      summary: Obtenir les données du tableau de bord
+      description: Fournit les données pour les graphiques de recettes et de dépenses.
+      responses:
+        '200':
+          description: Données du tableau de bord récupérées avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalRecettes:
+                    type: number
+                  totalDepenses:
+                    type: number
+                  recettesParSource:
+                    type: object
+                    properties:
+                      TVA:
+                        type: number
+                      Autres:
+                        type: number
+                  nombreBeneficiaires:
+                    type: number
+                  distributionAllocation:
+                    type: object
+                    additionalProperties:
+                      type: number
+                  tresorerie:
+                    type: number
+  /api/taxes:
+    get:
+      summary: Obtenir la liste des impôts et taxes
+      description: Récupère une liste complète des impôts et taxes.
+      responses:
+        '200':
+          description: Liste des impôts et taxes récupérée avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+  /api/redistribution:
+    get:
+      summary: Obtenir une explication de la redistribution par l'IA
+      description: L'IA génère un texte expliquant le processus de redistribution de la TVA.
+      responses:
+        '200':
+          description: Explication générée et récupérée avec succès.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  statut:
+                    type: string
+                  recettesTotales:
+                    type: number
+                  nombreBeneficiaires:
+                    type: number
+                  explicationIA:
+                    type: string
+components:
+  schemas:
+    CVRequest:
+      type: object
+      required:
+        - numeroFiscal
+        - descriptionMetier
+      properties:
+        numeroFiscal:
+          type: string
+          example: '12345678'
+        descriptionMetier:
+          type: string
+          example: 'Développeur web full-stack spécialisé en React et Node.js.'
+    CVResponse:
+      type: object
+      properties:
+        citoyen:
+          type: string
+          example: 'Citoyen de 30 ans'
+        numeroFiscal:
+          type: string
+          example: '12345678'
+        allocation:
+          type: number
+          example: 2500
+        age:
+          type: number
+          example: 30
+        skills:
+          type: array
+          items:
+            $ref: '#/components/schemas/Skill'
+        detailsReforme:
+          type: object
+          properties:
+            objectifs:
+              type: array
+              items:
+                type: string
+            modifications:
+              type: object
+              additionalProperties:
+                type: string
+            reference_cgi:
+              type: object
+              additionalProperties:
+                type: string
+    Skill:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'Développement web'
+        score:
+          type: number
+          format: float
+          example: 0.85
+    TVACollectionRequest:
+      type: object
+      properties:
+        amount:
+          type: number
+          example: 1000

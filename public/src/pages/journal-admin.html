@@ -1,0 +1,23 @@
+<div class="journal-admin-panel">
+    <h3>Édition et publication des articles</h3>
+    <div class="editor-panel">
+        <input type="text" id="journal-title-input" placeholder="Titre de l'article" required>
+        <textarea id="journal-content-textarea" placeholder="Rédigez votre article ici..." required></textarea>
+        
+        <div class="controls-editor">
+            <button id="generate-draft-btn" class="primary-btn">Générer un Brouillon IA</button>
+            <button id="save-article-btn" class="secondary-btn" style="display: none;">Enregistrer l'Article</button>
+        </div>
+    </div>
+    
+    <div id="draft-preview" class="draft-preview">
+        <h3>Aperçu du brouillon</h3>
+        <p>Sélectionnez une thématique ou générez un brouillon pour commencer.</p>
+    </div>
+    
+    <div class="regenerate-controls" style="display: none;">
+        <button id="regenerate-title-btn" class="secondary-btn">Régénérer le titre</button>
+        <button id="regenerate-image-btn" class="secondary-btn">Régénérer l'image</button>
+        <button id="regenerate-article-btn" class="secondary-btn">Régénérer l'article</button>
+    </div>
+</div>

@@ -1,0 +1,261 @@
+/* Styles pour la nouvelle page blog.html */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #032850;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+header nav li {
+    display: inline;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.side-menu h2 {
+    margin-top: 0;
+    color: #032850;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.side-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu nav li {
+    margin-bottom: 10px;
+}
+
+.side-menu nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.side-menu nav a:hover {
+    background-color: #e0e0e0;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px 40px;
+}
+
+#content-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.image-and-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imageTopic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+.imageTopic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+#resultatsTopic {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.controls.hidden {
+    display: none;
+}
+
+button {
+    background-color: #032850;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Nouvelles règles pour la page blog.html */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+    /* Ajout de ces trois lignes pour le centrage */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    margin: 15px;
+    font-size: 1.2em;
+    color: #032850;
+}
+
+.blog-card .content-snippet {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #ddd;
+    color: #555;
+}
+
+/* Styles pour la modale */
+.modal {
+    display: none; /* Masquée par défaut */
+    position: fixed; /* Reste en place */
+    z-index: 1; /* S'affiche au-dessus de tout */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Active le défilement si nécessaire */
+    background-color: rgba(0,0,0,0.4); /* Fond noir semi-transparent */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur de la modale */
+    max-width: 900px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-title {
+    text-align: center;
+    color: #032850;
+    font-size: 2em;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,72 @@
+{
+  "nom": "Jean-Pierre",
+  "prenom": "Dubois",
+  "contact": {
+    "email": "jeanpierre.dubois@email.com",
+    "telephone": "+33 6 12 34 56 78",
+    "adresse": "12 rue de la Liberté, 75001 Paris"
+  },
+  "objectifs_professionnels": "Développer une application web full-stack, en mettant l'accent sur l'accessibilité et la performance. Contribuer à des projets open-source et encadrer une équipe de développeurs juniors.",
+  "competences": {
+    "techniques": [
+      {
+        "domaine": "Développement Frontend",
+        "details": ["JavaScript (ES6+)", "React", "Vue.js", "HTML5", "CSS3", "Sass", "Webpack"]
+      },
+      {
+        "domaine": "Développement Backend",
+        "details": ["Node.js", "Express", "Python", "Django", "APIs RESTful", "GraphQL"]
+      },
+      {
+        "domaine": "Bases de Données",
+        "details": ["MongoDB", "PostgreSQL", "SQL", "Redis"]
+      },
+      {
+        "domaine": "Outils & DevOps",
+        "details": ["Git", "Docker", "CI/CD", "Jest", "Trello", "Jira"]
+      }
+    ],
+    "transversales": ["Gestion de projet", "Travail en équipe", "Encadrement", "Communication technique", "Résolution de problèmes complexes"]
+  },
+  "experiences": [
+    {
+      "titre": "Développeur Full-Stack Senior",
+      "entreprise": "Tech Innovations Inc.",
+      "duree": "2022 - Présent",
+      "realisations": [
+        "Conception et développement d'une plateforme SaaS, augmentant l'efficacité des utilisateurs de 30%.",
+        "Optimisation de la base de données, réduisant le temps de chargement des pages de 40%."
+      ],
+      "competences_acquises": ["Leadership technique", "Scalabilité", "Microservices"]
+    },
+    {
+      "titre": "Développeur Web",
+      "entreprise": "Startup Solutions",
+      "duree": "2019 - 2022",
+      "realisations": [
+        "Création d'une application de gestion de tâches avec Vue.js et Node.js.",
+        "Mise en place de tests unitaires et d'intégration."
+      ],
+      "competences_acquises": ["Développement agile", "Tests automatisés", "Collaboration inter-équipes"]
+    }
+  ],
+  "projets_personnels": [
+    {
+      "nom": "CVNU (Curriculum Vitae Numérique Universel)",
+      "description": "Un projet open-source visant à créer un outil de valorisation des compétences via l'IA.",
+      "technologies": ["JavaScript", "Express", "IA", "API REST"],
+      "contribution": "Conception de l'architecture backend et développement de l'API de structuration."
+    }
+  ],
+  "formation": [
+    {
+      "diplome": "Master en Informatique",
+      "etablissement": "Université Paris-Saclay",
+      "annee": 2019
+    }
+  ],
+  "langues": ["Français (Langue maternelle)", "Anglais (Courant)"],
+  "signature_numerique": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+  "identifiant_cvnu": "5f6b8c9d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+  "score": 95
+}

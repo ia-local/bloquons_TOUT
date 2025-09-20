@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réforme du Droit au Travail et à la Rémunération du CV Numérique</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Un Nouveau Droit au Travail et à la Rémunération du CV Numérique</h1>
+        <p>CNC-CFP - Compte n°647</p>
+    </header>
+
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link active">À propos de la réforme</a></li>
+                    <li><a href="#cvnu" class="nav-link">Mon CV Numérique</a></li>
+                    <li><a href="#blockchain-demo" class="nav-link">Démo Blockchain</a></li>
+                    <li><a href="#dashboard" class="nav-link">Tableau de bord</a></li>
+                    <li><a href="#funding" class="nav-link">Mécanismes de financement</a></li>
+                    <li><a href="#taxes" class="nav-link">Liste des impôts</a></li>
+                    <li><a href="#redistribution" class="nav-link">Redistribution par l'IA</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <section id="about" class="page active">
+                <h2>Résumé Exécutif de la Réforme</h2>
+                <p>Notre programme de réforme s'articule autour de trois piliers fondamentaux pour repenser le rapport au travail et à la rémunération.</p>
+                <ul>
+                    <li>**Définition élargie du travail** : Toute activité productive ou d'apprentissage générant une compétence valorisable est reconnue et monétisée via le **Curriculum Vitae Numérique Universel (CVNU)**.</li>
+                    <li>**Allocation universelle basée sur les compétences** : Chaque citoyen titulaire d'un CVNU actif reçoit une allocation mensuelle progressive, de 500 € à 5 000 €, versée **tous les 28 jours**.</li>
+                    <li>**Financement sécurisé et transparent** : La réforme est financée par une réaffectation de la **Taxe sur la Valeur Ajoutée (TVA)**, gérée par des **smart contracts** sur la blockchain.</li>
+                </ul>
+            </section>
+            
+            <section id="cvnu" class="page">
+                <h2>Mon CV Numérique Universel (CVNU)</h2>
+                <p>Générez un CV numérique à partir d'une description de votre profil professionnel.</p>
+                
+                <form id="cv-form" class="form-cv">
+                    <label for="numero-fiscal">Numéro Fiscal :</label>
+                    <input type="text" id="numero-fiscal" name="numero-fiscal" placeholder="Saisir votre numéro fiscal" required>
+                    
+                    <label for="description">Décrivez votre profil :</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Ex: Développeur web full-stack avec 5 ans d'expérience..." required></textarea>
+                    
+                    <button type="submit">Générer mon CV Numérique</button>
+                </form>
+
+                <div id="cvnu-details">
+                    <p>Votre CV apparaîtra ici...</p>
+                </div>
+                <div class="cvnu-visualisation">
+                    <h3>Progression des Compétences</h3>
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Nouvelle Section : Démonstration du Smart Contract -->
+            <section id="blockchain-demo" class="page">
+                <h2>Démo en direct : Le Smart Contract en action 🚀</h2>
+                <p>Simulez le mécanisme de financement de la réforme et prouvez la transparence des transactions.</p>
+                <div class="demo-container">
+                    <div class="demo-box">
+                        <h3>Trésorerie du Compte 647</h3>
+                        <p id="tresorerie-value">0 €</p>
+                        <p id="citoyens-actifs-value">0 citoyens actifs</p>
+                    </div>
+                    <div class="demo-controls">
+                        <button id="collect-btn">Simuler une caisse</button>
+                        <button id="decaisser-btn">Décaisser les allocations</button>
+                    </div>
+                </div>
+                <div class="demo-log">
+                    <h3>Journal des transactions</h3>
+                    <ul id="transactions-log"></ul>
+                </div>
+            </section>
+
+            <section id="dashboard" class="page">
+                <h2>Tableau de bord comptable</h2>
+                <p>Visualisation de l'équilibre entre recettes et dépenses.</p>
+                <div class="chart-container">
+                    <canvas id="recettesChart"></canvas>
+                    <canvas id="depensesChart"></canvas>
+                </div>
+                <button id="openModalBtn">Voir les détails de la TVA</button>
+            </section>
+            
+            <section id="funding" class="page">
+                <h2>Mécanismes de financement</h2>
+                <p><strong>Titre II : Mécanismes de Financement et Sécurité</strong></p>
+                <p><strong>Article L4331-1 :</strong> Les transactions sont sécurisées et automatisées par des smart contracts sur la blockchain.</p>
+                <p><strong>Article L4334-1 :</strong> Un pourcentage de la TVA est affecté à un fonds de redistribution, avec des décaissements directs sur le RIB lié au CVNU.</p>
+                <p><strong>Article L4333-1 :</strong> Un suivi régulier de la répartition des recettes de la TVA est assuré pour une transparence continue.</p>
+            </section>
+
+            <section id="taxes" class="page">
+                <h2>Liste des impôts et taxes</h2>
+                <p>Voici la liste complète des impôts et taxes sur laquelle notre commission a travaillé pour élaborer cette réforme.</p>
+                <ul id="taxes-list-container"></ul>
+            </section>
+            
+            <section id="redistribution" class="page">
+                <h2>Explication de la Redistribution</h2>
+                <p>Cette section est générée en temps réel par notre intelligence artificielle, pour une explication complète et actualisée de l'opération de décaissement de la TVA vers l'allocation universelle.</p>
+                <div id="ai-explanation">
+                    <p>Chargement de l'explication...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - CNC-CFP - Compte n°647</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Détails sur la Taxe sur la Valeur Ajoutée (TVA)</h2>
+            <p>La TVA est un impôt indirect sur la consommation. Notre réforme prévoit de réaffecter une partie de ses recettes pour financer l'allocation universelle et la formation professionnelle. Cette approche garantit la pérennité du financement en s'appuyant sur un impôt stable et directement lié à l'activité économique.</p>
+        </div>
+    </div>
+
+    <script src="template.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

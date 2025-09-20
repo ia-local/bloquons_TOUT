@@ -1,0 +1,44 @@
+[
+  {
+    "id": "COPERNICUS/S2_SR",
+    "name": "Sentinel-2 (Copernicus)",
+    "description": "Satellite optique haute résolution du programme européen Copernicus. Idéal pour l'analyse de la végétation et de l'utilisation des sols. Résolution spatiale de 10 à 60 mètres. Opère dans 13 bandes spectrales.",
+    "bands": ["B4", "B3", "B2"],
+    "sort": "CLOUDY_PIXEL_PERCENTAGE",
+    "realtime_data": {
+      "Last_Update": "10 août 2025 12:59:50",
+      "NORAD_ID": "53289",
+      "RA": "20h 54m 52.37s",
+      "DEC": "-34° 36' 13.2\"",
+      "Altitude": "556.48 km",
+      "Orbital_Period": "1.59 h",
+      "Launch_Date": "2022"
+    }
+  },
+  {
+    "id": "LANDSAT/LC08/C02/T1_L2",
+    "name": "Landsat 8",
+    "description": "Satellite d'imagerie terrestre de la NASA. Fournit des données multispectrales de moyenne résolution, utiles pour le suivi des ressources en eau et des écosystèmes.",
+    "bands": ["SR_B4", "SR_B3", "SR_B2"],
+    "sort": "CLOUD_COVER_LAND"
+  },
+  {
+    "id": "MODIS/061/MOD09GA",
+    "name": "MODIS (Terra/Aqua)",
+    "description": "Capteur à bord des satellites Terra et Aqua. Fournit des images de basse à moyenne résolution, utilisées pour des études à l'échelle mondiale sur les nuages, les aérosols et la couverture terrestre.",
+    "bands": ["sur_refl_b01", "sur_refl_b04", "sur_refl_b03"],
+    "sort": "cloud_state"
+  },
+  {
+    "id": "STARLINK",
+    "name": "Starlink",
+    "description": "Constellation de satellites de SpaceX pour l'accès à internet. Bien que Starlink soit une source d'objets brillants dans le ciel, ses satellites ne sont pas des satellites d'observation de la Terre et ne fournissent pas d'imagerie. Ils sont inclus ici à titre d'information contextuelle.",
+    "bands": [],
+    "sort": null,
+    "realtime_data": {
+      "Last_Update": "12 août 2025 10:20:00",
+      "Purpose": "Internet par satellite",
+      "Altitude": "550 km"
+    }
+  }
+]

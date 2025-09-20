@@ -1,0 +1,210 @@
+/* Fichier : public/src/css/styles.css */
+/* Fichier : src/css/style.css */
+
+/* --- STYLES DU HEADER (AUCUN GLISSEMENT DE L'ICÔNE) --- */
+/* Assure un positionnement et un affichage corrects pour le header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0A192F;
+    color: white;
+}
+
+.app-header .app-title {
+    margin: 0;
+    display: flex; /* Aligne l'icône et le texte */
+    align-items: center;
+    font-size: 24px;
+}
+
+.app-header .app-title .fas {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+/* --- GLISSEMENT DE L'ICÔNE D'ACCUEIL --- */
+.app-title .home-icon {
+    position: absolute;
+    left: 20px; /* Position de départ de l'icône */
+    font-size: 24px;
+    opacity: 0;
+    transition: left 0.5s ease-out, opacity 0.5s ease-out; /* Animation de glissement et d'apparition */
+}
+
+.app-header .header-home-link:hover .home-icon {
+    left: 60px; /* Position finale au survol */
+    opacity: 1;
+}
+
+.main-aside {
+    width: 60px; /* Largeur initiale pour n'afficher que les icônes */
+    transition: width 0.4s ease; /* Animation fluide de la largeur */
+    overflow: hidden; /* Cache le contenu qui dépasse */
+    position: fixed; /* Rend le menu statique sur la gauche */
+    height: 100%;
+    z-index: 1000;
+}
+
+/* Agrandit la barre latérale au survol */
+.main-aside:hover {
+    width: 200px; /* Largeur pour afficher icône + nom */
+}
+.main-content {
+    margin-left: 255x;
+}
+.main-aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-aside li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    position: relative;
+}
+
+.main-aside li a i {
+    font-size: 24px;
+    min-width: 30px;
+    text-align: center;
+    transition: transform 0.4s ease; /* Transition pour l'icône */
+}
+
+.main-aside li a span {
+    /* Cache le texte par défaut en le décalant */
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 10px;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s 0.4s;
+}
+
+/* Révèle le texte au survol */
+.main-aside:hover li a span {
+    transform: translateX(0); /* Fait glisser le texte à sa position initiale */
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s;
+}
+
+/* Fichier : public/src/css/styles.css */
+
+.profile-dropdown-menu {
+    display: none; /* Cache le menu par défaut */
+    position: absolute;
+    top: 60px; /* Ajustez selon la hauteur de votre en-tête */
+    right: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* S'assure qu'il est au-dessus d'autres éléments */
+}
+
+/* Classe pour rendre le menu visible */
+.profile-dropdown-menu.show {
+    display: block;
+}
+
+.profile-dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.profile-dropdown-menu a:hover {
+    background-color: #555;
+}
+
+/* Fichier : src/css/styles.css */
+
+/* --- STYLES DU FOOTER --- */
+.app-footer {
+    position: fixed; /* Rend le footer fixe en bas de l'écran */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between; /* Espace les éléments à chaque extrémité */
+    align-items: center;
+    padding: 0 20px;
+    background-color: transparent; /* Fond transparent par défaut */
+    z-index: 999;
+    overflow: hidden; /* Cache tout ce qui dépasse, y compris l'animation de fond */
+}
+
+/* Pseudo-élément pour l'animation de fond */
+.app-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Largeur initiale de 0 */
+    height: 100%;
+    background-color: #0A192F; /* Couleur de remplissage */
+    transition: width 0.5s ease-out; /* Anime la largeur */
+    z-index: -1; /* Place le pseudo-élément en arrière-plan */
+}
+
+/* Remplissage de la couleur au survol du footer */
+.app-footer:hover::before {
+    width: 100%;
+}
+
+/* Conteneur pour le bouton 'Paramètres' */
+.footer-primary-link-container {
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Le lien 'Paramètres' et son icône */
+.footer-link-fixed {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Le lien est toujours visible, seul le texte apparaît au survol */
+.footer-link-fixed span {
+    display: none; /* Cache le texte par défaut */
+}
+
+.app-footer:hover .footer-link-fixed span {
+    display: inline; /* Affiche le texte au survol du footer */
+}
+
+/* Conteneur pour les autres liens qui glissent */
+.footer-links-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transform: translateX(100%); /* Masque les liens hors de l'écran */
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Animation de glissement des autres liens au survol du footer */
+.app-footer:hover .footer-links-container {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Styles pour les liens qui glissent */
+.footer-links-container .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}

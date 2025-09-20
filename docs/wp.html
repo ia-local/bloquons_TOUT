@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Travail CVNU - Stratégie Optimisée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement de Chart.js et de son adaptateur de date pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.umd.min.js"></script>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Police Inter pour une meilleure lisibilité -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles de base pour la transition des thèmes */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Styles du mode sombre */
+        .dark-mode {
+            background-color: #121212; /* Arrière-plan très sombre */
+            color: #e0e0e0; /* Texte gris clair */
+        }
+        .dark-mode .bg-white {
+            background-color: #1e1e1e; /* Arrière-plan des cartes plus sombre */
+            border-color: #333333;
+        }
+        .dark-mode .text-gray-900 {
+            color: #e0e0e0;
+        }
+        .dark-mode .text-gray-800 {
+            color: #f0f0f0;
+        }
+        .dark-mode .text-gray-700, .dark-mode .text-gray-600 {
+            color: #bdbdbd;
+        }
+        .dark-mode .shadow-lg {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Ombre plus foncée */
+        }
+        .dark-mode .table-header {
+            background-color: #333333;
+            color: #f0f0f0;
+        }
+        .dark-mode .table-row:nth-child(odd) {
+            background-color: #262626;
+        }
+        .dark-mode .table-row:nth-child(even) {
+            background-color: #1e1e1e;
+        }
+        .dark-mode .table-row:hover {
+            background-color: #3a3a3a;
+        }
+        .dark-mode .text-blue-700 {
+            color: #90caf9; /* Bleu plus clair pour les titres */
+        }
+        .dark-mode .text-green-600 {
+            color: #a5d6a7;
+        }
+        .dark-mode .text-yellow-600 {
+            color: #fff176;
+        }
+        .dark-mode .text-purple-600 {
+            color: #ce93d8;
+        }
+        .dark-mode .text-red-600 {
+            color: #ef9a9a;
+        }
+        .dark-mode .toggle-container {
+            background-color: #424242;
+            border-color: #616161;
+        }
+        .dark-mode .toggle-circle {
+            background-color: #e0e0e0;
+        }
+        /* Mode sombre pour la barre latérale */
+        .dark-mode .sidebar {
+            background: #1e1e1e; /* Arrière-plan plus sombre pour la barre latérale */
+            border-right: 1px solid #333333;
+        }
+        .dark-mode .sidebar a {
+            color: #e0e0e0;
+        }
+        .dark-mode .sidebar a:hover {
+            background-color: #333333;
+        }
+        .dark-mode .chart-container {
+            border-color: #333333;
+        }
+
+        /* Styles du bouton de bascule de thème */
+        .toggle-container {
+            width: 60px;
+            height: 32px;
+            background-color: #e0e0e0;
+            border-radius: 9999px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2px;
+        }
+        .toggle-circle {
+            width: 28px;
+            height: 28px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 2px;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: #f6ad55; /* Couleur du soleil */
+        }
+        .toggle-container.active .toggle-circle {
+            transform: translateX(28px);
+            background-color: #64b5f6; /* Bleu pour la lune */
+            color: #e0e0e0; /* Couleur de la lune */
+        }
+        .toggle-container.active {
+            background-color: #64b5f6;
+            border-color: #42a5f5;
+        }
+
+        /* Style du conteneur du graphique */
+        .chart-container {
+            @apply bg-white p-8 rounded-xl shadow-2xl mb-12;
+            height: 450px; /* Légèrement plus grand pour un meilleur impact visuel */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e0e0e0;
+            transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            position: relative; /* Pour positionner le spinner */
+        }
+
+        .chart-loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #2962ff; /* Couleur du spinner */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        .dark-mode .chart-loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid #90caf9;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Styles spécifiques du tableau pour la réactivité et l'apparence */
+        .table-responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .table-auto-width {
+            width: 100%;
+            min-width: 1200px; /* Largeur minimale augmentée pour une mise en page plus spacieuse */
+        }
+        .table-auto-width th, .table-auto-width td {
+            padding: 1.25rem 1rem; /* Plus de rembourrage pour les cellules */
+        }
+        .table-row {
+            transition: background-color 0.2s ease-in-out;
+        }
+        .table-row:nth-child(odd) {
+            background-color: #f8fafc;
+        }
+        .table-row:nth-child(even) {
+            background-color: #ffffff;
+        }
+        .table-row:hover {
+            background-color: #f0f4f8;
+        }
+        .table-header {
+            background-color: #2962ff; /* Bleu plus profond pour l'en-tête */
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Ajustements réactifs */
+        @media (max-width: 1024px) { /* Ajuster la largeur minimale pour les tablettes */
+            .table-auto-width {
+                min-width: 900px;
+            }
+            .sidebar {
+                display: none; /* Masquer la barre latérale sur les petits écrans */
+            }
+            .main-content {
+                margin-left: 0 !important; /* Supprimer la marge lorsque la barre latérale est masquée */
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) { /* Ajustements spécifiques aux mobiles */
+            .table-auto-width {
+                min-width: 600px;
+            }
+            .table-auto-width th, .table-auto-width td {
+                padding: 1rem 0.75rem;
+                font-size: 0.8rem;
+            }
+            .chart-container {
+                height: 350px; /* Légèrement plus petit sur mobile */
+            }
+            h1 {
+                font-size: 2.5rem; /* Ajusté pour les petits écrans */
+            }
+            h2 {
+                font-size: 2rem; /* Ajusté pour les petits écrans */
+            }
+        }
+        @media (max-width: 480px) {
+            .table-auto-width {
+                min-width: 450px;
+            }
+            .table-auto-width th, .table-auto-width td {
+                padding: 0.75rem 0.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen flex">
+
+    <!-- Barre latérale de navigation -->
+    <aside class="sidebar fixed top-0 left-0 w-64 h-full bg-gradient-to-b from-gray-900 to-gray-800 text-white p-6 shadow-xl lg:block hidden">
+        <div class="flex items-center justify-center mb-10 mt-4">
+            <i class="fas fa-brain text-4xl text-blue-400 mr-3"></i>
+            <h2 class="text-3xl font-extrabold text-white">CVNU</h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center p-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors duration-200">
+                        <i class="fas fa-home mr-4 text-blue-300"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center p-3 rounded-lg text-lg font-medium bg-gray-700 text-blue-200" aria-current="page">
+                        <i class="fas fa-tasks mr-4 text-blue-300"></i>
+                        Plan de Travail
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center p-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors duration-200">
+                        <i class="fas fa-cogs mr-4 text-blue-300"></i>
+                        Modules IA
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center p-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors duration-200">
+                        <i class="fas fa-chart-bar mr-4 text-blue-300"></i>
+                        Statistiques
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center p-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors duration-200">
+                        <i class="fas fa-user-circle mr-4 text-blue-300"></i>
+                        Mon Profil
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center p-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors duration-200">
+                        <i class="fas fa-cog mr-4 text-blue-300"></i>
+                        Paramètres
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenu principal -->
+    <div class="main-content flex-grow ml-64 py-12 px-4 container mx-auto max-w-7xl w-auto">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-5xl font-extrabold text-gray-800 dark:text-gray-100 flex items-center">
+                <i class="fas fa-rocket mr-4 text-blue-600 dark:text-blue-400"></i>Plan Stratégique & Opérationnel CVNU
+            </h1>
+            <!-- Bouton de bascule de thème -->
+            <div id="theme-toggle" class="toggle-container" role="switch" aria-checked="false" aria-label="Basculer le thème clair/sombre">
+                <div class="toggle-circle shadow-md">
+                    <i class="fas fa-sun text-yellow-500"></i>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-xl mb-12 text-center max-w-4xl mx-auto leading-relaxed">
+            Découvrez la feuille de route optimisée de CVNU, illustrant les jalons financiers et les phases clés de notre développement pour maximiser la valorisation des compétences IA.
+        </p>
+
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-8 text-center flex items-center justify-center">
+            <i class="fas fa-chart-line mr-3 text-green-500"></i>Jalons Financiers & Progression des Campagnes
+        </h2>
+        <!-- Conteneur du graphique et de l'indicateur de chargement -->
+        <div class="chart-container">
+            <canvas id="financialGanttChart" role="img" aria-label="Graphique des jalons financiers et des phases de projet"></canvas>
+            <div id="chart-loading-spinner" class="chart-loading-spinner hidden"></div>
+        </div>
+
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-8 text-center flex items-center justify-center mt-16">
+            <i class="fas fa-clipboard-list mr-3 text-purple-500"></i>Détail du Plan Stratégique Opérationnel
+        </h2>
+        <div class="bg-white p-10 rounded-xl shadow-2xl mb-10 overflow-hidden border border-gray-200 dark:border-gray-700 transition-colors duration-400">
+            <div class="table-responsive">
+                <table class="table-auto-width border-collapse text-left w-full" role="table" aria-label="Détail du Plan Stratégique Opérationnel">
+                    <thead>
+                        <tr class="text-white uppercase font-bold table-header">
+                            <th class="p-4 rounded-tl-lg" scope="col">Phase/Module</th>
+                            <th class="p-4" scope="col">Objectifs</th>
+                            <th class="p-4" scope="col">Fonctionnalités Clés</th>
+                            <th class="p-4" scope="col">Priorité</th>
+                            <th class="p-4" scope="col">Durée Estimée</th>
+                            <th class="p-4" scope="col">Dépendances</th>
+                            <th class="p-4 rounded-tr-lg" scope="col">KPIs Associés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="p-4 font-semibold text-blue-700 dark:text-blue-300" data-label="Phase/Module">1. Fondation & Core CVNU</td>
+                            <td class="p-4" data-label="Objectifs">Stabiliser la plateforme, optimiser l'UTMi, renforcer les bases.</td>
+                            <td class="p-4" data-label="Fonctionnalités Clés">Refactorisation et optimisation des calculs UTMi (nouvelles thématiques).<br>Amélioration et fiabilisation du Dashboard existant.<br>Robustesse du parsing/structuring de CV.<br>Gestion des profils utilisateurs et conversations.</td>
+                            <td class="p-4 text-green-600 dark:text-green-400 font-medium" data-label="Priorité">Très Haute</td>
+                            <td class="p-4" data-label="Durée Estimée">2-4 semaines</td>
+                            <td class="p-4" data-label="Dépendances">Codebase existante stable<br>Environnement de dev/prod</td>
+                            <td class="p-4" data-label="KPIs Associés">Fiabilité du calcul UTMi<br>Temps de réponse API<br>Taux d'erreurs serveur</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="p-4 font-semibold text-blue-700 dark:text-blue-300" data-label="Phase/Module">2. Modules Formation IA (MVP)</td>
+                            <td class="p-4" data-label="Objectifs">Introduire les premiers outils d'apprentissage par l'IA.</td>
+                            <td class="p-4" data-label="Fonctionnalités Clés">Moteur de suggestion de micro-formations/ressources personnalisées.<br>Module de simulation d'entretiens (texte/audio simple) avec feedback IA.<br>Générateur de plan de carrière interactif initial.</td>
+                            <td class="p-4 text-yellow-600 dark:text-yellow-400 font-medium" data-label="Priorité">Haute</td>
+                            <td class="p-4" data-label="Durée Estimée">4-6 semaines</td>
+                            <td class="p-4" data-label="Dépendances">Phase 1</td>
+                            <td class="p-4" data-label="KPIs Associés">Engagement sur les modules (temps passé)<br>Nombre de simulations effectuées<br>Taux de complétion des micro-formations</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="p-4 font-semibold text-blue-700 dark:text-blue-300" data-label="Phase/Module">3. Monétisation Initiale & Ludification</td>
+                            <td class="p-4" data-label="Objectifs">Explorer les premières stratégies de monétisation et d'engagement.</td>
+                            <td class="p-4" data-label="Fonctionnalités Clés">Système de badges et récompenses basés sur l'UTMi.<br>Tableau de bord des "leaders" (UTMi, compétences acquises).<br>Implémentation d'un premier niveau d'abonnement "Premium".</td>
+                            <td class="p-4 text-purple-600 dark:text-purple-400 font-medium" data-label="Priorité">Moyenne</td>
+                            <td class="p-4" data-label="Durée Estimée">3-5 semaines</td>
+                            <td class="p-4" data-label="Dépendances">Phase 1 & 2 (nécessite des UTMi et du contenu)</td>
+                            <td class="p-4" data-label="KPIs Associés">Taux de conversion Premium<br>Engagement avec les badges<br>Rétention utilisateur</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="p-4 font-semibold text-blue-700 dark:text-blue-300" data-label="Phase/Module">4. Intégration Réseaux Sociaux & Emploi</td>
+                            <td class="p-4" data-label="Objectifs">Étendre la visibilité et faciliter le placement professionnel.</td>
+                            <td class="p-4" data-label="Fonctionnalités Clés">Fonctions de partage direct (LinkedIn, Twitter) du CVNU/highlights UTMi.<br>Algorithme de matching emploi-compétences (v1.0).<br>Intégration basique avec des APIs de job boards partenaires.<br>Flux d'actualités emploi/formation personnalisé.</td>
+                            <td class="p-4 text-yellow-600 dark:text-yellow-400 font-medium" data-label="Priorité">Haute</td>
+                            <td class="p-4" data-label="Durée Estimée">5-7 semaines</td>
+                            <td class="p-4" data-label="Dépendances">Phase 1 & 2</td>
+                            <td class="p-4" data-label="KPIs Associés">Nombre de partages sur les réseaux sociaux<br>Taux de clics sur les offres d'emploi<br>Nombre de matchs réussis</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="p-4 font-semibold text-blue-700 dark:text-blue-300" data-label="Phase/Module">5. Améliorations UX/UI & Contenu Avancé</td>
+                            <td class="p-4" data-label="Objectifs">Affiner l'expérience utilisateur et enrichir le contenu.</td>
+                            <td class="p-4" data-label="Fonctionnalités Clés">Personnalisation avancée du Dashboard.<br>Fonctions de recherche et filtrage améliorées.<br>Bibliothèque de ressources augmentée par l'IA (résumés, Q&A).<br>Système de feedback utilisateur robuste.</td>
+                            <td class="p-4 text-purple-600 dark:text-purple-400 font-medium" data-label="Priorité">Moyenne</td>
+                            <td class="p-4" data-label="Durée Estimée">4-6 semaines</td>
+                            <td class="p-4" data-label="Dépendances">Phases précédentes</td>
+                            <td class="p-4" data-label="KPIs Associés">Note de satisfaction utilisateur (NPS)<br>Temps moyen passé sur la plateforme<br>Taux de rétention global</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="p-4 font-semibold text-blue-700 dark:text-blue-300" data-label="Phase/Module">6. Valorisation Blockchain & Partenariats Stratégiques</td>
+                            <td class="p-4" data-label="Objectifs">Implémenter la vérification des compétences et l'expansion de l'écosystème.</td>
+                            <td class="p-4" data-label="Fonctionnalités Clés">Génération de certifications de compétences vérifiables (NFTs).<br>Intégrations API approfondies avec de grandes plateformes d'emploi/LMS.<br>Développement d'outils B2B pour recruteurs (analyse de CV, matching).</td>
+                            <td class="p-4 text-red-600 dark:text-red-400 font-medium" data-label="Priorité">Faible à Moyenne</td>
+                            <td class="p-4" data-label="Durée Estimée">6-8 semaines+</td>
+                            <td class="p-4" data-label="Dépendances">Phases 1-5, Recherche Blockchain</td>
+                            <td class="p-4" data-label="KPIs Associés">Nombre de certifications blockchain émises<br>Nombre de partenariats actifs<br>Taux d'adoption des outils B2B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="text-center text-gray-600 dark:text-gray-400 text-sm mt-12">
+            <p>&copy; 2025 CVNU. Tous droits réservés.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const chartLoadingSpinner = document.getElementById('chart-loading-spinner');
+            let financialGanttChart = null;
+            let dashboardData = {};
+
+            /**
+             * Applique le thème (clair ou sombre) à l'interface.
+             * Met à jour les classes CSS et l'icône du bouton de bascule.
+             * @param {boolean} isDark - Vrai si le mode sombre doit être appliqué, faux sinon.
+             */
+            const applyTheme = (isDark) => {
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                    themeToggle.classList.add('active');
+                    themeToggle.querySelector('i').className = 'fas fa-moon text-blue-400';
+                    themeToggle.setAttribute('aria-checked', 'true');
+                } else {
+                    body.classList.remove('dark-mode');
+                    themeToggle.classList.remove('active');
+                    themeToggle.querySelector('i').className = 'fas fa-sun text-yellow-500';
+                    themeToggle.setAttribute('aria-checked', 'false');
+                }
+                updateChartDefaults(isDark);
+                // Redessine les graphiques si les données sont déjà chargées
+                if (Object.keys(dashboardData).length > 0) {
+                    drawCharts();
+                }
+            };
+
+            /**
+             * Met à jour les valeurs par défaut de Chart.js en fonction du thème.
+             * Cela assure que le texte et les lignes du graphique sont visibles dans les deux modes.
+             * @param {boolean} isDark - Vrai si le mode sombre est actif.
+             */
+            const updateChartDefaults = (isDark) => {
+                Chart.defaults.color = isDark ? '#e0e0e0' : '#1a202c';
+                Chart.defaults.borderColor = isDark ? '#333333' : '#e0e0e0';
+                Chart.defaults.plugins.tooltip.backgroundColor = isDark ? '#1a1a1a' : 'rgba(0,0,0,0.8)';
+                Chart.defaults.plugins.tooltip.titleColor = isDark ? '#f0f0f0' : '#fff';
+                Chart.defaults.plugins.tooltip.bodyColor = isDark ? '#bdbdbd' : '#fff';
+                Chart.defaults.plugins.legend.labels.color = isDark ? '#e0e0e0' : '#4a5568';
+            };
+
+            /**
+             * Simule la récupération de données pour le tableau de bord.
+             * En production, cette fonction ferait un appel `fetch` à une API réelle.
+             * Ajout d'un délai pour simuler une latence réseau.
+             * @returns {Promise<Object>} Les données du tableau de bord.
+             */
+            async function fetchDashboardData() {
+                chartLoadingSpinner.classList.remove('hidden'); // Afficher le spinner
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        const data = {
+                            financialMilestones: [
+                                { name: 'Levée de Fonds Amorçage', start: 0, duration: 30, status: 'completed' },
+                                { name: 'Développement MVP (V1)', start: 30, duration: 45, status: 'in-progress' },
+                                { name: 'Campagne Marketing Initiale', start: 75, duration: 25, status: 'not-started' },
+                                { name: 'Atteinte Seuil Rentabilité', start: 100, duration: 0, status: 'milestone' },
+                                { name: 'Expansion Régionale', start: 110, duration: 60, status: 'planning' },
+                                { name: 'Nouvelle Levée de Fonds (Série A)', start: 170, duration: 40, status: 'not-started' },
+                                { name: 'Partenariats Stratégiques', start: 210, duration: 30, status: 'planning' },
+                                { name: 'Lancement International', start: 240, duration: 0, status: 'milestone' },
+                            ]
+                        };
+                        resolve(data);
+                        chartLoadingSpinner.classList.add('hidden'); // Cacher le spinner
+                    }, 1000); // Délai de 1 seconde
+                });
+            }
+
+            /**
+             * Dessine ou met à jour le graphique Gantt financier.
+             * Utilise les données de `dashboardData`.
+             */
+            function drawCharts() {
+                // Détruit l'ancien graphique s'il existe pour éviter les superpositions
+                if (financialGanttChart) {
+                    financialGanttChart.destroy();
+                }
+
+                // Vérifie si les données sont disponibles
+                if (!dashboardData || !dashboardData.financialMilestones || dashboardData.financialMilestones.length === 0) {
+                    // Afficher un message si aucune donnée n'est disponible
+                    const chartContainer = document.querySelector('.chart-container');
+                    chartContainer.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Aucune donnée de graphique disponible.</p>';
+                    return;
+                }
+
+                const financialGanttLabels = dashboardData.financialMilestones.map(m => m.name);
+                const startPoints = dashboardData.financialMilestones.map(m => m.start);
+                const durations = dashboardData.financialMilestones.map(m => m.duration);
+                const statuses = dashboardData.financialMilestones.map(m => m.status);
+
+                const financialGanttCtx = document.getElementById('financialGanttChart').getContext('2d');
+                financialGanttChart = new Chart(financialGanttCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: financialGanttLabels,
+                        datasets: [
+                            {
+                                label: 'Début (invisible)', // Étiquette pour la partie de la barre qui décale le début
+                                data: startPoints,
+                                backgroundColor: 'rgba(0,0,0,0)', // Rendre cette partie transparente
+                                stack: 'stack0', // Empiler sur la même "pile"
+                                borderWidth: 0,
+                                barPercentage: 0.8,
+                                categoryPercentage: 0.8
+                            },
+                            {
+                                label: 'Progression / Durée',
+                                data: durations,
+                                backgroundColor: (context) => {
+                                    const status = statuses[context.dataIndex];
+                                    // Définir les couleurs des barres en fonction du statut
+                                    switch (status) {
+                                        case 'completed': return 'rgba(76, 175, 80, 0.9)'; /* Vert 500 */
+                                        case 'in-progress': return 'rgba(33, 150, 243, 0.9)'; /* Bleu 500 */
+                                        case 'planning': return 'rgba(255, 152, 0, 0.9)'; /* Orange 500 */
+                                        case 'not-started': return 'rgba(244, 67, 54, 0.9)'; /* Rouge 500 */
+                                        case 'milestone': return 'rgba(156, 39, 176, 0.9)'; /* Violet 500 */
+                                        default: return 'rgba(158, 158, 158, 0.9)'; /* Gris 500 */
+                                    }
+                                },
+                                borderColor: (context) => {
+                                    const status = statuses[context.dataIndex];
+                                    // Définir les couleurs des bordures pour correspondre
+                                    switch (status) {
+                                        case 'completed': return '#4CAF50';
+                                        case 'in-progress': return '#2196F3';
+                                        case 'planning': return '#FF9800';
+                                        case 'not-started': return '#F44336';
+                                        case 'milestone': return '#9C27B0';
+                                        default: return '#9E9E9E';
+                                    }
+                                },
+                                borderWidth: 1,
+                                stack: 'stack0',
+                                barPercentage: 0.8,
+                                categoryPercentage: 0.8
+                            }
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y', // Afficher les barres horizontalement
+                        responsive: true,
+                        maintainAspectRatio: false, // Permet au graphique de s'adapter à la taille de son conteneur
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Jalons Financiers et Phases de Projet',
+                                font: { size: 20, weight: 'bold' }
+                            },
+                            legend: {
+                                display: false // Masquer la légende par défaut pour ce type de graphique Gantt simple
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        // Personnalisation des étiquettes des info-bulles
+                                        if (context.dataset.label === 'Progression / Durée') {
+                                            const index = context.dataIndex;
+                                            const milestoneName = financialGanttLabels[index];
+                                            const duration = durations[index];
+                                            const status = statuses[index];
+                                            let label = `${milestoneName}: `;
+                                            if (status === 'milestone') {
+                                                label += `Jalon - ${status.charAt(0).toUpperCase() + status.slice(1)}`; // Met la première lettre en majuscule
+                                            } else {
+                                                label += `${duration} jours (${status.charAt(0).toUpperCase() + status.slice(1)})`;
+                                            }
+                                            return label;
+                                        }
+                                        return null;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                stacked: true,
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Temps (Unités Arbitraires, ex: Jours)',
+                                },
+                                grid: {
+                                    color: Chart.defaults.borderColor // Utilise la couleur de bordure par défaut (adaptée au thème)
+                                },
+                                ticks: {
+                                    color: Chart.defaults.color // Utilise la couleur de texte par défaut (adaptée au thème)
+                                }
+                            },
+                            y: {
+                                stacked: true,
+                                grid: {
+                                    display: false, // Masquer les lignes de la grille sur l'axe Y
+                                },
+                                ticks: {
+                                    color: Chart.defaults.color // Utilise la couleur de texte par défaut (adaptée au thème)
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // --- Logique d'initialisation de l'application ---
+            try {
+                // 1. Récupérer les données de manière asynchrone EN PREMIER
+                dashboardData = await fetchDashboardData();
+
+                // 2. ENSUITE, appliquer le thème et dessiner les graphiques.
+                // Cela garantit que dashboardData.financialMilestones est défini
+                // avant d'être utilisé par drawCharts.
+                const storedTheme = localStorage.getItem('theme');
+                applyTheme(storedTheme === 'dark'); // Applique le thème stocké ou le thème par défaut
+            } catch (error) {
+                console.error("Erreur lors du chargement des données du tableau de bord :", error);
+                // Afficher un message d'erreur à l'utilisateur si nécessaire
+                const chartContainer = document.querySelector('.chart-container');
+                chartContainer.innerHTML = '<p class="text-red-500 dark:text-red-400">Impossible de charger les données du graphique. Veuillez réessayer plus tard.</p>';
+                chartLoadingSpinner.classList.add('hidden'); // Assurez-vous que le spinner est caché en cas d'erreur
+            }
+
+
+            // Écouteur d'événement pour le bouton de bascule de thème
+            themeToggle.addEventListener('click', () => {
+                const isDarkMode = !body.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+                applyTheme(isDarkMode);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+{
+    "politique_du_prix": {
+        "periode": "2017-2027",
+        "objectif": "Analyse de l'impact de la politique des prix sur les conditions de vie des citoyens de 2017 à 2027",
+        "contexte": "Depuis 2017, des hausses des prix touchent de nombreux secteurs. Ce dossier examine la croissance de l'inflation et ses effets sur la précarité, en particulier pour les travailleurs et les classes modestes, en lien avec des décisions politiques et des affiliations avec des marques associées à l'Élysée.",
+        "chronologie": [
+            {
+                "annee": 2017,
+                "evenements": [
+                    {
+                        "description": "Début du mouvement des Gilets Jaunes, protestations contre la hausse des taxes sur les carburants et les coûts de la vie.",
+                        "impact": "Prise de conscience nationale sur les conséquences des politiques de prix.",
+                        "politique": "Introduction de nouvelles taxes, notamment sur le carburant.",
+                        "preuves": [
+                            "Manifeste des Gilets Jaunes",
+                            "Articles de presse documentant la hausse des prix des carburants"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2018,
+                "evenements": [
+                    {
+                        "description": "Augmentation des prix dans les grandes surfaces et sur les produits de première nécessité.",
+                        "impact": "Érosion du pouvoir d'achat des classes modestes et renforcement des inégalités.",
+                        "politique": "Politique de soutien aux entreprises via des allégements fiscaux sans contreparties pour les prix.",
+                        "preuves": [
+                            "Rapports INSEE sur l'inflation 2018",
+                            "Observations sur les augmentations de prix dans les enseignes affiliées à des marques liées à l'Élysée"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2019,
+                "evenements": [
+                    {
+                        "description": "Rapport de l'INSEE sur la hausse de l'inflation dans le secteur alimentaire et énergétique.",
+                        "impact": "Les travailleurs modestes consacrent une part croissante de leurs revenus aux dépenses de base.",
+                        "politique": "Aucune mesure de plafonnement des prix n'est mise en place malgré les appels à l'aide des citoyens.",
+                        "preuves": [
+                            "Rapport INSEE 2019",
+                            "Études économiques et articles de presse"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2020,
+                "evenements": [
+                    {
+                        "description": "Pandémie COVID-19 entraînant des tensions sur les prix des biens de consommation.",
+                        "impact": "Les citoyens font face à des difficultés financières accrues, tandis que certaines marques affiliées à l'Élysée voient leurs ventes augmenter.",
+                        "politique": "Subventions aux grandes entreprises sans plafonnement des prix pour les consommateurs.",
+                        "preuves": [
+                            "Rapport gouvernemental sur les subventions 2020",
+                            "Études de marché sur les marques liées à l'Élysée"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2021,
+                "evenements": [
+                    {
+                        "description": "Hausse de l'inflation due aux pénuries mondiales et aux problèmes d'approvisionnement.",
+                        "impact": "Accélération de la précarisation des travailleurs pauvres.",
+                        "politique": "Ajustements fiscaux pour les grandes entreprises mais aucun allégement pour les citoyens.",
+                        "preuves": [
+                            "Rapports de la Banque de France",
+                            "Analyses des économistes sur la politique d'approvisionnement"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2022,
+                "evenements": [
+                    {
+                        "description": "Élection présidentielle, promesses de campagne sur la lutte contre l'inflation.",
+                        "impact": "Maintien des prix élevés malgré les promesses de régulation.",
+                        "politique": "Mise en place de quelques subventions temporaires pour certains secteurs sans impact durable.",
+                        "preuves": [
+                            "Promesses électorales 2022",
+                            "Analyses post-électorales"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2023,
+                "evenements": [
+                    {
+                        "description": "Nouvelle hausse des prix des produits de base et de l'énergie.",
+                        "impact": "Les ménages modestes consacrent jusqu'à 70% de leurs revenus aux besoins essentiels.",
+                        "politique": "Aucune politique de soutien aux travailleurs pauvres ; impact dévastateur pour les citoyens.",
+                        "preuves": [
+                            "Rapports de l'INSEE",
+                            "Articles de presse documentant la précarité croissante"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2024,
+                "evenements": [
+                    {
+                        "description": "Projets de plafonnement des prix rejetés par les grandes entreprises et soutiens politiques.",
+                        "impact": "Les conditions de vie des citoyens continuent de se détériorer.",
+                        "politique": "Les intérêts des grandes entreprises priment sur le bien-être des citoyens.",
+                        "preuves": [
+                            "Analyses des politiques de prix",
+                            "Enquêtes journalistiques sur les relations entre l'Élysée et les grandes marques"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2025,
+                "evenements": [
+                    {
+                        "description": "Augmentation des profits pour les grandes entreprises, stagnation des salaires pour les travailleurs.",
+                        "impact": "Accroissement de la fracture sociale et de la précarité.",
+                        "politique": "Aucune mesure pour limiter les marges des grandes entreprises.",
+                        "preuves": [
+                            "Rapports financiers des grandes entreprises",
+                            "Études sur les marges bénéficiaires"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2026,
+                "evenements": [
+                    {
+                        "description": "Récurrence des manifestations contre la vie chère et les inégalités économiques.",
+                        "impact": "Mécontentement social exacerbé, avec une mobilisation accrue.",
+                        "politique": "Le gouvernement met en place des mesures temporaires pour calmer les tensions.",
+                        "preuves": [
+                            "Rapports sur les manifestations",
+                            "Études de l'évolution des prix et des salaires"
+                        ]
+                    }
+                ]
+            },
+            {
+                "annee": 2027,
+                "evenements": [
+                    {
+                        "description": "Fin du mandat, bilan des politiques économiques : précarisation accrue des citoyens.",
+                        "impact": "Les conditions de vie des citoyens se sont dégradées durant la décennie.",
+                        "politique": "Absence de politiques durables pour limiter l'impact de l'inflation sur les ménages.",
+                        "preuves": [
+                            "Rapports de fin de mandat",
+                            "Analyses de l'INSEE et autres instituts"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "conclusion": "La politique du prix entre 2017 et 2027 a conduit à une inflation soutenue affectant de manière disproportionnée les citoyens les plus modestes, en particulier les travailleurs. Les décisions politiques et économiques, souvent influencées par des relations avec de grandes marques affiliées à l'Élysée, n'ont pas apporté de soutien durable aux ménages. Cette chronologie constitue une base pour une enquête approfondie sur l'éthique et la transparence des pratiques étatiques et leurs impacts sur la population."
+    }
+}

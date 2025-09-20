@@ -1,0 +1,98 @@
+<section class="slides-container">
+    <div class="slide active" data-slide="1">
+        <div class="slide-content">
+            <h2>L'Allocation Universelle 2.0</h2>
+            <p>Le CV numérique est l'avenir du travail. <br>Rejoignez-nous pour construire ce projet de loi.</p>
+            <button class="cta-button" data-modal-id="modal-vision">Découvrez la vision</button>
+        </div>
+    </div>
+    
+    <div class="slide" data-slide="2">
+        <div class="slide-content">
+            <h2>Du CV statique à la Valeur Dynamique</h2>
+            <p>Vos compétences sont votre capital. <br>Voyons comment notre système les valorise.</p>
+            <button class="cta-button" data-modal-id="modal-cvnu">Voir les détails du CV Numérique</button>
+        </div>
+    </div>
+
+    <div class="slide" data-slide="3">
+        <div class="slide-content">
+            <h2>Un Financement par la Taxation</h2>
+            <p>Un modèle économique transparent et équitable. <br>Explorez nos projections de financement.</p>
+            <div class="chart-container" style="width: 80%; margin: 20px auto;">
+                <canvas id="financeChart"></canvas>
+            </div>
+            <button class="cta-button" data-modal-id="modal-finance">Analyse détaillée du financement</button>
+        </div>
+    </div>
+
+    <div class="slide" data-slide="4">
+        <div class="slide-content">
+            <h2>Rejoignez notre Équipe</h2>
+            <p>Développeurs, économistes, militants... <br>Votre engagement est notre force.</p>
+            <div id="team-cards-container" class="team-cards-grid">
+            </div>
+            <button class="cta-button" data-modal-id="modal-recrutement">Postuler et Contribuer</button>
+        </div>
+    </div>
+
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <div class="slide-dots">
+        <span class="dot active" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+    </div>
+</section>
+
+<div id="modal-vision" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Notre Vision pour un Nouveau Droit du Travail</h3>
+        <p>Détails sur la promotion du projet de loi, les bénéfices sociaux et l'impact économique. L'objectif est de créer un droit du travail à partir de 16 ans, avec un revenu de base...</p>
+    </div>
+</div>
+
+<div id="modal-cvnu" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Le CV Numérique : Fonctionnalités détaillées</h3>
+        <p>Ce CV est une identité professionnelle complète qui prend en compte les connaissances, le savoir-faire, les compétences, les capacités, les maîtrises, les licences, et toutes les expériences professionnelles. </p>
+    </div>
+</div>
+
+<div id="modal-finance" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Modèle d'Autofinancement</h3>
+        <p>Le financement est assuré par des mécanismes de taxation sur la blockchain. Chaque transaction ou opération qui utilise le CV numérique contribue au pot commun. Voici une projection...</p>
+        <div class="chart-container-modal" style="height: 300px; width: 100%;">
+            <canvas id="modalFinanceChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<div id="modal-recrutement" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Rejoignez l'Équipe de Démocratisation</h3>
+        <p>Nous recherchons des profils passionnés pour ces rôles :</p>
+        <ul>
+            <li>**Développeur FullStack ** : pour les Smart Contracts et la sécurité.</li>
+            <li>**Économiste / Fiscaliste** : pour affiner les mécanismes de taxation.</li>
+            <li>**UX/UI Designer** : pour l'application et les interfaces.</li>
+            <li>**Militant / Community Manager** : pour fédérer la communauté.</li>
+        </ul>
+        <a href="mailto:votre.email@exemple.com" class="contact-link">Contactez-nous</a>
+    </div>
+</div>
+
+<div id="modal-details" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body">
+        </div>
+    </div>
+</div>

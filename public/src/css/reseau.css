@@ -1,0 +1,306 @@
+/* Fichier : public/src/css/reseau.css */
+
+/* --- Réinitialisation et conteneur principal de la page --- */
+html, body, .reseau-page-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reseau-page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+}
+
+.reseau-page-container h2 {
+    font-size: clamp(2em, 4vw, 2.5em);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.reseau-page-container p {
+    font-size: clamp(1em, 2vw, 1.2em);
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Disposition principale avec Grid --- */
+.main-network-grid {
+    display: grid;
+    grid-template-areas: "left-aside central-area right-aside";
+    /* L'aside de gauche est fixe (250px), le chat prend le reste, l'aside de droite est fixe (60px) */
+    grid-template-columns: 250px 1fr 60px;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* --- Styles des asides --- */
+.aside {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+/* L'aside de gauche est fixe (250px) et contient les listes d'utilisateurs et de bots */
+.left-aside {
+    grid-area: left-aside;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Important for the grid layout */
+}
+
+/* L'aside de droite est étroite (60px) et ne contient que les icônes */
+.right-aside {
+    grid-area: right-aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+/* Le contenu des asides latérales est affiché par défaut */
+.aside h3, .aside div {
+    opacity: 1;
+    transition: none;
+}
+
+/* --- Styles du conteneur central (chat et outils) --- */
+.central-area {
+    grid-area: central-area;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+.top-aside.tool-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+}
+
+.tool-icon {
+    font-size: clamp(1.5em, 3vw, 2em);
+    cursor: grab;
+    transition: transform 0.2s ease-in-out;
+    user-select: none;
+    padding: 10px;
+}
+
+/* --- Styles du chatroom --- */
+.chatroom-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-form input {
+    flex: 1;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.chat-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* --- Styles pour le canevas de visualisation dans l'aside --- */
+.reseau-canvas {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.canvas-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.zoom-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 5px;
+}
+
+.zoom-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* --- Styles de la Modale --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15vh auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#profil-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* --- Styles des Listes d'Utilisateurs et de Bots dans un format icône --- */
+#users-list, #chatbot-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer l'icône */
+    height: 40px; /* Taille du cercle */
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.user-list-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.user-list-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    /* Masquer le texte pour n'afficher que l'icône */
+    text-indent: -9999px; 
+    overflow: hidden;
+    position: relative;
+}
+
+/* Afficher le nom au survol */
+.user-list-item:hover .user-list-name {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) translateX(10px);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.user-list-info {
+    display: none; /* Masquer l'info par défaut */
+}
+
+/* Masquer les noms dans la liste, car on les affichera au survol */
+.user-list-name, .user-list-role {
+    display: none;
+}

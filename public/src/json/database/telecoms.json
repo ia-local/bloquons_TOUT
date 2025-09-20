@@ -1,0 +1,8 @@
+{
+"telecoms": [
+    { "name": "Orange", "type": "Opérateur 5G", "lat": 48.8566, "lon": 2.3522, "level": "national" },
+    { "name": "SFR", "type": "Opérateur 5G", "lat": 48.87, "lon": 2.33, "level": "national" },
+    { "name": "Free", "type": "Opérateur 5G", "lat": 48.86, "lon": 2.34, "level": "national" },
+    { "name": "Bouygues Telecom", "type": "Opérateur 5G", "lat": 48.85, "lon": 2.36, "level": "national" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+      "strategic_locations": [
+    { "name": "Hôpital Lariboisière", "city": "Paris", "type": "Hôpital", "lat": 48.882, "lon": 2.355, "level": "communal" },
+    { "name": "Université de la Sorbonne", "city": "Paris", "type": "Université", "lat": 48.846, "lon": 2.345, "level": "communal" },
+    { "name": "CHU de Rennes", "city": "Rennes", "type": "Hôpital", "lat": 48.114, "lon": -1.691, "level": "communal" },
+    { "name": "Université de Rennes 1", "city": "Rennes", "type": "Université", "lat": 48.116, "lon": -1.680, "level": "communal" },
+    { "name": "Hôpital Michallon", "city": "Grenoble", "type": "Hôpital", "lat": 45.189, "lon": 5.722, "level": "communal" },
+    { "name": "Université Grenoble Alpes", "city": "Grenoble", "type": "Université", "lat": 45.204, "lon": 5.768, "level": "communal" }
+  ]
+}

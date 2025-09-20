@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet de Loi : Réforme du Code du Travail</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Projet de Loi 📜</h1>
+        <h2>Réforme du Code du Travail</h2>
+        <nav>
+            <a href="/home" class="nav-link">Accueil</a>
+            <a href="/index" class="nav-link active">Générateur</a>
+            <a href="/developpement" class="nav-link">Développement</a>
+            <a href="/save" class="nav-link">Sauvegardes</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <aside class="sidebar">
+            <h3>Concepts Clés</h3>
+            <ul class="nav-menu">
+                <li class="nav-item" data-option="cvnu"><i class="fas fa-id-card-alt"></i> CV Numérique</li>
+                <li class="nav-item" data-option="smart-contracts"><i class="fas fa-file-contract"></i> Smart Contracts</li>
+                <li class="nav-item" data-option="circular-economy"><i class="fas fa-recycle"></i> Économie Circulaire</li>
+            </ul>
+            <hr>
+            <h3>Autres présentations</h3>
+            <ul class="nav-menu">
+                <li class="nav-item" data-option="detailed_presentation"><i class="fas fa-file-alt"></i> Présentation Détaillée</li>
+                <li class="nav-item" data-option="detailed_development_plan"><i class="fas fa-tasks"></i> Plan de Développement</li>
+                <li class="nav-item" data-option="public_general"><i class="fas fa-users"></i> Grand Public</li>
+                <li class="nav-item" data-option="politicians"><i class="fas fa-gavel"></i> Politiciens</li>
+                <li class="nav-item" data-option="swot"><i class="fas fa-chart-line"></i> Analyse SWOT</li>
+                <li class="nav-item" data-option="ai-impact"><i class="fas fa-robot"></i> Impact de l'IA</li>
+                <li class="nav-item" data-option="pros-cons"><i class="fas fa-balance-scale"></i> Pour & Contre</li>
+                <li class="nav-item" data-option="reference_text"><i class="fas fa-book"></i> Corpus de la Réforme</li>
+                <li class="nav-item" data-option="articles_text"><i class="fas fa-list-ol"></i> Articles de Référence</li>
+            </ul>
+        </aside>
+
+        <section class="content-container">
+            <section id="content">
+                <div class="loader-container">
+                    <div class="loader"></div>
+                    <p>Cliquez sur un élément du menu pour générer la présentation...</p>
+                </div>
+            </section>
+            
+            <div class="save-controls">
+                <button id="save-button" style="display: none;">Enregistrer la présentation</button>
+                <div id="status-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Réforme du Code du Travail</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

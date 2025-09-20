@@ -1,0 +1,161 @@
+/* Fichier : public/src/css/map.css */
+
+/* ==========================================================================
+   CSS pour la légende de la carte (map-legend)
+   ========================================================================== */
+
+.map-legend-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    font-family: Arial, sans-serif;
+}
+
+.map-legend h4 {
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: 1.1em;
+}
+
+#legend-list-categories,
+#legend-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-category,
+.legend-item,
+.legend-back-btn {
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.legend-category:hover,
+.legend-item:hover,
+.legend-back-btn:hover {
+    background-color: #e6f7ff;
+    color: #007bff;
+    border-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.legend-category.active,
+.legend-item.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.legend-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;
+    transition: filter 0.3s ease;
+}
+
+.legend-back-btn {
+    color: #007bff;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.legend-back-btn:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Base map styles */
+#map {
+    height: 740px;
+    flex-grow: 1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Additional utility classes */
+.page-container {
+    padding: 20px;
+}
+.map-section {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.map-app {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.map-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.map-filter {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+#geographical-level-filter {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+/* Fichier : public/src/css/map.css (ajout) */
+
+/* Style spécifique pour les boutons de sous-catégorie Mairies et Préfectures */
+.legend-item[data-subcategory="Mairies"],
+.legend-item[data-subcategory="Préfectures"] {
+    background-color: #f0f8ff; /* Bleu clair */
+    color: #004085;
+    border-color: #b8daff;
+}
+
+.legend-item[data-subcategory="Mairies"]:hover,
+.legend-item[data-subcategory="Préfectures"]:hover {
+    background-color: #e0f0ff;
+    border-color: #9fcdff;
+}
+
+/* Style pour l'icône dans cet ensemble */
+.legend-item[data-subcategory="Mairies"] .legend-icon,
+.legend-item[data-subcategory="Préfectures"] .legend-icon {
+    filter: sepia(100%) hue-rotate(180deg) saturate(300%);
+    /* Ceci va donner à l'icône une teinte bleue */
+}

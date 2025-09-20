@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jean Dupont",
+      "role": "Militant de la Démocratie",
+      "gender": "male",
+      "profile_picture": "src/img/pancarte.png",
+      "description": "Engagé dans la promotion de la citoyenneté numérique.",
+      "connections": {
+        "youtube": "ID_chaine_youtube_de_jean",
+        "telegram": "@jean_telegram",
+        "ip": "192.168.1.1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sarah Connor",
+      "role": "Spécialiste en Économie Circulaire",
+      "gender": "female",
+      "profile_picture": "src/img/pancarte.png",
+      "description": "Contribue à la modélisation des mécanismes d'autofinancement et à l'analyse de l'impact social."
+    },
+    {
+      "id": 3,
+      "name": "Mickael C.",
+      "role": "Développeur Front-End",
+      "profile_picture": "src/img/pancarte.png",
+      "description": "Développe l'interface utilisateur et assure la fluidité de l'expérience sur la plateforme."
+    }
+  ]
+}

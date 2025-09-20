@@ -1,0 +1,60 @@
+{
+    "titre": "Enquête sur les actions commerciales de Sanofi et son impact en santé publique",
+    "description": "Enquête sur les actions de Sanofi, y compris l'acquisition des Fondations Pasteur, leur rôle dans les Jeux Olympiques, et la délocalisation de leurs activités à l'international.",
+    "objectifs": [
+      "Analyser l'acquisition des Fondations Pasteur par Sanofi",
+      "Étudier le rôle de Sanofi en tant que sponsor des Jeux Olympiques",
+      "Évaluer l'impact de la délocalisation des filiales sur la santé publique française"
+    ],
+    "legalReferences": [
+      {
+        "code": "Code de la santé publique",
+        "articles": ["L5121-1", "L5121-8"],
+        "description": "Réglementation sur la production et la distribution de médicaments en France"
+      },
+      {
+        "code": "Code pénal",
+        "articles": ["432-11", "432-12"],
+        "description": "Conflit d'intérêt et abus de pouvoir des fonctionnaires"
+      }
+    ],
+    "sections": [
+      {
+        "titre": "Acquisition des Fondations Pasteur",
+        "details": [
+          {
+            "sujet": "Analyse des impacts sur la recherche et le développement de vaccins",
+            "description": "Évaluation de l'absence de vaccins produits suite à l'acquisition",
+            "hypothese": "Sanofi n'a pas investi dans le développement de vaccins",
+            "articles_de_loi": ["L5121-1"],
+            "preuves": ["Rapports d'acquisition", "Études de R&D"]
+          }
+        ]
+      },
+      {
+        "titre": "Rôle dans les Jeux Olympiques",
+        "details": [
+          {
+            "sujet": "Étude de l'engagement financier de Sanofi",
+            "description": "Analyse de l'impact des financements de Sanofi dans les JO sur ses investissements en santé",
+            "hypothese": "Les fonds pour les JO ont détourné les investissements en santé publique",
+            "articles_de_loi": ["432-11"],
+            "preuves": ["Documents de sponsoring", "Données financières"]
+          }
+        ]
+      },
+      {
+        "titre": "Délocalisation de la filiale Opella",
+        "details": [
+          {
+            "sujet": "Impact de la délocalisation sur la disponibilité des médicaments en France",
+            "description": "Étude de l'impact de la délocalisation de la production de médicaments vers les États-Unis",
+            "hypothese": "La délocalisation a diminué l'approvisionnement national en Doliprane",
+            "articles_de_loi": ["L5121-8"],
+            "preuves": ["Rapports de délocalisation", "Études de marché"]
+          }
+        ]
+      }
+    ]
+  }
+  

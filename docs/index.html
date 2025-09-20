@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVNU | CV Numérique Universel & Monétisation de Compétences IA</title>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Police Inter pour un look moderne et professionnel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Votre fichier CSS principal (sera compilé depuis cv.scss par le serveur) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN pour les graphiques (si nécessaire pour le dashboard, sinon peut être retiré) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- NOUVELLE NAVBAR INTELLIGENTE FIXÉE AU TOP -->
+    <nav id="mainNavbar" class="smart-navbar-top-fixed">
+        <div class="navbar-brand">
+            <h1 class="app-title-navbar"><i class="fas fa-id-card-alt"></i> CVNU</h1>
+        </div>
+
+        <div class="navbar-main-links">
+            <a href="#home" class="nav-link active" data-page="home">Accueil</a>
+            <a href="#dashboard" class="nav-link" data-page="dashboard">Dashboard UTMi</a>
+            <a href="#user-profile" class="nav-link" data-page="user-profile">Profil Utilisateur</a>
+            <!-- NOUVEAU LIEN: Gestion CV -->
+            <a href="#cv-management" class="nav-link" data-page="cv-management">Gestion CV</a>
+            <a href="#chatroom" class="nav-link" data-page="chatroom">Chatroom IA</a>
+            <a href="#workspace" class="nav-link" data-page="workspace">Workspace</a>
+            <a href="#documentation" class="nav-link" data-page="documentation">Documentation</a>
+            <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+        </div>
+
+        <div class="navbar-controls">
+            <div class="search-form-navbar">
+                <input type="search" id="navbarSearchInput" placeholder="Rechercher..." class="navbar-search-input">
+                <button id="navbarSearchBtn" class="navbar-search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Exemple de composant modal CMS-like -->
+            <button id="openCmsModalBtn" class="btn btn-navbar"><i class="fas fa-cogs"></i> Gérer Contenu</button>
+
+            <div id="themeToggle" class="theme-toggle" title="Basculer le thème clair/sombre">
+                <div class="toggle-circle"><i class="fas fa-sun"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteneur principal - Le padding-top du body sera ajusté en CSS pour éviter le chevauchement -->
+    <div class="main-container-wallet-pai">
+        <!-- NOUVEAU: Conteneur pour la navigation latérale dynamique -->
+        <div id="dynamic-left-nav" class="dynamic-left-nav">
+            <!-- Ce contenu sera généré dynamiquement par JavaScript -->
+            <h3 class="dynamic-nav-title"><i class="fas fa-bars"></i> Menu Thématique</h3>
+            <ul id="dynamic-nav-list" class="dynamic-nav-list">
+                <!-- Les liens dynamiques apparaîtront ici -->
+                <li class="placeholder-text">Sélectionnez une section...</li>
+            </ul>
+        </div>
+
+        <!-- LIGNE 2: CONTENU PRINCIPAL (MAIN - Zone de contenu des pages) -->
+        <main class="content-area-wallet-pai" role="main">
+            <!-- PAGE 1: ACCUEIL -->
+            <section id="home-page" class="content-section active" data-page="home" aria-labelledby="home-heading">
+                <h2 id="home-heading" class="page-main-title"><i class="fas fa-info-circle"></i> Bienvenue sur CVNU</h2>
+                <p class="page-main-intro">Découvrez comment CVNU transforme vos interactions IA en valeur professionnelle tangible.</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-robot"></i> Votre Assistant IA Personnel</h3>
+                    <p class="text-gray-700">Un coach IA dédié pour vous aider à extraire et à structurer vos compétences à travers des conversations ciblées. Cliquez sur "Chatroom IA" dans la navigation principale ou le menu latéral pour commencer !</p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-lightbulb"></i> Interaction IA Ponctuelle</h3>
+                    <p class="text-gray-700">Obtenez une réponse rapide et ciblée de l'IA pour toute question.</p>
+                    <div class="form-group">
+                        <label for="prompt-input" class="label-text">Votre Requête :</label>
+                        <textarea id="prompt-input" rows="5" class="input-field" placeholder="Ex: 'Explique le concept de Web Sémantique', 'Donne-moi des exemples de compétences en Blockchain.'"></textarea>
+                        <div class="button-row">
+                            <button id="generateResponseBtn" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Générer une Réponse</button>
+                            <button id="clearPromptBtn" class="btn btn-secondary"><i class="fas fa-eraser"></i> Effacer</button>
+                        </div>
+                    </div>
+                    <div class="output-group">
+                        <h3 class="card-subtitle"><i class="fas fa-comment-alt"></i> Réponse de l'IA</h3>
+                        <div id="ia-response-output" class="content-output-field custom-scrollbar">
+                            <p class="placeholder-text">La réponse de l'IA apparaîtra ici.</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- PAGE 2: DASHBOARD UTMi -->
+            <section id="dashboard-page" class="content-section" data-page="dashboard" aria-labelledby="dashboard-heading">
+                <h2 id="dashboard-heading" class="page-main-title"><i class="fas fa-chart-line"></i> Dashboard UTMi</h2>
+                <p class="page-main-intro">Visualisez les statistiques de vos interactions IA et la valeur générée en Unités Temporelles Monétisables (UTMi).</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-tachometer-alt"></i> Aperçu Global</h3>
+                    <div class="grid-metrics">
+                        <div class="metric-card-wallet">
+                            <p class="metric-value-wallet" id="totalUtmi">0.00</p>
+                            <p class="metric-label-wallet">Total UTMi Générées</p>
+                        </div>
+                        <div class="metric-card-wallet">
+                            <p class="metric-value-wallet" id="totalEstimatedCostUSD">0.00</p>
+                            <p class="metric-label-wallet">Coût Estimé (USD)</p>
+                        </div>
+                        <div class="metric-card-wallet">
+                            <p class="metric-value-wallet" id="totalEstimatedCostEUR">0.00</p>
+                            <p class="metric-label-wallet">Coût Estimé (EUR)</p>
+                        </div>
+                        <div class="metric-card-wallet">
+                            <p class="metric-value-wallet" id="totalInteractionCount">0</p>
+                            <p class="metric-label-wallet">Interactions Totales</p>
+                        </div>
+                        <div class="metric-card-wallet">
+                            <p class="metric-value-wallet" id="averageUtmiPerInteraction">0.00</p>
+                            <p class="metric-label-wallet">UTMi / Interaction (Moyenne)</p>
+                        </div>
+                        <div class="metric-card-wallet">
+                            <p class="metric-value-wallet" id="totalUtmiPerCostRatio">0.00</p>
+                            <p class="metric-label-wallet">Ratio UTMi/Coût</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-info-circle"></i> Détails et Répartitions</h3>
+                    <div class="grid-details">
+                        <div class="list-card-wallet">
+                            <h3>UTMi par Type</h3>
+                            <ul id="utmiByType"><li>Chargement...</li></ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>UTMi par Modèle</h3>
+                            <ul id="utmiByModel"><li>Chargement...</li></ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>Ratio UTMi/Coût par Modèle</h3>
+                            <ul id="utmiPerCostRatioByModel"><li>Chargement...</li></ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>UTMi par Axe Cognitif</h3>
+                            <ul id="utmiByCognitiveAxis"><li>Chargement...</li></ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>UTMi Thématiques</h3>
+                            <ul>
+                                <li>Marketing: <strong id="thematicUtmiMarketing">0.00</strong> UTMi</li>
+                                <li>Affiliation: <strong id="thematicUtmiAffiliation">0.00</strong> UTMi</li>
+                                <li>Fiscal/Économique: <strong id="thematicUtmiFiscalEconomic">0.00</strong> UTMi</li>
+                            </ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>Taux de Change</h3>
+                            <ul id="exchangeRates"><li>Chargement...</li></ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>Sujets les Plus Valorisés</h3>
+                            <ul id="mostValuableTopics"><li>Chargement...</li></ul>
+                        </div>
+                        <div class="list-card-wallet">
+                            <h3>Activités les Plus Courantes</h3>
+                            <ul id="mostCommonActivities"><li>Chargement...</li></ul>
+                        </div>
+                    </div>
+                    <button id="refreshDashboardBtn" class="btn btn-secondary mt-20"><i class="fas fa-sync-alt"></i> Actualiser le Dashboard</button>
+                </article>
+            </section>
+
+            <!-- PAGE 3: PROFIL UTILISATEUR (informations génériques, potentiellement blockchain) -->
+            <section id="user-profile-page" class="content-section" data-page="user-profile" aria-labelledby="profile-heading">
+                <h2 id="profile-heading" class="page-main-title"><i class="fas fa-user-circle"></i> Votre Profil Utilisateur</h2>
+                <p class="page-main-intro">Gérez vos informations de compte, les accès, et visualisez votre identité numérique liée à la blockchain CVNU.</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-id-badge"></i> Identité CVNU</h3>
+                    <p class="text-gray-700">Votre identifiant unique sur la plateforme.</p>
+                    <div class="form-group">
+                        <label class="label-text">ID Utilisateur :</label>
+                        <div id="userIdDisplay" class="content-output-field small-height">Chargement...</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="label-text">Adresse Blockchain CVNU :</label>
+                        <div id="cvnuAddressDisplay" class="content-output-field small-height">Non connecté</div>
+                        <p class="text-gray-600 text-sm mt-2">Connectez votre portefeuille pour lier votre identité blockchain.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-link"></i> Comptes Liés</h3>
+                    <p class="text-gray-700">Gérez les services externes connectés à votre profil.</p>
+                    <div class="linked-accounts-list">
+                        <div class="account-item">
+                            <i class="fab fa-google google-icon"></i> Google
+                            <button class="btn btn-secondary btn-sm ml-auto">Lier</button>
+                        </div>
+                        <div class="account-item">
+                            <i class="fab fa-paypal paypal-icon"></i> PayPal
+                            <button class="btn btn-secondary btn-sm ml-auto">Lier</button>
+                        </div>
+                        <!-- Ajoutez d'autres comptes liés ici -->
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-lock"></i> Paramètres de Sécurité</h3>
+                    <p class="text-gray-700">Gérez votre mot de passe et vos préférences de sécurité.</p>
+                    <button class="btn btn-primary">Changer le Mot de Passe</button>
+                </article>
+            </section>
+
+            <!-- NOUVELLE PAGE 4: GESTION DU CV (Contient l'ancien contenu du profil utilisateur lié au CV) -->
+            <section id="cv-management-page" class="content-section" data-page="cv-management" aria-labelledby="cv-management-heading">
+                <h2 id="cv-management-heading" class="page-main-title"><i class="fas fa-address-card"></i> Gestion du CV & Monétisation</h2>
+                <p class="page-main-intro">Générez et valorisez votre CV professionnel basé sur vos interactions IA et vos compétences. Explorez la monétisation de vos compétences grâce à des coefficients de valeur unitaires.</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-file-alt"></i> Générateur de CV</h3>
+                    <p class="text-gray-700">Collez une conversation historique avec l'IA ou décrivez vos expériences pour créer votre CV.</p>
+                    <div class="form-group">
+                        <label for="cv-input" class="label-text">Informations pour le CV (Markdown ou Texte Structuré) :</label>
+                        <textarea id="cv-input" rows="12" class="input-field" placeholder="Ex:
+Nom: John Doe
+Titre: Développeur Full Stack
+
+Expérience:
+- TechCorp (2020-Présent): Développeur Senior. Réalisations: Optimisation de l'API Stripe, Réduction des latences de 30%.
+- StartUpX (2018-2020): Développeur Junior.
+
+Compétences:
+- Langages: JavaScript, Python, Solidity
+- Frameworks: React, Node.js, Express
+- Outils: Docker, Git, VS Code
+- Soft Skills: Résolution de problèmes, Autonomie, Communication"></textarea>
+                    </div>
+                    <div class="output-group">
+                        <div class="button-row">
+                            <button id="generateCvBtn" class="btn btn-primary"><i class="fas fa-magic"></i> Générer le CV</button>
+                            <button id="clearCvInputBtn" class="btn btn-secondary"><i class="fas fa-eraser"></i> Effacer</button>
+                            <button id="editCvBtn" class="btn btn-secondary" style="display:none;"><i class="fas fa-edit"></i> Modifier le CV</button> <!-- NOUVEAU BOUTON -->
+                        </div>
+                        <h3 class="card-subtitle mt-20"><i class="fas fa-code"></i> Aperçu du CV (HTML)</h3>
+                        <div id="cv-output" class="content-output-field custom-scrollbar">
+                            <p class="placeholder-text">Votre CV sera généré ici. Il affichera vos compétences et expériences structurées.</p>
+                        </div>
+                        <button id="downloadCvBtn" class="btn download-btn mt-10" style="display: none;"><i class="fas fa-download"></i> Télécharger le CV HTML</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-award"></i> Valorisation & Monétisation des Compétences IA</h3>
+                    <p class="text-gray-700">L'IA analyse votre CV pour en extraire la valeur, les attributs professionnels, et propose une monétisation basée sur des coefficients UTMi.</p>
+                    <div class="output-group">
+                        <button id="valorizeCvContentBtn" class="btn btn-primary"><i class="fas fa-chart-pie"></i> Valoriser le CV</button>
+                        <h3 class="card-subtitle mt-20"><i class="fas fa-money-bill-wave"></i> Valorisation Détaillée</h3>
+                        <div id="valorization-output" class="content-output-field custom-scrollbar">
+                            <p class="placeholder-text">La valorisation de vos compétences par l'IA apparaîtra ici (ex: phrase d'accroche, description des compétences, estimation UTMi).</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- PAGE 5: CHATROOM IA -->
+            <section id="chatroom-page" class="content-section" data-page="chatroom" aria-labelledby="chatroom-heading">
+                <h2 id="chatroom-heading" class="page-main-title"><i class="fas fa-comment-dots"></i> Chatroom IA</h2>
+                <p class="page-main-intro">Discutez en direct avec votre assistant IA personnel. Idéal pour des sessions de brainstorming ou des conversations étendues sur un sujet.</p>
+
+                <div class="chat-main-layout card">
+                    <div class="chat-controls-top">
+                        <button id="startNewConversationBtn" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nouvelle Conversation</button>
+                        <button id="generateChatCvSummaryBtn" class="btn btn-secondary btn-sm" style="display:none;"><i class="fas fa-file-alt"></i> Résumé CV du Chat</button>
+                    </div>
+
+                    <div class="chat-content-layout">
+                        <!-- La liste des conversations (conversation-list-container) est maintenant gérée dynamiquement dans le menu de gauche -->
+                        <!-- Fenêtre de chat active -->
+                        <div class="chat-window-container">
+                            <h3 class="card-subtitle"><i class="fas fa-comment-dots"></i> Fenêtre de Chat <span id="current-conversation-id" class="conversation-id-display">(Sélectionnez une conversation)</span></h3>
+                            <div id="chat-window" class="chat-container custom-scrollbar">
+                                <p class="placeholder-text">Sélectionnez ou créez une conversation pour commencer à chatter.</p>
+                            </div>
+                            <div class="chat-input-area">
+                                <input type="text" id="chat-input" placeholder="Tapez votre message..." disabled>
+                                <button id="send-chat-btn" class="btn btn-primary" disabled><i class="fas fa-paper-plane"></i> Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section de résumé du CV après conversation, si nécessaire -->
+                    <article id="modalCvSummarySection" class="card-light" style="display: none;">
+                        <h3 class="card-title"><i class="fas fa-file-invoice"></i> Résumé de Conversation pour le CV</h3>
+                        <div id="modalCvSummaryOutput" class="content-output custom-scrollbar">
+                            <p class="placeholder-text">Un résumé pertinent pour votre CV à partir de la conversation apparaîtra ici.</p>
+                        </div>
+                        <button id="copyModalCvSummaryBtn" class="btn btn-secondary mt-10"><i class="fas fa-copy"></i> Copier dans le CV</button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PAGE 6: WORKSPACE -->
+            <section id="workspace-page" class="content-section" data-page="workspace" aria-labelledby="workspace-heading">
+                <h2 id="workspace-heading" class="page-main-title"><i class="fas fa-briefcase"></i> Mon Espace de Travail</h2>
+                <p class="page-main-intro">Cet espace est dédié à vos outils et projets. Vous pouvez l'adapter à vos besoins spécifiques.</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-tools"></i> Outils Personnalisés</h3>
+                    <p class="text-gray-700">Intégrez ici des fonctionnalités ou des widgets pour vos tâches quotidiennes.</p>
+                    <div class="placeholder-content-area">
+                        <p>Contenu de l'espace de travail à définir...</p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Ajoutez vos blocs de code préférés.</li>
+                            <li>Listez des liens rapides vers des ressources externes.</li>
+                            <li>Intégrez des tableaux de bord personnalisés.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-project-diagram"></i> Projets Actifs</h3>
+                    <p class="text-gray-700">Gérez et suivez l'avancement de vos projets directement depuis cette section.</p>
+                    <div class="placeholder-content-area">
+                        <p>Tableau de bord des projets ou liste de tâches...</p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- PAGE 7: DOCUMENTATION -->
+            <section id="documentation-page" class="content-section" data-page="documentation" aria-labelledby="documentation-heading">
+                <h2 id="documentation-heading" class="page-main-title"><i class="fas fa-book-open"></i> Documentation</h2>
+                <p class="page-main-intro">Accédez à la documentation complète de CVNU pour maîtriser toutes ses fonctionnalités.</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-info-circle"></i> Guide d'Utilisation</h3>
+                    <p class="text-gray-700">Apprenez à utiliser l'assistant IA, le dashboard UTMi et le générateur de CV.</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><a href="#" class="text-blue-500 hover:underline">Démarrer avec l'Assistant IA</a></li>
+                        <li><a href="#" class="text-blue-500 hover:underline">Comprendre le Dashboard UTMi</a></li>
+                        <li><a href="#" class="text-blue-500 hover:underline">Créer votre CV Professionnel</a></li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-code"></i> Référence Développeur</h3>
+                    <p class="text-gray-700">Informations techniques pour les développeurs souhaitant étendre ou intégrer CVNU.</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><a href="https://github.com/ia-local/cvnu" target="_blank" class="text-blue-500 hover:underline"><i class="fab fa-github"></i> Dépôt GitHub</a></li>
+                        <li><a href="#" class="text-blue-500 hover:underline">API Reference (bientôt disponible)</a></li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- PAGE 8: CONTACT -->
+            <section id="contact-page" class="content-section" data-page="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading" class="page-main-title"><i class="fas fa-headset"></i> Contactez-nous</h2>
+                <p class="page-main-intro">Vous avez des questions, des suggestions ou besoin d'assistance ? N'hésitez pas à nous contacter.</p>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-envelope"></i> Par Email</h3>
+                    <p class="text-gray-700">Envoyez-us un email à : <a href="mailto:support@cvnu.com" class="text-blue-500 hover:underline">support@cvnu.com</a></p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-comment-alt"></i> Support</h3>
+                    <p class="text-gray-700">Notre équipe de support est disponible du lundi au vendredi, de 9h à 17h (CET).</p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title"><i class="fas fa-map-marker-alt"></i> Adresse (Si applicable)</h3>
+                    <p class="text-gray-700">CVNU HQ<br>123 Rue de l'Innovation<br>75000 Paris, France</p>
+                </article>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- LIGNE 3: FOOTER (Pied de page de l'application) -->
+    <footer class="app-footer">
+        <p>&copy; 2025 CVNU. Tous droits réservés.</p>
+        <p>Développé avec <i class="fas fa-heart" style="color: #e74c3c;"></i> pour l'innovation dans la gestion de carrière.</p>
+        <div class="footer-links">
+            <a href="#privacy" class="footer-link">Politique de Confidentialité</a>
+            <a href="#terms" class="footer-link">Conditions d'Utilisation</a>
+            <a href="#contact" class="footer-link">Contact</a>
+        </div>
+        <!-- Liens Réseaux Sociaux -->
+        <div class="social-links mt-4">
+            <a href="https://facebook.com/cvnu" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/cvnu" target="_blank" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/company/cvnu" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/cvnu" target="_blank" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal Générique pour Alertes et Confirmations (reste en dehors de la structure principale) -->
+    <div id="genericAppModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="genericModalTitle">Titre du Modal</h3>
+                <button class="close-modal-btn" id="genericCloseModalBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="genericModalBody">
+                <p>Contenu du modal.</p>
+            </div>
+            <div class="modal-footer" id="genericModalFooter">
+                <button id="genericModalConfirmBtn" class="btn btn-primary" style="display:none;">Confirmer</button>
+                <button id="genericModalCancelBtn" class="btn btn-secondary" style="display:none;">Annuler</button>
+                <button id="genericModalOkBtn" class="btn btn-primary" style="display:none;">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message de statut global (ex: "Envoi en cours...", "Erreur...") -->
+    <div id="globalStatusMessage" class="status-message" role="status" aria-live="polite"></div>
+
+    <!-- Vos fichiers JavaScript. L'ordre est important ! -->
+    <script type="module" src="modal.js"></script>
+    <script type="module" src="pagination.js"></script>
+    <script type="module" src="cv.js"></script>
+</body>
+</html>

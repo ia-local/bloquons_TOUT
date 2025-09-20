@@ -1,0 +1,66 @@
+[
+  {
+    "id": "petition_ric_001",
+    "title": "Votation pour le Référendum d'Initiative Citoyenne (RIC)",
+    "description": "Pétition citoyenne demandant l'instauration du Référendum d'Initiative Citoyenne afin de renforcer la démocratie directe.",
+    "topic": "Démocratie Directe",
+    "targeted_official_or_policy": "Législation Nationale",
+    "number_of_signatures": 1250000,
+    "date_started": "2018-12-01",
+    "date_ended": "2019-03-15",
+    "status": "active",
+    "related_affaire_ids": [],
+    "value_metric": {
+      "political_pressure_score": 7.5,
+      "media_coverage_index": "élevé"
+    }
+  },
+  {
+    "id": "petition_destitution_macron_001",
+    "title": "Pétition pour la destitution du Président (Article 68 Constitution)",
+    "description": "Pétition citoyenne demandant l'application de l'Article 68 de la Constitution pour la destitution du Président de la République suite à des manquements graves, notamment liés aux récentes révélations sur les ventes de fleurons industriels et la gestion budgétaire.",
+    "topic": "Destitution Présidentielle",
+    "targeted_official_or_policy": "Emmanuel Macron",
+    "number_of_signatures": 2500000,
+    "date_started": "2024-12-01",
+    "date_ended": "2025-06-30",
+    "status": "ongoing",
+    "related_affaire_ids": ["affaire_ventes_industrielles_001", "affaire_budget_2024_001"],
+    "value_metric": {
+      "political_pressure_score": 9.0,
+      "media_coverage_index": "très élevé"
+    }
+  },
+  {
+    "id": "petition_cannabis_001",
+    "title": "Votation pour la légalisation du Cannabis",
+    "description": "Pétition citoyenne proposant la légalisation et la régulation du cannabis en France pour des raisons économiques et de santé publique.",
+    "topic": "Légalisation",
+    "targeted_official_or_policy": "Législation Nationale",
+    "number_of_signatures": 600000,
+    "date_started": "2021-09-01",
+    "date_ended": "2022-01-31",
+    "status": "closed",
+    "related_affaire_ids": [],
+    "value_metric": {
+      "political_pressure_score": 6.0,
+      "media_coverage_index": "moyen"
+    }
+  },
+  {
+    "id": "petition_revenu_universel_001",
+    "title": "Votation pour la Mise en Place du Revenu Universel",
+    "description": "Pétition citoyenne demandant l'instauration d'un revenu universel pour garantir le pouvoir d'achat et la dignité de chaque citoyen.",
+    "topic": "Pouvoir d'Achat",
+    "targeted_official_or_policy": "Politique Économique Nationale",
+    "number_of_signatures": 900000,
+    "date_started": "2020-03-01",
+    "date_ended": "2020-07-31",
+    "status": "closed",
+    "related_affaire_ids": [],
+    "value_metric": {
+      "political_pressure_score": 7.0,
+      "media_coverage_index": "élevé"
+    }
+  }
+]

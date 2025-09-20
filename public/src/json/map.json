@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "name": "Manifestations & Actions",
+      "icon": "manifestation-icon.png",
+      "dataKeys": ["manifestation_points_10_septembre", "manifestation_points_18_septembre"],
+      "subcategories": [
+        { "name": "Rassemblements", "icon": "manifestation-icon.png", "typeFilter": ["Rassemblement", "Manifestation"] },
+        { "name": "Blocages", "icon": "blocage-icon.png", "typeFilter": ["Blocage", "Blocage de lycée"] },
+        { "name": "Grèves", "icon": "cgt.png", "typeFilter": ["Grève"] },
+        { "name": "Opérations Spéciales", "icon": "op.png", "typeFilter": ["Opération", "Action symbolique", "Opération 'Cana'"] }
+      ]
+    },
+    {
+      "name": "Lieux Stratégiques",
+      "icon": "roundabout-icon.png",
+      "dataKeys": ["strategic_locations", "roundabout_points", "porte_points"],
+      "subcategories": [
+        { "name": "Ronds-points", "icon": "roundabout-icon.png" },
+        { "name": "Portes & Gares", "icon": "porte-icon.png" },
+        { "name": "Hôpitaux & Universités", "icon": "hospital.png" }
+      ]
+    },
+    {
+      "name": "Lieux Administratifs",
+      "icon": "mairie-icon.png",
+      "dataKeys": ["mairies", "prefectures", "elysee_point"],
+      "subcategories": [
+        { "name": "Mairies", "icon": "mairie-icon.png" },
+        { "name": "Préfectures", "icon": "pref.png" },
+        { "name": "Élysée", "icon": "boutique.png" }
+      ]
+    },
+    {
+      "name": "Secteurs d'application",
+      "icon": "secteur-icon.png",
+      "dataKeys": ["syndicats", "boycotts", "strategic_locations", "telecoms"],
+      "subcategories": [
+        { "name": "Agriculture", "icon": "fnsea.png", "typeFilter": ["FNSEA"] },
+        { "name": "Éducation", "icon": "university.png", "typeFilter": ["Université", "SUD éducation"] },
+        { "name": "Santé", "icon": "hospital.png", "typeFilter": ["Hôpital"] },
+        { "name": "Finance", "icon": "CreditCooperatif.png", "typeFilter": ["Banque", "Holding Financière"] },
+        { "name": "Commerce", "icon": "store.png", "typeFilter": ["Distribution", "Restauration Rapide"] },
+        { "name": "Industrie", "icon": "industrie-icon.png", "typeFilter": ["Industrie"] },
+        { "name": "Numérique & Télécoms", "icon": "telecom.png", "typeFilter": ["Opérateur 5G"] },
+        { "name": "Transport", "icon": "transport-icon.png", "typeFilter": ["RATP", "SNCF"] }
+      ]
+    },
+    {
+      "name": "Boycotts",
+      "icon": "boycott-icon.png",
+      "dataKeys": ["boycotts"],
+      "subcategories": [
+        { "name": "Distribution", "icon": "store.png", "typeFilter": ["Distribution", "movie"] },
+        { "name": "Banques", "icon": "CreditCooperatif.png", "typeFilter": ["Banque", "Holding Financière"] },
+        { "name": "Restauration", "icon": "McDonalds.png", "typeFilter": ["Restauration Rapide"] },
+        { "name": "Commerce", "icon": "Carrefour.png", "typeFilter": ["commerce"] },
+        { "name": "Industrie", "icon": "industrie-icon.png", "typeFilter": ["Industrie"] }
+      ]
+    },
+    {
+      "name": "Surveillance & Réseaux",
+      "icon": "camera-icon.png",
+      "dataKeys": ["cameras_points", "telecoms"],
+      "subcategories": [
+        { "name": "Caméras Fixes", "icon": "fixed-camera.png", "typeFilter": ["fixed"] },
+        { "name": "Caméras Dôme", "icon": "dome-camera.png", "typeFilter": ["dome"] },
+        { "name": "Caméras Panoramiques", "icon": "panoramic-camera.png", "typeFilter": ["panning"] },
+        { "name": "Agents de Sécurité", "icon": "guard-icon.png", "typeFilter": ["guard"] },
+        { "name": "Opérateurs 5G", "icon": "telecom.png", "typeFilter": ["Opérateur 5G"] }
+      ]
+    },
+    {
+      "name": "Organisations",
+      "icon": "syndicats.png",
+      "dataKeys": ["syndicats", "cnccfp_partis"],
+      "subcategories": [
+        { "name": "Sièges Syndicaux", "icon": "syndicats.png" },
+        { "name": "Partis Politiques", "icon": "parti-icon.png" }
+      ]
+    },
+    {
+      "name": "Pétitions",
+      "icon": "folder-icon.png",
+      "dataKeys": ["petitions"]
+    }
+  ]
+}

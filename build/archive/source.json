@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "id": "src-10sep-caen-video",
+      "type": "Vidéo YouTube",
+      "url": "https://www.youtube.com/watch?v=pAWZXhCAeeM",
+      "description": "Footage of demonstrations on September 10th in Caen, featuring syndicate banners."
+    },
+    {
+      "id": "src-10sep-paris-press",
+      "type": "Article de Presse",
+      "url": "https://example.com/article-paris-10sept",
+      "description": "Article from 'Le Citoyen' discussing the turnout at Place de la République."
+    },
+    {
+      "id": "src-11sep-ag-rennes",
+      "type": "Post Telegram",
+      "url": "https://t.me/ag-syndicale-rennes",
+      "description": "Channel report on the Inter-syndical General Assembly in Rennes."
+    },
+    {
+      "id": "src-14sep-ag-paris",
+      "type": "Site Web Syndical",
+      "url": "https://www.cgt.fr/evenements/ag-paris-14-septembre-2025",
+      "description": "Official website announcement for the General Assembly in Paris."
+    },
+    {
+      "id": "src-16sep-dossier-photos",
+      "type": "Google Drive Data",
+      "url": "https://drive.google.com/dossier-photos-16sep",
+      "description": "Collection de photos des points de blocage du 10 septembre pour documentation."
+    }
+  ]
+}

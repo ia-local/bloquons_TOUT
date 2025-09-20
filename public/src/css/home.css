@@ -1,0 +1,170 @@
+/* Conteneur principal du carrousel */
+.slides-container {
+    min-height: 80%;
+    width: 90%;
+    margin: 0 auto; /* Centrage horizontal */
+    position: relative; /* Indispensable pour positionner les boutons de navigation */
+    overflow: hidden; /* Cache le contenu qui dépasse du conteneur */
+    height: 100%; /* La hauteur s'adapte au contenu du slide */
+    min-height: 550px; /* Hauteur minimale pour éviter les collapses sur les slides vides */
+}
+
+/* Styles pour chaque slide */
+.slide {
+    display: none; /* Cache tous les slides par défaut */
+    width: 100%;
+    min-height: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #333;
+    
+    /* Utilisation de Flexbox pour centrer le contenu verticalement et horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Affiche le slide actif */
+.slide.active {
+    height: 100%;
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.slide-content h2 {
+    font-size: clamp(1.8em, 4vw, 2.5em);
+    margin-bottom: 20px;
+}
+
+.slide-content p {
+    font-size: clamp(1em, 2vw, 1.2em);
+    line-height: 1.6;
+}
+
+/* Boutons de navigation du carrousel */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centrage vertical parfait */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    text-decoration: none; /* Retirer le soulignement des liens */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Indicateurs de slides */
+.slide-dots {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Styles pour les cartes d'équipe */
+.team-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 10px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-card h3 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.team-card i {
+    font-size: 3em;
+    color: #2e7d32;
+    margin-top: 15px;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "c32049e7-37b4-4f5a-b0ab-78471829585f",
+    "role": "user",
+    "content": "[vous] bonjour",
+    "persona": "vous",
+    "timestamp": "2025-09-20T12:14:48.684Z"
+  },
+  {
+    "id": "bc089be7-0a6f-4460-92ae-f4920c6591e6",
+    "role": "ai",
+    "content": "Bonjour ! 👋 \n\nJe suis prêt à vous aider dans votre projet.  \n\nDites-moi, qu'est-ce que vous aimeriez faire ? \n\nN'hésitez pas à me poser des questions, me donner des instructions ou me demander de l'aide pour des tâches spécifiques. Je fais de mon mieux pour être utile et informatif. \n\nBonne chance pour votre projet ! 😊 \n\n",
+    "persona": "generaliste",
+    "timestamp": "2025-09-20T12:14:49.236Z"
+  },
+  {
+    "id": "b74cbb84-9572-4a8f-a6a8-349b48434193",
+    "role": "user",
+    "content": "test",
+    "persona": "vous",
+    "timestamp": "2025-09-20T12:35:29.454Z"
+  },
+  {
+    "id": "6a7cc228-8161-42e0-9a89-44f240cc76ed",
+    "role": "ai",
+    "content": "Bonjour ! \n\nJe suis prêt à vous aider dans votre projet.  \n\nPour que je puisse être le plus utile possible, veuillez me préciser :\n\n* **Quel est le sujet de votre projet ?** Plus vous êtes précis, mieux je peux comprendre vos besoins.\n* **Que souhaitez-vous que je fasse ?** Avez-vous besoin d'aide pour la recherche d'informations, la rédaction de texte, la génération d'idées, ou autre chose ?\n* **Avez-vous des contraintes spécifiques ?**  Par exemple, un style d'écriture particulier, une longueur maximale, ou une date limite ?\n\n\nN'hésitez pas à me poser toutes les questions que vous avez. Je suis là pour vous aider à réussir votre projet ! \n\n",
+    "persona": "generaliste",
+    "timestamp": "2025-09-20T12:35:30.090Z"
+  },
+  {
+    "id": "ce954e0e-3b03-49cf-b6ed-3f5889dbb88b",
+    "role": "user",
+    "content": "test",
+    "persona": "vous",
+    "timestamp": "2025-09-20T12:40:32.647Z"
+  },
+  {
+    "id": "84f7a5b0-4726-4803-9b7d-df55b5025807",
+    "role": "ai",
+    "content": "Bonjour !\n\nJe suis prêt à vous aider dans votre projet. \n\nDites-moi, quel est votre projet ? Plus vous me donnerez de détails, mieux je pourrai vous assister. \n\nN'hésitez pas à me poser des questions, à me demander de générer du texte, de résumer des informations ou même de vous aider à réfléchir à des solutions. \n\nJe suis là pour vous ! 😊 \n\n",
+    "persona": "generaliste",
+    "timestamp": "2025-09-20T12:40:33.193Z"
+  }
+]

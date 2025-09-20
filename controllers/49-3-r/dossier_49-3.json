@@ -1,0 +1,62 @@
+{
+    "periode": "2017-2025",
+    "description": "Analyse de l'usage de l'article 49.3 dans les réformes fiscales et financières, particulièrement lors des mandats d'Emmanuel Macron, avec un focus sur les motions de censure et les projets de loi adoptés sans vote.",
+    "utilisations": [
+      {
+        "annee": 2019,
+        "loi": "Réforme des retraites",
+        "context": "La réforme des retraites visait à instaurer un système universel par points, suscitant une forte opposition sociale et parlementaire.",
+        "date_utilisation": "29 février 2020",
+        "motions_de_censure": [
+          {
+            "date": "2 mars 2020",
+            "partis": ["Les Républicains", "La France Insoumise", "Parti Socialiste"],
+            "resultat": "Rejetée"
+          }
+        ],
+        "enjeux": [
+          "Uniformisation des régimes de retraite",
+          "Réduction des dépenses publiques",
+          "Opposition sociale (grèves et manifestations)"
+        ]
+      },
+      {
+        "annee": 2023,
+        "loi": "Réforme fiscale - Loi de Finances",
+        "context": "Cette réforme visait à réduire les impôts sur les entreprises et à simplifier la fiscalité, mais elle fut perçue comme un avantage aux grandes entreprises.",
+        "date_utilisation": "12 décembre 2023",
+        "motions_de_censure": [
+          {
+            "date": "15 décembre 2023",
+            "partis": ["Parti Socialiste", "Les Écologistes", "La France Insoumise"],
+            "resultat": "Rejetée"
+          }
+        ],
+        "enjeux": [
+          "Réduction des impôts sur les entreprises",
+          "Simplification de la fiscalité",
+          "Débats sur les inégalités fiscales"
+        ]
+      },
+      {
+        "annee": 2024,
+        "loi": "Réforme des services publics et finances",
+        "context": "Projet de loi pour optimiser les services publics et rationaliser les dépenses, visant des économies importantes mais menant à des réductions de postes dans certaines administrations.",
+        "date_utilisation": "15 mars 2024",
+        "motions_de_censure": [
+          {
+            "date": "17 mars 2024",
+            "partis": ["La France Insoumise", "Parti Communiste", "Union Démocratique"],
+            "resultat": "Rejetée"
+          }
+        ],
+        "enjeux": [
+          "Rationalisation des dépenses publiques",
+          "Réduction d’effectifs dans certaines administrations",
+          "Problèmes de service et accès réduit aux services publics"
+        ]
+      }
+    ],
+    "conclusion": "L'usage récurrent de l'article 49.3 entre 2017 et 2024 montre une tendance de l'exécutif à contourner le vote parlementaire sur des réformes controversées. Bien que les motions de censure aient été nombreuses, elles ont échoué à renverser le gouvernement, ce qui a permis de faire passer ces lois malgré l'opposition. Cela soulève des questions sur l'équilibre des pouvoirs et sur la légitimité démocratique des réformes fiscales et sociales adoptées durant cette période."
+  }
+  

@@ -1,0 +1,179 @@
+<!-- Fichier : public/ric.html -->
+<!-- Contenu principal de la page RIC, restructuré de manière sémantique -->
+
+<main class="page-container">
+
+    <header class="page-header">
+        <h1>Référendum d'Initiative Citoyenne (RIC) : Le Cœur de notre Démocratie !</h1>
+        <p>Le RIC est l'outil essentiel pour redonner le pouvoir aux citoyens. Il se décline en plusieurs formes :</p>
+        <ul>
+            <li>**RIC Législatif :** Proposer et voter des lois.</li>
+            <li>**RIC Abrogatoire :** Annuler une loi existante.</li>
+            <li>**RIC Constituant :** Modifier la Constitution.</li>
+            <li>**RIC Révocatoire :** Destituer un élu.</li>
+        </ul>
+        <p>C'est la garantie que notre voix sera directement entendue et respectée, conformément à l'article 16 de la Déclaration des droits de l'homme et du citoyen, qui garantit la séparation des pouvoirs et la Constitution.</p>
+    </header>
+
+    <section class="ric-controls">
+        <button id="add-ric-btn" class="btn btn-primary">Proposer un nouveau RIC</button>
+    </section>
+
+    <section class="ric-propositions">
+        <h2>Propositions actives</h2>
+        <!-- Section des filtres -->
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="type-filter">Filtrer par type :</label>
+                <select id="type-filter">
+                    <option value="all">Tous les types</option>
+                    <option value="Législatif">Législatif</option>
+                    <option value="Abrogatoire">Abrogatoire</option>
+                    <option value="Constituant">Constituant</option>
+                    <option value="Révocatoire">Révocatoire</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="level-filter">Filtrer par niveau :</label>
+                <select id="level-filter">
+                    <option value="all">Tous les niveaux</option>
+                    <option value="local">Local</option>
+                    <option value="departemental">Départemental</option>
+                    <option value="regional">Régional</option>
+                    <option value="national">National</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort-filter">Trier par :</label>
+                <select id="sort-filter">
+                    <option value="none">Par défaut</option>
+                    <option value="voters">Nombre de votants</option>
+                </select>
+            </div>
+        </div>
+        <!-- Fin de la section des filtres -->
+        <div id="ric-list" class="cards-grid">
+            <p>Chargement des propositions de RIC...</p>
+        </div>
+    </section>
+
+    <section class="ric-map-section">
+        <h2>Localisation des RIC</h2>
+        <div class="map-controls">
+            <button id="view-map-btn" class="btn btn-secondary">Afficher les RIC sur la carte</button>
+        </div>
+        <div id="ric-map"></div>
+    </section>
+    
+    <section id="ric-results" class="card-section">
+        <h3>Tirage au sort et résultats</h3>
+        <p>Cette section affichera le RIC sélectionné pour le scrutin final et ses résultats.</p>
+    </section>
+
+</main>
+
+<!-- Conteneur principal de la modale. C'est le composant qui s'affiche et se cache. -->
+<div id="app-modal" class="modal">
+    <div class="modal-content-wrapper">
+        <span class="modal-close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-content"></div>
+    </div>
+</div>
+
+<!-- Modèle de formulaire pour soumettre un RIC -->
+<template id="ric-form-template">
+    <form id="ric-form">
+        <div class="form-group">
+            <label for="ric-question">Votre question (oui/non) :</label>
+            <input type="text" id="ric-question" name="question" placeholder="Ex: Faut-il abroger la loi du Plomb ?" required>
+        </div>
+        <div class="form-group">
+            <label for="ric-description">Description et justifications :</label>
+            <textarea id="ric-description" name="description" rows="5" placeholder="Expliquez la proposition en détail..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="ric-deadline">Date butoir :</label>
+            <input type="date" id="ric-deadline" name="deadline" required>
+        </div>
+        <div class="form-group">
+            <label for="ric-type">Type de RIC :</label>
+            <select id="ric-type" name="type" required>
+                <option value="Législatif">Législatif</option>
+                <option value="Abrogatoire">Abrogatoire</option>
+                <option value="Constituant">Constituant</option>
+                <option value="Révocatoire">Révocatoire</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ric-level">Niveau de scrutin :</label>
+            <select id="ric-level" name="level" required>
+                <option value="local">Local</option>
+                <option value="departemental">Départemental</option>
+                <option value="regional">Régional</option>
+                <option value="national">National</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ric-vote-method">Modalité de vote :</label>
+            <select id="ric-vote-method" name="voteMethod">
+                <option value="click">Vote par clic (Internet)</option>
+                <option value="petition">Signature sur pétition (feuille A4)</option>
+                <option value="sms">Vote par SMS</option>
+                <option value="voix">Vote à voix ouverte</option>
+                <option value="main-levee">Vote à main levée</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Soumettre le RIC</button>
+    </form>
+</template>
+
+<!-- Modèle de modale pour le processus de vote -->
+<template id="ric-vote-template">
+    <div class="ric-vote-modal-content">
+        <h3 id="ric-vote-question"></h3>
+        <p id="ric-vote-description"></p>
+        <div class="vote-buttons">
+            <button id="vote-yes-btn" class="btn btn-primary">Voter OUI</button>
+            <button id="vote-no-btn" class="btn btn-secondary">Voter NON</button>
+        </div>
+    </div>
+</template>
+
+<!-- Nouveau modèle pour la modale de la carte -->
+<template id="ric-map-modal-template">
+    <div class="map-modal-content">
+        <!-- Section des filtres, déplacée dans la modale -->
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="type-filter-modal">Filtrer par type :</label>
+                <select id="type-filter-modal">
+                    <option value="all">Tous les types</option>
+                    <option value="Législatif">Législatif</option>
+                    <option value="Abrogatoire">Abrogatoire</option>
+                    <option value="Constituant">Constituant</option>
+                    <option value="Révocatoire">Révocatoire</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="level-filter-modal">Filtrer par niveau :</label>
+                <select id="level-filter-modal">
+                    <option value="all">Tous les niveaux</option>
+                    <option value="local">Local</option>
+                    <option value="departemental">Départemental</option>
+                    <option value="regional">Régional</option>
+                    <option value="national">National</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort-filter-modal">Trier par :</label>
+                <select id="sort-filter-modal">
+                    <option value="none">Par défaut</option>
+                    <option value="voters">Nombre de votants</option>
+                </select>
+            </div>
+            <button id="filter-map-btn" class="btn btn-primary">Filtrer</button>
+        </div>
+        <div id="ric-map-modal" class="map-container"></div>
+    </div>
+</template>

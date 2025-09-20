@@ -1,0 +1,1289 @@
+/* public/cv.scss - Refonte Complète de l'UI Inspirée WALLET PAI */
+
+/* Variables SCSS pour les Thèmes Clair et Sombre (Adaptées du WALLET PAI) */
+// Note: Ces variables seront ensuite lues par le compilateur SASS et transformées en CSS.
+// Les couleurs spécifiques en RVB pour JS (body::before) sont maintenues dans le CSS généré.
+
+// Couleurs primaires
+$primary-color: #4299e1;
+$primary-hover-color: #3182ce;
+$secondary-color: #10b981;
+$secondary-hover-color: #059669;
+$accent-color: #f59e0b;
+$danger-color: #e53e3e;
+$danger-hover-color: #c53030;
+$success-color: #38a169;
+$info-color: #3182ce;
+
+// Couleurs de fond
+$background-body-light: #f0f2f5;
+$background-main-container-light: #ffffff;
+$background-dynamic-nav-light: #0b1017;
+$background-content-area-light: #ffffff;
+$background-card-light: #f7fafc;
+$background-subtle-light: #e2e8f0;
+
+// Couleurs de texte
+$text-dark-light: #1a202c;
+$text-medium-light: #4a5568;
+$text-light: #ffffff; // Utilisé sur fonds sombres
+$placeholder-text-color-light: #a0aec0;
+
+// Chat-specific colors (light theme)
+$chat-user-bg-light: #e0f2fe;
+$chat-assistant-bg-light: #edf2f7;
+$chat-user-text-strong-light: #1d4ed8;
+$chat-assistant-text-strong-light: #4a5568;
+
+// Bordures et ombres
+$border-color-light: #edf2f7;
+$shadow-light: rgba(0, 0, 0, 0.05);
+$shadow-medium: rgba(0, 0, 0, 0.1);
+
+// Tailles
+$navbar-height: 70px;
+$dynamic-nav-width: 250px;
+
+// Font
+$font-inter: 'Inter', sans-serif;
+
+// Mixin pour thème sombre
+@mixin dark-theme {
+    // Couleurs primaires
+    --primary-color: #63b3ed;
+    --primary-hover-color: #4299e1;
+    --secondary-color: #68d391;
+    --secondary-hover-color: #48bb78;
+    --accent-color: #fbd38d;
+    --danger-color: #fc8181;
+    --danger-hover-color: #e53e3e;
+    --success-color: #68d391;
+    --info-color: #63b3ed;
+
+    // Couleurs de fond
+    --background-body: #2d3748;
+    --background-main-container: #1a202c;
+    --background-dynamic-nav: #222c3b;
+    --background-content-area: #1a202c;
+    --background-card: #2d3748;
+    --background-subtle: #4a5568;
+
+    // Couleurs de texte
+    --text-dark: #edf2f7;
+    --text-medium: #a0aec0;
+    --text-light: #1a202c;
+    --placeholder-text-color: #718096;
+
+    // Chat-specific colors (dark theme)
+    --chat-user-bg: #3c4b5d;
+    --chat-assistant-bg: #222c3b;
+    --chat-user-text-strong: var(--secondary-color);
+    --chat-assistant-text-strong: var(--primary-color);
+
+    // Bordures et ombres
+    --border-color: #4a5568;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.5);
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-inter;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: $navbar-height; /* IMPORTANT: Espace pour la navbar fixe */
+    padding-left: 1.5rem; /* Garde le padding latéral */
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--background-body, $background-body-light);
+    color: var(--text-dark, $text-dark-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &.dark-theme {
+        @include dark-theme;
+    }
+}
+
+/* NOUVELLE NAVBAR INTELLIGENTE */
+.smart-navbar-top-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navbar-height; /* Hauteur fixe */
+    background-color: var(--background-main-container, $background-main-container-light);
+    box-shadow: 0 4px 15px var(--shadow-medium, $shadow-medium);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; /* Pas de padding vertical car la hauteur est fixe */
+    border-bottom: 1px solid var(--border-color, $border-color-light); /* Ligne en bas pour un look carré */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-brand .app-title-navbar {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color, $primary-color);
+    margin: 0; /* Important pour le centrage vertical */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+.navbar-brand .app-title-navbar .fas {
+    color: var(--accent-color, $accent-color);
+}
+
+.navbar-main-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-grow: 1; /* Prend l'espace restant pour centrer */
+    justify-content: center; /* Centre les liens */
+}
+
+.navbar-main-links .nav-link {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0; /* Style carré */
+    font-weight: 500;
+    color: var(--text-medium, $text-medium-light);
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 2px solid transparent; /* Ligne pour active state */
+}
+
+.navbar-main-links .nav-link:hover {
+    color: var(--primary-color, $primary-color);
+    // Utilise les variables RVB déclarées dans body::before pour la compatibilité avec JS
+    background-color: rgba(var(--primary-color-rgb, 66, 153, 225), 0.05); /* Effet hover subtil */
+}
+.navbar-main-links .nav-link.active {
+    color: var(--primary-color, $primary-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color, $primary-color); /* Ligne active */
+    background-color: rgba(var(--primary-color-rgb, 66, 153, 225), 0.1);
+}
+
+.navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-form-navbar {
+    display: flex;
+    border: 1px solid var(--border-color, $border-color-light); /* Bordure carrée */
+    border-radius: 0.5rem; /* Légèrement arrondi */
+    overflow: hidden; /* Assure que le input et le bouton restent dans la bordure */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    &:focus-within {
+        border-color: var(--primary-color, $primary-color);
+        box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+    }
+}
+
+.navbar-search-input {
+    border: none;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--background-card, $background-card-light); /* Fond pour l'input */
+    color: var(--text-dark, $text-dark-light);
+    font-family: $font-inter;
+    font-size: 0.9em;
+    outline: none;
+    width: 150px; /* Largeur par défaut */
+    transition: width 0.3s ease;
+    &::placeholder {
+        color: var(--placeholder-text-color, $placeholder-text-color-light);
+    }
+    &:focus {
+        width: 200px; /* S'élargit au focus */
+    }
+}
+
+.navbar-search-btn {
+    background-color: var(--primary-color, $primary-color);
+    color: var(--text-light, $text-light);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: var(--primary-hover-color, $primary-hover-color);
+    }
+}
+
+/* Boutons génériques dans la navbar */
+.btn-navbar {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--secondary-color, $secondary-color);
+    color: var(--text-light, $text-light);
+    &:hover {
+        background-color: var(--secondary-hover-color, $secondary-hover-color);
+        transform: translateY(-1px);
+    }
+}
+
+/* Toggle de thème - Ajustements pour la navbar */
+.theme-toggle {
+    width: 60px; /* Plus compact */
+    height: 30px;
+    background-color: var(--text-medium, $text-medium-light); // Base color
+    border-radius: 15px; // Half of height
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.theme-toggle .toggle-circle {
+    width: 22px;
+    height: 22px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px; // Center vertically
+    left: 4px; // Initial position
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: $text-light;
+}
+body.dark-theme .theme-toggle {
+    background-color: var(--background-subtle); // Darker base color
+}
+body.dark-theme .theme-toggle .toggle-circle {
+    transform: translateX(30px);
+    background-color: var(--primary-color); // Different color for dark theme
+}
+
+
+/* LIGNE 2: CONTENEUR PRINCIPAL (Inspiré WALLET PAI) - Maintenant sous la navbar fixe */
+.main-container-wallet-pai {
+    max-width: 100%; /* S'adapte à la largeur du body */
+    width: 85%; /* Largeur maximale pour le contenu principal */
+    background-color: var(--background-main-container, $background-main-container-light);
+    border-radius: 1.5rem; /* Coins arrondis */
+    box-shadow: 0 10px 30px var(--shadow-medium, $shadow-medium);
+    overflow: hidden; /* Important pour contenir les éléments */
+    display: flex; /* Utilise flexbox pour les deux colonnes */
+    flex-direction: column; /* Par défaut en colonne pour mobile */
+    min-height: calc(100vh - $navbar-height - 3rem); /* Prend l'espace restant - navbar - padding body */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px; /* Espace entre navbar et conteneur principal */
+}
+
+/* NOUVEAU: Styles pour la navigation latérale dynamique */
+.dynamic-left-nav {
+    background-color: var(--background-dynamic-nav, $background-dynamic-nav-light);
+    color: var(--text-dark, $text-dark-light); /* Texte sombre pour ce fond clair */
+    padding: 1.5rem;
+    min-width: $dynamic-nav-width; /* Utilise la variable pour la largeur */
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem 0 0 1.5rem; /* Coins arrondis à gauche pour desktop */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-right: 1px solid var(--border-color, $border-color-light); /* Séparateur visuel */
+    /* Cache par défaut pour mobile, affiché en desktop via media query */
+    display: none;
+}
+
+.dynamic-nav-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--primary-color, $primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color, $border-color-light);
+    .fas {
+        color: var(--accent-color, $accent-color);
+    }
+}
+
+.dynamic-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Permet à la liste de prendre l'espace disponible */
+    li {
+        margin-bottom: 0.4rem;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 1rem;
+        border-radius: 0.5rem; /* Moins arrondi que l'ancien sidebar pour le look carré */
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+        text-decoration: none;
+        color:var(--text-medium, $text-medium-light); /* Couleur du texte par défaut */
+        font-weight: 500;
+        .fas {
+            margin-right: 0.6rem;
+            color: var(--primary-color, $primary-color);
+            transition: color 0.2s;
+        }
+        &:hover, &.active {
+            background-color: rgba(var(--primary-color-rgb, 66, 153, 225), 0.1);
+            color: var(--primary-color, $primary-color);
+        }
+        &.active {
+            background-color: rgba(var(--primary-color-rgb, 66, 153, 225), 0.2);
+            font-weight: 600;
+            .fas {
+                color: var(--accent-color, $accent-color);
+            }
+        }
+    }
+}
+
+/* Colonne Droite: Contenu Principal (Main) */
+.content-area-wallet-pai {
+    flex-grow: 1;
+    padding: 2rem; /* Padding interne comme WALLET PAI */
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+    /* Enlève la border-radius à gauche car c'est géré par dynamic-left-nav sur desktop */
+    border-radius: 0 1.5rem 1.5rem 0; /* Coins arrondis à droite seulement pour desktop */
+}
+
+/* Styles des Sections de Contenu (Pages) */
+.content-section {
+    display: none; /* Masqué par défaut */
+    animation: fadeIn 0.5s ease-out; /* Animation de fondu */
+    &.active {
+        display: block; /* Affiché quand actif */
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-main-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark, $text-dark-light);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color, $border-color-light);
+    .fas {
+        color: var(--accent-color, $accent-color);
+    }
+}
+
+.page-main-intro {
+    font-size: 1.1em;
+    color: var(--text-medium, $text-medium-light);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* Styles des Cartes (Sections internes) */
+.card {
+    background-color: var(--background-card, $background-card-light);
+    border-radius: 1rem; /* Plus arrondis */
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--shadow-light, $shadow-light);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color, $border-color-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-dark, $text-dark-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color, $border-color-light);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    .fas {
+        color: var(--primary-color, $primary-color);
+    }
+}
+
+.card-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-medium, $text-medium-light);
+    transition: color 0.3s ease;
+}
+
+/* Styles des champs de formulaire et zones de sortie */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.label-text {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: var(--text-medium, $text-medium-light);
+    margin-bottom: 0.5rem;
+}
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border-radius: 0.5rem; /* Plus arrondis */
+    border: 1px solid var(--border-color, $border-color-light);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.06); /* Ombre interne subtile */
+    background-color: var(--background-main-container, $background-main-container-light); /* Fond clair */
+    color: var(--text-dark, $text-dark-light);
+    font-family: $font-inter;
+    font-size: 1em;
+    resize: vertical;
+    transition: all 0.2s ease;
+    &:focus {
+        border-color: var(--primary-color, $primary-color);
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        outline: none;
+    }
+}
+/* Pour les divs de display comme userIdDisplay et cvnuAddressDisplay */
+.content-output-field.small-height {
+    min-height: 40px; /* Plus petit pour une seule ligne */
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.button-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem; /* Arrondi des boutons */
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    border: none;
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        background-color: #cbd5e0; /* Gris plus clair pour désactivé */
+        color: #4a5568;
+    }
+}
+
+.btn-primary {
+    background-color: var(--primary-color, $primary-color);
+    color: var(--text-light, $text-light);
+    &:hover:not(:disabled) {
+        background-color: var(--primary-hover-color, $primary-hover-color);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+}
+
+.btn-secondary {
+    background-color: #a0aec0; /* Gris moyen */
+    color: var(--text-dark, $text-dark-light);
+    &:hover:not(:disabled) {
+        background-color: #718096;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+}
+.btn.btn-sm { /* Petit bouton pour les liens de compte */
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8em;
+    border-radius: 0.3rem;
+}
+
+
+.download-btn {
+    background-color: var(--secondary-color, $secondary-color);
+    color: var(--text-light, $text-light);
+    margin-top: 1rem;
+    &:hover:not(:disabled) {
+        background-color: var(--secondary-hover-color, $secondary-hover-color);
+    }
+}
+
+.content-output-field {
+    background-color: var(--background-subtle, $background-subtle-light);
+    border: 1px solid var(--border-color, $border-color-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    min-height: 150px;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: var(--text-dark, $text-dark-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.placeholder-text {
+    color: var(--placeholder-text-color, $placeholder-text-color-light);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--background-subtle, $background-subtle-light);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary-color, $primary-color);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover-color, $primary-hover-color);
+}
+
+/* Dashboard Specific Styles (Refined to match WALLET PAI's dashboard) */
+.grid-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.metric-card-wallet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--background-subtle, $background-subtle-light); /* Utilisation de variables */
+    border: 1px solid var(--border-color, $border-color-light); /* Added border for consistency */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px var(--shadow-light, $shadow-light);
+    min-height: 120px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.metric-value-wallet {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-color, $primary-color); /* Couleur primaire du WALLET PAI */
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+.metric-label-wallet {
+    font-size: 0.875rem;
+    color: var(--text-medium, $text-medium-light);
+    margin-top: 0.5rem;
+}
+
+.grid-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.list-card-wallet {
+    background-color: var(--background-card, $background-card-light);
+    border: 1px solid var(--border-color, $border-color-light);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    h3 {
+        font-size: 1.1em;
+        color: var(--primary-color, $primary-color);
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        border-bottom: 1px dashed var(--border-color, $border-color-light);
+        padding-bottom: 0.5rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        padding: 0.25rem 0;
+        // Utilisez rgba pour que la couleur de bordure puisse être opacity-adjusted par body::before
+        border-bottom: 1px dotted rgba(var(--border-color-rgb, 237, 242, 247), 0.5);
+        font-size: 0.95em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child {
+            border-bottom: none;
+        }
+        strong {
+            color: var(--text-dark, $text-dark-light);
+        }
+    }
+}
+
+/* Styles pour les comptes liés dans la page Profil Utilisateur */
+.linked-accounts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    .account-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background-color: var(--background-subtle, $background-subtle-light);
+        border: 1px solid var(--border-color, $border-color-light);
+        border-radius: 0.5rem;
+        font-weight: 500;
+        color: var(--text-dark, $text-dark-light);
+        .fab {
+            font-size: 1.2em;
+            margin-right: 0.75rem;
+        }
+        .google-icon { color: #db4437; } /* Google Red */
+        .paypal-icon { color: #003087; } /* PayPal Blue */
+    }
+}
+
+
+/* --- Chatroom Section Specific Styles --- */
+.chat-main-layout { /* This is the main card containing the chat UI */
+    display: flex;
+    flex-direction: column;
+    /* Inherits existing .card styles for background, shadow, border-radius */
+}
+
+.chat-controls-top {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.chat-content-layout {
+    display: flex;
+    flex-grow: 1;
+    gap: 1.5rem;
+    min-height: 400px; /* Minimum height for chat area */
+}
+
+.conversation-list-container,
+.chat-window-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card, $background-card-light);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color, $border-color-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    h3 {
+        color: var(--primary-color, $primary-color);
+        font-size: 1.1em;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.conversation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    background-color: var(--background-subtle, $background-subtle-light);
+    border: 1px solid var(--border-color, $border-color-light);
+    li {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border-color, $border-color-light);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9em;
+        transition: background-color 0.2s ease;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: rgba(var(--primary-color-rgb, 66, 153, 225), 0.1);
+        }
+        &.active {
+            background-color: rgba(var(--primary-color-rgb, 66, 153, 225), 0.2);
+            font-weight: 600;
+            color: var(--primary-color, $primary-color);
+            border-left: 4px solid var(--primary-color, $primary-color);
+            .delete-conversation-btn { // For active state specific delete button style
+                background-color: var(--primary-color, $primary-color);
+                color: var(--text-light, $text-light);
+            }
+        }
+    }
+}
+.delete-conversation-btn {
+    background-color: var(--danger-color, $danger-color);
+    color: var(--text-light, $text-light);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.75em;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: var(--danger-hover-color, $danger-hover-color);
+    }
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: var(--text-medium, $text-medium-light);
+}
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color, $primary-color);
+    color: var(--text-light, $text-light);
+    font-size: 0.8em;
+    &:hover:not(:disabled) {
+        background-color: var(--primary-hover-color, $primary-hover-color);
+    }
+}
+
+.chat-container {
+    flex-grow: 1;
+    border: 1px solid var(--border-color, $border-color-light);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background-color: var(--background-main-container, $background-main-container-light);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.chat-message {
+    margin-bottom: 0.75rem;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    max-width: 85%; /* Plus large */
+    position: relative;
+    font-size: 0.9em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    line-height: 1.4;
+    strong {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        display: block;
+        color: var(--chat-assistant-text-strong, $chat-assistant-text-strong-light); /* Default for IA */
+    }
+    &.user {
+        background-color: var(--chat-user-bg, $chat-user-bg-light);
+        align-self: flex-end;
+        border-bottom-right-radius: 0.3rem;
+        color: var(--text-dark, $text-dark-light); /* Assure la lisibilité */
+        strong {
+            color: var(--chat-user-text-strong, $chat-user-text-strong-light);
+        }
+        small {
+            text-align: right;
+        }
+    }
+    &.assistant {
+        background-color: var(--chat-assistant-bg, $chat-assistant-bg-light);
+        align-self: flex-start;
+        border-bottom-left-radius: 0.3rem;
+        color: var(--text-dark, $text-dark-light); /* Assure la lisibilité */
+        small {
+            text-align: left;
+        }
+    }
+    small {
+        display: block;
+        font-size: 0.7em;
+        color: var(--placeholder-text-color, $placeholder-text-color-light);
+        margin-top: 0.4rem;
+    }
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+    input {
+        flex-grow: 1;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color, $border-color-light);
+        border-radius: 0.5rem;
+        background-color: var(--background-card, $background-card-light); /* Garde le fond cohérent */
+        color: var(--text-dark, $text-dark-light);
+    }
+    button {
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        background-color: var(--primary-color, $primary-color);
+        color: var(--text-light, $text-light);
+        font-weight: 600;
+        &:hover:not(:disabled) {
+            background-color: var(--primary-hover-color, $primary-hover-color);
+        }
+    }
+}
+
+/* Ajustement de la section résumé CV dans le chatroom */
+#modalCvSummarySection {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color, $border-color-light);
+    padding-top: 1.5rem;
+    transition: border-color 0.3s ease;
+    .card-title {
+        text-align: center;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Styles du modal générique */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal-content {
+    background-color: var(--background-main-container, $background-main-container-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px var(--shadow-medium, $shadow-medium);
+    width: 90%;
+    max-width: 900px; // Augmenté pour l'édition de CV
+    height: 90%;
+    max-height: 700px;
+    transform: translateY(-50px);
+    transition: transform 0.4s ease, background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    .modal-overlay.active & {
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color, $border-color-light);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+    h3 {
+        margin: 0;
+        font-size: 1.8em;
+        color: var(--primary-color, $primary-color);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .fas {
+        color: var(--accent-color, $accent-color);
+    }
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: var(--text-medium, $text-medium-light);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    &:hover {
+        color: var(--danger-color, $danger-color);
+    }
+}
+
+.modal-body {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color, $border-color-light);
+    margin-top: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+
+/* LIGNE 3: FOOTER */
+.app-footer {
+    width: 100%;
+    max-width: 1200px; /* Aligné avec le conteneur principal */
+    background-color: var(--background-main-container, $background-main-container-light);
+    color: var(--text-medium, $text-medium-light);
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 -4px 8px var(--shadow-light, $shadow-light);
+    text-align: center;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    p {
+        margin: 0.5rem 0;
+        font-size: 0.9em;
+    }
+    .fas {
+        color: #e74c3c;
+    }
+    .footer-links {
+        margin-top: 1rem;
+    }
+    .footer-link {
+        color: var(--primary-color, $primary-color);
+        text-decoration: none;
+        margin: 0 0.75rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+        &:hover {
+            text-decoration: underline;
+            color: var(--primary-hover-color, $primary-hover-color);
+        }
+    }
+}
+
+/* Styles pour les icônes de réseaux sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* Espace entre les icônes */
+    margin-top: 1rem;
+    .social-icon {
+        color: var(--text-medium, $text-medium-light); /* Couleur par défaut */
+        font-size: 1.5rem; /* Taille de l'icône */
+        transition: color 0.3s ease, transform 0.2s ease;
+        &:hover {
+            transform: scale(1.1); /* Léger agrandissement au survol */
+        }
+        /* Couleurs spécifiques aux marques */
+        .fa-facebook-f:hover { color: #3b5998; }
+        .fa-twitter:hover { color: #1da1f2; }
+        .fa-linkedin-in:hover { color: #0077b5; }
+        .fa-youtube:hover { color: #ff0000; }
+    }
+}
+
+/* CV Specific Styles (for the HTML generated by cv_processing.js) */
+.cv-container {
+    padding: 20px;
+    background-color: var(--background-main-container, $background-main-container-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    line-height: 1.6;
+    color: var(--text-dark, $text-dark-light);
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color, $border-color-light);
+}
+
+.cv-name {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--primary-color, $primary-color);
+    font-weight: 700;
+}
+
+.cv-contact-info {
+    font-size: 0.9em;
+    color: var(--text-medium, $text-medium-light);
+    margin-top: 5px;
+    i {
+        margin-right: 5px;
+        color: var(--primary-color, $primary-color);
+    }
+}
+
+.cv-summary {
+    margin-top: 15px;
+    font-style: italic;
+    color: var(--text-medium, $text-medium-light);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section-title {
+    font-size: 1.8em;
+    color: var(--primary-color, $primary-color);
+    border-bottom: 1px solid var(--primary-color, $primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    i {
+        color: var(--primary-hover-color, $primary-hover-color);
+    }
+}
+
+.cv-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 3px solid var(--border-color, $border-color-light);
+    background-color: var(--background-card, $background-card-light);
+    border-radius: 5px;
+    h3 {
+        font-size: 1.2em;
+        margin: 0 0 5px 0;
+        color: var(--text-dark, $text-dark-light);
+    }
+}
+
+.cv-item-duration {
+    font-size: 0.85em;
+    color: var(--text-medium, $text-medium-light);
+    margin-bottom: 8px;
+}
+
+.cv-skills-list, .cv-languages-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+        background-color: lighten($secondary-color, 40%); /* Light green based on secondary */
+        color: darken($secondary-color, 10%); /* Darker green */
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+        border: 1px solid lighten($secondary-color, 30%);
+    }
+}
+
+.cv-item-tech {
+    font-size: 0.85em;
+    color: var(--text-medium, $text-medium-light);
+    margin-top: 5px;
+}
+
+
+/* Responsive Adjustments (Inspired by WALLET PAI) */
+@media (min-width: 768px) { /* Tablet and Desktop */
+    .smart-navbar-top-fixed {
+        flex-direction: row;
+        text-align: left;
+        padding: 0 3rem;
+    }
+    .main-container-wallet-pai {
+        flex-direction: row; /* Deux colonnes: nav latérale + contenu principal */
+    }
+    /* Afficher la nav latérale dynamique sur desktop */
+    .dynamic-left-nav {
+        display: flex; /* Rendre visible */
+        border-radius: 1.5rem 0 0 1.5rem; /* Coins arrondis à gauche pour desktop */
+        min-height: calc(100vh - $navbar-height - 3rem); /* S'aligne à la hauteur du conteneur principal */
+    }
+    .content-area-wallet-pai {
+        border-radius: 0 1.5rem 1.5rem 0; /* Coins arrondis à droite pour desktop */
+    }
+    /* Chatroom layout for desktop */
+    .chat-content-layout {
+        flex-direction: row; /* Conversions list and chat window side-by-side */
+    }
+    .conversation-list-container {
+        flex: 0 0 280px; /* Fixed width for conversation list on desktop */
+    }
+}
+
+@media (max-width: 767px) { /* Mobile */
+    body {
+        padding-top: $navbar-height;
+        padding-left: 0.75rem; /* Réduire le padding général */
+        padding-right: 0.75rem;
+    }
+    .smart-navbar-top-fixed {
+        flex-direction: column;
+        height: auto; /* Hauteur automatique pour contenir les éléments empilés */
+        padding: 0.75rem 1rem;
+        gap: 0.75rem; /* Espace entre les blocs */
+    }
+    .navbar-main-links {
+        flex-wrap: wrap; /* Les liens s'enroulent */
+        justify-content: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .navbar-main-links .nav-link {
+        padding: 0.4rem 0.6rem; /* Padding plus petit */
+        font-size: 0.85em;
+    }
+    .navbar-brand, .navbar-controls {
+        width: 100%; /* Pleine largeur sur mobile */
+        justify-content: center;
+    }
+    .navbar-controls {
+        flex-wrap: wrap; /* Les contrôles s'enroulent */
+        gap: 0.75rem;
+    }
+    .search-form-navbar {
+        width: 100%; /* Pleine largeur */
+    }
+    .navbar-search-input {
+        width: 100%; /* Input prend toute la largeur disponible */
+        flex-grow: 1; /* S'étire pour remplir l'espace */
+    }
+    .btn-navbar {
+        flex-grow: 1; /* Les boutons s'étirent */
+        justify-content: center;
+    }
+    .theme-toggle {
+        margin-left: auto; /* Pousse à droite si de l'espace */
+        margin-right: auto;
+    }
+
+    .main-container-wallet-pai {
+        min-height: calc(100vh - $navbar-height - 3rem - 80px); /* Ajuster davantage pour la navbar étendue */
+        margin-top: 10px; /* Réduire la marge */
+    }
+    /* Cacher la nav latérale dynamique sur mobile, elle n'existe plus en tant que sidebar fixe */
+    .dynamic-left-nav {
+        display: none;
+    }
+    /* L'espace de contenu prend toute la largeur disponible sur mobile */
+    .content-area-wallet-pai {
+        border-radius: 1.5rem; /* Tous les coins arrondis sur mobile, car pas de sidebar */
+    }
+
+    .content-area-wallet-pai {
+        padding: 1rem; /* Réduire le padding du contenu principal */
+    }
+    .card {
+        padding: 1rem; /* Réduire le padding des cartes */
+    }
+    .grid-metrics, .grid-details {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste pour les petits écrans */
+    }
+    .metric-card-wallet {
+        min-height: 100px;
+    }
+    .metric-value-wallet {
+        font-size: 1.8rem;
+    }
+    /* Chatroom layout for mobile */
+    .chat-content-layout {
+        flex-direction: column; /* Conversions list above chat window */
+    }
+    .conversation-list-container {
+        flex: 1 1 100%;
+        max-height: 200px; /* Limit height on small screens */
+    }
+    .chat-window-container {
+        flex: 1 1 100%;
+        min-height: 300px; /* Ensure chat window is usable on mobile */
+    }
+    .button-row {
+        flex-direction: column; /* Boutons empilés sur mobile */
+    }
+    .btn {
+        width: 100%; /* Boutons pleine largeur sur mobile */
+    }
+    .btn-icon-text-compact {
+        width: auto; /* Ajuste la largeur pour le header */
+    }
+}
+
+/* Pour la visibilité des couleurs en RVB pour le calcul d'opacité en JS et pour l'active state du navlink */
+// Ces règles sont nécessaires pour que le JavaScript puisse extraire les valeurs RVB pour les calculs d'opacité
+// sans avoir à parser les variables CSS directement.
+body::before {
+    content: '';
+    display: none;
+    --primary-color-rgb: 66, 153, 225; // Valeurs RVB pour $primary-color
+    --border-color-rgb: 237, 242, 247; // Valeurs RVB pour $border-color-light
+}
+
+body.dark-theme::before {
+    content: '';
+    display: none;
+    --primary-color-rgb: 99, 179, 237; // Valeurs RVB pour --primary-color en dark theme
+    --border-color-rgb: 74, 101, 114; // Valeurs RVB pour --border-color en dark theme
+}

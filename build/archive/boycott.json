@@ -1,0 +1,289 @@
+{
+  "financial_flows": [],
+  "affaires": {
+  "chronology": []
+  },
+  "rics": [],
+  "taxes": [
+    {
+      "id": "tax_tfa",
+      "name": "Taxe sur les Transactions Financières (TFA)",
+      "description": "Taxe sur les flux financiers et les mouvements de capitaux.",
+      "rate": 0.2,
+      "applicable_to": "financial_flows"
+    },
+    {
+      "id": "tax_production",
+      "name": "Taxe sur les Facteurs de Production",
+      "description": "Taxe basée sur les coûts de production des entreprises.",
+      "rate": 0.05,
+      "applicable_to": "company_data"
+    },
+    {
+      "id": "tax_vat",
+      "name": "Taxe sur la Valeur Ajoutée",
+      "description": "Modélisation de l'impact de la TVA sur les transactions.",
+      "rate": 0.2,
+      "applicable_to": "transactions"
+    },
+    {
+      "id": "tax_campaign",
+      "name": "Taxe sur les Excédents de Comptes de Campagne",
+      "description": "Taxe sur les excédents de financement des partis politiques, d'après les données de la CNCCFP.FR.",
+      "rate": 0.5,
+      "applicable_to": "campaign_finance"
+    }
+  ],
+  "boycotts": [
+    {
+      "id": "b_movie_1",
+      "type": "movie",
+      "name": "Film 'bad guy 2",
+      "reason": "Promotion de politiques toxiques par le réalisateur.",
+      "targets": [
+        {
+          "name": "Billet de cinéma 'Pathé-Gaumont'",
+          "tax_id": "tax_vat"
+        }
+      ]
+    },
+    {
+      "id": "ent_boulangerie",
+      "name": "Boulangerie",
+      "type": "Distribution",
+      "description": "Réseau de boulangeries mentionné dans l'enquête."
+    },
+    {
+      "id": "ent_leclerc",
+      "name": "Leclerc",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_carrefour",
+      "name": "Carrefour",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_lidl",
+      "name": "Lidl",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_intermarche",
+      "name": "Intermarché",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_aldi",
+      "name": "Aldi",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_monoprix",
+      "name": "Monoprix",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_total",
+      "name": "Total",
+      "type": "Distribution",
+      "description": "Entreprise pétrolière et stations-service mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_super_u",
+      "name": "Super U",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_proxy_cocci_market",
+      "name": "Proxy/Cocci-MARKET",
+      "type": "Distribution",
+      "description": "Réseaux de magasins de proximité mentionnés dans l'enquête."
+    },
+    {
+      "id": "ent_hsbc",
+      "name": "HSBC",
+      "type": "Banque",
+      "description": "Banque internationale mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_societe_generale",
+      "name": "Société Générale",
+      "type": "Banque",
+      "description": "Banque commerciale mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_credit_cooperatif",
+      "name": "Crédit Coopératif",
+      "type": "Banque",
+      "description": "Banque éthique mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_credit_agricole",
+      "name": "Crédit Agricole",
+      "type": "Banque",
+      "description": "Banque commerciale mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_la_poste",
+      "name": "La Poste",
+      "type": "Banque",
+      "description": "Banque mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_credit_lyonnais",
+      "name": "Crédit Lyonnais",
+      "type": "Banque",
+      "description": "Banque historique mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_credit_mutuel",
+      "name": "Crédit Mutuel",
+      "type": "Banque",
+      "description": "Banque mutualiste mentionnée dans l'enquête."
+    },
+    {
+      "id": "ent_cic",
+      "name": "CIC",
+      "type": "Banque",
+      "description": "Banque mentionnée dans l'enquête."
+    },
+    {
+  "id": "ent_europafi",
+  "name": "EUROPAFI",
+  "type": "Holding Financière",
+  "description": "Holding de banques européennes mentionnée dans l'enquête. Ses filiales (DAB) sont situées dans plusieurs villes clés.",
+  "locations": [
+    {
+      "city": "Gateshead",
+      "country": "Royaume-Uni",
+      "country_code": "GB",
+      "lat": 54.9583,
+      "lon": -1.6033
+    },
+    {
+      "city": "Dublin",
+      "country": "Irlande",
+      "country_code": "IE",
+      "lat": 53.3498,
+      "lon": -6.2603
+    },
+    {
+      "city": "Loughton",
+      "country": "Royaume-Uni",
+      "country_code": "GB",
+      "lat": 51.6500,
+      "lon": 0.0600
+    },
+    {
+      "city": "Haarlem",
+      "country": "Pays-Bas",
+      "country_code": "NL",
+      "lat": 52.3874,
+      "lon": 4.6462
+    },
+    {
+      "city": "Bruxelles",
+      "country": "Belgique",
+      "country_code": "BE",
+      "lat": 50.8503,
+      "lon": 4.3517
+    },
+    {
+      "city": "Berlin",
+      "country": "Allemagne",
+      "country_code": "DE",
+      "lat": 52.5200,
+      "lon": 13.4050
+    },
+    {
+      "city": "Munich",
+      "country": "Allemagne",
+      "country_code": "DE",
+      "lat": 48.1351,
+      "lon": 11.5820
+    },
+    {
+      "city": "Vienne",
+      "country": "Autriche",
+      "country_code": "AT",
+      "lat": 48.2082,
+      "lon": 16.3738
+    },
+    {
+      "city": "Chamalières",
+      "country": "France",
+      "country_code": "FR",
+      "lat": 45.7766,
+      "lon": 3.0645
+    },
+    {
+      "city": "Rome",
+      "country": "Italie",
+      "country_code": "IT",
+      "lat": 41.9028,
+      "lon": 12.4964
+    },
+    {
+      "city": "Madrid",
+      "country": "Espagne",
+      "country_code": "ES",
+      "lat": 40.4168,
+      "lon": -3.7038
+    },
+    {
+      "city": "Carregado",
+      "country": "Portugal",
+      "country_code": "PT",
+      "lat": 39.0494,
+      "lon": -8.9950
+    },
+    {
+      "city": "Varsovie",
+      "country": "Pologne",
+      "country_code": "PL",
+      "lat": 52.2297,
+      "lon": 21.0122
+    },
+    {
+      "city": "Sofia",
+      "country": "Bulgarie",
+      "country_code": "BG",
+      "lat": 42.6977,
+      "lon": 23.3219
+    },
+    {
+      "city": "Athènes",
+      "country": "Grèce",
+      "country_code": "GR",
+      "lat": 37.9838,
+      "lon": 23.7275
+    }
+  ]
+}
+  ],
+  "entities": [],
+  "caisse_manifestation": {
+    "solde": 0,
+    "transactions": []
+  },
+  "blockchain": {
+    "transactions": []
+  },
+  "polls": [],
+  "organizers": [],
+  "beneficiaries": [],
+  "cv_contracts": [],
+  "manifestation_points": [
+    { "city": "Caen", "lat": 49.183333, "lon": -0.350000, "count": 6000 },
+    { "city": "Rennes", "lat": 48.11197912, "lon": -1.68186449, "count": 15000 },
+    { "city": "Grenoble", "lat": 45.185, "lon": 5.725, "count": 30000 }
+  ]
+}

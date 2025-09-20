@@ -1,0 +1,143 @@
+/* Fichier : public/src/css/cvnu.css */
+
+.cvnu-profile-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f0f4f8;
+    min-height: calc(100vh - 120px); /* Ajuster selon la taille de votre header/footer */
+}
+
+/* --- Menu latéral (Aside) --- */
+.cvnu-aside-menu {
+    flex: 0 0 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.cvnu-profile-card {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #0A192F;
+}
+
+.cvnu-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cvnu-nav li a {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #555;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cvnu-nav li a:hover {
+    background-color: #f5f5f5;
+}
+
+.cvnu-nav li a.active {
+    background-color: #0A192F;
+    color: white;
+}
+
+/* --- Contenu principal (Main) --- */
+.cvnu-main-content {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.cvnu-section {
+    display: none; /* Cache toutes les sections par défaut */
+}
+
+.cvnu-section.active {
+    display: block; /* Affiche la section active */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Formulaires et affichage des résultats (styles réutilisés) --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#cv-content-input,
+#full-name,
+#birth-date,
+#professional-goals {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #0A192F;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1a335f;
+}
+
+.output-display {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    min-height: 250px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+.output-display pre {
+    margin: 0;
+    padding: 0;
+}
+
+.loading-spinner, .error-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}

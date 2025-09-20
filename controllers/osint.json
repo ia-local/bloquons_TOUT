@@ -1,0 +1,121 @@
+{
+    "OSINT_Methods": [
+      {
+        "Category": "Collecte et Extraction de Données",
+        "Algorithms": [
+          {
+            "Name": "Web Scraping",
+            "Tools": ["BeautifulSoup", "Scrapy", "Selenium"]
+          },
+          {
+            "Name": "API Calls",
+            "Description": "Automatisation des requêtes vers des services et plateformes"
+          },
+          {
+            "Name": "Search Engine Automation",
+            "Tools": ["Selenium"]
+          }
+        ]
+      },
+      {
+        "Category": "Analyse de Texte et Extraction de Motifs",
+        "Algorithms": [
+          {
+            "Name": "Natural Language Processing (NLP)",
+            "Tools": ["spaCy", "NLTK"]
+          },
+          {
+            "Name": "Sentiment Analysis",
+            "Description": "Analyse des émotions ou opinions exprimées"
+          },
+          {
+            "Name": "Text Clustering",
+            "Algorithms": ["K-means", "DBSCAN"]
+          }
+        ]
+      },
+      {
+        "Category": "Traitement des Données Géospatiales",
+        "Algorithms": [
+          {
+            "Name": "Reverse Geocoding",
+            "Description": "Conversion des coordonnées GPS en adresses"
+          },
+          {
+            "Name": "Heatmaps",
+            "Tools": ["Leaflet.js", "Google Maps API"]
+          }
+        ]
+      },
+      {
+        "Category": "Analyse des Réseaux Sociaux",
+        "Algorithms": [
+          {
+            "Name": "Social Network Analysis (SNA)",
+            "Description": "Analyse des relations et interactions"
+          },
+          {
+            "Name": "Graph Algorithms",
+            "Examples": ["PageRank", "Betweenness Centrality", "Community Detection"]
+          }
+        ]
+      },
+      {
+        "Category": "Détection de Modèles et Anomalies",
+        "Algorithms": [
+          {
+            "Name": "Machine Learning",
+            "Description": "Modèles de classification pour identifier des comportements suspects"
+          },
+          {
+            "Name": "Time Series Analysis",
+            "Description": "Détection de tendances et événements inhabituels"
+          },
+          {
+            "Name": "Anomaly Detection",
+            "Algorithms": ["Isolation Forest", "Local Outlier Factor (LOF)", "Autoencoders"]
+          }
+        ]
+      },
+      {
+        "Category": "Fusion et Corrélation des Données",
+        "Algorithms": [
+          {
+            "Name": "Data Fusion Techniques",
+            "Description": "Combinaison d'informations de diverses sources"
+          },
+          {
+            "Name": "Entity Resolution",
+            "Description": "Identification et fusion d'enregistrements concernant la même entité"
+          }
+        ]
+      },
+      {
+        "Category": "Visualisation des Données",
+        "Algorithms": [
+          {
+            "Name": "Dashboards",
+            "Tools": ["Tableau", "Power BI", "Plotly"]
+          },
+          {
+            "Name": "Graph Visualisation",
+            "Tools": ["D3.js", "Gephi"]
+          }
+        ]
+      },
+      {
+        "Category": "Automatisation et Surveillances Actives",
+        "Algorithms": [
+          {
+            "Name": "Alert Systems",
+            "Description": "Systèmes d'alerte en temps réel avec règles spécifiques"
+          },
+          {
+            "Name": "Automated Monitoring",
+            "Tools": ["RSS feeds", "Scripts de scraping"]
+          }
+        ]
+      }
+    ]
+  }
+  

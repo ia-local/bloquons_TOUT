@@ -1,0 +1,84 @@
+{
+  "categories": [
+    {
+      "name": "Commerce",
+      "icon": "src/img/boycott-icon.png",
+      "description": "Commerces et enseignes ciblés."
+    },
+    {
+      "name": "Économie",
+      "icon": "src/img/banque_de_france.png",
+      "description": "Banques et entités financières."
+    },
+    {
+      "name": "Caméras",
+      "icon": "src/img/camera-icon.png",
+      "description": "Points de surveillance (caméras)."
+    },
+    {
+      "name": "Éducation",
+      "icon": "src/img/university.png",
+      "description": "Lieux d'enseignement et universités."
+    },
+    {
+      "name": "Santé",
+      "icon": "src/img/hospital.png",
+      "description": "Hôpitaux et centres de santé."
+    },
+    {
+      "name": "Gouvernement",
+      "icon": "src/img/mairie-icon.png",
+      "description": "Bâtiments officiels (mairies, préfectures)."
+    },
+    {
+      "name": "Manifestation",
+      "icon": "src/img/manifestation-icon.png",
+      "description": "Lieux de rassemblement et de manifestations."
+    },
+    {
+      "name": "Points Stratégiques",
+      "icon": "src/img/roundabout-icon.png",
+      "description": "Points de blocage et accès clés."
+    },
+    {
+      "name": "Réseaux Sociaux",
+      "icon": "src/img/telegram.png",
+      "description": "Groupes de mobilisation sur les réseaux sociaux."
+    },
+    {
+      "name": "Industrie",
+      "icon": "src/img/industrie-icon.png",
+      "description": "Sites industriels et d'énergie."
+    },
+    {
+      "name": "Satellites",
+      "icon": "src/img/satellite.png",
+      "description": "Couches de données satellitaires."
+    },
+    {
+      "name": "Télécommunications",
+      "icon": "src/img/telecom.png",
+      "description": "Infrastructures de télécommunication."
+    },
+    {
+      "name": "Intersyndical",
+      "icon": "src/img/syndicats.png",
+      "description": "Sièges et points de ralliement syndicaux."
+    },
+    {
+      "name": "Dossiers de Preuves",
+      "icon": "src/img/folder-icon.png",
+      "description": "Emplacements de dossiers d'enquête."
+    },
+    {
+      "name": "Assemblée Générale",
+      "icon": "src/img/ag-icon.png",
+      "description": "Lieux d'assemblées générales."
+    },
+    {
+      "name": "Soumissions en attente",
+      "icon": "src/img/pending-icon.png",
+      "description": "Points de données en attente de validation."
+    }
+  ]
+}

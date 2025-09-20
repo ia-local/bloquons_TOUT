@@ -1,0 +1,107 @@
+[
+    {
+        "id": "ric-1",
+        "question": "Faut-il abroger la loi du Plomb ?",
+        "description": "La loi du plomb, mise en place sans consultation, est jugée injuste. Cette proposition vise à son abrogation totale pour garantir les libertés individuelles.",
+        "deadline": "2025-09-30",
+        "votes_for": 8500,
+        "votes_against": 4089,
+        "status": "En cours",
+        "level": "national",
+        "type": "Abrogatoire",
+        "locations": [
+            {
+                "lat": 48.8566,
+                "lon": 2.3522,
+                "count": 5000
+            },
+            {
+                "lat": 43.6047,
+                "lon": 1.4442,
+                "count": 2500
+            }
+        ]
+    },
+    {
+        "id": "ric-2",
+        "question": "Faut-il modifier la Constitution via un RIC constituant ?",
+        "description": "Cette proposition vise à intégrer le RIC dans la Constitution afin de sécuriser l'exercice de ce droit citoyen et d'éviter qu'il ne soit remis en cause par les lois futures.",
+        "deadline": "2025-10-15",
+        "votes_for": 28760,
+        "votes_against": 5807,
+        "status": "En cours",
+        "level": "national",
+        "type": "Constituant",
+        "locations": [
+            {
+                "lat": 45.7640,
+                "lon": 4.8357,
+                "count": 15000
+            },
+            {
+                "lat": 44.8378,
+                "lon": -0.5792,
+                "count": 8000
+            }
+        ]
+    },
+    {
+        "id": "ric-3",
+        "question": "Faut-il mettre en place une taxe sur les comptes de campagne des politiciens fautifs ?",
+        "description": "Pour garantir une justice fiscale, ce RIC propose de taxer les excédents de comptes de campagne des élus ayant mis en place des lois injustes, comme celle des 80 km/h.",
+        "deadline": "2025-11-20",
+        "votes_for": 7000,
+        "votes_against": 2876,
+        "status": "En cours",
+        "level": "national",
+        "type": "Législatif",
+        "locations": [
+            {
+                "lat": 47.2184,
+                "lon": -1.5536,
+                "count": 4000
+            },
+            {
+                "lat": 49.4432,
+                "lon": 1.0999,
+                "count": 3000
+            }
+        ]
+    },
+    {
+        "id": "ric-4",
+        "question": "Faut-il créer un jardin partagé dans le quartier Ouest ?",
+        "description": "Proposition de RIC local pour transformer un terrain vague en un jardin partagé géré par les habitants.",
+        "deadline": "2025-08-15",
+        "votes_for": 150,
+        "votes_against": 25,
+        "status": "En cours",
+        "level": "local",
+        "type": "Législatif",
+        "locations": [
+            {
+                "lat": 47.2184,
+                "lon": -1.5536,
+                "count": 175
+            }
+        ]
+    },
+    {
+        "id": "ric-5",
+        "question": "Faut-il améliorer les pistes cyclables du département ?",
+        "description": "RIC départemental proposant un budget pour l'extension et l'amélioration du réseau cyclable sur tout le département.",
+        "deadline": "2025-09-01",
+        "votes_for": 1200,
+        "votes_against": 350,
+        "status": "En cours",
+        "level": "departemental",
+        "type": "Législatif",
+        "locations": [
+            {
+                "lat": 47.491,
+                "lon": -0.556,
+                "count": 1550
+            }
+        ]
+    }
+]

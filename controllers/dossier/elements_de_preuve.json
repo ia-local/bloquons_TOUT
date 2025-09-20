@@ -1,0 +1,14 @@
+[
+    {
+        "type": "Preuve financière",
+        "description": "Transactions suspectes dans les comptes associés à l'Élysée.",
+        "details": "Analyse des flux financiers montrant des marges élevées et non déclarées.",
+        "articleViolations": ["313", "314"]
+    },
+    {
+        "type": "Preuve administrative",
+        "description": "Utilisation de l'image de l'État pour des gains privés.",
+        "details": "Documentation de l'usage de la marque 'Élysée','X' à des fins de commerce.",
+        "articleViolations": ["431"]
+    }
+]

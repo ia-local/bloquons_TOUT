@@ -1,0 +1,178 @@
+{
+    "CTF": {
+      "id": 3,
+      "title": "R2D2 - L'IA au service de la justice sociale 🤖",
+      "description": "Histoire d'Alicia, une IA qui lutte contre l'évasion fiscale et les infractions routières.",
+      "objectif": "Étudier le rôle d'Alicia et son impact sur la prévention et la justice sociale.",
+      "phases": ["Analyse", "Étude de cas", "Documentation"],
+      "tasks": [
+        "Comprendre le rôle d'Alicia dans la prévention des infractions.",
+        "Évaluer son efficacité et son impact.",
+        "Proposer des recommandations pour encourager l'adoption de l'IA."
+      ],
+      "OSINT_Methods": [
+        {
+          "Category": "Collecte et Extraction de Données",
+          "Algorithms": [
+            {
+              "Name": "Web Scraping",
+              "Tools": ["BeautifulSoup", "Scrapy", "Selenium"]
+            },
+            {
+              "Name": "API Calls",
+              "Description": "Automatisation des requêtes vers des services et plateformes"
+            },
+            {
+              "Name": "Search Engine Automation",
+              "Tools": ["Selenium"]
+            }
+          ]
+        },
+        {
+          "Category": "Analyse de Texte et Extraction de Motifs",
+          "Algorithms": [
+            {
+              "Name": "Natural Language Processing (NLP)",
+              "Tools": ["spaCy", "NLTK"]
+            },
+            {
+              "Name": "Sentiment Analysis",
+              "Description": "Analyse des émotions ou opinions exprimées"
+            },
+            {
+              "Name": "Text Clustering",
+              "Algorithms": ["K-means", "DBSCAN"]
+            }
+          ]
+        },
+        {
+          "Category": "Traitement des Données Géospatiales",
+          "Algorithms": [
+            {
+              "Name": "Reverse Geocoding",
+              "Description": "Conversion des coordonnées GPS en adresses"
+            },
+            {
+              "Name": "Heatmaps",
+              "Tools": ["Leaflet.js", "Google Maps API"]
+            }
+          ]
+        },
+        {
+          "Category": "Analyse des Réseaux Sociaux",
+          "Algorithms": [
+            {
+              "Name": "Social Network Analysis (SNA)",
+              "Description": "Analyse des relations et interactions"
+            },
+            {
+              "Name": "Graph Algorithms",
+              "Examples": ["PageRank", "Betweenness Centrality", "Community Detection"]
+            }
+          ]
+        },
+        {
+          "Category": "Détection de Modèles et Anomalies",
+          "Algorithms": [
+            {
+              "Name": "Machine Learning",
+              "Description": "Modèles de classification pour identifier des comportements suspects"
+            },
+            {
+              "Name": "Time Series Analysis",
+              "Description": "Détection de tendances et événements inhabituels"
+            },
+            {
+              "Name": "Anomaly Detection",
+              "Algorithms": ["Isolation Forest", "Local Outlier Factor (LOF)", "Autoencoders"]
+            }
+          ]
+        },
+        {
+          "Category": "Fusion et Corrélation des Données",
+          "Algorithms": [
+            {
+              "Name": "Data Fusion Techniques",
+              "Description": "Combinaison d'informations de diverses sources"
+            },
+            {
+              "Name": "Entity Resolution",
+              "Description": "Identification et fusion d'enregistrements concernant la même entité"
+            }
+          ]
+        },
+        {
+          "Category": "Visualisation des Données",
+          "Algorithms": [
+            {
+              "Name": "Dashboards",
+              "Tools": ["Tableau", "Power BI", "Plotly"]
+            },
+            {
+              "Name": "Graph Visualisation",
+              "Tools": ["D3.js", "Gephi"]
+            }
+          ]
+        },
+        {
+          "Category": "Automatisation et Surveillance Active",
+          "Algorithms": [
+            {
+              "Name": "Alert Systems",
+              "Description": "Systèmes d'alerte en temps réel avec règles spécifiques"
+            },
+            {
+              "Name": "Automated Monitoring",
+              "Tools": ["RSS feeds", "Scripts de scraping"]
+            }
+          ]
+        }
+      ],
+      "projectTeam": {
+        "Description": "Équipe interdisciplinaire avec des experts en technologie, en déontologie, en anthropisme et en communication pour couvrir tous les aspects de la mission.",
+        "Members": [
+          "Expert en technologie",
+          "Spécialiste en déontologie",
+          "Anthropologue",
+          "Communicateur"
+        ]
+      },
+      "entropyAnalysis": {
+        "Description": "Étude des dilemmes éthiques potentiels liés au radar policier, et identification des meilleures pratiques pour appliquer la déontologie.",
+        "Steps": [
+          "Analyse des implications éthiques",
+          "Définition des meilleures pratiques"
+        ]
+      },
+      "radarDesign": {
+        "Description": "Conception d'un radar qui respecte les normes techniques et déontologiques.",
+        "Collaboration": "Travail avec des experts en technologie et en sécurité routière"
+      },
+      "lawEnforcementPartnerships": {
+        "Description": "Partenariat avec la police pour définir les besoins opérationnels et les normes éthiques.",
+        "Steps": [
+          "Identification des standards",
+          "Développement des protocoles"
+        ]
+      },
+      "testingAndEvaluation": {
+        "Description": "Tester le radar dans des conditions réelles, en évaluant son efficacité et son impact éthique.",
+        "Steps": [
+          "Tests en conditions réelles",
+          "Évaluation des résultats"
+        ]
+      },
+      "deployment": {
+        "Description": "Déploiement du radar dans différentes zones avec des règles éthiques strictes.",
+        "Communication": "Informer le public pour garantir une utilisation appropriée"
+      },
+      "continuousImprovement": {
+        "Description": "Suivi des performances, collecte des retours et adaptation de la technologie.",
+        "Steps": [
+          "Collecte des retours",
+          "Amélioration continue"
+        ]
+      }
+    }
+  }
+  

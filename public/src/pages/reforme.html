@@ -1,0 +1,44 @@
+<section class="page-section cvnu-page-container">
+    <h1>Générateur de CV Numérique Universel (CVNU)</h1>
+    <p>Le CVNU est au cœur de notre réforme. Il permet de valoriser vos compétences pour une allocation universelle équitable.</p>
+    
+    <div class="cvnu-info-section">
+        <h2>Le CVNU au service de la réforme</h2>
+        <div class="card">
+            <h3>Titre I : Redéfinition du Droit au Travail et à la Rémunération des Compétences</h3>
+            <p>Cette section réaffirme le droit au travail à vie à partir de l'âge de 16 ans, en l'adaptant à l'économie numérique.</p>
+
+            <h4>Article L3121-1 : Définition du Travail</h4>
+            <p>Le travail est désormais défini comme toute activité productive ou d'apprentissage générant une compétence valorisable et reconnue sur le CVNU. Cette définition élargit le concept de travail pour inclure les apprentissages indépendants, les projets personnels et les activités génératrices de compétences non traditionnelles.</p>
+
+            <h4>Article L3222-1 : Allocation Universelle des Compétences</h4>
+            <p>Un système d'allocation universelle des compétences est instauré, versée à chaque citoyen détenant un CVNU actif et validé. Le montant de cette allocation, compris entre 500€ et 5000€, est calculé en fonction de la progression des compétences enregistrées sur le CVNU, via un algorithme transparent et évolutif.</p>
+        </div>
+    </div>
+
+    <div class="cvnu-input-area">
+        <h2>Générer votre CVNU</h2>
+        <p>Collez le texte de votre CV ci-dessous pour le structurer et l'analyser via notre IA.</p>
+        <form id="cvnu-form">
+            <div class="form-group">
+                <label for="cv-content-input">Contenu du CV :</label>
+                <textarea id="cv-content-input" placeholder="Collez le contenu de votre CV ici..." rows="15"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="numero-fiscal-input">Numéro Fiscal (simulation) :</label>
+                <input type="text" id="numero-fiscal-input" placeholder="Entrez un numéro fiscal" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" id="generate-cv-button" class="action-btn">Analyser et structurer le CV</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="cvnu-output-area">
+        <h2>Résultat du CVNU</h2>
+        <div id="cvnu-output-display" class="output-display">
+            <p>Le résultat de l'analyse s'affichera ici.</p>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,157 @@
+/* Styles pour la page de blog */
+.blog-container {
+    padding: 2rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Styles pour le composant de carte */
+.card-blog {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-blog:hover {
+    transform: translateY(-5px);
+}
+
+.card-blog-media img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-blog-content {
+    padding: 1.5rem;
+}
+
+.card-blog-content h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-blog-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.card-blog-content .card-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+/* Styles pour la modale du générateur */
+#generator-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#generator-modal .modal-content {
+    background-color: #fefefe;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#generator-modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#generator-modal .close-button:hover,
+#generator-modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#generator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#generator-form label {
+    font-weight: bold;
+}
+
+#generator-form input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#generator-form button {
+    padding: 0.75rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#generator-form button:hover {
+    background-color: #0056b3;
+}
+
+#generation-status {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+#generated-article-preview {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+#preview-title {
+    color: #007BFF;
+    font-size: 1.5rem;
+}
+
+#preview-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+#preview-content {
+    margin-top: 1rem;
+    line-height: 1.6;
+}

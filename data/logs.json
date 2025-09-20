@@ -1,0 +1,1316 @@
+[
+  {
+    "timestamp": "2025-06-29T10:21:10.647Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 0
+  },
+  {
+    "timestamp": "2025-06-29T10:21:19.677Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 0
+  },
+  {
+    "timestamp": "2025-06-29T10:21:21.893Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 0
+  },
+  {
+    "timestamp": "2025-06-29T10:21:28.758Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 0
+  },
+  {
+    "timestamp": "2025-06-29T10:21:30.746Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "d97a15d6-b0a7-43fb-af24-d590708cef3b",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T10:21:30.749Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T10:22:43.711Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T10:42:23.931Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T10:42:36.507Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T10:42:41.254Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T10:43:00.856Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T10:43:02.942Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "cf2e0480-8eb7-4a5d-9faa-ffa94328566f",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T10:43:02.945Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T10:52:40.241Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T10:53:15.701Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T10:53:30.131Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:00:20.344Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:00:28.860Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:06:21.172Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:06:39.332Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:07:29.286Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:15:33.114Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:19:35.002Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:19:36.316Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:38:31.519Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:38:42.016Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T11:38:46.570Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "41a1d0c0-2294-4f59-8b50-8b433bfd7823",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T11:38:46.578Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T11:39:26.530Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T11:40:33.278Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T11:40:41.160Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T11:43:10.592Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T11:43:12.623Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T11:43:31.356Z",
+    "type": "AI_RESPONSE_PUNCTUAL",
+    "prompt": "test",
+    "response": "Please tell me what you'd like me to test!  \n\nFor example, you could ask me to:\n\n* **Answer a question:** \"What is the capital of France?\"\n* **Generate some text:** \"Write a short story about a cat who goes on an adventure.\"\n* **Translate something:** \"Translate 'Hello world' into Spanish.\"\n* **Summarize a piece of text:** \"Summarize the plot of the movie Inception.\"\n\n\nLet me know how I can help! 😊 \n",
+    "model": "gemma2-9b-it",
+    "utmi": 17.56,
+    "estimatedCost": 0.00001,
+    "processingTime": 0.572
+  },
+  {
+    "timestamp": "2025-06-29T12:02:10.958Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 0
+  },
+  {
+    "timestamp": "2025-06-29T12:02:13.134Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "e4ab93fd-d08c-4aae-8430-fac7074535f2",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T12:02:13.142Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 1
+  },
+  {
+    "timestamp": "2025-06-29T12:02:16.357Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "346e1a46-9ad7-4854-adfc-4aab82919f29",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T12:02:16.365Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 2
+  },
+  {
+    "timestamp": "2025-06-29T12:02:26.271Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "cb76c05d-293b-45df-93d2-057e19d64229",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T12:02:26.277Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 3
+  },
+  {
+    "timestamp": "2025-06-29T12:02:26.889Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "f6922dc7-68ea-4748-aa3f-4005465a7896",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-06-29T12:02:26.898Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "count": 4
+  },
+  {
+    "timestamp": "2025-06-29T12:02:35.881Z",
+    "type": "AI_RESPONSE_PUNCTUAL",
+    "prompt": "bonjour",
+    "response": "Bonjour ! 👋  Comment puis-je vous aider aujourd'hui ? 😊\n",
+    "model": "gemma2-9b-it",
+    "utmi": 7.61,
+    "estimatedCost": 0.000002,
+    "processingTime": 0.371
+  },
+  {
+    "id": "pasted_conv_2025-06-29T12-03-12-430Z",
+    "date": "2025-06-29T12:03:12.436Z",
+    "rawMarkdownPath": "/Volumes/devOps/projets/cvnu/beta/conversations_pasted_raw/conversation_pasted_2025-06-29T12-03-12-430Z.md",
+    "analysis": {
+      "conversation_summary": "L'utilisateur a résolu un bug critique lié à l'intégration d'une API (Stripe) en mettant à jour Node.js, puis a documenté la solution et automatisé le déploiement.",
+      "identified_skills": [
+        "Débogage (API Stripe)",
+        "Mise à jour de dépendances (Node.js)",
+        "Configuration de hooks d'API",
+        "Automatisation de déploiement",
+        "Documentation technique (Wiki interne)"
+      ],
+      "soft_skills_demonstrated": [
+        "Résolution de problèmes complexes",
+        "Proactivité",
+        "Autonomie",
+        "Orientation vers l'amélioration continue",
+        "Rigueur (documentation)"
+      ],
+      "key_topics": [
+        "Problème d'intégration API",
+        "Solution technique Node.js",
+        "Optimisation des processus",
+        "Documentation"
+      ],
+      "potential_projects": [
+        "Résolution et optimisation de l'intégration du module de paiement Stripe : Diagnostic, mise à jour de Node.js, reconfiguration des hooks, documentation et automatisation du déploiement pour assurer la stabilité du site."
+      ]
+    }
+  },
+  {
+    "id": "pasted_conv_2025-06-29T12-03-24-958Z",
+    "date": "2025-06-29T12:03:24.961Z",
+    "rawMarkdownPath": "/Volumes/devOps/projets/cvnu/beta/conversations_pasted_raw/conversation_pasted_2025-06-29T12-03-24-958Z.md",
+    "analysis": {
+      "conversation_summary": "L'utilisateur a résolu un bug critique lié à l'intégration d'une API (Stripe) en mettant à jour Node.js, puis a documenté la solution et automatisé le déploiement.",
+      "identified_skills": [
+        "Débogage (API Stripe)",
+        "Mise à jour de dépendances (Node.js)",
+        "Configuration de hooks d'API",
+        "Automatisation de déploiement",
+        "Documentation technique (Wiki interne)"
+      ],
+      "soft_skills_demonstrated": [
+        "Résolution de problèmes complexes",
+        "Proactivité",
+        "Autonomie",
+        "Orientation vers l'amélioration continue",
+        "Rigueur (documentation)"
+      ],
+      "key_topics": [
+        "Problème d'intégration API",
+        "Solution technique Node.js",
+        "Optimisation des processus",
+        "Documentation"
+      ],
+      "potential_projects": [
+        "Résolution et optimisation de l'intégration du module de paiement Stripe : Diagnostic, mise à jour de Node.js, reconfiguration des hooks, documentation et automatisation du déploiement pour assurer la stabilité du site."
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-06-29T12:04:49.446Z",
+    "type": "AI_RESPONSE_PUNCTUAL",
+    "prompt": "Synthèse de Valorisation\n\n            \nMessage: Compétences du CV valorisées avec succès.\n\n\n            \nValorisation Détaillée:\n\n\n            \n{\n  \"catch_phrase\": \"Innovant et passionné par l'informatique, je mets mon expertise au service des entreprises pour les aider à atteindre leurs objectifs.\",\n  \"valorized_technical_skills\": [\n    {\n      \"skill\": \"Expérience en informatique\",\n      \"valorization\": \"Trois ans d'expérience dans le domaine de l'informatique, ce qui me permet de comprendre les besoins spécifiques des entreprises et de proposer des solutions efficaces.\"\n    }\n  ],\n  \"professional_attributes\": [\n    {\n      \"attribute\": \"Innovativité\",\n      \"justification\": \"Mon expérience et ma passion pour l'informatique me permettent de trouver des solutions créatives et innovantes pour résoudre les problèmes.\"\n    },\n    {\n      \"attribute\": \"Communication\",\n      \"justification\": \"En tant qu'expert en recrutement et en analyse de carrière, je suis capable de communiquer efficacement avec les entreprises et les candidats pour comprendre leurs besoins et proposer des solutions adaptées.\"\n    }\n  ]\n}",
+    "response": "## Synthèse de Valorisation\n\nVotre message \"Compétences du CV valorisées avec succès\" est bien parti ! \n\nLa valorisation détaillée fournie est un excellent point de départ. Elle met en avant :\n\n**Points forts:**\n\n* **Catchphrase percutante:** \"Innovant et passionné par l'informatique, je mets mon expertise au service des entreprises pour les aider à atteindre leurs objectifs.\"  Elle est concise, accrocheuse et reflète votre motivation.\n\n* **Valorisation des compétences techniques:** L'expérience en informatique de 3 ans est clairement mise en avant, avec une justification précise de son impact.\n* **Mise en avant des qualités professionnelles:** L'innovation et la communication sont des atouts précieux pour vous démarquer. Les justifications fournies sont convaincantes et illustrent concrètement vos compétences.\n\n\n**Suggestions d'amélioration:**\n\n* **Développer davantage les compétences techniques:**  \n    * Listez d'autres compétences techniques spécifiques (langages de programmation, outils, etc.) et associez-les à des réalisations tangibles. \n    * Quantifiez vos expériences (ex: \"développé 3 applications web\", \"implémenté 2 systèmes d'automatisation\").\n* **Exemplifier les qualités professionnelles:** \n    * Donnez des exemples concrets de situations où vous avez démontré votre innovation et votre communication. \n    *  Parlez d'un projet innovant ou d'une situation où vous avez réussi à communiquer efficacement avec des parties prenantes différentes.\n* **Adapter la valorisation à chaque offre d'emploi:** \n    *  Identifiez les compétences et les qualités recherchées dans chaque offre et mettez en avant celles qui sont les plus pertinentes. \n\n\nEn enrichissant votre valorisation avec des exemples précis et en l'adaptant à chaque situation, vous maximiserez vos chances de succès dans votre recherche d'emploi. \n\n\n\n",
+    "model": "gemma2-9b-it",
+    "utmi": 101.38,
+    "estimatedCost": 0.000046,
+    "processingTime": 1.017
+  },
+  {
+    "id": "pasted_conv_2025-06-29T12-08-35-682Z",
+    "date": "2025-06-29T12:08:35.686Z",
+    "rawMarkdownPath": "/Volumes/devOps/projets/cvnu/beta/conversations_pasted_raw/conversation_pasted_2025-06-29T12-08-35-682Z.md",
+    "analysis": {
+      "conversation_summary": "L'utilisateur a résolu un bug critique lié à l'intégration d'une API (Stripe) en mettant à jour Node.js, puis a documenté la solution et automatisé le déploiement.",
+      "identified_skills": [
+        "Débogage (API Stripe)",
+        "Mise à jour de dépendances (Node.js)",
+        "Configuration de hooks d'API",
+        "Automatisation de déploiement",
+        "Documentation technique (Wiki interne)"
+      ],
+      "soft_skills_demonstrated": [
+        "Résolution de problèmes complexes",
+        "Proactivité",
+        "Autonomie",
+        "Orientation vers l'amélioration continue",
+        "Rigueur (documentation)"
+      ],
+      "key_topics": [
+        "Problème d'intégration API",
+        "Solution technique Node.js",
+        "Optimisation des processus",
+        "Documentation"
+      ],
+      "potential_projects": [
+        "Résolution et optimisation de l'intégration du module de paiement Stripe : Diagnostic, mise à jour de Node.js, reconfiguration des hooks, documentation et automatisation du déploiement pour assurer la stabilité du site."
+      ]
+    }
+  },
+  {
+    "id": "pasted_conv_2025-06-29T12-09-09-309Z",
+    "date": "2025-06-29T12:09:09.311Z",
+    "rawMarkdownPath": "/Volumes/devOps/projets/cvnu/beta/conversations_pasted_raw/conversation_pasted_2025-06-29T12-09-09-309Z.md",
+    "analysis": {
+      "conversation_summary": "L'utilisateur a résolu un bug critique lié à l'intégration d'une API (Stripe) en mettant à jour Node.js, puis a documenté la solution et automatisé le déploiement.",
+      "identified_skills": [
+        "Débogage (API Stripe)",
+        "Mise à jour de dépendances (Node.js)",
+        "Configuration de hooks d'API",
+        "Automatisation de déploiement",
+        "Documentation technique (Wiki interne)"
+      ],
+      "soft_skills_demonstrated": [
+        "Résolution de problèmes complexes",
+        "Proactivité",
+        "Autonomie",
+        "Orientation vers l'amélioration continue",
+        "Rigueur (documentation)"
+      ],
+      "key_topics": [
+        "Problème d'intégration API",
+        "Solution technique Node.js",
+        "Optimisation des processus",
+        "Documentation"
+      ],
+      "potential_projects": [
+        "Résolution et optimisation de l'intégration du module de paiement Stripe : Diagnostic, mise à jour de Node.js, reconfiguration des hooks, documentation et automatisation du déploiement pour assurer la stabilité du site."
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-09T07:34:52.914Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Alfred Alphonse"
+  },
+  {
+    "timestamp": "2025-09-09T07:34:52.924Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Alfred Alphonse"
+  },
+  {
+    "timestamp": "2025-09-09T07:35:02.918Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Alfred Alphonse"
+  },
+  {
+    "timestamp": "2025-09-09T07:35:02.925Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Alfred Alphonse"
+  },
+  {
+    "timestamp": "2025-09-09T07:35:50.569Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:35:50.583Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:36:15.995Z",
+    "type": "AI_RESPONSE_PUNCTUAL",
+    "prompt": "ynthèse de Valorisation\n\n            \nMessage: Compétences du CV valorisées avec succès.\n\n\n            \nValorisation Détaillée:\n\n\n            \n{\n  \"catch_phrase\": \"Polyvalent professionnel avec 20 ans d'expérience en politique et une expertise solide en programmation informatique.\",\n  \"valorized_technical_skills\": [\n    {\n      \"skill\": \"Programmation informatique\",\n      \"valorization\": \"15 ans d'expérience en programmation informatique témoignent d'une expertise technique solide et d'une capacité d'adaptation à des environnements technologiques variés.\"\n    }\n  ],\n  \"professional_attributes\": [\n    {\n      \"attribute\": \"Polyvalence\",\n      \"justification\": \"Une expérience diversifiée dans des secteurs aussi différents que la politique, l'informatique, l'agriculture, l'industrie, l'animation et l'hôtellerie démontre une capacité d'adaptation et une ouverture à de nouveaux challenges.\"\n    },\n    {\n      \"attribute\": \"Leadership\",\n      \"justification\": \"20 ans d'expérience en politique suggèrent des compétences en leadership, en gestion de projets et en prise de décision.\"\n    }\n  ]\n}",
+    "response": "This is a great start to a CV valorisation analysis! \n\nHere are some suggestions to make it even stronger:\n\n**1. Expand on Technical Skills:**\n\n* **Specificity:** Instead of just \"programmation informatique\", list specific programming languages and frameworks the candidate is proficient in (e.g., Python, Java, SQL, React).\n* **Quantify Achievements:**  Add metrics to demonstrate the impact of their programming skills (e.g., \"Developed a web application that increased user engagement by 20%\").\n\n**2.  Deepen Professional Attribute Descriptions:**\n\n* **Provide Concrete Examples:** Back up claims about leadership and polyvalence with specific examples from their experience. For instance:\n    *  **Leadership:** \"Led a campaign team of 10 volunteers, resulting in a 15% increase in voter turnout.\"\n    *  **Polyvalence:** \"Successfully transitioned from a role in agriculture to a leadership position in the tech sector, demonstrating adaptability and a willingness to learn.\"\n* **Tailor to Target Role:**  Align the highlighted attributes with the specific requirements of the job they are applying for. \n\n**3. Add Soft Skills:**\n\n* Don't overlook important soft skills like communication, teamwork, problem-solving, and critical thinking. \n\n**4.  Refine the Catch Phrase:**\n\n* Consider making it more concise and impactful. \n\n**5.  Structure for Clarity:**\n\n* Use bullet points and clear headings to make the valorisation easy to read and understand.\n\n**Example Enhancement:**\n\n```json\n{\n  \"catch_phrase\": \"Experienced Political Leader & Software Developer Seeking a Challenging Role\",\n  \"valorized_technical_skills\": [\n    {\n      \"skill\": \"Python\",\n      \"valorization\": \"15 years of experience developing Python applications for web and data analysis, resulting in increased efficiency and data-driven insights.\"\n    },\n    {\n      \"skill\": \"SQL\",\n      \"valorization\": \"Proficient in SQL for database management and querying, enabling efficient data extraction and analysis.\"\n    }\n  ],\n  \"professional_attributes\": [\n    {\n      \"attribute\": \"Polyvalence\",\n      \"justification\": \"Proven ability to adapt to diverse environments, demonstrated through roles in politics, software development, agriculture, industry, animation, and hospitality.\"\n    },\n    {\n      \"attribute\": \"Leadership\",\n      \"justification\": \"20 years of experience in politics, including leading a campaign team of 10 volunteers, resulting in a 15% increase in voter turnout.\"\n    },\n    {\n      \"attribute\": \"Communication\",\n      \"justification\": \"Excellent communication and interpersonal skills, honed through public speaking engagements, stakeholder management, and team collaboration.\"\n    }\n  ]\n}\n```\n\n\n\nRemember, the goal is to showcase the candidate's unique qualifications and make a compelling case for why they are the best fit for the position.\n",
+    "model": "gemma2-9b-it",
+    "utmi": 128.6,
+    "estimatedCost": 0.000071,
+    "processingTime": 1.528
+  },
+  {
+    "timestamp": "2025-09-09T07:36:38.348Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:36:38.354Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:36:43.130Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:36:43.139Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:36:51.959Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 1,
+    "totalCount": 1
+  },
+  {
+    "timestamp": "2025-09-09T07:36:57.391Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "661e0876-c6b0-4561-956a-ffc04fbbbc91",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-09-09T07:36:57.397Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 2,
+    "totalCount": 2
+  },
+  {
+    "timestamp": "2025-09-09T07:37:12.444Z",
+    "type": "CONVERSATION_MESSAGE",
+    "action": "USER_MESSAGE_SENT",
+    "conversationId": "661e0876-c6b0-4561-956a-ffc04fbbbc91",
+    "userMessage": "Bonjour, peux-tu me proposer des solutions de formation, dans l'économie circulaire, le socialisme, ...",
+    "utmi": 12.38,
+    "estimated_cost_usd": 0.000003,
+    "interaction": {
+      "type": "prompt",
+      "data": {
+        "text": "Bonjour, peux-tu me proposer des solutions de formation, dans l'économie circulaire, le socialisme, la solidarité",
+        "wordCount": 15,
+        "inputTokens": 29
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-09T07:37:13.235Z",
+    "type": "CONVERSATION_MESSAGE",
+    "action": "AI_RESPONSE_RECEIVED",
+    "conversationId": "661e0876-c6b0-4561-956a-ffc04fbbbc91",
+    "aiResponse": "Bonjour ! Je suis ravi de vous aider à structurer votre parcours professionnel pour vos formations d...",
+    "utmi": 93.1,
+    "estimated_cost_usd": 0.00003,
+    "interaction": {
+      "type": "ai_response",
+      "data": {
+        "text": "Bonjour ! Je suis ravi de vous aider à structurer votre parcours professionnel pour vos formations dans l'économie circulaire, le socialisme et la solidarité. \n\nPour vous proposer des solutions de formation pertinentes, j'ai besoin de mieux comprendre vos objectifs et votre background. \n\nPouvez-vous me dire :\n\n1. **Quel est votre niveau d'études actuel ?** (ex: bac, licence, master...)\n2. **Avez-vous déjà des expériences professionnelles dans l'un de ces domaines ?** Si oui, lesquelles ?\n3. **Quels aspects de l'économie circulaire, du socialisme ou de la solidarité vous intéressent le plus ?** (ex: développement durable, management participatif, insertion professionnelle...)\n4. **Quel type de formation recherchez-vous ?** (ex: diplôme universitaire, certificat, formation courte...)\n5. **Avez-vous des préférences géographiques ?** (ex: formation en ligne, formation à distance, formation en présentiel dans une ville spécifique...)\n\nEn me fournissant ces informations, je pourrai vous proposer des solutions de formation adaptées à vos besoins et à vos aspirations.  \n\nJe suis prêt à vous accompagner pour que vous puissiez vous former dans les domaines qui vous passionnent ! \n\n",
+        "tokenCount": 298,
+        "outputTokens": 298,
+        "inputTokens": 130,
+        "modelId": "gemma2-9b-it",
+        "relevance": true,
+        "coherence": true,
+        "completeness": true,
+        "problemSolved": false,
+        "isFiscalEconomicInsight": true,
+        "isMetierSpecificSolution": false
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-09T07:37:13.252Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 2,
+    "totalCount": 2
+  },
+  {
+    "timestamp": "2025-09-09T07:37:24.196Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:37:24.205Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:37:26.189Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 2,
+    "totalCount": 2
+  },
+  {
+    "timestamp": "2025-09-09T07:40:19.988Z",
+    "type": "AI_RESPONSE_PUNCTUAL",
+    "prompt": "Je viens de travailler pendant un mois à la réforme du code du travail, donc j'ai obtenu des compétences dans l'élaboration d'un projet de loi, faire la différence entre le code et le droit pour présenter le projet de loi",
+    "response": "Félicitations pour votre travail sur la réforme du code du travail ! C'est un domaine important et complexe, et avoir contribué à son évolution est un accomplissement notable. \n\nVotre expérience vous a certainement permis de développer des compétences précieuses dans plusieurs domaines :\n\n* **Élaboration d'un projet de loi:** Vous avez probablement appris à analyser les besoins, à formuler des propositions concrètes, à rédiger des articles clairs et précis, et à prendre en compte les implications juridiques et sociales de vos propositions.\n* **Différenciation entre le code et le droit:** Vous comprenez maintenant que le code du travail est un ensemble de règles et de dispositions législatives qui constituent une partie du droit du travail plus vaste. Vous savez probablement identifier les différents types de sources du droit (lois, règlements, conventions collectives, jurisprudence) et les interrelations entre elles. \n* **Communication juridique:** Vous avez probablement dû expliquer des concepts juridiques complexes à des personnes non spécialisées, ce qui a développé vos compétences en communication écrite et orale.\n\nPour affirmer et approfondir ces compétences, je vous recommande de :\n\n* **Consulter des ouvrages spécialisés sur la législation et la rédaction de projets de loi.**\n* **Suivre des formations en droit du travail ou en droit public.**\n* **Participer à des conférences ou des ateliers sur la réforme législative.**\n* **Relire et analyser les projets de loi sur le code du travail que vous avez étudiés.**\n* **Discutez de votre expérience avec d'autres juristes ou professionnels du droit.**\n\nN'oubliez pas que le domaine du droit est en constante évolution. Il est essentiel de se tenir au courant des dernières nouveautés et de se perfectionner continuellement.\n\n\n\n",
+    "model": "gemma2-9b-it",
+    "utmi": 99.08,
+    "estimatedCost": 0.000045,
+    "processingTime": 0.986
+  },
+  {
+    "timestamp": "2025-09-09T07:41:50.105Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:41:50.114Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:41:50.974Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 2,
+    "totalCount": 2
+  },
+  {
+    "timestamp": "2025-09-09T07:41:52.274Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:41:52.282Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:43:54.660Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T07:43:54.670Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:00:01.548Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:00:01.557Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:03:23.495Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:03:23.503Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:03:23.665Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 2,
+    "totalCount": 2
+  },
+  {
+    "timestamp": "2025-09-09T08:30:44.275Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:30:44.283Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:33:12.164Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:33:12.174Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:56:14.612Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:56:14.621Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:56:19.606Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T08:56:19.611Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T09:33:29.260Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T09:33:29.270Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T16:51:11.852Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T16:51:11.862Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T16:51:38.468Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T16:51:38.474Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T17:04:24.822Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T17:04:24.828Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T20:38:53.700Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T20:38:53.712Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T20:39:23.925Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-09T20:39:23.940Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T02:35:32.552Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T02:35:32.561Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T02:38:26.129Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T02:38:26.135Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T03:14:56.558Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T03:14:56.576Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T03:19:54.696Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T03:19:54.703Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T11:10:28.441Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T11:10:28.451Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Michael Pierre"
+  },
+  {
+    "timestamp": "2025-09-11T11:11:02.531Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:11:02.545Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:11:22.705Z",
+    "type": "AI_RESPONSE_PUNCTUAL",
+    "prompt": "Synthèse de Valorisation\n\n            \nMessage: Compétences du CV valorisées avec succès.\n\n\n            \nValorisation Détaillée:\n\n\n            \n{\n  \"catch_phrase\": \"Expert en commerce avec 20 ans d'expérience, recherchant un poste stimulant où mes compétences et mon expertise peuvent contribuer au succès d'une entreprise dynamique.\",\n  \"valorized_technical_skills\": [],\n  \"professional_attributes\": [\n    {\n      \"attribute\": \"Expérience\",\n      \"justification\": \"20 ans d'expérience dans le commerce témoignent d'une solide compréhension du secteur et de ses enjeux.\"\n    },\n    {\n      \"attribute\": \"Adaptabilité\",\n      \"justification\": \"L'expérience dans deux secteurs distincts (commerce et industrie) suggère une capacité à s'adapter à différents environnements professionnels.\"\n    },\n    {\n      \"attribute\": \"Engagement\",\n      \"justification\": \"Avoir travaillé pendant 70 ans indique un fort engagement envers le travail et une volonté de réussite.\"\n    }\n  ]\n}",
+    "response": "## Synthèse de Valorisation : Analyse \n\nL'analyse du CV met en lumière des compétences et des expériences valorisées avec succès. \n\n**Points forts:**\n\n* **Expérience:** L'affirmation \"20 ans d'expérience dans le commerce\" est un atout majeur. Elle traduit une connaissance approfondie du secteur et une capacité à gérer les défis commerciaux. \n* **Adaptabilité:** L'expérience dans deux secteurs différents (commerce et industrie) est un signe fort d'adaptabilité et de polyvalence. \n* **Engagement:** 70 ans d'expérience professionnelle témoignent d'un engagement fort envers le travail et une volonté de réussite.\n\n**Points à améliorer:**\n\n* **Révision des informations:** Une erreur est présente dans la valorisation. 70 ans d'expérience est irréaliste et peut nuire à la crédibilité du CV. Il est important de vérifier et corriger cette information.\n\n**Conseils:**\n\n* **Développer les \"compétences techniques\":**  Le CV mentionne des \"compétences techniques\" valorisées, mais il ne les détaille pas. Il serait judicieux de les lister et de les illustrer par des exemples concrets.\n* **Quantifier les réussites:**  Au lieu d'affirmer simplement l'expérience, il est plus pertinent de quantifier les réalisations et les impacts positifs générés au cours de sa carrière. Par exemple, \"augmentation des ventes de 15%\" ou \"mise en place d'une nouvelle stratégie commerciale qui a permis de réduire les coûts de 10%\". \n\n* **Adapter le message:** Le \"catch phrase\"  est un peu générique. Il serait plus efficace de le personnaliser en fonction du type de poste visé et des valeurs de l'entreprise.\n\n\n\nEn résumé, le CV présente des points forts, notamment une solide expérience et une capacité d'adaptation. Cependant, il est important de corriger les erreurs et de développer davantage les compétences techniques et les réalisations pour maximiser son impact.  \n",
+    "model": "gemma2-9b-it",
+    "utmi": 102,
+    "estimatedCost": 0.000046,
+    "processingTime": 1.061
+  },
+  {
+    "timestamp": "2025-09-11T11:11:55.533Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:11:55.541Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:12:22.064Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:12:22.074Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:13:03.286Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 2,
+    "totalCount": 2
+  },
+  {
+    "timestamp": "2025-09-11T11:13:06.264Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "f0f84dca-cb9b-45b6-bd8c-8dad7aacbda0",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-09-11T11:13:06.269Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 3,
+    "totalCount": 3
+  },
+  {
+    "timestamp": "2025-09-11T11:13:42.025Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 3,
+    "totalCount": 3
+  },
+  {
+    "timestamp": "2025-09-11T11:13:44.915Z",
+    "type": "CONVERSATION_MANAGEMENT",
+    "action": "NEW_CONVERSATION",
+    "conversationId": "90ae7f7e-6020-4299-94d3-83b67d585cfc",
+    "utmi_generated": 1.1,
+    "estimated_cost_usd": 0
+  },
+  {
+    "timestamp": "2025-09-11T11:13:44.924Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 4,
+    "totalCount": 4
+  },
+  {
+    "timestamp": "2025-09-11T11:13:47.710Z",
+    "type": "CONVERSATION_MESSAGE",
+    "action": "USER_MESSAGE_SENT",
+    "conversationId": "90ae7f7e-6020-4299-94d3-83b67d585cfc",
+    "userMessage": "Peux-tu me rédiger le parcours professionnel pour travailler dans le socialisme en 500 mots...",
+    "utmi": 7.7,
+    "estimated_cost_usd": 0.000002,
+    "interaction": {
+      "type": "prompt",
+      "data": {
+        "text": "Peux-tu me rédiger le parcours professionnel pour travailler dans le socialisme en 500 mots",
+        "wordCount": 14,
+        "inputTokens": 23
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11T11:13:49.113Z",
+    "type": "CONVERSATION_MESSAGE",
+    "action": "AI_RESPONSE_RECEIVED",
+    "conversationId": "90ae7f7e-6020-4299-94d3-83b67d585cfc",
+    "aiResponse": "##  Construisons votre parcours professionnel pour le socialisme !\n\nVotre engagement pour le sociali...",
+    "utmi": 143.52,
+    "estimated_cost_usd": 0.000066,
+    "interaction": {
+      "type": "ai_response",
+      "data": {
+        "text": "##  Construisons votre parcours professionnel pour le socialisme !\n\nVotre engagement pour le socialisme est inspirant ! Pour mettre en avant votre parcours professionnel dans ce domaine, je vais vous guider à travers quelques questions clés.  N'hésitez pas à être précis et à donner des exemples concrets. Plus vous serez détaillé, plus votre parcours brillera.\n\n**1. Expériences et projets:**\n\n* **Dans quels contextes avez-vous déjà mis en pratique vos convictions socialistes ?**\n    * S'agit-il d'associations, de mouvements citoyens, de bénévolat, d'actions politiques, d'initiatives entrepreneuriales sociales ? \n* **Pouvez-vous décrire vos rôles et responsabilités dans ces expériences ?** \n    * Étiez-vous responsable d'un projet, d'un groupe, d'une campagne ?\n    * Quelles tâches concrets avez-vous effectuées ?\n\n**2. Compétences techniques et organisationnelles:**\n\n* **Quelles compétences techniques maîtrisez-vous qui pourraient être utiles dans le domaine du socialisme ?**\n    * Parlez-vous des outils de communication digitale, de gestion de projet, de gestion de base de données, de rédaction de rapports, de gestion financière ?\n* **Avez-vous participé à des projets de recherche, d'analyse ou de plaidoyer ?** \n    * Si oui, quelles méthodes avez-vous utilisées ?\n\n**3. Défis rencontrés et solutions apportées:**\n\n* **Quels défis avez-vous rencontré dans vos expériences et comment avez-vous trouvé des solutions ?**\n    * Parlez-moi d'une situation où votre engagement socialiste a été mis à l'épreuve et comment vous avez surmonté l'obstacle.\n* **Pouvez-vous quantifier vos réussites ?** \n    * Avez-vous aidé un nombre précis de personnes, amélioré une situation, obtenu un résultat tangible pour une cause ?\n\n**4. Responsabilités et soft skills:**\n\n* **Quelles sont vos qualités personnelles qui vous rendent apte à travailler dans le domaine socialiste ?** \n    * Parlez de votre capacité à travailler en équipe, à communiquer efficacement, à résoudre des problèmes, à être empathique, à être perspicace, à être organisé, à prendre des initiatives.\n\n**5. Objectifs professionnels:**\n\n* **Quel type de poste recherchez-vous et dans quel contexte ?** \n    * Association, ONG, mouvement politique, entreprise sociale, institution publique ?\n* **Quelles sont vos aspirations à long terme ?** \n    * Comment voulez-vous contribuer à la construction d'une société plus juste et plus solidaire ?\n\nN'oubliez pas, votre parcours professionnel est unique et précieux. En répondant à ces questions avec honnêteté et précision, vous construirez une présentation convaincante de vos compétences et de votre engagement pour le socialisme. \n\n\n",
+        "tokenCount": 664,
+        "outputTokens": 664,
+        "inputTokens": 128,
+        "modelId": "gemma2-9b-it",
+        "relevance": true,
+        "coherence": true,
+        "completeness": true,
+        "problemSolved": false,
+        "isFiscalEconomicInsight": false,
+        "isMetierSpecificSolution": false
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-11T11:13:49.136Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 4,
+    "totalCount": 4
+  },
+  {
+    "timestamp": "2025-09-11T11:14:15.369Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:14:15.378Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T11:15:07.069Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 4,
+    "totalCount": 4
+  },
+  {
+    "timestamp": "2025-09-11T15:38:38.187Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:38:38.199Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:39:28.256Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:39:28.267Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:40:24.176Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:40:24.188Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:40:42.174Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T15:40:42.185Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T16:01:22.752Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-11T16:01:22.764Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:06:23.806Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:06:23.819Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:06:40.611Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:06:40.620Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:06:48.730Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:06:48.739Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:07:38.050Z",
+    "type": "CONVERSATION_HISTORY",
+    "action": "READ_ALL",
+    "page": 1,
+    "limit": 5,
+    "count": 4,
+    "totalCount": 4
+  },
+  {
+    "timestamp": "2025-09-12T07:39:38.322Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:39:38.335Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:41:10.171Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-12T07:41:10.182Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T14:06:07.984Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T14:06:07.996Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T14:06:48.064Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T14:06:48.071Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T16:03:48.441Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T16:03:48.451Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T16:05:30.433Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "Monique"
+  },
+  {
+    "timestamp": "2025-09-14T16:05:30.446Z",
+    "type": "CV_PROCESSING",
+    "action": "RENDER_HTML",
+    "status": "SUCCESS",
+    "name": "Monique"
+  },
+  {
+    "timestamp": "2025-09-16T18:50:31.881Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "test"
+  },
+  {
+    "timestamp": "2025-09-20T14:18:07.380Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "ERROR",
+    "error": "Erreur API Groq: ENOENT: no such file or directory, open '/Volumes/devOps/public/Manifest.910-2025/routes/data/last_structured_cv.json'",
+    "details": "ENOENT: no such file or directory, open '/Volumes/devOps/public/Manifest.910-2025/routes/data/last_structured_cv.json'",
+    "status_code": "N/A"
+  },
+  {
+    "timestamp": "2025-09-20T14:19:35.254Z",
+    "type": "CV_PROCESSING",
+    "action": "PARSE_AND_STRUCTURE",
+    "status": "SUCCESS",
+    "data": "test"
+  }
+]

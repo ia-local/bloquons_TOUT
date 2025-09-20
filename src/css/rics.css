@@ -1,0 +1,192 @@
+/* Fichier : public/src/css/rics.css */
+/* Styles spécifiques à la page RIC */
+.add-ric-btn {
+    width: 150px;
+    border: 1px solid;
+    border-radius: 15%;
+}
+/* Styles pour les sections principales */
+.ric-propositions, .ric-map-section, .ric-results, .ric-controls {
+    margin-bottom: 40px;
+}
+
+/* Styles pour les cartes */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card.ric-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.card-footer span {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Styles pour les filtres */
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters-container label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.filters-container select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+}
+
+/* Styles pour la modale */
+.modal {
+    display: none; /* Cache la modale par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+/* Affiche la modale quand la classe 'is-visible' est ajoutée */
+.modal.is-visible {
+    display: flex;
+}
+
+/* Conteneur du contenu de la modale */
+.modal-content-wrapper {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh; /* Limite la hauteur de la modale */
+    overflow-y: auto; /* Ajoute un défilement si nécessaire */
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Bouton de fermeture */
+.modal-close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+}
+
+/* Styles pour le formulaire de RIC */
+#ric-form .form-group {
+    margin-bottom: 20px;
+}
+
+#ric-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#ric-form input[type="text"],
+#ric-form textarea,
+#ric-form input[type="date"],
+#ric-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Styles pour le composant de vote */
+.ric-vote-modal-content {
+    text-align: center;
+}
+
+.ric-vote-modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ric-vote-modal-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.ric-vote-modal-content .vote-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.ric-vote-modal-content .vote-buttons .btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Styles spécifiques à la modale de carte */
+.map-modal-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#ric-map-modal {
+    width: 100%;
+    height: 600px; /* Hauteur fixe pour la carte */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+    z-index: 1; /* S'assure que la carte est au-dessus du reste du contenu si nécessaire */
+}

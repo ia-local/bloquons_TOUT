@@ -1,0 +1,407 @@
+swagger: '2.0'
+info:
+  title: API de la Plateforme Citoyenne
+  description: API pour la gestion des données de la plateforme, le bot Telegram et les outils de mobilisation citoyenne.
+  version: 1.0.0
+host: localhost:3000
+basePath: /api
+schemes:
+  - http
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /ai/generate-entity:
+    post:
+      summary: Générer une entité avec l'IA
+      description: Utilise l'IA pour générer un objet JSON d'une entité (supermarché, banque, etc.) à partir d'une requête en langage naturel.
+      parameters:
+        - name: query
+          in: body
+          description: La requête en langage naturel pour l'IA.
+          required: true
+          schema:
+            type: object
+            properties:
+              query:
+                type: string
+                example: "Ajouter un Carrefour à Lyon"
+      responses:
+        '200':
+          description: Entité générée et retournée.
+          schema:
+            $ref: '#/definitions/Entity'
+        '400':
+          description: Requête vide.
+        '500':
+          description: Erreur lors de la génération IA.
+
+  /financial-flows:
+    get:
+      summary: Obtenir tous les flux financiers
+      responses:
+        '200':
+          description: Liste de tous les flux financiers.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/FinancialFlow'
+    post:
+      summary: Ajouter un nouveau flux financier
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/FinancialFlow'
+      responses:
+        '201':
+          description: Flux financier ajouté avec succès.
+
+  /financial-flows/{id}:
+    put:
+      summary: Mettre à jour un flux financier
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/FinancialFlow'
+      responses:
+        '200':
+          description: Flux financier mis à jour.
+        '404':
+          description: Flux financier non trouvé.
+    delete:
+      summary: Supprimer un flux financier
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Flux financier supprimé.
+        '404':
+          description: Flux financier non trouvé.
+
+  /affaires:
+    get:
+      summary: Obtenir la chronologie des affaires
+      responses:
+        '200':
+          description: Chronologie des affaires depuis 2017.
+          schema:
+            $ref: '#/definitions/AffairesChronology'
+
+  /affaires/event:
+    post:
+      summary: Ajouter un événement à la chronologie des affaires
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/AffaireEvent'
+      responses:
+        '201':
+          description: Événement d'affaire ajouté.
+
+  /rics:
+    get:
+      summary: Obtenir tous les RICs
+      description: Récupère la liste de tous les Référendums d'Initiative Citoyenne proposés.
+      responses:
+        '200':
+          description: Liste des RICs.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/RIC'
+    post:
+      summary: Ajouter un nouveau RIC
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/RIC'
+      responses:
+        '201':
+          description: RIC ajouté.
+
+  /rics/{id}:
+    put:
+      summary: Mettre à jour un RIC
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/RIC'
+      responses:
+        '200':
+          description: RIC mis à jour.
+        '404':
+          description: RIC non trouvé.
+    delete:
+      summary: Supprimer un RIC
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '204':
+          description: RIC supprimé.
+        '404':
+          description: RIC non trouvé.
+
+  /taxes:
+    get:
+      summary: Obtenir la liste des taxes proposées
+      responses:
+        '200':
+          description: Liste de toutes les propositions de taxes.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Tax'
+
+  /entities:
+    get:
+      summary: Obtenir toutes les entités
+      description: Récupère la liste de toutes les entités (supermarchés, banques, etc.) pour la page de boycottage.
+      responses:
+        '200':
+          description: Liste des entités.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Entity'
+    post:
+      summary: Ajouter une nouvelle entité
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Entity'
+      responses:
+        '201':
+          description: Entité ajoutée.
+
+  /entities/{id}:
+    put:
+      summary: Mettre à jour une entité
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Entity'
+      responses:
+        '200':
+          description: Entité mise à jour.
+        '404':
+          description: Entité non trouvée.
+    delete:
+      summary: Supprimer une entité
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Entité supprimée.
+        '404':
+          description: Entité non trouvée.
+
+  /dashboard/summary:
+    get:
+      summary: Obtenir les données de synthèse pour le tableau de bord
+      responses:
+        '200':
+          description: Résumé des données clés.
+          schema:
+            $ref: '#/definitions/DashboardSummary'
+
+  /caisse-manifestation:
+    get:
+      summary: Obtenir le solde de la caisse de manifestation
+      responses:
+        '200':
+          description: Solde et transactions de la caisse.
+          schema:
+            $ref: '#/definitions/CaisseDeManifestation'
+
+  /caisse-manifestation/transaction:
+    post:
+      summary: Ajouter une transaction à la caisse de manifestation
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CaisseTransaction'
+      responses:
+        '201':
+          description: Transaction ajoutée.
+
+  /blockchain/transaction:
+    post:
+      summary: Simuler l'ajout d'une transaction à la blockchain
+      description: Ajoute une transaction avec un hash et une signature simulés.
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              expediteur:
+                type: string
+              destinataire:
+                type: string
+              montant:
+                type: number
+      responses:
+        '201':
+          description: Transaction blockchain simulée ajoutée.
+
+definitions:
+  FinancialFlow:
+    type: object
+    properties:
+      id:
+        type: string
+      sender_name:
+        type: string
+      receiver_name:
+        type: string
+      amount:
+        type: number
+      is_suspicious:
+        type: boolean
+  
+  AffairesChronology:
+    type: object
+    properties:
+      chronology:
+        type: array
+        items:
+          type: object
+          properties:
+            year:
+              type: integer
+            events:
+              type: array
+              items:
+                $ref: '#/definitions/AffaireEvent'
+  
+  AffaireEvent:
+    type: object
+    properties:
+      timestamp:
+        type: string
+        format: date-time
+      description:
+        type: string
+      source:
+        type: string
+  
+  RIC:
+    type: object
+    properties:
+      id:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+      status:
+        type: string
+      signatures:
+        type: integer
+  
+  Tax:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      rate:
+        type: number
+      applicable_to:
+        type: string
+  
+  Entity:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+      description:
+        type: string
+      geo:
+        type: object
+        properties:
+          lat:
+            type: number
+          lon:
+            type: number
+  
+  DashboardSummary:
+    type: object
+    properties:
+      totalTransactions:
+        type: integer
+      activeAlerts:
+        type: integer
+      riskyEntities:
+        type: integer
+
+  CaisseDeManifestation:
+    type: object
+    properties:
+      solde:
+        type: number
+      transactions:
+        type: array
+        items:
+          $ref: '#/definitions/CaisseTransaction'
+
+  CaisseTransaction:
+    type: object
+    properties:
+      id:
+        type: string
+      type:
+        type: string
+        enum: [ 'entrée', 'sortie' ]
+      montant:
+        type: number
+      description:
+        type: string

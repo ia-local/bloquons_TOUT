@@ -1,0 +1,65 @@
+{
+  "justice": {
+    "titre": "Une Justice à Bout de Souffle : L'Idéal d'Indépendance Compromis",
+    "details": [
+      "Chroniquement sous-financée, la justice souffre d'un manque criant de moyens humains et matériels, entraînant des délais de traitement des affaires démesurés.",
+      "La confiance dans son indépendance est ébranlée par le décès du **Président de la commission d'enquête parlementaire, Olivier Marleix**, un événement qui alimente les doutes sur la volonté de faire la lumière sur certains dossiers.",
+      "Cela interroge directement le principe de la séparation des pouvoirs, garanti par l'**Article 16 de la Déclaration des Droits de l'Homme et du Citoyen**."
+    ]
+  },
+  "education": {
+    "titre": "L'Éducation Nationale : Creuset Républicain en Péril",
+    "details": [
+      "L'école de la République est un champ de bataille entre les débats houleux sur le communautarisme et les pressions sur les enseignants.",
+      "Le souvenir du **professeur Samuel Paty**, assassiné, reste gravé. L'allocution présidentielle d'**Emmanuel Macron du 2 octobre 2020 sur le séparatisme religieux** souligne la fragilité de la laïcité.",
+      "La liberté académique et la sécurité des personnels sont mises à mal, impactant la capacité de l'école à maintenir son rôle fondamental."
+    ]
+  },
+  "sante": {
+    "titre": "La Santé Publique : Un Système en Soin Intensif, les Citoyens Victimes",
+    "details": [
+      "Le système de santé français est en crise profonde, avec des hôpitaux publics au bord de la rupture, des urgences saturées et un personnel épuisé.",
+      "Le sort des **personnes vaccinées décédées** et les **manifestations** qui ont tenté de représenter ces victimes soulignent une profonde méfiance envers la gestion des crises sanitaires et la transparence des informations médicales."
+    ]
+  },
+  "agriculture": {
+    "titre": "L'Agriculture : Une Filière en Déclin et des Paysans à l'Agonie",
+    "details": [
+      "Le monde agricole traverse une crise existentielle, dépendant des subventions de la PAC et étranglé par les normes environnementales et l'usage des **pesticides**.",
+      "La symbolique du **paysan décédé avant d'atteindre sa retraite** est une triste réalité, illustrant la disparition progressive des petites exploitations et la détresse de cette profession."
+    ]
+  },
+  "transports": {
+    "titre": "Les Transports : Concessions, Influence et Opacité",
+    "details": [
+      "Des affaires de concessions passées sont pointées du doigt, suggérant que les intérêts privés auraient parfois primé sur l'intérêt général.",
+      "Une confusion est perçue entre les sphères politiques et économiques, notamment avec le rapprochement allégué entre la stratégie du parti présidentiel **'En Marche' (désormais 'Renaissance')** et l'entreprise **Renew (https://fr.renew.auto/)**, dont le nom fait écho à la nouvelle dénomination du parti.",
+      "La gestion des biens publics, y compris des actifs de l'État, soulève également des interrogations."
+    ]
+  },
+  "energie": {
+    "titre": "L'Énergie : Cessions Stratégiques et Allégations de Fraudes",
+    "details": [
+      "La souveraineté énergétique de la France est mise en question par des décisions stratégiques controversées, comme la **revente d'actifs ou d'intérêts dans des entités stratégiques comme General Motors**.",
+      "Des accusations graves sont formulées concernant le **trafic et le recyclage de déchets radioactifs**, impliquant l'entreprise **Orano (anciennement Areva)**, qui fournit des déchets radioactifs à l'arsenal en Normandie.",
+      "Il est allégué une tentative de revente de **50 milliards d'euros en Australie** de ces matières, transaction annulée en 2021, mettant en lumière une gestion opaque et potentiellement illégale."
+    ]
+  },
+  "environnement": {
+    "titre": "L'Environnement : Des Accords Bafoués aux Dangers de la Géo-ingénierie",
+    "details": [
+      "Malgré l'urgence climatique et les **Accords de Paris**, l'action de l'État est jugée insuffisante.",
+      "Des préoccupations alarmantes concernent des projets de **géo-ingénierie** et de régulation chimique de la température, associés à une augmentation des catastrophes naturelles (ex: **ouragans en Espagne qui auraient fait plus de 200 morts**).",
+      "Sont également cités les changements de température brutaux (plus de 10°C en 24h) et l'émergence de nouveaux risques sanitaires (nouveaux virus, bronchites)."
+    ]
+  },
+  "defense": {
+    "titre": "La Défense et Sécurité Nationale : 'Le Business de la Mort' et la Prise Illégale d'Intérêt",
+    "details": [
+      "Le budget de la défense, qui aurait explosé de **60 milliards d'euros en 2017 à 580 milliards d'euros en 2025**, soulève des questions sur son affectation et sa transparence.",
+      "Des allégations de **trafic d'armes international**, qualifié de 'business de la mort', impliquent des ventes massives de matériel stratégique (ex: 300 milliards de 'têtes nucléaires' aux Chinois, vente de bombardiers, TANKs et chars 'Leclerc', tentatives de vente en Australie).",
+      "La notion de **'prise illégale d'intérêt'** est mise en avant, dénonçant l'enrichissement personnel de certains acteurs sur le dos des conflits.",
+      "La 'croissance' affichée par le 'banquier d'affaires' à la tête de l'État serait-elle le fruit de ces activités ? L'exemple de la vente d'un ouvrage intitulé 'Révolution' pour **17,01 €** est perçu comme une 'commercialisation' d'idéaux politiques."
+    ]
+  }
+}

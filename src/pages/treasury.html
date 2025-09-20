@@ -1,0 +1,56 @@
+<div class="page-header">
+    <h1>Trésorerie 💰</h1>
+    <p>Gère les transactions et les finances de la plateforme.</p>
+</div>
+
+<section class="treasury-section">
+    <h2>Résumé financier</h2>
+    <div class="treasury-summary-cards">
+        <div class="summary-card" id="caisse-solde-card">
+            <h3>Solde actuel</h3>
+            <p id="caisse-solde">Chargement...</p>
+        </div>
+        <div class="summary-card" id="total-revenue-card">
+            <h3>Revenus totaux</h3>
+            <p id="total-revenue">Chargement...</p>
+        </div>
+        <div class="summary-card" id="total-expenses-card">
+            <h3>Dépenses totales</h3>
+            <p id="total-expenses">Chargement...</p>
+        </div>
+    </div>
+</section>
+
+<section class="treasury-section">
+    <h2>Nouvelle transaction</h2>
+    <form id="transaction-form" class="transaction-form">
+        <div class="form-group">
+            <label for="transaction-type">Type :</label>
+            <select id="transaction-type" name="type" required>
+                <option value="entrée">Recette</option>
+                <option value="dépense">Dépense</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="transaction-amount">Montant (€) :</label>
+            <input type="number" id="transaction-amount" name="montant" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="transaction-description">Description :</label>
+            <input type="text" id="transaction-description" name="description" required>
+        </div>
+        <button type="submit" class="btn primary">Ajouter la transaction</button>
+    </form>
+</section>
+
+<section class="treasury-section">
+    <h2>Historique des transactions</h2>
+    <div id="transactions-list" class="transactions-list">
+        <p>Chargement des transactions...</p>
+    </div>
+</section>
+
+<section class="treasury-section">
+    <h2>Évolution du solde</h2>
+    <canvas id="financial-chart"></canvas>
+</section>

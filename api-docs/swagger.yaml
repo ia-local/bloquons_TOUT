@@ -1,0 +1,1313 @@
+openapi: 3.0.0
+info:
+  title: API Enquête Parlementaire & Manifestation
+  description: API pour gérer les données d'une enquête parlementaire, des pétitions, et des actions de manifestation.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Serveur de développement local
+
+tags:
+  - name: Flux financiers
+    description: Gestion des transactions et flux financiers suspects.
+  - name: Affaires
+    description: Gestion de la chronologie des affaires de l'enquête.
+  - name: RIC
+    description: Gestion des Référendums d'Initiative Citoyenne.
+  - name: Entités
+    description: Gestion des entités (entreprises, individus, etc.) liées à l'enquête.
+  - name: Caisse de manifestation
+    description: Gestion des transactions de la caisse de manifestation.
+  - name: Outils IA
+    description: Endpoints pour les outils d'intelligence artificielle.
+  - name: Boycotts
+    description: Gestion des listes de boycott.
+  - name: Taxation
+    description: Définition des règles de taxation.
+  - name: Géolocalisation
+    description: Endpoints pour les données géographiques.
+  - name: Blockchain
+    description: Gestion des interactions avec la blockchain simulée.
+  - name: Bénéficiaires
+    description: Gestion des bénéficiaires et du CVNU.
+  - name: Chatbot
+    description: Endpoints pour la gestion de la chatroom et de l'IA multi-rôles.
+  - name: Réseau
+    description: Endpoints pour la visualisation du réseau de militants et de connexions.
+  - name: Journal
+    description: Endpoints pour la gestion des articles du journal.
+
+paths:
+  /api/financial-flows:
+    get:
+      tags:
+        - Flux financiers
+      summary: Récupère tous les flux financiers.
+      responses:
+        '200':
+          description: Liste de tous les flux financiers.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinancialFlow'
+    post:
+      tags:
+        - Flux financiers
+      summary: Crée un nouveau flux financier.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FinancialFlowInput'
+      responses:
+        '201':
+          description: Flux financier créé avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialFlow'
+  
+  /api/financial-flows/{id}:
+    put:
+      tags:
+        - Flux financiers
+      summary: Met à jour un flux financier existant.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FinancialFlowInput'
+      responses:
+        '200':
+          description: Flux financier mis à jour.
+        '404':
+          description: Flux financier non trouvé.
+    delete:
+      tags:
+        - Flux financiers
+      summary: Supprime un flux financier.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Flux financier supprimé avec succès.
+        '404':
+          description: Flux financier non trouvé.
+
+  /api/affaires:
+    get:
+      tags:
+        - Affaires
+      summary: Récupère la chronologie des affaires.
+      responses:
+        '200':
+          description: Chronologie des affaires récupérée avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Affaire'
+
+  /api/affaires/event:
+    post:
+      tags:
+        - Affaires
+      summary: Ajoute un nouvel événement à la chronologie d'une affaire.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AffaireEvent'
+      responses:
+        '201':
+          description: Événement ajouté avec succès.
+          
+  /api/rics:
+    get:
+      tags:
+        - RIC
+      summary: Récupère la liste de tous les RIC actifs.
+      responses:
+        '200':
+          description: Liste de tous les RIC.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ric'
+    post:
+      tags:
+        - RIC
+      summary: Crée une nouvelle proposition de RIC.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RicInput'
+      responses:
+        '201':
+          description: RIC créé avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ric'
+  /api/rics/{id}:
+    put:
+      tags:
+        - RIC
+      summary: Met à jour une pétition existante.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RicInput'
+      responses:
+        '200':
+          description: Pétition mise à jour.
+        '404':
+          description: Pétition non trouvée.
+    delete:
+      tags:
+        - RIC
+      summary: Supprime une pétition.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Pétition supprimée avec succès.
+        '404':
+          description: Pétition non trouvée.
+          
+  /api/entities:
+    get:
+      tags:
+        - Entités
+      summary: Récupère toutes les entités.
+      responses:
+        '200':
+          description: Liste de toutes les entités.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Entity'
+    post:
+      tags:
+        - Entités
+      summary: Crée une nouvelle entité.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EntityInput'
+      responses:
+        '201':
+          description: Entité créée avec succès.
+
+  /api/entities/{id}:
+    put:
+      tags:
+        - Entités
+      summary: Met à jour une entité existante.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EntityInput'
+      responses:
+        '200':
+          description: Entité mise à jour.
+        '404':
+          description: Entité non trouvée.
+    delete:
+      tags:
+        - Entités
+      summary: Supprime une entité.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Entité supprimée avec succès.
+        '404':
+          description: Entité non trouvé.
+          
+  /api/caisse-manifestation:
+    get:
+      tags:
+        - Caisse de manifestation
+      summary: Récupère l'état de la caisse de manifestation.
+      responses:
+        '200':
+          description: État de la caisse.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaisseManifestation'
+  
+  /api/caisse-manifestation/transaction:
+    post:
+      tags:
+        - Caisse de manifestation
+      summary: Ajoute une transaction à la caisse.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CaisseTransactionInput'
+      responses:
+        '201':
+          description: Transaction ajoutée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaisseTransaction'
+                
+  /api/ai/generate-entity:
+    post:
+      tags:
+        - Outils IA
+      summary: Génère les données d'une entité à partir d'une requête textuelle.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: La phrase pour générer les données de l'entité.
+      responses:
+        '200':
+          description: Données de l'entité générées.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntityInput'
+  
+  /api/boycotts:
+    get:
+      tags:
+        - Boycotts
+      summary: Récupère toutes les listes de boycott.
+      parameters:
+        - name: type
+          in: query
+          description: Filtre la liste par type de boycott (movie, bank, commerce, product, etc.).
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Liste de tous les articles à boycotter.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Boycott'
+    post:
+      tags:
+        - Boycotts
+      summary: Ajoute un nouvel élément à boycotter, en l'associant à une règle de taxation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BoycottInput'
+      responses:
+        '201':
+          description: Élément ajouté avec succès à la liste de boycott.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Boycott'
+  
+  /api/boycotts/{id}:
+    put:
+      tags:
+        - Boycotts
+      summary: Met à jour un élément de la liste de boycott.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BoycottInput'
+      responses:
+        '200':
+          description: Élément mis à jour.
+        '404':
+          description: Élément non trouvé.
+    delete:
+      tags:
+        - Boycotts
+      summary: Supprime un élément de la liste de boycott.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Élément supprimé avec succès.
+        '404':
+          description: Élément non trouvé.
+  
+  /api/taxes:
+    get:
+      tags:
+        - Taxation
+      summary: Récupère la liste de toutes les règles de taxation pour la caisse de manifestation.
+      responses:
+        '200':
+          description: Liste des règles de taxation.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Tax'
+    post:
+      tags:
+        - Taxation
+      summary: Ajoute une nouvelle règle de taxation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaxInput'
+      responses:
+        '201':
+          description: Règle de taxation créée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tax'
+
+  /api/prefectures:
+    get:
+      tags:
+        - Géolocalisation
+      summary: Récupère les données de toutes les préfectures.
+      responses:
+        '200':
+          description: Liste des préfectures.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prefecture'
+
+  /api/telegram-sites:
+    get:
+      tags:
+        - Géolocalisation
+      summary: Récupère les données des sites de manifestation sur Telegram.
+      responses:
+        '200':
+          description: Liste des sites Telegram.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ManifestationSite'
+  
+  /api/manifestation-sites:
+    get:
+      tags:
+        - Géolocalisation
+      summary: Récupère les données de tous les sites de manifestation.
+      responses:
+        '200':
+          description: Liste des sites de manifestation.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ManifestationSite'
+                  
+  /api/camera-points:
+    get:
+      tags:
+        - Géolocalisation
+      summary: Récupère tous les points de caméras de la base de données.
+      responses:
+        '200':
+          description: Liste de tous les points de caméras.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CameraPoint'
+    post:
+      tags:
+        - Géolocalisation
+      summary: Crée un nouveau point de caméra.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CameraPointInput'
+      responses:
+        '201':
+          description: Point de caméra créé avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CameraPoint'
+
+  /api/public-cameras:
+    get:
+      tags:
+        - Géolocalisation
+      summary: Récupère les points de caméras publiques.
+      responses:
+        '200':
+          description: Points de caméras publiques récupérés.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CameraPoint'
+  
+  /api/dashboard/summary:
+    get:
+      tags:
+        - Outils IA
+      summary: Récupère un résumé des données pour le tableau de bord.
+      responses:
+        '200':
+          description: Données de résumé du tableau de bord.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DashboardSummary'
+                
+  /api/blockchain/recevoir-fonds:
+    post:
+      tags:
+        - Blockchain
+        - Caisse de manifestation
+      summary: Reçoit des fonds sur le smart contract (simulation).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FondsTransactionInput'
+      responses:
+        '200':
+          description: Fonds reçus avec succès.
+        '400':
+          description: Montant manquant.
+
+  /api/blockchain/decaisser-allocations:
+    post:
+      tags:
+        - Blockchain
+        - Caisse de manifestation
+      summary: Déclenche le décaissement des allocations (simulation).
+      responses:
+        '200':
+          description: Décaissement en cours.
+          
+  /api/beneficiaries/register:
+    post:
+      tags:
+        - Bénéficiaires
+      summary: Enregistre un nouveau bénéficiaire pour les allocations.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BeneficiaryInput'
+      responses:
+        '201':
+          description: Bénéficiaire enregistré avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Beneficiary'
+        '400':
+          description: Données d'inscription manquantes.
+        '409':
+          description: Cet email est déjà enregistré.
+  
+  # --- Nouveaux Endpoints pour le Chatbot ---
+  /api/chat/history:
+    get:
+      tags:
+        - Chatbot
+      summary: Récupère l'historique complet de la chatroom.
+      description: Renvoie la liste de tous les messages envoyés dans la chatroom.
+      responses:
+        '200':
+          description: OK - Liste des messages.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChatMessage'
+        '500':
+          description: Erreur serveur.
+          
+  /api/chat/message:
+    post:
+      tags:
+        - Chatbot
+      summary: Envoyer un nouveau message à l'IA.
+      description: Crée un message utilisateur et obtient une réponse de l'IA. Le modèle de l'IA est choisi en fonction de la "persona" spécifiée.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+                - persona
+              properties:
+                message:
+                  type: string
+                  example: "Quelle est la loi sur l'économie circulaire ?"
+                persona:
+                  type: string
+                  example: "avocat"
+      responses:
+        '201':
+          description: Message créé avec succès.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatMessage'
+        '400':
+          description: Requête invalide (message ou persona manquant).
+        '500':
+          description: Erreur serveur.
+          
+  /api/chat/message/{id}:
+    put:
+      tags:
+        - Chatbot
+      summary: Mettre à jour le contenu d'un message.
+      description: Met à jour le contenu d'un message existant dans l'historique du chat.
+      parameters:
+        - name: id
+          in: path
+          description: ID du message à mettre à jour.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                  example: "Voici le message corrigé."
+      responses:
+        '200':
+          description: Message mis à jour.
+        '404':
+          description: Message non trouvé.
+        '500':
+          description: Erreur serveur.
+    delete:
+      tags:
+        - Chatbot
+      summary: Supprimer un message.
+      description: Supprime un message de l'historique du chat via son ID.
+      parameters:
+        - name: id
+          in: path
+          description: ID du message à supprimer.
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Message supprimé avec succès.
+        '404':
+          description: Message non trouvé.
+        '500':
+          description: Erreur serveur.
+
+  # --- Nouveaux Endpoints pour le Réseau ---
+  /reseau/api/connections:
+    get:
+      tags:
+        - Réseau
+      summary: Récupérer les connexions du réseau.
+      description: Renvoie la liste des connexions entre les différents nœuds (utilisateurs, outils, etc.).
+      responses:
+        '200':
+          description: OK - Liste des connexions.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  connections:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Connection'
+        '500':
+          description: Erreur serveur.
+
+  /reseau/api/users:
+    get:
+      tags:
+        - Réseau
+      summary: Récupérer les utilisateurs du réseau.
+      description: Renvoie la liste de tous les utilisateurs du réseau.
+      responses:
+        '200':
+          description: OK - Liste des utilisateurs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+        '500':
+          description: Erreur serveur.
+          
+  /api/missions:
+    get:
+      tags:
+        - Missions
+      summary: Récupère la liste de toutes les missions.
+      responses:
+        '200':
+          description: Liste de toutes les missions.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mission'
+          
+  /journal/api/journal/posts:
+    get:
+      tags:
+        - Journal
+      summary: Récupère la liste des articles du journal.
+      responses:
+        '200':
+          description: Liste des articles.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JournalPost'
+    post:
+      tags:
+        - Journal
+      summary: Crée un nouvel article de journal.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JournalPostInput'
+      responses:
+        '201':
+          description: Article créé avec succès.
+
+components:
+  schemas:
+    FinancialFlow:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        date:
+          type: string
+          format: date
+        sender:
+          type: string
+        receiver:
+          type: string
+        is_suspicious:
+          type: boolean
+    FinancialFlowInput:
+      type: object
+      properties:
+        type:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        date:
+          type: string
+          format: date
+        sender:
+          type: string
+        receiver:
+          type: string
+        is_suspicious:
+          type: boolean
+      required:
+        - type
+        - amount
+        - currency
+        - date
+        - sender
+        - receiver
+    Affaire:
+      type: object
+      properties:
+        chronology:
+          type: array
+          items:
+            $ref: '#/components/schemas/AffaireYear'
+    AffaireYear:
+      type: object
+      properties:
+        year:
+          type: integer
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/AffaireEvent'
+    AffaireEvent:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        description:
+          type: string
+    Ric:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID unique du RIC.
+        question:
+          type: string
+          description: Question du référendum.
+        description:
+          type: string
+          description: Description détaillée de la proposition.
+        deadline:
+          type: string
+          format: date
+          description: Date limite pour les votes.
+        voteMethod:
+          type: string
+          description: Modalité de vote proposée.
+        votes_for:
+          type: integer
+          description: Nombre de votes 'pour'.
+        votes_against:
+          type: integer
+          description: Nombre de votes 'contre'.
+        status:
+          type: string
+          description: Statut actuel du RIC (ex: 'active').
+        locations:
+          type: array
+          description: Répartition géographique des votes (simulée).
+          items:
+            type: object
+            properties:
+              lat:
+                type: number
+              lon:
+                type: number
+              count:
+                type: integer
+    RicInput:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        topic:
+          type: string
+        targeted_official_or_policy:
+          type: string
+        number_of_signatures:
+          type: integer
+      required:
+        - title
+        - description
+        - topic
+        - targeted_official_or_policy
+        - number_of_signatures
+    Entity:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        description:
+          type: string
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Location'
+    EntityInput:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        description:
+          type: string
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Location'
+      required:
+        - name
+        - type
+        - description
+        - locations
+    Location:
+      type: object
+      properties:
+        lat:
+          type: number
+        lon:
+          type: number
+        city:
+          type: string
+        country:
+          type: string
+        country_code:
+          type: string
+    CaisseManifestation:
+      type: object
+      properties:
+        solde:
+          type: number
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/CaisseTransaction'
+    CaisseTransaction:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ "entrée", "sortie" ]
+        montant:
+          type: number
+        description:
+          type: string
+        date:
+          type: string
+          format: date
+    CaisseTransactionInput:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [ "entrée", "sortie" ]
+        montant:
+          type: number
+        description:
+          type: string
+        date:
+          type: string
+          format: date
+      required:
+        - type
+        - montant
+        - description
+    Boycott:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          description: Type de boycott.
+        name:
+          type: string
+          description: Nom de l'élément à boycotter (ex : "Société Générale", "Macif").
+        reason:
+          type: string
+          description: Raison détaillée du boycott.
+        targets:
+          type: array
+          description: Liste des cibles spécifiques.
+          items:
+            $ref: '#/components/schemas/BoycottTarget'
+        description:
+          type: string
+          description: Description de l'entité.
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Location'
+    BoycottInput:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Type de boycott.
+        name:
+          type: string
+          description: Nom de l'élément à boycotter.
+        reason:
+          type: string
+          description: Raison détaillée du boycott.
+        targets:
+          type: array
+          description: Liste des cibles spécifiques.
+          items:
+            $ref: '#/components/schemas/BoycottTargetInput'
+        description:
+          type: string
+          description: Description de l'entité.
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Location'
+      required:
+        - type
+        - name
+    BoycottTarget:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Nom du produit/service/entité ciblé(e) (ex: "Billet de cinéma").
+        tax_id:
+          type: string
+          description: Référence à l'ID de la règle de taxation applicable.
+    BoycottTargetInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Nom du produit/service/entité ciblé(e).
+        tax_id:
+          type: string
+          description: Référence à l'ID de la règle de taxation applicable.
+      required:
+        - name
+        - tax_id
+    Tax:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identifiant unique de la règle de taxation.
+        name:
+          type: string
+          description: Nom de la taxe.
+        description:
+          type: string
+          description: Description de la taxe.
+        rate:
+          type: number
+          description: Taux de taxation à appliquer (ex: 0.2 pour 20%).
+        applicable_to:
+          type: string
+          description: Domaine d'application de la taxe.
+    TaxInput:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        rate:
+          type: number
+        applicable_to:
+          type: string
+    Prefecture:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        location:
+          $ref: '#/components/schemas/Location'
+    ManifestationSite:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        location:
+          $ref: '#/components/schemas/Location'
+    DashboardSummary:
+      type: object
+      properties:
+        totalTransactions:
+          type: integer
+          description: Nombre total de transactions.
+        activeAlerts:
+          type: integer
+          description: Nombre de transactions suspectes.
+        riskyEntities:
+          type: integer
+          description: Nombre d'entités "à risque".
+        caisseSolde:
+          type: number
+          description: Solde actuel de la caisse de manifestation.
+        boycottCount:
+          type: integer
+          description: Nombre total d'éléments de la liste de boycott.
+        ricCount:
+          type: integer
+          description: Nombre total de RICS.
+    CameraPoint:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        city:
+          type: string
+        lat:
+          type: number
+        lon:
+          type: number
+        timestamp:
+          type: string
+          format: date-time
+        video_link:
+          type: string
+          format: uri
+    CameraPointInput:
+      type: object
+      properties:
+        name:
+          type: string
+        city:
+          type: string
+        lat:
+          type: number
+        lon:
+          type: number
+        timestamp:
+          type: string
+          format: date-time
+        video_link:
+          type: string
+          format: uri
+      required:
+        - name
+        - city
+        - lat
+        - lon
+    FondsTransactionInput:
+      type: object
+      properties:
+        amount:
+          type: number
+          description: Montant de la transaction.
+      required:
+        - amount
+    Beneficiary:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        cv_score:
+          type: number
+        registration_date:
+          type: string
+          format: date-time
+    BeneficiaryInput:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        cv_score:
+          type: number
+      required:
+        - name
+        - email
+        - cv_score
+    ChatMessage:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        role:
+          type: string
+          enum: [user, ai, system]
+        content:
+          type: string
+        persona:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+    Connection:
+      type: object
+      properties:
+        source_id:
+          type: string
+        target_id:
+          type: string
+        type:
+          type: string
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        role:
+          type: string
+        gender:
+          type: string
+        profile_picture:
+          type: string
+        description:
+          type: string
+    Satellite:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        bands:
+          type: array
+          items:
+            type: string
+    JournalPost:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        content:
+          type: string
+        media:
+          type: string
+          format: uri
+        date:
+          type: string
+          format: date-time
+    JournalPostInput:
+      type: object
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+        media:
+          type: string
+          format: uri
+      required:
+        - title
+        - content
+        - media
+    Mission:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        status:
+          type: string

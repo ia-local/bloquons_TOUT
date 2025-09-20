@@ -1,0 +1,35 @@
+{
+  "name": "manifest.910-2025",
+  "version": "1.0.0",
+  "description": "Plateforme citoyenne de mobilisation pour le 10 septembre.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . & node serveur.js",
+    "serveur": "node serveur.js"
+  },
+  "keywords": [
+    "electron",
+    "manifestation",
+    "boycottage",
+    "ric"
+  ],
+  "author": "Votre nom",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.3.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "groq-sdk": "^0.4.0",
+    "telegraf": "^4.16.0",
+    "uuid": "^9.0.1",
+    "yamljs": "^0.3.0"
+  }
+}

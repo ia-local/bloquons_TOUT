@@ -1,0 +1,33 @@
+{
+  "projections": {
+    "labels": ["Année 1", "Année 2", "Année 3", "Année 4", "Année 5"],
+    "data": [50, 150, 400, 800, 1500]
+  },
+  "cv_details": {
+    "title": "Le CV Numérique",
+    "description": "Le CV est une identité professionnelle complète...",
+    "features": [
+      "Connaissances",
+      "Savoir-faire",
+      "Compétences"
+    ]
+  },
+  "team": [
+    {
+      "role": "Développeur Full Stack",
+      "description": "Responsable des Smart Contracts et de la sécurité."
+    },
+    {
+      "role": "Économiste / Fiscaliste",
+      "description": "Expert en modélisation des mécanismes de financement."
+    },
+    {
+      "role": "UX/UI Designer",
+      "description": "Pour l'application et les interfaces, garantissant une expérience utilisateur fluide."
+    },
+    {
+      "role": "Militant / Community Manager",
+      "description": "Pour fédérer la communauté et promouvoir le projet de loi."
+    }
+  ]
+}

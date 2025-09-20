@@ -1,0 +1,57 @@
+/* Style pour le fond de la modale */
+.ipcam-modal {
+    display: block; /* Affiche la modale par défaut */
+    position: fixed; /* Reste en place */
+    z-index: 1000; /* Se superpose aux autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Active le défilement si le contenu est trop grand */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% depuis le haut et centré */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* La largeur de la modale */
+    max-width: 800px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton de fermeture */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Conteneur pour la vidéo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

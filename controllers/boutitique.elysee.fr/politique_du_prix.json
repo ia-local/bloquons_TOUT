@@ -1,0 +1,45 @@
+{
+    "investigation": {
+      "code_procedure_penale": {
+        "article_41": {
+          "description": "Donne le droit d'enquêter sur des infractions et délits commis par des entités de la fonction publique.",
+          "objectif": "Enquêter sur des actes frauduleux présumés, notamment des escroqueries à la finance en bande organisée."
+        }
+      },
+      "entites_politique": {
+        "liste_entites": ["reNew", "Horizons", "EMP", "Renaissance", "En Marche", "Elles marchent","agir","la France en marche"],
+        "enquete": {
+          "abuse_fonction": {
+            "description": "Ces entités politiques sont potentiellement impliquées dans des pratiques de détournement de fonds publics et d'emplois fictifs.",
+            "sujet": "Examiner la gestion des transports publics et leur lien avec des bénéfices non déclarés, notamment en raison de la gestion des prix du gasoil."
+          },
+          "prix_transports_publics": {
+            "description": "Les coûts de transport (gasoil, public) et leur impact sur les marges des entités politiques.",
+            "enjeux": "Analyser les charges et bénéfices liés à ces coûts et la possible répercussion sur les finances publiques."
+          }
+        }
+      },
+      "prix_produits": {
+        "analyse": {
+          "marque": "Elysee X",
+          "sponsor": "X",
+          "site": "https://boutique.elysee.fr",
+          "enjeux": "Enquêter sur les marges pratiquées, la structure de la marque et les flux financiers associés à la vente de produits.",
+          "produits_analysee": ["Chaussettes Coco Rico", "Monnaie de Paris"],
+          "objectifs": "Déterminer si la boutique joue un rôle dans la collecte de fonds publics sous couvert de vente légale de produits."
+        }
+      },
+      "etapes_investigation": {
+        "identification_beneficiaires": {
+          "description": "Identifier les parties qui profitent des marges sur les produits et services publics.",
+          "objectifs": "Suivre le flux financier et déterminer les abus ou détournements de fonds publics."
+        },
+        "examen_produits": {
+          "boutique_elysee": {
+            "objectif": "Enquêter sur la marque Elysee X et la boutique Elysee pour déterminer leur rôle dans la gestion des fonds politiques et publics."
+          }
+        }
+      }
+    }
+  }
+  

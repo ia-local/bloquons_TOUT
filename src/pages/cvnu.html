@@ -1,0 +1,64 @@
+<div class="cvnu-profile-container">
+    <aside class="cvnu-aside-menu">
+        <div class="cvnu-profile-card">
+            <img src="https://ia-local.github.io/Manifest.910-2025/media/user-icon.png" alt="Avatar de l'utilisateur" class="profile-avatar">
+            <h3 id="profile-name">Nom Prénom</h3>
+            <p id="profile-score">Score CVNU : --</p>
+        </div>
+
+        <nav class="cvnu-nav">
+            <ul>
+                <li><a href="#" data-section="initial-data" class="active">Données initiales</a></li>
+                <li><a href="#" data-section="cv-analysis">Analyse du CV</a></li>
+                <li><a href="#" data-section="rib">RIB</a></li>
+                <li><a href="#" data-section="digital-signature">Signature numérique</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="cvnu-main-content">
+        <div id="initial-data" class="cvnu-section active">
+            <h2>Données initiales du profil</h2>
+            <p>Ici, vous pouvez renseigner vos informations de base pour initialiser votre profil CVNU.</p>
+            <form id="initial-data-form">
+                <div class="form-group">
+                    <label for="full-name">Nom complet :</label>
+                    <input type="text" id="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="birth-date">Date de naissance :</label>
+                    <input type="date" id="birth-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="professional-goals">Objectifs professionnels :</label>
+                    <textarea id="professional-goals" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn primary">Enregistrer</button>
+            </form>
+        </div>
+
+        <div id="cv-analysis" class="cvnu-section">
+            <h2>Analyse du CV</h2>
+            <p>Collez le texte de votre CV pour que notre IA le structure et l'analyse.</p>
+            <div class="cvnu-input-area">
+                <form id="cv-analysis-form">
+                    <textarea id="cv-content-input" placeholder="Collez le contenu de votre CV ici..." rows="15"></textarea>
+                    <button type="submit" id="analyze-cv-btn" class="btn primary">Analyser</button>
+                </form>
+                <div id="cv-output-display" class="output-display">
+                    <p>Le résultat de l'analyse s'affichera ici.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="rib" class="cvnu-section">
+            <h2>RIB</h2>
+            <p>Mettez à jour vos informations bancaires.</p>
+            </div>
+
+        <div id="digital-signature" class="cvnu-section">
+            <h2>Signature numérique</h2>
+            <p>Générez et partagez votre signature numérique.</p>
+            </div>
+    </main>
+</div>

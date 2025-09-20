@@ -1,0 +1,32 @@
+{
+      "taxes": [
+    {
+      "id": "tax_tfa",
+      "name": "Taxe sur les Transactions Financières (TFA)",
+      "description": "Taxe sur les flux financiers et les mouvements de capitaux.",
+      "rate": 0.2,
+      "applicable_to": "financial_flows"
+    },
+    {
+      "id": "tax_production",
+      "name": "Taxe sur les Facteurs de Production",
+      "description": "Taxe basée sur les coûts de production des entreprises.",
+      "rate": 0.05,
+      "applicable_to": "company_data"
+    },
+    {
+      "id": "tax_vat",
+      "name": "Taxe sur la Valeur Ajoutée",
+      "description": "Modélisation de l'impact de la TVA sur les transactions.",
+      "rate": 0.2,
+      "applicable_to": "transactions"
+    },
+    {
+      "id": "tax_campaign",
+      "name": "Taxe sur les Excédents de Comptes de Campagne",
+      "description": "Taxe sur les excédents de financement des partis politiques, d'après les données de la CNCCFP.FR.",
+      "rate": 0.5,
+      "applicable_to": "campaign_finance"
+    }
+  ]
+}

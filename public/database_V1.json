@@ -1,0 +1,278 @@
+{
+    "rics": [],
+    "missions": [
+        {
+            "id": "mission-1",
+            "title": "Collecte de données sur le terrain",
+            "description": "Relevez les positions des caméras de surveillance, des mairies ou des ronds-points dans votre ville.",
+            "status": "En cours",
+            "syndicats": ["CGT", "FO"],
+            "city": "Caen",
+            "lat": 49.18331,
+            "lon": -0.3705,
+            "type": "Intersyndical"
+        }
+    ],
+    "syndicats": [
+        {
+            "id": "syndicat-1",
+            "name": "Maison des Syndicats",
+            "syndicats": ["CGT", "FO"],
+            "city": "Caen",
+            "lat": 49.18331,
+            "lon": -0.3705,
+            "type": "Intersyndical",
+            "description": "Siège de l'Union Départementale de la CGT et de Force Ouvrière."
+        }
+    ],
+  "petitions": [
+      {
+        "id": "i-2743",
+        "title": "Destitution du Président de la République",
+        "url": "https://petitions.assemblee-nationale.fr/initiatives/i-2743",
+        "description": "Demande de destitution en vertu de l'article 68 de la Constitution, pour violation des principes démocratiques.",
+        "author": "Thibaud MAGNIEZ",
+        "date": "28/04/2025"
+      },
+      {
+        "id": "i-3014",
+        "title": "Abrogation de la loi Duplomb",
+        "url": "https://petitions.assemblee-nationale.fr/initiatives/i-3014",
+        "description": "Non à la Loi Duplomb — Pour la santé, la sécurité, l’intelligence collective.",
+        "author": "Eleonore PATTERY",
+        "date": "12/02/2025"
+      }
+  ],
+    "secteurs_application": [
+        {
+            "id": "secteur-leclerc",
+            "name": "Leclerc",
+            "type": "Distribution",
+            "description": "Chaîne de supermarchés",
+            "locations": [
+                { "id": "loc-leclerc-paris", "city": "Paris", "lat": 48.86, "lon": 2.35 },
+                { "id": "loc-leclerc-marseille", "city": "Marseille", "lat": 43.29, "lon": 5.37 }
+            ]
+        },
+        {
+            "id": "secteur-total",
+            "name": "Total",
+            "type": "Industrie",
+            "description": "Entreprise pétrolière.",
+            "locations": [
+                { "id": "loc-total-lehavre", "city": "Le Havre", "lat": 49.49, "lon": 0.10 }
+            ]
+        },
+        {
+            "id": "secteur-orange",
+            "name": "Orange",
+            "type": "Opérateur 5G",
+            "description": "Opérateur de télécommunications.",
+            "lat": 48.8566,
+            "lon": 2.3522
+        },
+        {
+            "id": "secteur-chu",
+            "name": "CHU de Rennes",
+            "type": "Hôpital",
+            "description": "Centre Hospitalier Universitaire.",
+            "lat": 48.114,
+            "lon": -1.691
+        },
+        {
+            "id": "secteur-sorbonne",
+            "name": "Université de la Sorbonne",
+            "type": "Université",
+            "description": "Université à Paris.",
+            "lat": 48.846,
+            "lon": 2.345
+        },
+        {
+            "id": "secteur-conf-paysanne",
+            "name": "Confédération Paysanne",
+            "type": "Agriculture",
+            "description": "Syndicat agricole.",
+            "lat": 49.18331,
+            "lon": -0.3705
+        }
+    ],
+    "cameras_points": [
+        {
+            "id": "camera-1",
+            "name": "Caméra de la Place Masséna",
+            "city": "Nice",
+            "lat": 43.6967,
+            "lon": 7.2687,
+            "type": "fixed",
+            "description": "Caméra fixe de surveillance."
+        },
+        {
+            "id": "camera-2",
+            "name": "Caméra de Gare du Nord",
+            "city": "Paris",
+            "lat": 48.8790,
+            "lon": 2.3551,
+            "type": "dome",
+            "description": "Caméra dôme pour la surveillance à 360°."
+        },
+        {
+            "id": "camera-3",
+            "name": "Caméra de l'Hôtel de Ville",
+            "city": "Lyon",
+            "lat": 45.7675,
+            "lon": 4.8340,
+            "type": "panning",
+            "description": "Caméra panoramique pour surveiller la place des Terreaux."
+        },
+        {
+            "id": "camera-4",
+            "name": "Garde du Louvre",
+            "city": "Paris",
+            "lat": 48.8606,
+            "lon": 2.3376,
+            "type": "guard",
+            "description": "Personnel de sécurité à l'entrée du musée du Louvre."
+        }
+    ],
+    "manifestations": [
+        {
+            "id": "manif-10-caen",
+            "city": "Caen",
+            "lat": 49.183333,
+            "lon": -0.35,
+            "date": "2025-09-10",
+            "type": "Rassemblement",
+            "description": "Rassemblement du 10 septembre."
+        },
+        {
+            "id": "manif-18-paris",
+            "city": "Paris",
+            "lat": 48.8679,
+            "lon": 2.3582,
+            "date": "2025-09-18",
+            "type": "Rassemblement",
+            "description": "Rassemblement du 18 septembre.",
+            "actions": [
+                {
+                    "id": "action-18-lycees",
+                    "type": "Blocage",
+                    "description": "Blocage des lycées et facultés à Paris."
+                },
+                {
+                    "id": "action-18-ratp",
+                    "type": "Grève",
+                    "description": "Grèves massives à la RATP et la SNCF."
+                }
+            ]
+        },
+        {
+            "id": "action-18-caen",
+            "city": "Caen",
+            "lat": 49.1764,
+            "lon": -0.3168,
+            "date": "2025-09-18",
+            "type": "Opération",
+            "description": "Opération Cana sur le rond-point de Castorama."
+        }
+    ],
+    "roundabout_points": [
+        {
+            "id": "roundabout-1",
+            "name": "Rond-point de la Patte d'Oie",
+            "city": "Amiens",
+            "lat": 49.885,
+            "lon": 2.298,
+            "type": "Rond-point de Blocage"
+        }
+    ],
+    "porte_points": [
+        {
+            "id": "porte-1",
+            "name": "Porte de Bagnolet",
+            "city": "Paris",
+            "lat": 48.8631,
+            "lon": 2.4045,
+            "type": "Porte de Paris"
+        }
+    ],
+    "prefectures": [
+        {
+            "id": "pref-1",
+            "department": "75 Paris",
+            "city": "Paris",
+            "lat": 48.8566,
+            "lon": 2.3522,
+            "type": "Préfecture"
+        }
+    ],
+    "mairies": [
+        {
+            "id": "mairie-1",
+            "name": "Mairie de Paris",
+            "city": "Paris",
+            "lat": 48.8566,
+            "lon": 2.3522,
+            "type": "Mairie"
+        }
+    ],
+    "elysee_point": {
+        "id": "elysee-1",
+        "name": "Palais de l'Élysée",
+        "city": "Paris",
+        "type": "Palais de l'Élysée",
+        "lat": 48.8703,
+        "lon": 2.3168
+    },
+    "Partis_Politiques": [
+      {
+          "id": "parti-1",
+          "parnom": "100% ASNIERES",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      },
+      {
+          "id": "910",
+          "parnom": "RENAISSANCE",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      },
+      {
+          "id": "1378",
+          "parnom": "ENSEMBLE ! (MAJORITÉ PRÉSIDENTIELLE)",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      },
+      {
+          "id": "049",
+          "parnom": "RASSEMBLEMENT NATIONAL",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      },
+            {
+          "id": "1038",
+          "parnom": "ENSEMBLE POUR LA RÉPUBLIQUE",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      }
+      ,
+            {
+          "id": "976",
+          "parnom": "LA FRANCE INSOUMISE",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      },
+                  {
+          "id": "647",
+          "parnom": "PARTI PIRATE",
+          "lat": 48.919,
+          "lon": 2.293,
+          "city": "Asnières-sur-Seine"
+      }
+    ]
+}

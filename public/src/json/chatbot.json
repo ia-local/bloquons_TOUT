@@ -1,0 +1,44 @@
+{
+  "bots": [
+    {
+      "id": "ai-1",
+      "name": "IA Enquêteur",
+      "persona": "enqueteur",
+      "model": "gemma2-9b-it",
+      "role": "Spécialiste en Enquêtes",
+      "gender": "male",
+      "emoji": "🕵️‍♂️",
+      "description": "Un expert en analyse de données, spécialisé dans la corruption et les flux financiers."
+    },
+    {
+      "id": "ai-2",
+      "name": "IA Avocat",
+      "persona": "avocat",
+      "model": "deepseek-r1-distill-llama-70b",
+      "role": "Conseiller Juridique",
+      "gender": "male",
+      "emoji": "👨‍⚖️",
+      "description": "Un conseiller juridique spécialisé dans la législation du travail et les droits des citoyens."
+    },
+    {
+      "id": "ai-3",
+      "name": "IA Généraliste",
+      "persona": "generaliste",
+      "model": "llama-3.1-8b-instant",
+      "role": "Assistant Général",
+      "gender": "neutral",
+      "emoji": "🤖",
+      "description": "Un assistant polyvalent pour répondre à toutes vos questions."
+    },
+    {
+      "id": "ai-4",
+      "name": "IA Codage",
+      "persona": "codage",
+      "model": "gemma2-9b-it",
+      "role": "Assistant de Codage",
+      "gender": "neutral",
+      "emoji": "💻",
+      "description": "Génère du code, explique les concepts de programmation et aide au débogage."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<section class="page-section">
+    <h1>Missions du Mouvement</h1>
+    <p>Rejoignez nos actions pour la justice sociale en participant aux missions proposées par le mouvement.</p>
+    <div class="mission-controls">
+        <button id="show-add-mission-btn" class="action-btn">Ajouter une nouvelle mission</button>
+    </div>
+
+    <div id="add-mission-form-container" style="display:none;">
+        <h2>Créer une nouvelle mission</h2>
+        <form id="add-mission-form">
+            <div class="form-group">
+                <label for="mission-title-input">Titre de la mission:</label>
+                <input type="text" id="mission-title-input" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="mission-description-input">Description courte:</label>
+                <textarea id="mission-description-input" name="description" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="mission-full-description-input">Description complète:</label>
+                <textarea id="mission-full-description-input" name="full_description" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="mission-status-input">Statut:</label>
+                <select id="mission-status-input" name="status">
+                    <option value="À venir">À venir</option>
+                    <option value="En cours">En cours</option>
+                    <option value="Terminée">Terminée</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mission-rewards-input">Récompenses:</label>
+                <input type="text" id="mission-rewards-input" name="rewards">
+            </div>
+            <button type="submit" class="action-btn">Enregistrer la mission</button>
+            <button type="button" id="generate-mission-ai-btn" class="action-btn secondary-btn">Générer avec l'IA</button>
+        </form>
+    </div>
+    <div class="actions">
+        <h2>Actions</h2>
+    <div class="mission-grid">
+        <div class="loading-spinner">
+            <p>Chargement des missions...</p>
+        </div>
+    </div>
+
+    <div id="mission-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-mission-title"></h2>
+            <p id="modal-mission-full-description"></p>
+            <p><strong>Statut :</strong> <span id="modal-mission-status"></span></p>
+            <p><strong>Récompenses :</strong> <span id="modal-mission-rewards"></span></p>
+        </div>
+    </div>
+    </div>
+    <div>
+        <h2>Revendication</h2>
+    </div>
+</section>
+<div id="detail-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-content"></div>
+    </div>
+</div>
