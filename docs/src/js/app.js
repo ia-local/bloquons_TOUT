@@ -1,4 +1,4 @@
-// Fichier : public/src/js/app.js
+// Fichier : docs/src/js/app.js
 
 // --- Imports des modules de l'application ---
 import { initMap } from './map.js';
@@ -31,7 +31,7 @@ function initializeApp() {
     loadAsideMenu();
     attachProfileMenuEvent();
     attachNavigationEvents();
-    loadPage('home'); // Cette ligne charge le contenu de 'home.html' et appelle initHomePage() via le switch.
+    loadPage('home');
     initCvnuModal();
     initMapModal();
     initObserver();
@@ -43,9 +43,6 @@ function initializeApp() {
 }
 
 // --- Fonctions de navigation ---
-/**
- * Attache l'écouteur d'événement pour le menu déroulant du profil.
- */
 function attachProfileMenuEvent() {
     const profileBtn = document.getElementById('user-profile-btn');
     const profileMenu = document.getElementById('profile-menu');
@@ -66,9 +63,6 @@ function attachProfileMenuEvent() {
     }
 }
 
-/**
- * Charge le menu latéral de l'application.
- */
 function loadAsideMenu() {
     const mainNavigation = document.getElementById('main-navigation');
     if (mainNavigation) {
@@ -90,34 +84,28 @@ function loadAsideMenu() {
                 <li><a href="#" data-page="treasury"><i class="fas fa-wallet"></i><span>Trésorerie</span></a></li>
                 <li><a href="#" data-page="contacts"><i class="fas fa-address-book"></i><span>Contacts</span></a></li>
                 <li><a href="#" data-page="reseau"><i class="fas fa-network-wired"></i><span>Réseau</span></a></li>
-                 <li><a href="#" data-page="organisation"><i class="fas fa-sitemap"></i><span>Organisation</span></a></li>
+                <li><a href="#" data-page="organisation"><i class="fas fa-sitemap"></i><span>Organisation</span></a></li>
                 <li><a href="#" data-page="parametres"><i class="fas fa-cog"></i><span>Paramètres</span></a></li>
             </ul>
         `;
     }
 }
-/**
- * Attache les écouteurs d'événements de clic aux liens de navigation.
- * Gère les liens de l'aside et du footer.
- */
+
 function attachNavigationEvents() {
     document.addEventListener('click', (e) => {
-        // Le sélecteur 'a[data-page]' cible tous les liens avec l'attribut data-page,
-        // qu'ils soient dans l'aside ou le footer.
         const navLink = e.target.closest('a[data-page]');
         
         if (navLink) {
             e.preventDefault();
             const pageName = navLink.dataset.page;
-            
-            // Gérer un cas spécial pour la carte qui ouvre une modale
+            const subPageName = navLink.dataset.subpage;
+
             if (pageName === 'map' && navLink.id === 'open-map-modal-btn') {
                 initMapModal();
             } else {
-                loadPage(pageName);
+                loadPage(pageName, subPageName);
             }
             
-            // Ferme le menu de profil s'il est ouvert après un clic sur un lien
             const profileMenu = document.getElementById('profile-menu');
             if (profileMenu) {
                 profileMenu.classList.remove('show');
@@ -125,11 +113,8 @@ function attachNavigationEvents() {
         }
     });
 }
-/**
- * Charge une page HTML de manière dynamique dans le contenu principal.
- * @param {string} pageName - Le nom de la page à charger (ex: 'home', 'map').
- */
-async function loadPage(pageName) {
+
+async function loadPage(pageName, subPageName = null) {
     const mainContent = document.getElementById('main-content');
     const asideLinks = document.querySelectorAll('.main-aside a');
 
@@ -138,7 +123,14 @@ async function loadPage(pageName) {
     });
 
     try {
-        const response = await fetch(`src/pages/${pageName}.html`);
+        let pagePath;
+        if (subPageName) {
+            pagePath = `src/pages/${pageName}/${subPageName}.html`;
+        } else {
+            pagePath = `src/pages/${pageName}.html`;
+        }
+        
+        const response = await fetch(pagePath);
         if (!response.ok) {
             throw new Error(`Erreur de chargement de la page ${pageName}: ${response.statusText}`);
         }
@@ -147,7 +139,6 @@ async function loadPage(pageName) {
         
         await new Promise(r => setTimeout(r, 10));
         
-        // Exécuter la fonction d'initialisation spécifique à la page
         switch (pageName) {
             case 'home':
                 initHomePage();
@@ -174,7 +165,7 @@ async function loadPage(pageName) {
                 initCvnuPage();
                 break;
             case 'journal':
-                initJournalPage();
+                initJournalPage(subPageName); // Passer la sous-page au script journal
                 break;
             case 'missions':
                 initMissionsPage();
@@ -226,7 +217,6 @@ async function fetchAllData() {
     }
 }
 
-// --- NOUVELLE FONCTION: Chargement de map.json ---
 async function getMapConfig() {
     try {
         const response = await fetch('src/json/map.json');
@@ -239,7 +229,6 @@ async function getMapConfig() {
         return {};
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', initializeApp);
 

@@ -88,6 +88,7 @@ const COEFFICIENTS = {
     TAX_AI_SPECIFIC: {
         TAX_VAT: 1,
         TAX_TFA: 1,
+        TAX_TICPE: 1,
         TAX_PRODUCTION: 1,
         TAX_CAMPAGN: 1,
         TAX_ADVICE_ACCURACY_BONUS: 10,

@@ -1,0 +1,20 @@
+{
+  "users_cv": [
+    {
+      "id": "cv-1",
+      "name": "Alice Leblanc",
+      "role": "Développeuse FullStack",
+      "cvnu_score": 95,
+      "description": "Expert en smart contracts et en économie circulaire.",
+      "profile_picture": "chemin/vers/alice.jpg"
+    },
+    {
+      "id": "cv-2",
+      "name": "Benoit Dupré",
+      "role": "Data Scientist",
+      "cvnu_score": 88,
+      "description": "Analyse les données pour les insights du dashboard.",
+      "profile_picture": "chemin/vers/benoit.jpg"
+    }
+  ]
+}

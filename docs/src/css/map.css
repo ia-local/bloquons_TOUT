@@ -96,7 +96,7 @@
 
 /* Base map styles */
 #map {
-    height: 740px;
+    height: 100%;
     flex-grow: 1;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -104,6 +104,7 @@
 
 /* Additional utility classes */
 .page-container {
+    max-width:100%;
     padding: 20px;
 }
 .map-section {
@@ -159,3 +160,79 @@
     filter: sepia(100%) hue-rotate(180deg) saturate(300%);
     /* Ceci va donner à l'icône une teinte bleue */
 }
+/* Fichier : public/src/css/map.css */
+
+/* ... (le reste de vos styles) ... */
+
+/* --- Styles pour les menus déroulants des utilisateurs --- */
+.user-map {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.user-dropdown {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.user-dropdown summary {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    list-style: none; /* Cache le marqueur par défaut */
+    position: relative;
+    border-bottom: 1px solid transparent;
+}
+
+.user-dropdown summary::before {
+    content: '▶';
+    position: absolute;
+    left: 15px;
+    transition: transform 0.2s ease;
+}
+
+.user-dropdown[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+.user-dropdown[open] > summary {
+    border-bottom-color: #ddd;
+}
+
+.user-list-container {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* --- Styles pour les cartes d'utilisateur --- */
+.user-cv-card, .user-militant-card {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.user-cv-card h3, .user-militant-card h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #007bff;
+}
+
+.user-cv-card p, .user-militant-card p {
+    margin: 5px 0 0;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* ... (le reste de vos styles) ... */

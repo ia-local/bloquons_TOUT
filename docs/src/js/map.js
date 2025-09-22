@@ -3,9 +3,10 @@
 import { initLayerMap } from './layerMap.js';
 import { initLegend } from './layerLegend.js';
 import { openBoycottageFormModal } from './boycottageForm.js';
-// import { getMapConfig } from './utils.js'; // Cette ligne n'est plus nécessaire
-import { initTimeline } from './chronologie.js'; 
-import { initBoycottList } from './boycott.js';
+// Les imports suivants sont commentés car les fichiers sources n'ont pas été fournis.
+// import { initTimeline } from './chronologie.js';
+// import { initBoycottList } from './boycott.js';
+import { initUserLayer } from './layerUser.js'; // Ajout de l'import pour le nouveau module utilisateur
 
 let allData = {};
 let legendConfig = {};
@@ -20,18 +21,28 @@ export async function initMap() {
             databaseData, 
             legendConfigData, 
             cnccfpData,
-            manifestationData // NOUVEAU: Ajout de la variable manquante
+            manifestationData,
+            ricData,
+            userCvData, // NOUVEAU: Chargement des données des CV
+            usersMilitantData // NOUVEAU: Chargement des données des militants
         ] = await Promise.all([
             fetchData('database.json'),
             fetchData('src/json/map.json'),
             fetchData('src/json/cnccfp.json'),
-            fetchData('src/json/manifestations.json')
+            fetchData('src/json/manifestations.json'),
+            fetchData('src/json/ric-map.json'),
+            fetchData('src/json/user-cv.json'), // NOUVEAU: Appel à fetchData
+            fetchData('src/json/users-militant.json') // NOUVEAU: Appel à fetchData
         ]);
         
+        // Fusionne toutes les données en un seul objet
         allData = {
             ...databaseData,
             ...manifestationData,
-            cnccfp_partis: cnccfpData
+            cnccfp_partis: cnccfpData,
+            rics: ricData.rics,
+            users_cv: userCvData.users_cv, // NOUVEAU: Ajout des utilisateurs CV
+            users_militant: usersMilitantData.users_militant // NOUVEAU: Ajout des utilisateurs militants
         };
 
         legendConfig = legendConfigData;
@@ -39,9 +50,12 @@ export async function initMap() {
         initLayerMap(allData, legendConfig);
         initLegend(legendConfig, allData);
         
-        // NOUVEAU: Appel des fonctions pour afficher la chronologie et la liste des boycotts
-        initTimeline(allData.chronology);
-        initBoycottList(allData.boycotts);
+        // Initialise la couche utilisateur avec les nouvelles données
+        initUserLayer(allData); // NOUVEAU: Appel du module utilisateur
+
+        // Exemple d'appels de fonctions de modules annexes
+        // if (allData.chronology) initTimeline(allData.chronology);
+        // if (allData.boycotts) initBoycottList(allData.boycotts);
         
         attachMapEvents();
         console.log("Carte et légende initialisées avec les données asynchrones.");
@@ -72,6 +86,3 @@ function attachMapEvents() {
         openFormBtn.addEventListener('click', openBoycottageFormModal);
     }
 }
-
-// L'appel de la fonction d'initialisation se fera depuis app.js
-// document.addEventListener('DOMContentLoaded', initMap);

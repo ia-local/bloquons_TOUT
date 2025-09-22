@@ -1,0 +1,20 @@
+{
+  "users_militant": [
+    {
+      "id": "militant-1",
+      "name": "Clara Roussel",
+      "role": "Organisatrice de manifestations",
+      "militant_score": 98,
+      "description": "Dirige la mobilisation et la coordination sur le terrain.",
+      "profile_picture": "chemin/vers/clara.jpg"
+    },
+    {
+      "id": "militant-2",
+      "name": "David Morin",
+      "role": "Porte-parole du mouvement",
+      "militant_score": 92,
+      "description": "S'occupe de la communication et des médias sociaux.",
+      "profile_picture": "chemin/vers/david.jpg"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-{  
+{
   "rics": [],
   "missions": [
     {
@@ -7,7 +7,10 @@
       "description": "Relevez les positions des caméras de surveillance, des mairies ou des ronds-points dans votre ville.",
       "full_description": "Cette mission vise à créer une base de données collaborative. Les participants doivent utiliser l'application pour géolocaliser les points stratégiques. Ces données sont cruciales pour la cartographie des manifestations et la stratégie de boycott.",
       "status": "En cours",
-      "syndicats": ["CGT", "FO"],
+      "syndicats": [
+        "CGT",
+        "FO"
+      ],
       "city": "Caen",
       "lat": 49.18331,
       "lon": -0.3705,
@@ -20,7 +23,11 @@
       "description": "Examinez les modifications proposées aux articles L3121-1 et L4331-1 et donnez votre avis.",
       "full_description": "Nous avons besoin de l'expertise de citoyens pour examiner en détail les textes de loi générés par l'IA. Votre rôle est de vérifier la pertinence et les potentielles failles juridiques. Votre analyse sera utilisée pour affiner notre projet de loi.",
       "status": "En cours",
-      "syndicats": ["CGT", "FO","FNSEA"],
+      "syndicats": [
+        "CGT",
+        "FO",
+        "FNSEA"
+      ],
       "city": "Caen",
       "lat": 49.18331,
       "lon": -0.3705,
@@ -33,14 +40,19 @@
       "description": "Identifiez et enregistrez les lieux de manifestation potentiels et les voies d'accès principales.",
       "full_description": "Aidez-nous à planifier la manifestation du 10 septembre en identifiant les meilleurs lieux de rassemblement, les itinéraires sécurisés et les points de sortie. Votre contribution assure la sécurité et l'efficacité de nos actions.",
       "status": "À venir",
-      "syndicats": ["CGT", "FO","FNSEA","CNCCFP"],
+      "syndicats": [
+        "CGT",
+        "FO",
+        "FNSEA",
+        "CNCCFP"
+      ],
       "city": "Caen",
       "lat": 49.18331,
       "lon": -0.3705,
       "type": "Intersyndical",
       "rewards": "Invitation à la réunion des coordinateurs locaux."
     },
-            {
+    {
       "id": "4",
       "title": "Stratégie de boycottage",
       "description": "Identifiez et enregistrez les lieux de manifestation potentiels et les voies d'accès principales.",
@@ -55,7 +67,7 @@
       "full_description": "Aidez-nous à planifier la manifestation du 10 septembre en identifiant les meilleurs lieux de rassemblement, les itinéraires sécurisés et les points de sortie. Votre contribution assure la sécurité et l'efficacité de nos actions.",
       "status": "À venir",
       "rewards": "Invitation à la réunion des coordinateurs locaux."
-    },    
+    },
     {
       "id": "6",
       "title": "Mise à jour : [Journal]",
@@ -88,7 +100,7 @@
       "status": "À venir",
       "rewards": "Invitation à la réunion des coordinateurs locaux."
     },
-        {
+    {
       "id": "10",
       "title": "Co Working",
       "description": "Identifiez et enregistrez les lieux de manifestation potentiels et les voies d'accès principales.",
@@ -97,167 +109,19 @@
       "rewards": "Invitation à la réunion des coordinateurs locaux."
     }
   ],
-  "syndicats": [
-    {
-      "name": "Maison des Syndicats",
-      "syndicats": ["CGT", "FO"],
-      "city": "Caen",
-      "lat": 49.18331,
-      "lon": -0.3705,
-      "type": "Intersyndical",
-      "description": "Siège de l'Union Départementale de la CGT et de Force Ouvrière."
-    },
-    {
-      "name": "Syndicat Solidaires",
-      "syndicats": ["Solidaires", "SUD éducation"],
-      "city": "Caen",
-      "lat": 49.1834,
-      "lon": -0.3708,
-      "type": "Intersyndical",
-      "description": "Maison des syndicats pour les organisations du groupe Solidaires."
-    },
-    {
-      "name": "SUD PTT Solidaires",
-      "syndicats": ["SUD PTT"],
-      "city": "Caen",
-      "lat": 49.1915,
-      "lon": -0.3698,
-      "type": "Intersyndical",
-      "description": "Siège du Syndicat SUD PTT pour le Calvados."
-    }
-  ],
-  "polls": [],
-  "organizers": [],
-  "cv_contracts": [],
-  "beneficiaries": [],
-  "caisse_manifestation": {
-    "solde": 0,
-    "transactions": []
-  },
-  "taxes": [
-    {
-      "id": "tax_tfa",
-      "name": "Taxe sur les Transactions Financières (TFA)",
-      "description": "Taxe sur les flux financiers et les mouvements de capitaux.",
-      "rate": 0.2,
-      "applicable_to": "financial_flows"
-    },
-    {
-      "id": "tax_production",
-      "name": "Taxe sur les Facteurs de Production",
-      "description": "Taxe basée sur les coûts de production des entreprises.",
-      "rate": 0.05,
-      "applicable_to": "company_data"
-    },
-    {
-      "id": "tax_vat",
-      "name": "Taxe sur la Valeur Ajoutée",
-      "description": "Modélisation de l'impact de la TVA sur les transactions.",
-      "rate": 0.2,
-      "applicable_to": "transactions"
-    },
-    {
-      "id": "tax_campaign",
-      "name": "Taxe sur les Excédents de Comptes de Campagne",
-      "description": "Taxe sur les excédents de financement des partis politiques, d'après les données de la CNCCFP.FR.",
-      "rate": 0.5,
-      "applicable_to": "campaign_finance"
-    }
-  ],
-    "petitions": [
-    {
-      "id": "i-2743",
-      "title": "Destitution du Président de la République",
-      "url": "https://petitions.assemblee-nationale.fr/initiatives/i-2743",
-      "description": "Demande de destitution en vertu de l'article 68 de la Constitution, pour violation des principes démocratiques.",
-      "author": "Thibaud MAGNIEZ",
-      "lat": 49.18331,
-      "lon": -0.3705,
-      "date": "28/04/2025"
-    },
-    {
-      "id": "i-3014",
-      "title": "Abrogation de la loi Duplomb",
-      "url": "https://petitions.assemblee-nationale.fr/initiatives/i-3014",
-      "description": "Non à la Loi Duplomb — Pour la santé, la sécurité, l’intelligence collective.",
-      "author": "Eleonore PATTERY",
-      "lat": 49.18331,
-      "lon": -0.3705,
-      "date": "12/02/2025"
-    }
-  ],
-  "blockchain": {
-    "transactions": []
-  },
-  "satellites": [
-    {
-      "id": "COPERNICUS/S2_SR",
-      "name": "Sentinel-2 (Copernicus)",
-      "description": "Satellite optique haute résolution du programme européen Copernicus. Idéal pour l'analyse de la végétation et de l'utilisation des sols. Résolution spatiale de 10 à 60 mètres. Opère dans 13 bandes spectrales.",
-      "bands": ["B4", "B3", "B2"],
-      "sort": "CLOUDY_PIXEL_PERCENTAGE",
-      "realtime_data": {
-        "Last_Update": "10 août 2025 12:59:50",
-        "NORAD_ID": "53289",
-        "RA": "20h 54m 52.37s",
-        "DEC": "-34° 36' 13.2\"",
-        "Altitude": "556.48 km",
-        "Orbital_Period": "1.59 h",
-        "Launch_Date": "2022"
-      },
-      "lat": 46.603354,
-      "lon": 1.888334,
-      "level": "all"
-    },
-    {
-      "id": "LANDSAT/LC08/C02/T1_L2",
-      "name": "Landsat 8",
-      "description": "Satellite d'imagerie terrestre de la NASA. Fournit des données multispectrales de moyenne résolution, utiles pour le suivi des ressources en eau et des écosystèmes.",
-      "bands": ["SR_B4", "SR_B3", "SR_B2"],
-      "sort": "CLOUD_COVER_LAND",
-      "lat": 46.5,
-      "lon": 1.8,
-      "level": "all"
-    },
-    {
-      "id": "MODIS/061/MOD09GA",
-      "name": "MODIS (Terra/Aqua)",
-      "description": "Capteur à bord des satellites Terra et Aqua. Fournit des images de basse à moyenne résolution, utilisées pour des études à l'échelle mondiale sur les nuages, les aérosols et la couverture terrestre.",
-      "bands": ["sur_refl_b01", "sur_refl_b04", "sur_refl_b03"],
-      "sort": "cloud_state",
-      "lat": 46.7,
-      "lon": 1.9,
-      "level": "all"
-    },
-    {
-      "id": "STARLINK",
-      "name": "Starlink",
-      "description": "Constellation de satellites de SpaceX pour l'accès à internet. Bien que Starlink soit une source d'objets brillants dans le ciel, ses satellites ne sont pas des satellites d'observation de la Terre et ne fournissent pas d'imagerie. Ils sont inclus ici à titre d'information contextuelle.",
-      "bands": [],
-      "sort": null,
-      "realtime_data": {
-        "Last_Update": "12 août 2025 10:20:00",
-        "Purpose": "Internet par satellite",
-        "Altitude": "550 km"
-      },
-      "lat": 46.65,
-      "lon": 2.0,
-      "level": "national"
-    }
-  ],
   "chronology": [
- {
+    {
       "id": "1",
-      "title": "Election EM 910",
-      "subtitle": "titre 2027",
-      "description": "Lancement de la loi DUMPLOMB.",
+      "title": "Election Macron",
+      "subtitle": "Mai 2017",
+      "description": "Collection du président de la république, création du gouvernement en marche",
       "start_date": "2017-07-08T00:00:00Z",
       "end_date": "2017-07-08T23:59:59Z",
       "lat": 48.8566,
       "lon": 2.3522,
       "city": "Paris"
     },
-     {
+    {
       "id": "2",
       "title": "Loi du Plomb",
       "subtitle": "Du 8 JUILLET",
@@ -312,7 +176,7 @@
       "lon": 2.3582,
       "city": "Paris"
     },
-        {
+    {
       "id": "7",
       "title": "Croissance Politique - caisse manifestation",
       "subtitle": "Le 12 septembre 2025",
@@ -323,7 +187,7 @@
       "lon": 2.3168,
       "city": "Paris"
     },
-            {
+    {
       "id": "8",
       "title": "Finance : EuropaFi",
       "subtitle": "occupation",
@@ -337,7 +201,7 @@
     {
       "id": "9",
       "title": "Manifestation - Grève Générale",
-      "subtitle": "Le 18 septembre",
+      "subtitle": "Le 18 septembre 2025",
       "description": "Nous vous invitons à vous rassembler, à distribuer de l'argent de la caisse de manifestation et à échanger autour d'un restaurant sur les revendications de justice sociale, de destitution et du RIC. C'est un moment pour se réapproprier l'espace public de manière constructive.",
       "start_date": "2025-09-18T00:00:00Z",
       "end_date": "2025-09-18T23:59:59Z",
@@ -345,10 +209,10 @@
       "lon": 2.3168,
       "city": "Paris"
     },
-        {
+    {
       "id": "10",
       "title": "Bilan Générale - secteur application",
-      "subtitle": "action - revendication - national",
+      "subtitle": "19 septembbre 2025",
       "description": "Nous vous invitons à vous rassembler, à distribuer de l'argent de la caisse de manifestation et à échanger autour d'un restaurant sur les revendications de justice sociale, de destitution et du RIC. C'est un moment pour se réapproprier l'espace public de manière constructive.",
       "start_date": "2025-09-19T00:00:00Z",
       "end_date": "2025-09-19T23:59:59Z",
@@ -357,42 +221,238 @@
       "city": "Paris"
     },
     [
-    {
-      "id": "11",
-      "title": "Fête de l'abolition de la monarchie",
-      "subtitle": "Le 21 septembre",
-      "description": "Cet événement a célébré l'abolition de la monarchie et a été l'occasion de rassemblements festifs et de kermesses. Il a permis de créer un lieu sécurisé pour la discussion, les conférences et les formations. Un rassemblement majeur a été organisé à Guingamp, mais des événements similaires ont eu lieu dans plusieurs villes.",
-      "start_date": "2025-09-21T00:00:00Z",
-      "end_date": "2025-09-21T23:59:59Z",
-      "lat": 48.5638,
-      "lon": -3.1491,
-      "city": "Guingamp"
-    },
-         {
-      "id": "12",
-      "title": "budget 2026",
-      "subtitle": "decembre 2025",
-      "description": "Lancement de la loi DUMPLOMB.",
-      "start_date": "2025-12-30T00:00:00Z",
-      "end_date": "2025-12-30T23:59:59Z",
-      "lat": 48.8566,
-      "lon": 2.3522,
-      "city": "Paris"
-    },
-        {
-      "id": "9",
-      "title": "https://www.elysee.fr/emmanuel-macron/france2030",
-      "subtitle": "france203",
-      "description": "Cet événement a célébré l'abolition de la monarchie et a été l'occasion de rassemblements festifs et de kermesses. Il a permis de créer un lieu sécurisé pour la discussion, les conférences et les formations. Un rassemblement majeur a été organisé à Guingamp, mais des événements similaires ont eu lieu dans plusieurs villes.",
-      "start_date": "2030-09-21T00:00:00Z",
-      "end_date": "2030-09-21T23:59:59Z",
-      "lat": 48.5638,
-      "lon": -3.1491,
-      "city": "Guingamp"
-    }
-]
+      {
+        "id": "11",
+        "title": "Place de la républicque",
+        "subtitle": "Le 21 septembre 2025",
+        "description": "Cet événement a célébré l'abolition de la monarchie et a été l'occasion de rassemblements À la place de la république à Paris..",
+        "start_date": "2025-09-21T00:00:00Z",
+        "end_date": "2025-09-21T23:59:59Z",
+        "lat": 48.8703,
+        "lon": 2.3168,
+        "city": "Guingamp"
+      },
+      {
+        "id": "12",
+        "title": "Grece reconductible",
+        "subtitle": "Le 24 septembre 2025",
+        "description": "organisation",
+        "start_date": "2025-09-24T00:00:00Z",
+        "end_date": "2025-09-24T23:59:59Z",
+        "lat": 48.5638,
+        "lon": -3.1491,
+        "city": "Nationnal"
+      },
+      {
+        "id": "13",
+        "title": "budget 2026",
+        "subtitle": "31 decembre 2025",
+        "description": "Lancement de la loi DUMPLOMB.",
+        "start_date": "2025-12-30T00:00:00Z",
+        "end_date": "2025-12-30T23:59:59Z",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "city": "Paris"
+      },
+            {
+        "id": "14",
+        "title": "santé - hospital",
+        "subtitle": "9 octobre 2025",
+        "description": "Cet événement a célébré l'abolition de la monarchie et a été l'occasion de rassemblements festifs et de kermesses. Il a permis de créer un lieu sécurisé pour la discussion, les conférences et les formations. Un rassemblement majeur a été organisé à Guingamp, mais des événements similaires ont eu lieu dans plusieurs villes.",
+        "start_date": "2025-10-09T00:00:00Z",
+        "end_date": "2025-10-09T23:59:59Z",
+        "lat": 48.5638,
+        "lon": -3.1491,
+        "city": "France"
+      },
+      {
+        "id": "15",
+        "title": "Programmae France 2030",
+        "subtitle": "france203",
+        "description": "Cet événement a célébré l'abolition de la monarchie et a été l'occasion de rassemblements festifs et de kermesses. Il a permis de créer un lieu sécurisé pour la discussion, les conférences et les formations. Un rassemblement majeur a été organisé à Guingamp, mais des événements similaires ont eu lieu dans plusieurs villes.",
+        "start_date": "2030-12-30T00:00:00Z",
+        "end_date": "2030-12-30T23:59:59Z",
+        "lat": 48.5638,
+        "lon": -3.1491,
+        "city": "Guingamp"
+      }
+    ]
   ],
-
+  "syndicats": [
+    {
+      "name": "Maison des Syndicats",
+      "syndicats": [
+        "CGT",
+        "FO"
+      ],
+      "city": "Caen",
+      "lat": 49.18331,
+      "lon": -0.3705,
+      "type": "Intersyndical",
+      "description": "Siège de l'Union Départementale de la CGT et de Force Ouvrière."
+    },
+    {
+      "name": "Syndicat Solidaires",
+      "syndicats": [
+        "Solidaires",
+        "SUD éducation"
+      ],
+      "city": "Caen",
+      "lat": 49.1834,
+      "lon": -0.3708,
+      "type": "Intersyndical",
+      "description": "Maison des syndicats pour les organisations du groupe Solidaires."
+    },
+    {
+      "name": "SUD PTT Solidaires",
+      "syndicats": [
+        "SUD PTT"
+      ],
+      "city": "Caen",
+      "lat": 49.1915,
+      "lon": -0.3698,
+      "type": "Intersyndical",
+      "description": "Siège du Syndicat SUD PTT pour le Calvados."
+    }
+  ],
+  "polls": [],
+  "organizers": [],
+  "cv_contracts": [],
+  "beneficiaries": [],
+  "caisse_manifestation": {
+    "solde": 0,
+    "transactions": []
+  },
+  "taxes": [
+    {
+      "id": "tax_tfa",
+      "name": "Taxe sur les Transactions Financières (TFA)",
+      "description": "Taxe sur les flux financiers et les mouvements de capitaux.",
+      "rate": 0.2,
+      "applicable_to": "financial_flows"
+    },
+    {
+      "id": "tax_production",
+      "name": "Taxe sur les Facteurs de Production",
+      "description": "Taxe basée sur les coûts de production des entreprises.",
+      "rate": 0.05,
+      "applicable_to": "company_data"
+    },
+    {
+      "id": "tax_vat",
+      "name": "Taxe sur la Valeur Ajoutée",
+      "description": "Modélisation de l'impact de la TVA sur les transactions.",
+      "rate": 0.2,
+      "applicable_to": "transactions"
+    },
+    {
+      "id": "tax_campaign",
+      "name": "Taxe sur les Excédents de Comptes de Campagne",
+      "description": "Taxe sur les excédents de financement des partis politiques, d'après les données de la CNCCFP.FR.",
+      "rate": 0.5,
+      "applicable_to": "campaign_finance"
+    },
+    {
+      "id": "tax_ticpe",
+      "name": "Taxe Intérieure de Consommation sur les Produits Énergétiques (TICPE)",
+      "description": "Taxe française sur les produits pétroliers utilisés comme carburant ou combustible de chauffage, intégrant une composante carbone.",
+      "rate": "variable",
+      "applicable_to": "energy_products"
+    }
+  ],
+  "petitions": [
+    {
+      "id": "i-2743",
+      "title": "Destitution du Président de la République",
+      "url": "https://petitions.assemblee-nationale.fr/initiatives/i-2743",
+      "description": "Demande de destitution en vertu de l'article 68 de la Constitution, pour violation des principes démocratiques.",
+      "author": "Thibaud MAGNIEZ",
+      "lat": 49.18331,
+      "lon": -0.3705,
+      "date": "28/04/2025"
+    },
+    {
+      "id": "i-3014",
+      "title": "Abrogation de la loi Duplomb",
+      "url": "https://petitions.assemblee-nationale.fr/initiatives/i-3014",
+      "description": "Non à la Loi Duplomb — Pour la santé, la sécurité, l’intelligence collective.",
+      "author": "Eleonore PATTERY",
+      "lat": 49.18331,
+      "lon": -0.3705,
+      "date": "12/02/2025"
+    }
+  ],
+  "blockchain": {
+    "transactions": []
+  },
+  "satellites": [
+    {
+      "id": "COPERNICUS/S2_SR",
+      "name": "Sentinel-2 (Copernicus)",
+      "description": "Satellite optique haute résolution du programme européen Copernicus. Idéal pour l'analyse de la végétation et de l'utilisation des sols. Résolution spatiale de 10 à 60 mètres. Opère dans 13 bandes spectrales.",
+      "bands": [
+        "B4",
+        "B3",
+        "B2"
+      ],
+      "sort": "CLOUDY_PIXEL_PERCENTAGE",
+      "realtime_data": {
+        "Last_Update": "10 août 2025 12:59:50",
+        "NORAD_ID": "53289",
+        "RA": "20h 54m 52.37s",
+        "DEC": "-34° 36' 13.2\"",
+        "Altitude": "556.48 km",
+        "Orbital_Period": "1.59 h",
+        "Launch_Date": "2022"
+      },
+      "lat": 46.603354,
+      "lon": 1.888334,
+      "level": "all"
+    },
+    {
+      "id": "LANDSAT/LC08/C02/T1_L2",
+      "name": "Landsat 8",
+      "description": "Satellite d'imagerie terrestre de la NASA. Fournit des données multispectrales de moyenne résolution, utiles pour le suivi des ressources en eau et des écosystèmes.",
+      "bands": [
+        "SR_B4",
+        "SR_B3",
+        "SR_B2"
+      ],
+      "sort": "CLOUD_COVER_LAND",
+      "lat": 46.5,
+      "lon": 1.8,
+      "level": "all"
+    },
+    {
+      "id": "MODIS/061/MOD09GA",
+      "name": "MODIS (Terra/Aqua)",
+      "description": "Capteur à bord des satellites Terra et Aqua. Fournit des images de basse à moyenne résolution, utilisées pour des études à l'échelle mondiale sur les nuages, les aérosols et la couverture terrestre.",
+      "bands": [
+        "sur_refl_b01",
+        "sur_refl_b04",
+        "sur_refl_b03"
+      ],
+      "sort": "cloud_state",
+      "lat": 46.7,
+      "lon": 1.9,
+      "level": "all"
+    },
+    {
+      "id": "STARLINK",
+      "name": "Starlink",
+      "description": "Constellation de satellites de SpaceX pour l'accès à internet. Bien que Starlink soit une source d'objets brillants dans le ciel, ses satellites ne sont pas des satellites d'observation de la Terre et ne fournissent pas d'imagerie. Ils sont inclus ici à titre d'information contextuelle.",
+      "bands": [],
+      "sort": null,
+      "realtime_data": {
+        "Last_Update": "12 août 2025 10:20:00",
+        "Purpose": "Internet par satellite",
+        "Altitude": "550 km"
+      },
+      "lat": 46.65,
+      "lon": 2,
+      "level": "national"
+    }
+  ],
   "media_sources": [
     {
       "platform": "YouTube",
@@ -412,11 +472,63 @@
       "reason": "Promotion de politiques toxiques par le réalisateur.",
       "tax_id": "tax_vat",
       "locations": [
-        { "name": "Cinéma Pathé-Gaumont", "city": "Paris", "lat": 48.868, "lon": 2.348, "level": "communal" }
+        {
+          "name": "Cinéma Pathé-Gaumont",
+          "city": "Paris",
+          "lat": 48.868,
+          "lon": 2.348,
+          "level": "communal"
+        }
       ]
     },
-    { "id": "ent_boulangerie", "name": "Boulangerie", "type": "Distribution", "description": "Réseau de boulangeries mentionné dans l'enquête.", "tax_id": "tax_vat", "locations": [{"city": "Paris", "lat": 48.868, "lon": 2.348, "level": "communal"}] },
-    { "id": "ent_leclerc", "name": "Leclerc", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Paris", "lat": 48.86, "lon": 2.35, "level": "communal" }, { "city": "Marseille", "lat": 43.29, "lon": 5.37, "level": "communal" }, { "city": "Strasbourg", "lat": 48.58, "lon": 7.75, "level": "communal" }, { "city": "Lille", "lat": 50.63, "lon": 3.06, "level": "communal" }] },
+    {
+      "id": "ent_boulangerie",
+      "name": "Boulangerie",
+      "type": "Distribution",
+      "description": "Réseau de boulangeries mentionné dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.868,
+          "lon": 2.348,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_leclerc",
+      "name": "Leclerc",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.86,
+          "lon": 2.35,
+          "level": "communal"
+        },
+        {
+          "city": "Marseille",
+          "lat": 43.29,
+          "lon": 5.37,
+          "level": "communal"
+        },
+        {
+          "city": "Strasbourg",
+          "lat": 48.58,
+          "lon": 7.75,
+          "level": "communal"
+        },
+        {
+          "city": "Lille",
+          "lat": 50.63,
+          "lon": 3.06,
+          "level": "communal"
+        }
+      ]
+    },
     {
       "id": "ent_carrefour",
       "name": "Carrefour",
@@ -424,23 +536,200 @@
       "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
       "tax_id": "tax_vat",
       "locations": [
-        { "city": "Lyon", "lat": 45.76, "lon": 4.83, "level": "communal" },
-        { "city": "Toulouse", "lat": 43.60, "lon": 1.44, "level": "communal" },
-        { "city": "Bordeaux", "lat": 44.83, "lon": -0.57, "level": "communal" },
-        { "city": "Nice", "lat": 43.71, "lon": 7.26, "level": "communal" },
-        { "city": "Hérouville-Saint-Clair", "lat": 49.20753, "lon": -0.32958, "level": "communal" }
+        {
+          "city": "Lyon",
+          "lat": 45.76,
+          "lon": 4.83,
+          "level": "communal"
+        },
+        {
+          "city": "Toulouse",
+          "lat": 43.6,
+          "lon": 1.44,
+          "level": "communal"
+        },
+        {
+          "city": "Bordeaux",
+          "lat": 44.83,
+          "lon": -0.57,
+          "level": "communal"
+        },
+        {
+          "city": "Nice",
+          "lat": 43.71,
+          "lon": 7.26,
+          "level": "communal"
+        },
+        {
+          "city": "Hérouville-Saint-Clair",
+          "lat": 49.20753,
+          "lon": -0.32958,
+          "level": "communal"
+        }
       ]
     },
-    { "id": "ent_intermarche", "name": "Intermarché", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Nantes", "lat": 47.21, "lon": -1.55, "level": "communal" }, { "city": "Rennes", "lat": 48.11, "lon": -1.67, "level": "communal" }] },
-    { "id": "ent_super_u", "name": "Super U", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Angers", "lat": 47.47, "lon": -0.55, "level": "communal" }] },
-    { "id": "ent_auchan", "name": "Auchan", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Villeneuve-d'Ascq", "lat": 50.61, "lon": 3.13, "level": "communal" }] },
-    { "id": "ent_lidl", "name": "Lidl", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Paris", "lat": 48.87, "lon": 2.37, "level": "communal" }] },
-    { "id": "ent_aldi", "name": "Aldi", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Marseille", "lat": 43.32, "lon": 5.41, "level": "communal" }] },
-    { "id": "ent_monoprix", "name": "Monoprix", "type": "Distribution", "description": "Chaîne de supermarchés mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{"city": "Lyon", "lat": 45.76, "lon": 4.83, "level": "communal"}] },
-    { "id": "ent_proxy_cocci_market", "name": "Proxy/Cocci-MARKET", "type": "Distribution", "description": "Réseaux de magasins de proximité mentionnés dans l'enquête.", "tax_id": "tax_vat", "locations": [{"city": "Toulouse", "lat": 43.60, "lon": 1.44, "level": "communal"}] },
-    { "id": "ent_total", "name": "Total", "type": "Industrie", "description": "Entreprise pétrolière et stations-service mentionnée dans l'enquête.", "tax_id": "tax_vat", "locations": [{ "city": "Le Havre", "lat": 49.49, "lon": 0.10, "level": "communal" }, { "city": "Rouen", "lat": 49.44, "lon": 1.09, "level": "communal" }] },
-    { "id": "ent_hsbc", "name": "HSBC", "type": "Banque", "description": "Banque internationale mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{ "city": "Paris", "lat": 48.8724, "lon": 2.3275, "level": "communal" }] },
-    { "id": "ent_societe_generale", "name": "Société Générale", "type": "Banque", "description": "Banque commerciale mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{ "city": "Paris", "lat": 48.878, "lon": 2.308, "level": "communal" }] },
+    {
+      "id": "ent_intermarche",
+      "name": "Intermarché",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Nantes",
+          "lat": 47.21,
+          "lon": -1.55,
+          "level": "communal"
+        },
+        {
+          "city": "Rennes",
+          "lat": 48.11,
+          "lon": -1.67,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_super_u",
+      "name": "Super U",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Angers",
+          "lat": 47.47,
+          "lon": -0.55,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_auchan",
+      "name": "Auchan",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Villeneuve-d'Ascq",
+          "lat": 50.61,
+          "lon": 3.13,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_lidl",
+      "name": "Lidl",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.87,
+          "lon": 2.37,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_aldi",
+      "name": "Aldi",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Marseille",
+          "lat": 43.32,
+          "lon": 5.41,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_monoprix",
+      "name": "Monoprix",
+      "type": "Distribution",
+      "description": "Chaîne de supermarchés mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Lyon",
+          "lat": 45.76,
+          "lon": 4.83,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_proxy_cocci_market",
+      "name": "Proxy/Cocci-MARKET",
+      "type": "Distribution",
+      "description": "Réseaux de magasins de proximité mentionnés dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Toulouse",
+          "lat": 43.6,
+          "lon": 1.44,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_total",
+      "name": "Total",
+      "type": "Industrie",
+      "description": "Entreprise pétrolière et stations-service mentionnée dans l'enquête.",
+      "tax_id": "tax_vat",
+      "locations": [
+        {
+          "city": "Le Havre",
+          "lat": 49.49,
+          "lon": 0.1,
+          "level": "communal"
+        },
+        {
+          "city": "Rouen",
+          "lat": 49.44,
+          "lon": 1.09,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_hsbc",
+      "name": "HSBC",
+      "type": "Banque",
+      "description": "Banque internationale mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.8724,
+          "lon": 2.3275,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_societe_generale",
+      "name": "Société Générale",
+      "type": "Banque",
+      "description": "Banque commerciale mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.878,
+          "lon": 2.308,
+          "level": "communal"
+        }
+      ]
+    },
     {
       "id": "ent_credit_cooperatif",
       "name": "Crédit Coopératif",
@@ -448,8 +737,18 @@
       "description": "Banque éthique mentionnée dans l'enquête.",
       "tax_id": "tax_tfa",
       "locations": [
-        { "city": "Bordeaux", "lat": 44.83, "lon": -0.57, "level": "communal" },
-        { "city": "Caen", "lat": 49.1825, "lon": -0.3601, "level": "communal" }
+        {
+          "city": "Bordeaux",
+          "lat": 44.83,
+          "lon": -0.57,
+          "level": "communal"
+        },
+        {
+          "city": "Caen",
+          "lat": 49.1825,
+          "lon": -0.3601,
+          "level": "communal"
+        }
       ]
     },
     {
@@ -459,16 +758,224 @@
       "description": "Siège social de la Banque de France, (finance).",
       "tax_id": "tax_campaign",
       "locations": [
-        { "city": "Paris", "lat": 48.8635588, "lon": 2.3397514, "level": "national" },
-        { "city": "Caen", "lat": 49.183049, "lon": -0.354784, "level": "communal" }
+        {
+          "city": "Paris",
+          "lat": 48.8635588,
+          "lon": 2.3397514,
+          "level": "national"
+        },
+        {
+          "city": "Caen",
+          "lat": 49.183049,
+          "lon": -0.354784,
+          "level": "communal"
+        }
       ]
     },
-    { "id": "ent_credit_agricole", "name": "Crédit Agricole", "type": "Banque", "description": "Banque commerciale mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{ "city": "Paris", "lat": 48.88, "lon": 2.30, "level": "communal" }] },
-    { "id": "ent_la_poste", "name": "La Poste", "type": "Banque", "description": "Banque mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{"city": "Strasbourg", "lat": 48.586, "lon": 7.757, "level": "communal"}] },
-    { "id": "ent_credit_lyonnais", "name": "Crédit Lyonnais", "type": "Banque", "description": "Banque historique mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{"city": "Nantes", "lat": 47.21, "lon": -1.55, "level": "communal"}] },
-    { "id": "ent_credit_mutuel", "name": "Crédit Mutuel", "type": "Banque", "description": "Banque mutualiste mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{"city": "Rennes", "lat": 48.11, "lon": -1.67, "level": "communal"}] },
-    { "id": "ent_cic", "name": "CIC", "type": "Banque", "description": "Banque mentionnée dans l'enquête.", "tax_id": "tax_tfa", "locations": [{ "city": "Paris", "lat": 48.8757, "lon": 2.3364, "level": "communal" }] },
-    { "id": "ent_europafi", "name": "EUROPAFI", "type": "Holding Financière", "description": "Holding de banques européennes mentionnée dans l'enquête. Ses filiales sont situées dans plusieurs villes clés.", "tax_id": "tax_tfa", "locations": [{ "city": "Gateshead", "country": "Royaume-Uni", "country_code": "GB", "lat": 54.9583, "lon": -1.6033, "level": "europe" }, { "city": "Dublin", "country": "Irlande", "country_code": "IE", "lat": 53.3498, "lon": -6.2603, "level": "europe" }, { "city": "Loughton", "country": "Royaume-Uni", "country_code": "GB", "lat": 51.6500, "lon": 0.0600, "level": "europe" }, { "city": "Haarlem", "country": "Pays-Bas", "country_code": "NL", "lat": 52.3874, "lon": 4.6462, "level": "europe" }, { "city": "Bruxelles", "country": "Belgique", "country_code": "BE", "lat": 50.8503, "lon": 4.3517, "level": "europe" }, { "city": "Berlin", "country": "Allemagne", "country_code": "DE", "lat": 52.5200, "lon": 13.4050, "level": "europe" }, { "city": "Munich", "country": "Allemagne", "country_code": "DE", "lat": 48.1351, "lon": 11.5820, "level": "europe" }, { "city": "Vienne", "country": "Autriche", "country_code": "AT", "lat": 48.2082, "lon": 16.3738, "level": "europe" }, { "city": "Chamalières", "country": "France", "country_code": "FR", "lat": 45.7766, "lon": 3.0645, "level": "communal" }, { "city": "Rome", "country": "Italie", "country_code": "IT", "lat": 41.9028, "lon": 12.4964, "level": "europe" }, { "city": "Madrid", "country": "Espagne", "country_code": "ES", "lat": 40.4168, "lon": -3.7038, "level": "europe" }, { "city": "Carregado", "country": "Portugal", "country_code": "PT", "lat": 39.0494, "lon": -8.9950, "level": "europe" }, { "city": "Varsovie", "country": "Pologne", "country_code": "PL", "lat": 52.2297, "lon": 21.0122, "level": "europe" }, { "city": "Sofia", "country": "Bulgarie", "country_code": "BG", "lat": 42.6977, "lon": 23.3219, "level": "europe" }, { "city": "Athènes", "country": "Grèce", "country_code": "GR", "lat": 37.9838, "lon": 23.7275, "level": "europe" }] },
+    {
+      "id": "ent_credit_agricole",
+      "name": "Crédit Agricole",
+      "type": "Banque",
+      "description": "Banque commerciale mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.88,
+          "lon": 2.3,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_la_poste",
+      "name": "La Poste",
+      "type": "Banque",
+      "description": "Banque mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Strasbourg",
+          "lat": 48.586,
+          "lon": 7.757,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_credit_lyonnais",
+      "name": "Crédit Lyonnais",
+      "type": "Banque",
+      "description": "Banque historique mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Nantes",
+          "lat": 47.21,
+          "lon": -1.55,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_credit_mutuel",
+      "name": "Crédit Mutuel",
+      "type": "Banque",
+      "description": "Banque mutualiste mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Rennes",
+          "lat": 48.11,
+          "lon": -1.67,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_cic",
+      "name": "CIC",
+      "type": "Banque",
+      "description": "Banque mentionnée dans l'enquête.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Paris",
+          "lat": 48.8757,
+          "lon": 2.3364,
+          "level": "communal"
+        }
+      ]
+    },
+    {
+      "id": "ent_europafi",
+      "name": "EUROPAFI",
+      "type": "Holding Financière",
+      "description": "Holding de banques européennes mentionnée dans l'enquête. Ses filiales sont situées dans plusieurs villes clés.",
+      "tax_id": "tax_tfa",
+      "locations": [
+        {
+          "city": "Gateshead",
+          "country": "Royaume-Uni",
+          "country_code": "GB",
+          "lat": 54.9583,
+          "lon": -1.6033,
+          "level": "europe"
+        },
+        {
+          "city": "Dublin",
+          "country": "Irlande",
+          "country_code": "IE",
+          "lat": 53.3498,
+          "lon": -6.2603,
+          "level": "europe"
+        },
+        {
+          "city": "Loughton",
+          "country": "Royaume-Uni",
+          "country_code": "GB",
+          "lat": 51.65,
+          "lon": 0.06,
+          "level": "europe"
+        },
+        {
+          "city": "Haarlem",
+          "country": "Pays-Bas",
+          "country_code": "NL",
+          "lat": 52.3874,
+          "lon": 4.6462,
+          "level": "europe"
+        },
+        {
+          "city": "Bruxelles",
+          "country": "Belgique",
+          "country_code": "BE",
+          "lat": 50.8503,
+          "lon": 4.3517,
+          "level": "europe"
+        },
+        {
+          "city": "Berlin",
+          "country": "Allemagne",
+          "country_code": "DE",
+          "lat": 52.52,
+          "lon": 13.405,
+          "level": "europe"
+        },
+        {
+          "city": "Munich",
+          "country": "Allemagne",
+          "country_code": "DE",
+          "lat": 48.1351,
+          "lon": 11.582,
+          "level": "europe"
+        },
+        {
+          "city": "Vienne",
+          "country": "Autriche",
+          "country_code": "AT",
+          "lat": 48.2082,
+          "lon": 16.3738,
+          "level": "europe"
+        },
+        {
+          "city": "Chamalières",
+          "country": "France",
+          "country_code": "FR",
+          "lat": 45.7766,
+          "lon": 3.0645,
+          "level": "communal"
+        },
+        {
+          "city": "Rome",
+          "country": "Italie",
+          "country_code": "IT",
+          "lat": 41.9028,
+          "lon": 12.4964,
+          "level": "europe"
+        },
+        {
+          "city": "Madrid",
+          "country": "Espagne",
+          "country_code": "ES",
+          "lat": 40.4168,
+          "lon": -3.7038,
+          "level": "europe"
+        },
+        {
+          "city": "Carregado",
+          "country": "Portugal",
+          "country_code": "PT",
+          "lat": 39.0494,
+          "lon": -8.995,
+          "level": "europe"
+        },
+        {
+          "city": "Varsovie",
+          "country": "Pologne",
+          "country_code": "PL",
+          "lat": 52.2297,
+          "lon": 21.0122,
+          "level": "europe"
+        },
+        {
+          "city": "Sofia",
+          "country": "Bulgarie",
+          "country_code": "BG",
+          "lat": 42.6977,
+          "lon": 23.3219,
+          "level": "europe"
+        },
+        {
+          "city": "Athènes",
+          "country": "Grèce",
+          "country_code": "GR",
+          "lat": 37.9838,
+          "lon": 23.7275,
+          "level": "europe"
+        }
+      ]
+    },
     {
       "id": "ent_mcdonalds_champs_elysees",
       "name": "McDonald's",
@@ -476,122 +983,1018 @@
       "description": "Chaîne de restauration rapide mentionnée dans l'enquête.",
       "tax_id": "tax_vat",
       "locations": [
-        { "city": "Paris", "name": "Champs-Élysées", "lat": 48.867854, "lon": 2.281098, "level": "communal" }
+        {
+          "city": "Paris",
+          "name": "Champs-Élysées",
+          "lat": 48.867854,
+          "lon": 2.281098,
+          "level": "communal"
+        }
       ]
     }
   ],
   "telecoms": [
-    { "name": "Orange", "type": "Opérateur 5G", "lat": 48.8566, "lon": 2.3522, "level": "national" },
-    { "name": "SFR", "type": "Opérateur 5G", "lat": 48.87, "lon": 2.33, "level": "national" },
-    { "name": "Free", "type": "Opérateur 5G", "lat": 48.86, "lon": 2.34, "level": "national" },
-    { "name": "Bouygues Telecom", "type": "Opérateur 5G", "lat": 48.85, "lon": 2.36, "level": "national" }
+    {
+      "name": "Orange",
+      "type": "Opérateur 5G",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "level": "national"
+    },
+    {
+      "name": "SFR",
+      "type": "Opérateur 5G",
+      "lat": 48.87,
+      "lon": 2.33,
+      "level": "national"
+    },
+    {
+      "name": "Free",
+      "type": "Opérateur 5G",
+      "lat": 48.86,
+      "lon": 2.34,
+      "level": "national"
+    },
+    {
+      "name": "Bouygues Telecom",
+      "type": "Opérateur 5G",
+      "lat": 48.85,
+      "lon": 2.36,
+      "level": "national"
+    }
   ],
   "cameras_points": [
-    { "id": "1", "name": "Caméra de la Place Masséna", "city": "Nice", "lat": 43.6967, "lon": 7.2687, "type": "fixed", "description": "Caméra fixe de surveillance de la place principale", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "2", "name": "Caméra de Gare du Nord", "city": "Paris", "lat": 48.8790, "lon": 2.3551, "type": "dome", "description": "Caméra dôme pour la surveillance à 360° du hall", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "3", "name": "Caméra de l'Hôtel de Ville", "city": "Lyon", "lat": 45.7675, "lon": 4.8340, "type": "panning", "description": "Caméra panoramique pour surveiller la place des Terreaux", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "4", "name": "Garde du Louvre", "city": "Paris", "lat": 48.8606, "lon": 2.3376, "type": "guard", "description": "Personnel de sécurité à l'entrée du musée du Louvre", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "5", "name": "Caméra des Champs-Élysées", "city": "Paris", "lat": 48.8698, "lon": 2.3075, "type": "fixed", "description": "Caméra fixe sur l'avenue principale", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "6", "name": "Caméra de la Place Royale", "city": "Nantes", "lat": 47.2155, "lon": -1.5583, "type": "dome", "description": "Surveillance de la fontaine et de l'espace public", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "7", "name": "Caméra de la Place de la Bourse", "city": "Bordeaux", "lat": 44.8413, "lon": -0.5670, "type": "panning", "description": "Caméra surveillant le miroir d'eau", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "8", "name": "Caméra d'Aéroport Roissy-CDG", "city": "Roissy-en-France", "lat": 49.0097, "lon": 2.5479, "type": "dome", "description": "Surveillance de l'intérieur du Terminal 1", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "national" },
-    { "id": "9", "name": "Caméra du Château de Versailles", "city": "Versailles", "lat": 48.8048, "lon": 2.1203, "type": "fixed", "description": "Caméra de sécurité dans les jardins du château", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "10", "name": "Caméra de la Gare de Lyon", "city": "Lyon", "lat": 45.7592, "lon": 4.8327, "type": "fixed", "description": "Caméra fixe sur le quai", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "11", "name": "Caméra de la Place de la Comédie", "city": "Montpellier", "lat": 43.6083, "lon": 3.8797, "type": "dome", "description": "Surveillance du cœur historique de la ville", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "12", "name": "Caméra de la Gare Saint-Jean", "city": "Bordeaux", "lat": 44.8252, "lon": -0.5562, "type": "panning", "description": "Caméra pour la surveillance des quais et voies", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "13", "name": "Caméra du Marché de Noël", "city": "Strasbourg", "lat": 48.5828, "lon": 7.7450, "type": "fixed", "description": "Caméra saisonnière sur la place de la Cathédrale", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "14", "name": "Caméra du centre commercial Parly 2", "city": "Le Chesnay-Rocquencourt", "lat": 48.8236, "lon": 2.1154, "type": "dome", "description": "Caméra dôme à l'intérieur du centre commercial", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "15", "name": "Caméra du stade Vélodrome", "city": "Marseille", "lat": 43.2698, "lon": 5.3957, "type": "fixed", "description": "Surveillance des tribunes et des entrées du stade", "video_link": "https://www.youtube.com/shorts/xYTDkwZnikE", "level": "communal" },
-    { "id": "16", "name": "Caméra de l'aéroport de Nice", "city": "Nice", "lat": 43.6653, "lon": 7.2078, "type": "panning", "description": "Caméra surveillant les pistes de l'aéroport", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "national" },
-    { "id": "17", "name": "Caméra du métro Bellecour", "city": "Lyon", "lat": 45.7578, "lon": 4.8329, "type": "fixed", "description": "Caméra de sécurité dans le métro", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "18", "name": "Caméra de la Place du Capitole", "city": "Toulouse", "lat": 43.6044, "lon": 1.4442, "type": "dome", "description": "Surveillance à 360° de la place principale", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "19", "name": "Caméra de la Gare de l'Est", "city": "Paris", "lat": 48.8763, "lon": 2.3582, "type": "panning", "description": "Caméra mobile pour les quais de la gare", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "20", "name": "Caméra du centre commercial La Part-Dieu", "city": "Lyon", "lat": 45.7601, "lon": 4.8550, "type": "dome", "description": "Caméra dôme à l'intérieur du centre commercial", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "21", "name": "Caméra du Vieux-Lille", "city": "Lille", "lat": 50.6402, "lon": 3.0631, "type": "fixed", "description": "Caméra fixe de rue dans le quartier historique", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "22", "name": "Caméra du Marché des Lices", "city": "Rennes", "lat": 48.1130, "lon": -1.6841, "type": "dome", "description": "Caméra dôme de surveillance du marché", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "23", "name": "Caméra du centre commercial Euralille", "city": "Lille", "lat": 50.6385, "lon": 3.0683, "type": "fixed", "description": "Surveillance des accès au centre commercial", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "24", "name": "Caméra de l'Opéra de Lille", "city": "Lille", "lat": 50.6385, "lon": 3.0642, "type": "fixed", "description": "Caméra de surveillance de la rue Faidherbe", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" },
-    { "id": "25", "name": "Caméra du Zénith de Strasbourg", "city": "Eckbolsheim", "lat": 48.5839, "lon": 7.6896, "type": "dome", "description": "Caméra dôme pour la surveillance des abords du Zénith", "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g", "level": "communal" }
+    {
+      "id": "1",
+      "name": "Caméra de la Place Masséna",
+      "city": "Nice",
+      "lat": 43.6967,
+      "lon": 7.2687,
+      "type": "fixed",
+      "description": "Caméra fixe de surveillance de la place principale",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "2",
+      "name": "Caméra de Gare du Nord",
+      "city": "Paris",
+      "lat": 48.879,
+      "lon": 2.3551,
+      "type": "dome",
+      "description": "Caméra dôme pour la surveillance à 360° du hall",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "3",
+      "name": "Caméra de l'Hôtel de Ville",
+      "city": "Lyon",
+      "lat": 45.7675,
+      "lon": 4.834,
+      "type": "panning",
+      "description": "Caméra panoramique pour surveiller la place des Terreaux",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "4",
+      "name": "Garde du Louvre",
+      "city": "Paris",
+      "lat": 48.8606,
+      "lon": 2.3376,
+      "type": "guard",
+      "description": "Personnel de sécurité à l'entrée du musée du Louvre",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "5",
+      "name": "Caméra des Champs-Élysées",
+      "city": "Paris",
+      "lat": 48.8698,
+      "lon": 2.3075,
+      "type": "fixed",
+      "description": "Caméra fixe sur l'avenue principale",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "6",
+      "name": "Caméra de la Place Royale",
+      "city": "Nantes",
+      "lat": 47.2155,
+      "lon": -1.5583,
+      "type": "dome",
+      "description": "Surveillance de la fontaine et de l'espace public",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "7",
+      "name": "Caméra de la Place de la Bourse",
+      "city": "Bordeaux",
+      "lat": 44.8413,
+      "lon": -0.567,
+      "type": "panning",
+      "description": "Caméra surveillant le miroir d'eau",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "8",
+      "name": "Caméra d'Aéroport Roissy-CDG",
+      "city": "Roissy-en-France",
+      "lat": 49.0097,
+      "lon": 2.5479,
+      "type": "dome",
+      "description": "Surveillance de l'intérieur du Terminal 1",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "national"
+    },
+    {
+      "id": "9",
+      "name": "Caméra du Château de Versailles",
+      "city": "Versailles",
+      "lat": 48.8048,
+      "lon": 2.1203,
+      "type": "fixed",
+      "description": "Caméra de sécurité dans les jardins du château",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "10",
+      "name": "Caméra de la Gare de Lyon",
+      "city": "Lyon",
+      "lat": 45.7592,
+      "lon": 4.8327,
+      "type": "fixed",
+      "description": "Caméra fixe sur le quai",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "11",
+      "name": "Caméra de la Place de la Comédie",
+      "city": "Montpellier",
+      "lat": 43.6083,
+      "lon": 3.8797,
+      "type": "dome",
+      "description": "Surveillance du cœur historique de la ville",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "12",
+      "name": "Caméra de la Gare Saint-Jean",
+      "city": "Bordeaux",
+      "lat": 44.8252,
+      "lon": -0.5562,
+      "type": "panning",
+      "description": "Caméra pour la surveillance des quais et voies",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "13",
+      "name": "Caméra du Marché de Noël",
+      "city": "Strasbourg",
+      "lat": 48.5828,
+      "lon": 7.745,
+      "type": "fixed",
+      "description": "Caméra saisonnière sur la place de la Cathédrale",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "14",
+      "name": "Caméra du centre commercial Parly 2",
+      "city": "Le Chesnay-Rocquencourt",
+      "lat": 48.8236,
+      "lon": 2.1154,
+      "type": "dome",
+      "description": "Caméra dôme à l'intérieur du centre commercial",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "15",
+      "name": "Caméra du stade Vélodrome",
+      "city": "Marseille",
+      "lat": 43.2698,
+      "lon": 5.3957,
+      "type": "fixed",
+      "description": "Surveillance des tribunes et des entrées du stade",
+      "video_link": "https://www.youtube.com/shorts/xYTDkwZnikE",
+      "level": "communal"
+    },
+    {
+      "id": "16",
+      "name": "Caméra de l'aéroport de Nice",
+      "city": "Nice",
+      "lat": 43.6653,
+      "lon": 7.2078,
+      "type": "panning",
+      "description": "Caméra surveillant les pistes de l'aéroport",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "national"
+    },
+    {
+      "id": "17",
+      "name": "Caméra du métro Bellecour",
+      "city": "Lyon",
+      "lat": 45.7578,
+      "lon": 4.8329,
+      "type": "fixed",
+      "description": "Caméra de sécurité dans le métro",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "18",
+      "name": "Caméra de la Place du Capitole",
+      "city": "Toulouse",
+      "lat": 43.6044,
+      "lon": 1.4442,
+      "type": "dome",
+      "description": "Surveillance à 360° de la place principale",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "19",
+      "name": "Caméra de la Gare de l'Est",
+      "city": "Paris",
+      "lat": 48.8763,
+      "lon": 2.3582,
+      "type": "panning",
+      "description": "Caméra mobile pour les quais de la gare",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "20",
+      "name": "Caméra du centre commercial La Part-Dieu",
+      "city": "Lyon",
+      "lat": 45.7601,
+      "lon": 4.855,
+      "type": "dome",
+      "description": "Caméra dôme à l'intérieur du centre commercial",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "21",
+      "name": "Caméra du Vieux-Lille",
+      "city": "Lille",
+      "lat": 50.6402,
+      "lon": 3.0631,
+      "type": "fixed",
+      "description": "Caméra fixe de rue dans le quartier historique",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "22",
+      "name": "Caméra du Marché des Lices",
+      "city": "Rennes",
+      "lat": 48.113,
+      "lon": -1.6841,
+      "type": "dome",
+      "description": "Caméra dôme de surveillance du marché",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "23",
+      "name": "Caméra du centre commercial Euralille",
+      "city": "Lille",
+      "lat": 50.6385,
+      "lon": 3.0683,
+      "type": "fixed",
+      "description": "Surveillance des accès au centre commercial",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "24",
+      "name": "Caméra de l'Opéra de Lille",
+      "city": "Lille",
+      "lat": 50.6385,
+      "lon": 3.0642,
+      "type": "fixed",
+      "description": "Caméra de surveillance de la rue Faidherbe",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    },
+    {
+      "id": "25",
+      "name": "Caméra du Zénith de Strasbourg",
+      "city": "Eckbolsheim",
+      "lat": 48.5839,
+      "lon": 7.6896,
+      "type": "dome",
+      "description": "Caméra dôme pour la surveillance des abords du Zénith",
+      "video_link": "https://www.youtube.com/watch?v=F_fV3-m50-g",
+      "level": "communal"
+    }
   ],
-    "manifestation_points": [
-    { "city": "Caen", "lat": 49.183333, "lon": -0.350000, "count": 6000, "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM", "source": "Rapport local", "level": "communal" },
-    { "city": "Rennes", "lat": 48.11197912, "lon": -1.68186449, "count": 15000, "video_link": null, "source": "Rapport local", "level": "communal" },
-    { "city": "Grenoble", "lat": 45.185, "lon": 5.725, "count": 30000, "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk", "source": "Divers", "level": "communal" },
-    { "city": "Paris", "lat": 48.8679, "lon": 2.3582, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk", "strategic_location": "Place de la République", "note": "Référence numérique 910", "source": "Média", "level": "national" },
-    { "city": "Marseille", "lat": 43.2961, "lon": 5.3699, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=XpdhTarPyac", "source": "Vidéo YouTube", "level": "communal" },
-    { "city": "Saint-Malo", "lat": 48.6493, "lon": -2.0076, "count": 170, "video_link": null, "source": "Média local", "level": "communal" },
-    { "city": "Fougères", "lat": 48.3519, "lon": -1.205, "count": 380, "video_link": null, "source": "Média local", "level": "communal" },
-    { "city": "Valenciennes", "lat": 50.356, "lon": 3.523, "count": { "CGT": 1500, "Police": 700 }, "source": "Rapports syndicaux et policiers", "level": "communal" },
-    { "city": "Nantes", "lat": 47.2186, "lon": -1.5541, "count": 200, "source": "Média local", "level": "communal" },
-    { "city": "Tours", "lat": 47.3941, "lon": 0.6848, "count": "500", "video_link": "https://www.youtube.com/watch?v=Otqa3o64fbw", "source": "Vidéo YouTube", "level": "communal" },
-    { "city": "Amiens", "lat": 49.896546, "lon": 2.311214, "count": "Police: 6500, Syndicats: 8000", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "France 3 Hauts-de-France", "level": "communal" },
-    { "city": "Lille", "lat": 50.6212, "lon": 3.0448, "count": 3000, "video_link": "https://www.youtube.com/shorts/i3G5dqi520w", "source": "RCF Hauts-de-France", "level": "communal" },
-    { "city": "Rouen", "lat": 49.44, "lon": 1.09, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Le Havre", "lat": 49.4959, "lon": 0.1311, "count": 20000, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "CGT", "level": "communal" },
-    { "city": "Bordeaux", "lat": 44.84151, "lon": -0.56997, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Poitiers", "lat": 46.58013, "lon": 0.34423, "count": 250, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Le7.info", "level": "communal" },
-    { "city": "La Rochelle", "lat": 46.166667, "lon": -1.150000, "count": "Plus de 1500", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Foix", "lat": 42.966667, "lon": 1.600000, "count": 8000, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Orange Actu", "level": "communal" },
-    { "city": "La Fare-les-Oliviers", "lat": 43.551666, "lon": 5.194722, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "local" },
-    { "city": "Toulon", "lat": 43.1368, "lon": 5.9336, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Albertville", "lat": 45.675535, "lon": 6.392726, "count": 1500, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Villeurbanne", "lat": 45.7725, "lon": 4.8966, "count": "Environ 70", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Annecy", "lat": 45.8992348, "lon": 6.1288847, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Créteil", "lat": 48.790367, "lon": 2.455572, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Strasbourg", "lat": 48.58406, "lon": 7.75871, "count": "Police: 9500, Organisateurs: 30000", "video_link": "https://www.youtube.com/shorts/TRLPkMeydSk", "source": "Parlement Européen", "level": "communal" },
-    { "city": "Reims", "lat": 49.23, "lon": 4.062, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Arbois", "lat": 46.902851, "lon": 5.772342, "count": "Environ 60", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Trente Neuf Degrés", "level": "communal" },
-    { "city": "Béthune", "lat": 50.531842, "lon": 2.637715, "count": 100, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Calais La Sociale", "level": "communal" },
-    { "city": "Beauvais", "lat": 49.4333, "lon": 2.0833, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Tonneins", "lat": 44.389722, "lon": 0.308333, "count": "Environ 3000", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Dailymotion", "level": "communal" },
-    { "city": "Vienne", "lat": 45.526167, "lon": 4.875277, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Toulouse", "lat": 43.6045, "lon": 1.4442, "count": "À rechercher", "video_link": "https://www.youtube.com/shorts/8wR4VZF5UpQ", "source": "AES TV", "level": "communal" },
-    { "city": "Pau", "lat": 43.2951, "lon": -0.370797, "count": "2500", "video_link": "https://www.youtube.com/watch?v=xwTfADirufs", "source": "youtube", "level": "communal" },
-    { "city": "Ploërmel", "lat": 47.929286, "lon": -2.396499, "count": "500", "video_link": "https://www.youtube.com/watch?v=K9-l_Aqf3Hw", "source": "Les Infos du Pays Gallo", "level": "communal" },
-    { "city": "Dublin", "country": "Irlande", "name": "Ambassade de France", "lat": 53.338706, "lon": -6.249520, "count": "1 000 000", "video_link": "https://www.youtube.com/shorts/4ecsRbPunEk", "level": "europe" },
-    { "city": "Madrid", "country": "Espagne", "lat": 40.416775, "lon": -3.703790, "count": "Milliers", "source": "Divers médias espagnols", "level": "europe" },
-    { "city": "Bruxelles", "country": "Belgique", "lat": 50.850346, "lon": 4.351721, "count": "Données à vérifier", "source": "Non confirmée pour cette date","video_link": "https://www.youtube.com/shorts/BB4yltCWAFU,https://www.youtube.com/shorts/9fyJzxQ879k", "level": "europe" },
-    { "city": "Berlin", "lat": 52.520008, "lon": 13.404954, "count": "Données à vérifier", "source": "Non confirmée pour cette date", "level": "europe" }
+  "manifestation_points": [
+    {
+      "city": "Caen",
+      "lat": 49.183333,
+      "lon": -0.35,
+      "count": 6000,
+      "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM",
+      "source": "Rapport local",
+      "level": "communal"
+    },
+    {
+      "city": "Rennes",
+      "lat": 48.11197912,
+      "lon": -1.68186449,
+      "count": 15000,
+      "video_link": null,
+      "source": "Rapport local",
+      "level": "communal"
+    },
+    {
+      "city": "Grenoble",
+      "lat": 45.185,
+      "lon": 5.725,
+      "count": 30000,
+      "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk",
+      "source": "Divers",
+      "level": "communal"
+    },
+    {
+      "city": "Paris",
+      "lat": 48.8679,
+      "lon": 2.3582,
+      "count": "Plusieurs milliers",
+      "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk",
+      "strategic_location": "Place de la République",
+      "note": "Référence numérique 910",
+      "source": "Média",
+      "level": "national"
+    },
+    {
+      "city": "Marseille",
+      "lat": 43.2961,
+      "lon": 5.3699,
+      "count": "Plusieurs milliers",
+      "video_link": "https://www.youtube.com/watch?v=XpdhTarPyac",
+      "source": "Vidéo YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Saint-Malo",
+      "lat": 48.6493,
+      "lon": -2.0076,
+      "count": 170,
+      "video_link": null,
+      "source": "Média local",
+      "level": "communal"
+    },
+    {
+      "city": "Fougères",
+      "lat": 48.3519,
+      "lon": -1.205,
+      "count": 380,
+      "video_link": null,
+      "source": "Média local",
+      "level": "communal"
+    },
+    {
+      "city": "Valenciennes",
+      "lat": 50.356,
+      "lon": 3.523,
+      "count": {
+        "CGT": 1500,
+        "Police": 700
+      },
+      "source": "Rapports syndicaux et policiers",
+      "level": "communal"
+    },
+    {
+      "city": "Nantes",
+      "lat": 47.2186,
+      "lon": -1.5541,
+      "count": 200,
+      "source": "Média local",
+      "level": "communal"
+    },
+    {
+      "city": "Tours",
+      "lat": 47.3941,
+      "lon": 0.6848,
+      "count": "500",
+      "video_link": "https://www.youtube.com/watch?v=Otqa3o64fbw",
+      "source": "Vidéo YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Amiens",
+      "lat": 49.896546,
+      "lon": 2.311214,
+      "count": "Police: 6500, Syndicats: 8000",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "France 3 Hauts-de-France",
+      "level": "communal"
+    },
+    {
+      "city": "Lille",
+      "lat": 50.6212,
+      "lon": 3.0448,
+      "count": 3000,
+      "video_link": "https://www.youtube.com/shorts/i3G5dqi520w",
+      "source": "RCF Hauts-de-France",
+      "level": "communal"
+    },
+    {
+      "city": "Rouen",
+      "lat": 49.44,
+      "lon": 1.09,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Le Havre",
+      "lat": 49.4959,
+      "lon": 0.1311,
+      "count": 20000,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "CGT",
+      "level": "communal"
+    },
+    {
+      "city": "Bordeaux",
+      "lat": 44.84151,
+      "lon": -0.56997,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Poitiers",
+      "lat": 46.58013,
+      "lon": 0.34423,
+      "count": 250,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Le7.info",
+      "level": "communal"
+    },
+    {
+      "city": "La Rochelle",
+      "lat": 46.166667,
+      "lon": -1.15,
+      "count": "Plus de 1500",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Foix",
+      "lat": 42.966667,
+      "lon": 1.6,
+      "count": 8000,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Orange Actu",
+      "level": "communal"
+    },
+    {
+      "city": "La Fare-les-Oliviers",
+      "lat": 43.551666,
+      "lon": 5.194722,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "local"
+    },
+    {
+      "city": "Toulon",
+      "lat": 43.1368,
+      "lon": 5.9336,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Albertville",
+      "lat": 45.675535,
+      "lon": 6.392726,
+      "count": 1500,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Villeurbanne",
+      "lat": 45.7725,
+      "lon": 4.8966,
+      "count": "Environ 70",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Annecy",
+      "lat": 45.8992348,
+      "lon": 6.1288847,
+      "count": "Plusieurs milliers",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Créteil",
+      "lat": 48.790367,
+      "lon": 2.455572,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Strasbourg",
+      "lat": 48.58406,
+      "lon": 7.75871,
+      "count": "Police: 9500, Organisateurs: 30000",
+      "video_link": "https://www.youtube.com/shorts/TRLPkMeydSk",
+      "source": "Parlement Européen",
+      "level": "communal"
+    },
+    {
+      "city": "Reims",
+      "lat": 49.23,
+      "lon": 4.062,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Arbois",
+      "lat": 46.902851,
+      "lon": 5.772342,
+      "count": "Environ 60",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Trente Neuf Degrés",
+      "level": "communal"
+    },
+    {
+      "city": "Béthune",
+      "lat": 50.531842,
+      "lon": 2.637715,
+      "count": 100,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Calais La Sociale",
+      "level": "communal"
+    },
+    {
+      "city": "Beauvais",
+      "lat": 49.4333,
+      "lon": 2.0833,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Tonneins",
+      "lat": 44.389722,
+      "lon": 0.308333,
+      "count": "Environ 3000",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Dailymotion",
+      "level": "communal"
+    },
+    {
+      "city": "Vienne",
+      "lat": 45.526167,
+      "lon": 4.875277,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Toulouse",
+      "lat": 43.6045,
+      "lon": 1.4442,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/shorts/8wR4VZF5UpQ",
+      "source": "AES TV",
+      "level": "communal"
+    },
+    {
+      "city": "Pau",
+      "lat": 43.2951,
+      "lon": -0.370797,
+      "count": "2500",
+      "video_link": "https://www.youtube.com/watch?v=xwTfADirufs",
+      "source": "youtube",
+      "level": "communal"
+    },
+    {
+      "city": "Ploërmel",
+      "lat": 47.929286,
+      "lon": -2.396499,
+      "count": "500",
+      "video_link": "https://www.youtube.com/watch?v=K9-l_Aqf3Hw",
+      "source": "Les Infos du Pays Gallo",
+      "level": "communal"
+    },
+    {
+      "city": "Dublin",
+      "country": "Irlande",
+      "name": "Ambassade de France",
+      "lat": 53.338706,
+      "lon": -6.24952,
+      "count": "1 000 000",
+      "video_link": "https://www.youtube.com/shorts/4ecsRbPunEk",
+      "level": "europe"
+    },
+    {
+      "city": "Madrid",
+      "country": "Espagne",
+      "lat": 40.416775,
+      "lon": -3.70379,
+      "count": "Milliers",
+      "source": "Divers médias espagnols",
+      "level": "europe"
+    },
+    {
+      "city": "Bruxelles",
+      "country": "Belgique",
+      "lat": 50.850346,
+      "lon": 4.351721,
+      "count": "Données à vérifier",
+      "source": "Non confirmée pour cette date",
+      "video_link": "https://www.youtube.com/shorts/BB4yltCWAFU,https://www.youtube.com/shorts/9fyJzxQ879k",
+      "level": "europe"
+    },
+    {
+      "city": "Berlin",
+      "lat": 52.520008,
+      "lon": 13.404954,
+      "count": "Données à vérifier",
+      "source": "Non confirmée pour cette date",
+      "level": "europe"
+    }
   ],
   "manifestation_points_10_septembre": [
-    { "city": "Caen", "lat": 49.183333, "lon": -0.350000, "count": 6000, "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM", "source": "Rapport local", "level": "communal" },
-    { "city": "Rennes", "lat": 48.11197912, "lon": -1.68186449, "count": 15000, "video_link": null, "source": "Rapport local", "level": "communal" },
-    { "city": "Grenoble", "lat": 45.185, "lon": 5.725, "count": 30000, "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk", "source": "Divers", "level": "communal" },
-    { "city": "Paris", "lat": 48.8679, "lon": 2.3582, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk", "strategic_location": "Place de la République", "note": "Référence numérique 910", "source": "Média", "level": "national" },
-    { "city": "Marseille", "lat": 43.2961, "lon": 5.3699, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=XpdhTarPyac", "source": "Vidéo YouTube", "level": "communal" },
-    { "city": "Saint-Malo", "lat": 48.6493, "lon": -2.0076, "count": 170, "video_link": null, "source": "Média local", "level": "communal" },
-    { "city": "Fougères", "lat": 48.3519, "lon": -1.205, "count": 380, "video_link": null, "source": "Média local", "level": "communal" },
-    { "city": "Valenciennes", "lat": 50.356, "lon": 3.523, "count": { "CGT": 1500, "Police": 700 }, "source": "Rapports syndicaux et policiers", "level": "communal" },
-    { "city": "Nantes", "lat": 47.2186, "lon": -1.5541, "count": 200, "source": "Média local", "level": "communal" },
-    { "city": "Tours", "lat": 47.3941, "lon": 0.6848, "count": "500", "video_link": "https://www.youtube.com/watch?v=Otqa3o64fbw", "source": "Vidéo YouTube", "level": "communal" },
-    { "city": "Amiens", "lat": 49.896546, "lon": 2.311214, "count": "Police: 6500, Syndicats: 8000", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "France 3 Hauts-de-France", "level": "communal" },
-    { "city": "Lille", "lat": 50.6212, "lon": 3.0448, "count": 3000, "video_link": "https://www.youtube.com/shorts/i3G5dqi520w", "source": "RCF Hauts-de-France", "level": "communal" },
-    { "city": "Rouen", "lat": 49.44, "lon": 1.09, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Le Havre", "lat": 49.4959, "lon": 0.1311, "count": 20000, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "CGT", "level": "communal" },
-    { "city": "Bordeaux", "lat": 44.84151, "lon": -0.56997, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Poitiers", "lat": 46.58013, "lon": 0.34423, "count": 250, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Le7.info", "level": "communal" },
-    { "city": "La Rochelle", "lat": 46.166667, "lon": -1.150000, "count": "Plus de 1500", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Foix", "lat": 42.966667, "lon": 1.600000, "count": 8000, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Orange Actu", "level": "communal" },
-    { "city": "La Fare-les-Oliviers", "lat": 43.551666, "lon": 5.194722, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "local" },
-    { "city": "Toulon", "lat": 43.1368, "lon": 5.9336, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Albertville", "lat": 45.675535, "lon": 6.392726, "count": 1500, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Villeurbanne", "lat": 45.7725, "lon": 4.8966, "count": "Environ 70", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Annecy", "lat": 45.8992348, "lon": 6.1288847, "count": "Plusieurs milliers", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "YouTube", "level": "communal" },
-    { "city": "Créteil", "lat": 48.790367, "lon": 2.455572, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Strasbourg", "lat": 48.58406, "lon": 7.75871, "count": "Police: 9500, Organisateurs: 30000", "video_link": "https://www.youtube.com/shorts/TRLPkMeydSk", "source": "Parlement Européen", "level": "communal" },
-    { "city": "Reims", "lat": 49.23, "lon": 4.062, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Arbois", "lat": 46.902851, "lon": 5.772342, "count": "Environ 60", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Trente Neuf Degrés", "level": "communal" },
-    { "city": "Béthune", "lat": 50.531842, "lon": 2.637715, "count": 100, "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Calais La Sociale", "level": "communal" },
-    { "city": "Beauvais", "lat": 49.4333, "lon": 2.0833, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Tonneins", "lat": 44.389722, "lon": 0.308333, "count": "Environ 3000", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": "Dailymotion", "level": "communal" },
-    { "city": "Vienne", "lat": 45.526167, "lon": 4.875277, "count": "À rechercher", "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk", "source": null, "level": "communal" },
-    { "city": "Toulouse", "lat": 43.6045, "lon": 1.4442, "count": "À rechercher", "video_link": "https://www.youtube.com/shorts/8wR4VZF5UpQ", "source": "AES TV", "level": "communal" },
-    { "city": "Pau", "lat": 43.2951, "lon": -0.370797, "count": "2500", "video_link": "https://www.youtube.com/watch?v=xwTfADirufs", "source": "youtube", "level": "communal" },
-    { "city": "Ploërmel", "lat": 47.929286, "lon": -2.396499, "count": "500", "video_link": "https://www.youtube.com/watch?v=K9-l_Aqf3Hw", "source": "Les Infos du Pays Gallo", "level": "communal" },
-    { "city": "Dublin", "country": "Irlande", "name": "Ambassade de France", "lat": 53.338706, "lon": -6.249520, "count": "1 000 000", "video_link": "https://www.youtube.com/shorts/4ecsRbPunEk", "level": "europe" },
-    { "city": "Madrid", "country": "Espagne", "lat": 40.416775, "lon": -3.703790, "count": "Milliers", "source": "Divers médias espagnols", "level": "europe" },
-    { "city": "Bruxelles", "country": "Belgique", "lat": 50.850346, "lon": 4.351721, "count": "Données à vérifier", "source": "Non confirmée pour cette date","video_link": "https://www.youtube.com/shorts/BB4yltCWAFU,https://www.youtube.com/shorts/9fyJzxQ879k", "level": "europe" },
-    { "city": "Berlin", "lat": 52.520008, "lon": 13.404954, "count": "Données à vérifier", "source": "Non confirmée pour cette date", "level": "europe" }
+    {
+      "city": "Caen",
+      "lat": 49.183333,
+      "lon": -0.35,
+      "count": 6000,
+      "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM",
+      "source": "Rapport local",
+      "level": "communal"
+    },
+    {
+      "city": "Rennes",
+      "lat": 48.11197912,
+      "lon": -1.68186449,
+      "count": 15000,
+      "video_link": null,
+      "source": "Rapport local",
+      "level": "communal"
+    },
+    {
+      "city": "Grenoble",
+      "lat": 45.185,
+      "lon": 5.725,
+      "count": 30000,
+      "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk",
+      "source": "Divers",
+      "level": "communal"
+    },
+    {
+      "city": "Paris",
+      "lat": 48.8679,
+      "lon": 2.3582,
+      "count": "Plusieurs milliers",
+      "video_link": "https://www.youtube.com/watch?v=ZvUkt9Y2uKk",
+      "strategic_location": "Place de la République",
+      "note": "Référence numérique 910",
+      "source": "Média",
+      "level": "national"
+    },
+    {
+      "city": "Marseille",
+      "lat": 43.2961,
+      "lon": 5.3699,
+      "count": "Plusieurs milliers",
+      "video_link": "https://www.youtube.com/watch?v=XpdhTarPyac",
+      "source": "Vidéo YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Saint-Malo",
+      "lat": 48.6493,
+      "lon": -2.0076,
+      "count": 170,
+      "video_link": null,
+      "source": "Média local",
+      "level": "communal"
+    },
+    {
+      "city": "Fougères",
+      "lat": 48.3519,
+      "lon": -1.205,
+      "count": 380,
+      "video_link": null,
+      "source": "Média local",
+      "level": "communal"
+    },
+    {
+      "city": "Valenciennes",
+      "lat": 50.356,
+      "lon": 3.523,
+      "count": {
+        "CGT": 1500,
+        "Police": 700
+      },
+      "source": "Rapports syndicaux et policiers",
+      "level": "communal"
+    },
+    {
+      "city": "Nantes",
+      "lat": 47.2186,
+      "lon": -1.5541,
+      "count": 200,
+      "source": "Média local",
+      "level": "communal"
+    },
+    {
+      "city": "Tours",
+      "lat": 47.3941,
+      "lon": 0.6848,
+      "count": "500",
+      "video_link": "https://www.youtube.com/watch?v=Otqa3o64fbw",
+      "source": "Vidéo YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Amiens",
+      "lat": 49.896546,
+      "lon": 2.311214,
+      "count": "Police: 6500, Syndicats: 8000",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "France 3 Hauts-de-France",
+      "level": "communal"
+    },
+    {
+      "city": "Lille",
+      "lat": 50.6212,
+      "lon": 3.0448,
+      "count": 3000,
+      "video_link": "https://www.youtube.com/shorts/i3G5dqi520w",
+      "source": "RCF Hauts-de-France",
+      "level": "communal"
+    },
+    {
+      "city": "Rouen",
+      "lat": 49.44,
+      "lon": 1.09,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Le Havre",
+      "lat": 49.4959,
+      "lon": 0.1311,
+      "count": 20000,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "CGT",
+      "level": "communal"
+    },
+    {
+      "city": "Bordeaux",
+      "lat": 44.84151,
+      "lon": -0.56997,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Poitiers",
+      "lat": 46.58013,
+      "lon": 0.34423,
+      "count": 250,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Le7.info",
+      "level": "communal"
+    },
+    {
+      "city": "La Rochelle",
+      "lat": 46.166667,
+      "lon": -1.15,
+      "count": "Plus de 1500",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Foix",
+      "lat": 42.966667,
+      "lon": 1.6,
+      "count": 8000,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Orange Actu",
+      "level": "communal"
+    },
+    {
+      "city": "La Fare-les-Oliviers",
+      "lat": 43.551666,
+      "lon": 5.194722,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "local"
+    },
+    {
+      "city": "Toulon",
+      "lat": 43.1368,
+      "lon": 5.9336,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Albertville",
+      "lat": 45.675535,
+      "lon": 6.392726,
+      "count": 1500,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Villeurbanne",
+      "lat": 45.7725,
+      "lon": 4.8966,
+      "count": "Environ 70",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Annecy",
+      "lat": 45.8992348,
+      "lon": 6.1288847,
+      "count": "Plusieurs milliers",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "YouTube",
+      "level": "communal"
+    },
+    {
+      "city": "Créteil",
+      "lat": 48.790367,
+      "lon": 2.455572,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Strasbourg",
+      "lat": 48.58406,
+      "lon": 7.75871,
+      "count": "Police: 9500, Organisateurs: 30000",
+      "video_link": "https://www.youtube.com/shorts/TRLPkMeydSk",
+      "source": "Parlement Européen",
+      "level": "communal"
+    },
+    {
+      "city": "Reims",
+      "lat": 49.23,
+      "lon": 4.062,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Arbois",
+      "lat": 46.902851,
+      "lon": 5.772342,
+      "count": "Environ 60",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Trente Neuf Degrés",
+      "level": "communal"
+    },
+    {
+      "city": "Béthune",
+      "lat": 50.531842,
+      "lon": 2.637715,
+      "count": 100,
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Calais La Sociale",
+      "level": "communal"
+    },
+    {
+      "city": "Beauvais",
+      "lat": 49.4333,
+      "lon": 2.0833,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Tonneins",
+      "lat": 44.389722,
+      "lon": 0.308333,
+      "count": "Environ 3000",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": "Dailymotion",
+      "level": "communal"
+    },
+    {
+      "city": "Vienne",
+      "lat": 45.526167,
+      "lon": 4.875277,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/watch?v=5FZqRpcMRuk",
+      "source": null,
+      "level": "communal"
+    },
+    {
+      "city": "Toulouse",
+      "lat": 43.6045,
+      "lon": 1.4442,
+      "count": "À rechercher",
+      "video_link": "https://www.youtube.com/shorts/8wR4VZF5UpQ",
+      "source": "AES TV",
+      "level": "communal"
+    },
+    {
+      "city": "Pau",
+      "lat": 43.2951,
+      "lon": -0.370797,
+      "count": "2500",
+      "video_link": "https://www.youtube.com/watch?v=xwTfADirufs",
+      "source": "youtube",
+      "level": "communal"
+    },
+    {
+      "city": "Ploërmel",
+      "lat": 47.929286,
+      "lon": -2.396499,
+      "count": "500",
+      "video_link": "https://www.youtube.com/watch?v=K9-l_Aqf3Hw",
+      "source": "Les Infos du Pays Gallo",
+      "level": "communal"
+    },
+    {
+      "city": "Dublin",
+      "country": "Irlande",
+      "name": "Ambassade de France",
+      "lat": 53.338706,
+      "lon": -6.24952,
+      "count": "1 000 000",
+      "video_link": "https://www.youtube.com/shorts/4ecsRbPunEk",
+      "level": "europe"
+    },
+    {
+      "city": "Madrid",
+      "country": "Espagne",
+      "lat": 40.416775,
+      "lon": -3.70379,
+      "count": "Milliers",
+      "source": "Divers médias espagnols",
+      "level": "europe"
+    },
+    {
+      "city": "Bruxelles",
+      "country": "Belgique",
+      "lat": 50.850346,
+      "lon": 4.351721,
+      "count": "Données à vérifier",
+      "source": "Non confirmée pour cette date",
+      "video_link": "https://www.youtube.com/shorts/BB4yltCWAFU,https://www.youtube.com/shorts/9fyJzxQ879k",
+      "level": "europe"
+    },
+    {
+      "city": "Berlin",
+      "lat": 52.520008,
+      "lon": 13.404954,
+      "count": "Données à vérifier",
+      "source": "Non confirmée pour cette date",
+      "level": "europe"
+    }
   ],
   "manifestation_points_18_septembre": [
     {
@@ -610,7 +2013,7 @@
         {
           "name": "Saint-Brieuc",
           "lat": 48.5135,
-          "lon": -2.7660
+          "lon": -2.766
         },
         {
           "name": "Salon-de-Provence",
@@ -625,7 +2028,7 @@
         {
           "name": "Orléans",
           "lat": 47.9029,
-          "lon": 1.9090
+          "lon": 1.909
         },
         {
           "name": "Tours",
@@ -645,7 +2048,7 @@
         {
           "name": "Clermont-Ferrand",
           "lat": 45.7772,
-          "lon": 3.0870
+          "lon": 3.087
         },
         {
           "name": "Saint-Denis",
@@ -695,11 +2098,11 @@
         {
           "name": "Toulon",
           "lat": 43.1242,
-          "lon": 5.9280
+          "lon": 5.928
         },
         {
           "name": "Caen",
-          "lat": 49.1820,
+          "lat": 49.182,
           "lon": -0.3705
         },
         {
@@ -714,12 +2117,12 @@
         },
         {
           "name": "Saint-Girons",
-          "lat": 42.9840,
+          "lat": 42.984,
           "lon": 1.1448
         },
         {
           "name": "Lyon",
-          "lat": 45.7640,
+          "lat": 45.764,
           "lon": 4.8357
         },
         {
@@ -735,7 +2138,7 @@
         {
           "name": "La-Roche-sur-Yon",
           "lat": 46.6713,
-          "lon": -1.4260
+          "lon": -1.426
         },
         {
           "name": "Le-Puy-en-Velay",
@@ -750,7 +2153,7 @@
         {
           "name": "Cahors",
           "lat": 44.4475,
-          "lon": 1.4420
+          "lon": 1.442
         },
         {
           "name": "Poitiers",
@@ -805,7 +2208,7 @@
         {
           "name": "Fougères",
           "lat": 48.3519,
-          "lon": -1.2050
+          "lon": -1.205
         },
         {
           "name": "Saint-Nazaire",
@@ -940,7 +2343,7 @@
             "name": "Carrefour",
             "city": "Saint-Brieuc",
             "lat": 48.5135,
-            "lon": -2.7660
+            "lon": -2.766
           }
         },
         {
@@ -967,25 +2370,120 @@
           "type": "Blocage de lycée",
           "description": "Blocage de lycées et facultés, incluant Sèze, La Fayette, Massé, Saint-Exupéry, Pasteur, Ravel Monet, Boucher, Condorcet, Rabelais, Borgne, François 1er, Thiers, Monge, Parc, le Mirail, facultés de lettres et INSPE.",
           "locations": [
-            { "name": "Lycée Sèze", "city": "Saint-Pierre-à-la-Réunion", "lat": -21.3387, "lon": 55.4746 },
-            { "name": "Lycée Lafayette", "city": "Brioude", "lat": 45.3005, "lon": 3.3941 },
-            { "name": "Lycée Masséna", "city": "Rennes", "lat": 48.1173, "lon": -1.6778 },
-            { "name": "Lycée Saint-Exupéry", "city": "Lyon", "lat": 45.7640, "lon": 4.8357 },
-            { "name": "Lycée Pasteur", "city": "Lille", "lat": 50.6292, "lon": 3.0573 },
-            { "name": "Lycée Ravel", "city": "Paris", "lat": 48.8566, "lon": 2.3522 },
-            { "name": "Lycée Monet", "city": "Paris", "lat": 48.8566, "lon": 2.3522 },
-            { "name": "Lycée Boucher", "city": "Paris", "lat": 48.8566, "lon": 2.3522 },
-            { "name": "Lycée Condorcet", "city": "Savenay-sur-Orge", "lat": 48.6657, "lon": 2.3396 },
-            { "name": "Lycée Rabelais", "city": "Saint-Brieuc", "lat": 48.5135, "lon": -2.7660 },
-            { "name": "Lycée Borgne", "city": "Montélimar", "lat": 44.5574, "lon": 4.7505 },
-            { "name": "Lycée François 1er", "city": "Le-Havre", "lat": 49.4959, "lon": 0.1311 },
-            { "name": "Lycée Thiers", "city": "Paris", "lat": 48.8566, "lon": 2.3522 },
-            { "name": "Lycée Monge", "city": "Chambéry", "lat": 45.5645, "lon": 5.9178 },
-            { "name": "Lycée Parc", "city": "Saint-Denis", "lat": 48.9351, "lon": 2.3526 },
-            { "name": "Université du Mirail", "city": "Toulouse", "lat": 43.6045, "lon": 1.4442 },
-            { "name": "Faculté de lettres", "city": "Clermont-Ferrand", "lat": 45.7772, "lon": 3.0870 },
-            { "name": "INSPE", "city": "Rennes", "lat": 48.1173, "lon": -1.6778 },
-            { "name": "INSPE", "city": "Clermont-Ferrand", "lat": 45.7772, "lon": 3.0870 }
+            {
+              "name": "Lycée Sèze",
+              "city": "Saint-Pierre-à-la-Réunion",
+              "lat": -21.3387,
+              "lon": 55.4746
+            },
+            {
+              "name": "Lycée Lafayette",
+              "city": "Brioude",
+              "lat": 45.3005,
+              "lon": 3.3941
+            },
+            {
+              "name": "Lycée Masséna",
+              "city": "Rennes",
+              "lat": 48.1173,
+              "lon": -1.6778
+            },
+            {
+              "name": "Lycée Saint-Exupéry",
+              "city": "Lyon",
+              "lat": 45.764,
+              "lon": 4.8357
+            },
+            {
+              "name": "Lycée Pasteur",
+              "city": "Lille",
+              "lat": 50.6292,
+              "lon": 3.0573
+            },
+            {
+              "name": "Lycée Ravel",
+              "city": "Paris",
+              "lat": 48.8566,
+              "lon": 2.3522
+            },
+            {
+              "name": "Lycée Monet",
+              "city": "Paris",
+              "lat": 48.8566,
+              "lon": 2.3522
+            },
+            {
+              "name": "Lycée Boucher",
+              "city": "Paris",
+              "lat": 48.8566,
+              "lon": 2.3522
+            },
+            {
+              "name": "Lycée Condorcet",
+              "city": "Savenay-sur-Orge",
+              "lat": 48.6657,
+              "lon": 2.3396
+            },
+            {
+              "name": "Lycée Rabelais",
+              "city": "Saint-Brieuc",
+              "lat": 48.5135,
+              "lon": -2.766
+            },
+            {
+              "name": "Lycée Borgne",
+              "city": "Montélimar",
+              "lat": 44.5574,
+              "lon": 4.7505
+            },
+            {
+              "name": "Lycée François 1er",
+              "city": "Le-Havre",
+              "lat": 49.4959,
+              "lon": 0.1311
+            },
+            {
+              "name": "Lycée Thiers",
+              "city": "Paris",
+              "lat": 48.8566,
+              "lon": 2.3522
+            },
+            {
+              "name": "Lycée Monge",
+              "city": "Chambéry",
+              "lat": 45.5645,
+              "lon": 5.9178
+            },
+            {
+              "name": "Lycée Parc",
+              "city": "Saint-Denis",
+              "lat": 48.9351,
+              "lon": 2.3526
+            },
+            {
+              "name": "Université du Mirail",
+              "city": "Toulouse",
+              "lat": 43.6045,
+              "lon": 1.4442
+            },
+            {
+              "name": "Faculté de lettres",
+              "city": "Clermont-Ferrand",
+              "lat": 45.7772,
+              "lon": 3.087
+            },
+            {
+              "name": "INSPE",
+              "city": "Rennes",
+              "lat": 48.1173,
+              "lon": -1.6778
+            },
+            {
+              "name": "INSPE",
+              "city": "Clermont-Ferrand",
+              "lat": 45.7772,
+              "lon": 3.087
+            }
           ]
         },
         {
@@ -996,10 +2494,30 @@
           "type": "Blocage",
           "description": "Blocage d'Ilévia, du port de Fécamp, de l'autoroute à Toulon et du Leclerc à Ivot.",
           "locations": [
-            { "name": "Ilévia", "city": "Lille", "lat": 50.6292, "lon": 3.0573 },
-            { "name": "Port de Fécamp", "city": "Fécamp", "lat": 49.7610, "lon": 0.3804 },
-            { "name": "Autoroute", "city": "Toulon", "lat": 43.1242, "lon": 5.9280 },
-            { "name": "Leclerc", "city": "Ivot", "lat": 49.5057, "lon": 0.7601 }
+            {
+              "name": "Ilévia",
+              "city": "Lille",
+              "lat": 50.6292,
+              "lon": 3.0573
+            },
+            {
+              "name": "Port de Fécamp",
+              "city": "Fécamp",
+              "lat": 49.761,
+              "lon": 0.3804
+            },
+            {
+              "name": "Autoroute",
+              "city": "Toulon",
+              "lat": 43.1242,
+              "lon": 5.928
+            },
+            {
+              "name": "Leclerc",
+              "city": "Ivot",
+              "lat": 49.5057,
+              "lon": 0.7601
+            }
           ]
         },
         {
@@ -1010,9 +2528,24 @@
           "type": "Manifestation",
           "description": "Grande manifestation avec des cortèges lycéens et des alliances syndicales/indignés. À Paris, Lyon et Marseille, mais aussi dans de nombreuses villes de France (plus de 200 mentionnées).",
           "locations": [
-            { "name": "Rue Rivoli", "city": "Paris", "lat": 48.8679, "lon": 2.3582 },
-            { "name": "Ministère de l'Économie", "city": "Paris", "lat": 48.8407, "lon": 2.3688 },
-            { "name": "Abattoir", "city": "Fougères", "lat": 48.3519, "lon": -1.2050 }
+            {
+              "name": "Rue Rivoli",
+              "city": "Paris",
+              "lat": 48.8679,
+              "lon": 2.3582
+            },
+            {
+              "name": "Ministère de l'Économie",
+              "city": "Paris",
+              "lat": 48.8407,
+              "lon": 2.3688
+            },
+            {
+              "name": "Abattoir",
+              "city": "Fougères",
+              "lat": 48.3519,
+              "lon": -1.205
+            }
           ]
         },
         {
@@ -1023,252 +2556,1830 @@
     }
   ],
   "strategic_locations": [
-    { "name": "Hôpital Lariboisière", "city": "Paris", "type": "Hôpital", "lat": 48.882, "lon": 2.355, "level": "communal" },
-    { "name": "Université de la Sorbonne", "city": "Paris", "type": "Université", "lat": 48.846, "lon": 2.345, "level": "communal" },
-    { "name": "CHU de Rennes", "city": "Rennes", "type": "Hôpital", "lat": 48.114, "lon": -1.691, "level": "communal" },
-    { "name": "Université de Rennes 1", "city": "Rennes", "type": "Université", "lat": 48.116, "lon": -1.680, "level": "communal" },
-    { "name": "Hôpital Michallon", "city": "Grenoble", "type": "Hôpital", "lat": 45.189, "lon": 5.722, "level": "communal" },
-    { "name": "Université Grenoble Alpes", "city": "Grenoble", "type": "Université", "lat": 45.204, "lon": 5.768, "level": "communal" },
+    {
+      "name": "Hôpital Lariboisière",
+      "city": "Paris",
+      "type": "Hôpital",
+      "lat": 48.882,
+      "lon": 2.355,
+      "level": "communal"
+    },
+    {
+      "name": "Université de la Sorbonne",
+      "city": "Paris",
+      "type": "Université",
+      "lat": 48.846,
+      "lon": 2.345,
+      "level": "communal"
+    },
+    {
+      "name": "CHU de Rennes",
+      "city": "Rennes",
+      "type": "Hôpital",
+      "lat": 48.114,
+      "lon": -1.691,
+      "level": "communal"
+    },
+    {
+      "name": "Université de Rennes 1",
+      "city": "Rennes",
+      "type": "Université",
+      "lat": 48.116,
+      "lon": -1.68,
+      "level": "communal"
+    },
+    {
+      "name": "Hôpital Michallon",
+      "city": "Grenoble",
+      "type": "Hôpital",
+      "lat": 45.189,
+      "lon": 5.722,
+      "level": "communal"
+    },
+    {
+      "name": "Université Grenoble Alpes",
+      "city": "Grenoble",
+      "type": "Université",
+      "lat": 45.204,
+      "lon": 5.768,
+      "level": "communal"
+    },
     {
       "name": "Université Lumière Lyon 2",
-    "city": "Lyon",
-    "lat": 45.7533,
-    "lon": 4.8317,
-    "count": "environ 200",
-    "video_link": "https://www.example.com/video-lyon-protest",
-    "source": "Média local Le Progrès",
-    "level": "communal",
-    "type": "Établissement scolaire",
-    "description": "Rassemblement des étudiants sur le campus pour protester contre la réforme. Les cours ont été partiellement perturbés."
-}
-  
+      "city": "Lyon",
+      "lat": 45.7533,
+      "lon": 4.8317,
+      "count": "environ 200",
+      "video_link": "https://www.example.com/video-lyon-protest",
+      "source": "Média local Le Progrès",
+      "level": "communal",
+      "type": "Établissement scolaire",
+      "description": "Rassemblement des étudiants sur le campus pour protester contre la réforme. Les cours ont été partiellement perturbés."
+    }
   ],
   "roundabout_points": [
-    { "name": "Rond-point de la Patte d'Oie", "city": "Amiens", "lat": 49.885, "lon": 2.298, "count": "À rechercher", "type": "Rond-point de Blocage", "level": "communal" },
-    { "name": "Rond-point des Quatre-Vents", "city": "Créteil", "lat": 48.784, "lon": 2.459, "count": "À rechercher", "type": "Rond-point de Blocage", "level": "communal" },
-    { "name": "Rond-point du Val d'Auron", "city": "Bourges", "lat": 47.069, "lon": 2.408, "count": "À rechercher", "type": "Rond-point de Blocage", "level": "communal" },
-    { "name": "Rond-point de Castorama", "city": "Caen", "lat": 49.1764, "lon": -0.3168, "count": "À rechercher", "type": "Rond-point de Blocage","video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM", "level": "communal" }
-
+    {
+      "name": "Rond-point de la Patte d'Oie",
+      "city": "Amiens",
+      "lat": 49.885,
+      "lon": 2.298,
+      "count": "À rechercher",
+      "type": "Rond-point de Blocage",
+      "level": "communal"
+    },
+    {
+      "name": "Rond-point des Quatre-Vents",
+      "city": "Créteil",
+      "lat": 48.784,
+      "lon": 2.459,
+      "count": "À rechercher",
+      "type": "Rond-point de Blocage",
+      "level": "communal"
+    },
+    {
+      "name": "Rond-point du Val d'Auron",
+      "city": "Bourges",
+      "lat": 47.069,
+      "lon": 2.408,
+      "count": "À rechercher",
+      "type": "Rond-point de Blocage",
+      "level": "communal"
+    },
+    {
+      "name": "Rond-point de Castorama",
+      "city": "Caen",
+      "lat": 49.1764,
+      "lon": -0.3168,
+      "count": "À rechercher",
+      "type": "Rond-point de Blocage",
+      "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM",
+      "level": "communal"
+    }
   ],
   "porte_points": [
-    { "name": "Porte de Bagnolet", "city": "Paris", "lat": 48.8631, "lon": 2.4045, "count": "X", "type": "Porte de Paris","video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM", "level": "communal" },
-    { "name": "Porte d'Aubervilliers", "city": "Paris", "lat": 48.8988, "lon": 2.3739, "count": "À rechercher", "type": "Porte de Paris", "level": "communal" },
-    { "name": "Porte de Clignancourt", "city": "Paris", "lat": 48.8985, "lon": 2.3481, "count": "À rechercher", "type": "Porte de Paris", "level": "communal" },
-    { "name": "Porte de Montreuil", "city": "Paris", "lat": 48.8559, "lon": 2.4172, "count": "À rechercher", "type": "Porte de Paris", "level": "communal" },
-    { "name": "Porte de Vincennes", "city": "Paris", "lat": 48.8475, "lon": 2.4191, "count": "À rechercher", "type": "Porte de Paris", "level": "communal" },
-    { "name": "Gare du Nord", "city": "Paris", "lat": 48.88092, "lon": 2.35515, "count": "À rechercher", "type": "Porte de Paris", "level": "communal" }
+    {
+      "name": "Porte de Bagnolet",
+      "city": "Paris",
+      "lat": 48.8631,
+      "lon": 2.4045,
+      "count": "X",
+      "type": "Porte de Paris",
+      "video_link": "https://www.youtube.com/watch?v=pAWZXhCAeeM",
+      "level": "communal"
+    },
+    {
+      "name": "Porte d'Aubervilliers",
+      "city": "Paris",
+      "lat": 48.8988,
+      "lon": 2.3739,
+      "count": "À rechercher",
+      "type": "Porte de Paris",
+      "level": "communal"
+    },
+    {
+      "name": "Porte de Clignancourt",
+      "city": "Paris",
+      "lat": 48.8985,
+      "lon": 2.3481,
+      "count": "À rechercher",
+      "type": "Porte de Paris",
+      "level": "communal"
+    },
+    {
+      "name": "Porte de Montreuil",
+      "city": "Paris",
+      "lat": 48.8559,
+      "lon": 2.4172,
+      "count": "À rechercher",
+      "type": "Porte de Paris",
+      "level": "communal"
+    },
+    {
+      "name": "Porte de Vincennes",
+      "city": "Paris",
+      "lat": 48.8475,
+      "lon": 2.4191,
+      "count": "À rechercher",
+      "type": "Porte de Paris",
+      "level": "communal"
+    },
+    {
+      "name": "Gare du Nord",
+      "city": "Paris",
+      "lat": 48.88092,
+      "lon": 2.35515,
+      "count": "À rechercher",
+      "type": "Porte de Paris",
+      "level": "communal"
+    }
   ],
   "prefectures": [
-    { "department": "01 Ain", "city": "Bourg-en-Bresse", "lat": 46.2057, "lon": 5.2289, "type": "Préfecture", "level": "departmental" },
-    { "department": "02 Aisne", "city": "Laon", "lat": 49.5638, "lon": 3.6262, "type": "Préfecture", "level": "departmental" },
-    { "department": "03 Allier", "city": "Moulins", "lat": 46.5658, "lon": 3.3323, "type": "Préfecture", "level": "departmental" },
-    { "department": "04 Alpes de Haute Provence", "city": "Digne-les-Bains", "lat": 44.0924, "lon": 6.2346, "type": "Préfecture", "level": "departmental" },
-    { "department": "05 Hautes Alpes", "city": "Gap", "lat": 44.5615, "lon": 6.0792, "type": "Préfecture", "level": "departmental" },
-    { "department": "06 Alpes Maritimes", "city": "Nice", "lat": 43.7009, "lon": 7.2625, "type": "Préfecture", "level": "departmental" },
-    { "department": "07 Ardèche", "city": "Privas", "lat": 44.737, "lon": 4.598, "type": "Préfecture", "level": "departmental" },
-    { "department": "08 Ardennes", "city": "Charleville-Mézières", "lat": 49.7766, "lon": 4.7265, "type": "Préfecture", "level": "departmental" },
-    { "department": "09 Ariège", "city": "Foix", "lat": 42.9634, "lon": 1.6083, "type": "Préfecture", "level": "departmental" },
-    { "department": "10 Aube", "city": "Troyes", "lat": 48.2974, "lon": 4.0746, "type": "Préfecture", "level": "departmental" },
-    { "department": "11 Aude", "city": "Carcassonne", "lat": 43.2104, "lon": 2.3486, "type": "Préfecture", "level": "departmental" },
-    { "department": "12 Aveyron", "city": "Rodez", "lat": 44.3524, "lon": 2.5714, "type": "Préfecture", "level": "departmental" },
-    { "department": "13 Bouches du Rhône", "city": "Marseille", "lat": 43.2961, "lon": 5.3699, "type": "Préfecture", "level": "departmental" },
-    { "department": "14 Calvados", "city": "Caen", "lat": 49.182, "lon": -0.3705, "type": "Préfecture", "level": "departmental" },
-    { "department": "15 Cantal", "city": "Aurillac", "lat": 44.9221, "lon": 2.4439, "type": "Préfecture", "level": "departmental" },
-    { "department": "16 Charente", "city": "Angoulême", "lat": 45.6486, "lon": 0.156, "type": "Préfecture", "level": "departmental" },
-    { "department": "17 Charente Maritime", "city": "La Rochelle", "lat": 46.1603, "lon": -1.1511, "type": "Préfecture", "level": "departmental" },
-    { "department": "18 Cher", "city": "Bourges", "lat": 47.0842, "lon": 2.3965, "type": "Préfecture", "level": "departmental" },
-    { "department": "19 Corrèze", "city": "Tulle", "lat": 45.2662, "lon": 1.7712, "type": "Préfecture", "level": "departmental" },
-    { "department": "2a Corse du Sud", "city": "Ajaccio", "lat": 41.9205, "lon": 8.7397, "type": "Préfecture", "level": "departmental" },
-    { "department": "2b Haute Corse", "city": "Bastia", "lat": 42.7011, "lon": 9.4507, "type": "Préfecture", "level": "departmental" },
-    { "department": "21 Côte d'Or", "city": "Dijon", "lat": 47.3222, "lon": 5.043, "type": "Préfecture", "level": "departmental" },
-    { "department": "22 Côtes d'Armor", "city": "Saint-Brieuc", "lat": 48.5135, "lon": -2.766, "type": "Préfecture", "level": "departmental" },
-    { "department": "23 Creuse", "city": "Guéret", "lat": 46.1706, "lon": 1.871, "type": "Préfecture", "level": "departmental" },
-    { "department": "24 Dordogne", "city": "Périgueux", "lat": 45.1843, "lon": 0.7208, "type": "Préfecture", "level": "departmental" },
-    { "department": "25 Doubs", "city": "Besançon", "lat": 47.2378, "lon": 6.0245, "type": "Préfecture", "level": "departmental" },
-    { "department": "26 Drôme", "city": "Valence", "lat": 44.9333, "lon": 4.8917, "type": "Préfecture", "level": "departmental" },
-    { "department": "27 Eure", "city": "Évreux", "lat": 49.0234, "lon": 1.1504, "type": "Préfecture", "level": "departmental" },
-    { "department": "28 Eure et Loir", "city": "Chartres", "lat": 48.4475, "lon": 1.4883, "type": "Préfecture", "level": "departmental" },
-    { "department": "29 Finistère", "city": "Quimper", "lat": 47.9943, "lon": -4.1039, "type": "Préfecture", "level": "departmental" },
-    { "department": "30 Gard", "city": "Nîmes", "lat": 43.8368, "lon": 4.3601, "type": "Préfecture", "level": "departmental" },
-    { "department": "31 Haute Garonne", "city": "Toulouse", "lat": 43.6045, "lon": 1.4442, "type": "Préfecture", "level": "departmental" },
-    { "department": "32 Gers", "city": "Auch", "lat": 43.6465, "lon": 0.5853, "type": "Préfecture", "level": "departmental" },
-    { "department": "33 Gironde", "city": "Bordeaux", "lat": 44.8378, "lon": -0.5792, "type": "Préfecture", "level": "departmental" },
-    { "department": "34 Hérault", "city": "Montpellier", "lat": 43.6108, "lon": 3.8767, "type": "Préfecture", "level": "departmental" },
-    { "department": "35 Ille et Vilaine", "city": "Rennes", "lat": 48.1173, "lon": -1.6778, "type": "Préfecture", "level": "departmental" },
-    { "department": "36 Indre", "city": "Châteauroux", "lat": 46.8066, "lon": 1.6917, "type": "Préfecture", "level": "departmental" },
-    { "department": "37 Indre et Loire", "city": "Tours", "lat": 47.3941, "lon": 0.6848, "type": "Préfecture", "level": "departmental" },
-    { "department": "38 Isère", "city": "Grenoble", "lat": 45.1885, "lon": 5.7245, "type": "Préfecture", "level": "departmental" },
-    { "department": "39 Jura", "city": "Lons-le-Saunier", "lat": 46.6713, "lon": 5.556, "type": "Préfecture", "level": "departmental" },
-    { "department": "40 Landes", "city": "Mont-de-Marsan", "lat": 43.891, "lon": -0.5005, "type": "Préfecture", "level": "departmental" },
-    { "department": "41 Loir et Cher", "city": "Blois", "lat": 47.585, "lon": 1.332, "type": "Préfecture", "level": "departmental" },
-    { "department": "42 Loire", "city": "Saint-Étienne", "lat": 45.4397, "lon": 4.3872, "type": "Préfecture", "level": "departmental" },
-    { "department": "43 Haute Loire", "city": "Le Puy-en-Velay", "lat": 45.0433, "lon": 3.8852, "type": "Préfecture", "level": "departmental" },
-    { "department": "44 Loire Atlantique", "city": "Nantes", "lat": 47.2186, "lon": -1.5541, "type": "Préfecture", "level": "departmental" },
-    { "department": "45 Loiret", "city": "Orléans", "lat": 47.9029, "lon": 1.909, "type": "Préfecture", "level": "departmental" },
-    { "department": "46 Lot", "city": "Cahors", "lat": 44.4475, "lon": 1.442, "type": "Préfecture", "level": "departmental" },
-    { "department": "47 Lot et Garonne", "city": "Agen", "lat": 44.2045, "lon": 0.6133, "type": "Préfecture", "level": "departmental" },
-    { "department": "48 Lozère", "city": "Mende", "lat": 44.5167, "lon": 3.5, "type": "Préfecture", "level": "departmental" },
-    { "department": "49 Maine et Loire", "city": "Angers", "lat": 47.4784, "lon": -0.5632, "type": "Préfecture", "level": "departmental" },
-    { "department": "50 Manche", "city": "Saint-Lô", "lat": 49.1171, "lon": -1.087, "type": "Préfecture", "level": "departmental" },
-    { "department": "51 Marne", "city": "Châlons-en-Champagne", "lat": 48.9567, "lon": 4.3725, "type": "Préfecture", "level": "departmental" },
-    { "department": "52 Haute Marne", "city": "Chaumont", "lat": 48.107, "lon": 5.136, "type": "Préfecture", "level": "departmental" },
-    { "department": "53 Mayenne", "city": "Laval", "lat": 48.0706, "lon": -0.7725, "type": "Préfecture", "level": "departmental" },
-    { "department": "54 Meurthe et Moselle", "city": "Nancy", "lat": 48.6936, "lon": 6.1843, "type": "Préfecture", "level": "departmental" },
-    { "department": "55 Meuse", "city": "Bar-le-Duc", "lat": 48.7714, "lon": 5.1633, "type": "Préfecture", "level": "departmental" },
-    { "department": "56 Morbihan", "city": "Vannes", "lat": 47.6586, "lon": -2.7603, "type": "Préfecture", "level": "departmental" },
-    { "department": "57 Moselle", "city": "Metz", "lat": 49.1193, "lon": 6.175, "type": "Préfecture", "level": "departmental" },
-    { "department": "58 Nièvre", "city": "Nevers", "lat": 46.992, "lon": 3.161, "type": "Préfecture", "level": "departmental" },
-    { "department": "59 Nord", "city": "Lille", "lat": 50.6292, "lon": 3.0573, "type": "Préfecture", "level": "departmental" },
-    { "department": "60 Oise", "city": "Beauvais", "lat": 49.4316, "lon": 2.0945, "type": "Préfecture", "level": "departmental" },
-    { "department": "61 Orne", "city": "Alençon", "lat": 48.431, "lon": 0.091, "type": "Préfecture", "level": "departmental" },
-    { "department": "62 Pas de Calais", "city": "Arras", "lat": 50.2926, "lon": 2.7825, "type": "Préfecture", "level": "departmental" },
-    { "department": "63 Puy de Dôme", "city": "Clermont-Ferrand", "lat": 45.7772, "lon": 3.087, "type": "Préfecture", "level": "departmental" },
-    { "department": "64 Pyrénées Atlantiques", "city": "Pau", "lat": 43.3006, "lon": -0.3662, "type": "Préfecture", "level": "departmental" },
-    { "department": "65 Hautes Pyrénées", "city": "Tarbes", "lat": 43.2323, "lon": 0.0768, "type": "Préfecture", "level": "departmental" },
-    { "department": "66 Pyrénées Orientales", "city": "Perpignan", "lat": 42.6888, "lon": 2.8948, "type": "Préfecture", "level": "departmental" },
-    { "department": "67 Bas Rhin", "city": "Strasbourg", "lat": 48.5839, "lon": 7.7455, "type": "Préfecture", "level": "departmental" },
-    { "department": "68 Haut Rhin", "city": "Colmar", "lat": 48.0792, "lon": 7.3592, "type": "Préfecture", "level": "departmental" },
-    { "department": "69 Rhône", "city": "Lyon", "lat": 45.764, "lon": 4.8357, "type": "Préfecture", "level": "departmental" },
-    { "department": "70 Haute Saône", "city": "Vesoul", "lat": 47.625, "lon": 6.155, "type": "Préfecture", "level": "departmental" },
-    { "department": "71 Saône et Loire", "city": "Mâcon", "lat": 46.306, "lon": 4.832, "type": "Préfecture", "level": "departmental" },
-    { "department": "72 Sarthe", "city": "Le Mans", "lat": 48.0077, "lon": 0.1983, "type": "Préfecture", "level": "departmental" },
-    { "department": "73 Savoie", "city": "Chambéry", "lat": 45.5645, "lon": 5.9178, "type": "Préfecture", "level": "departmental" },
-    { "department": "74 Haute Savoie", "city": "Annecy", "lat": 45.8992, "lon": 6.1294, "type": "Préfecture", "level": "departmental" },
-    { "department": "75 Paris", "city": "Paris", "lat": 48.8566, "lon": 2.3522, "type": "Préfecture", "level": "departmental" },
-    { "department": "76 Seine Maritime", "city": "Rouen", "lat": 49.4432, "lon": 1.0994, "type": "Préfecture", "level": "departmental" },
-    { "department": "77 Seine et Marne", "city": "Melun", "lat": 48.539, "lon": 2.654, "type": "Préfecture", "level": "departmental" },
-    { "department": "78 Yvelines", "city": "Versailles", "lat": 48.8014, "lon": 2.1301, "type": "Préfecture", "level": "departmental" },
-    { "department": "79 Deux Sèvres", "city": "Niort", "lat": 46.3243, "lon": -0.4632, "type": "Préfecture", "level": "departmental" },
-    { "department": "80 Somme", "city": "Amiens", "lat": 49.8941, "lon": 2.2958, "type": "Préfecture", "level": "departmental" },
-    { "department": "81 Tarn", "city": "Albi", "lat": 43.9298, "lon": 2.1432, "type": "Préfecture", "level": "departmental" },
-    { "department": "82 Tarn et Garonne", "city": "Montauban", "lat": 44.0175, "lon": 1.355, "type": "Préfecture", "level": "departmental" },
-    { "department": "83 Var", "city": "Toulon", "lat": 43.1242, "lon": 5.928, "type": "Préfecture", "level": "departmental" },
-    { "department": "84 Vaucluse", "city": "Avignon", "lat": 43.9493, "lon": 4.806, "type": "Préfecture", "level": "departmental" },
-    { "department": "85 Vendée", "city": "La Roche-sur-Yon", "lat": 46.6713, "lon": -1.426, "type": "Préfecture", "level": "departmental" },
-    { "department": "86 Vienne", "city": "Poitiers", "lat": 46.5869, "lon": 0.3664, "type": "Préfecture", "level": "departmental" },
-    { "department": "87 Haute Vienne", "city": "Limoges", "lat": 45.8336, "lon": 1.2611, "type": "Préfecture", "level": "departmental" },
-    { "department": "88 Vosges", "city": "Épinal", "lat": 48.175, "lon": 6.447, "type": "Préfecture", "level": "departmental" },
-    { "department": "89 Yonne", "city": "Auxerre", "lat": 47.7885, "lon": 3.568, "type": "Préfecture", "level": "departmental" },
-    { "department": "90 Territoire de Belfort", "city": "Belfort", "lat": 47.6406, "lon": 6.8632, "type": "Préfecture", "level": "departmental" },
-    { "department": "91 Essonne", "city": "Évry", "lat": 48.6299, "lon": 2.4278, "type": "Préfecture", "level": "departmental" },
-    { "department": "92 Hauts de Seine", "city": "Nanterre", "lat": 48.892, "lon": 2.208, "type": "Préfecture", "level": "departmental" },
-    { "department": "93 Seine Saint Denis", "city": "Bobigny", "lat": 48.909, "lon": 2.445, "type": "Préfecture", "level": "departmental" },
-    { "department": "94 Val de Marne", "city": "Créteil", "lat": 48.796, "lon": 2.45, "type": "Préfecture", "level": "departmental" },
-    { "department": "95 Val d'Oise", "city": "Cergy", "lat": 49.035, "lon": 2.071, "type": "Préfecture", "level": "departmental" },
-    { "department": "971 Guadeloupe", "city": "Basse-Terre", "lat": 16.002, "lon": -61.705, "type": "Préfecture", "level": "departmental" },
-    { "department": "972 Martinique", "city": "Fort-de-France", "lat": 14.608, "lon": -61.073, "type": "Préfecture", "level": "departmental" },
-    { "department": "973 Guyane", "city": "Cayenne", "lat": 4.935, "lon": -52.333, "type": "Préfecture", "level": "departmental" },
-    { "department": "974 La réunion", "city": "Saint-Denis", "lat": -20.882, "lon": 55.45, "type": "Préfecture", "level": "departmental" },
-    { "department": "975 Saint Pierre et Miquelon", "city": "Saint-Pierre", "lat": 46.786, "lon": -56.177, "type": "Préfecture", "level": "departmental" },
-    { "department": "976 Mayotte", "city": "Mamoudzou", "lat": -12.78, "lon": 45.22, "type": "Préfecture", "level": "departmental" },
-    { "department": "977 Saint Barthelemy", "city": "Gustavia", "lat": 17.895, "lon": -62.84, "type": "Préfecture", "level": "departmental" },
-    { "department": "978 Saint Martin", "city": "Marigot", "lat": 18.067, "lon": -63.085, "type": "Préfecture", "level": "departmental" }
+    {
+      "department": "01 Ain",
+      "city": "Bourg-en-Bresse",
+      "lat": 46.2057,
+      "lon": 5.2289,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "02 Aisne",
+      "city": "Laon",
+      "lat": 49.5638,
+      "lon": 3.6262,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "03 Allier",
+      "city": "Moulins",
+      "lat": 46.5658,
+      "lon": 3.3323,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "04 Alpes de Haute Provence",
+      "city": "Digne-les-Bains",
+      "lat": 44.0924,
+      "lon": 6.2346,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "05 Hautes Alpes",
+      "city": "Gap",
+      "lat": 44.5615,
+      "lon": 6.0792,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "06 Alpes Maritimes",
+      "city": "Nice",
+      "lat": 43.7009,
+      "lon": 7.2625,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "07 Ardèche",
+      "city": "Privas",
+      "lat": 44.737,
+      "lon": 4.598,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "08 Ardennes",
+      "city": "Charleville-Mézières",
+      "lat": 49.7766,
+      "lon": 4.7265,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "09 Ariège",
+      "city": "Foix",
+      "lat": 42.9634,
+      "lon": 1.6083,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "10 Aube",
+      "city": "Troyes",
+      "lat": 48.2974,
+      "lon": 4.0746,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "11 Aude",
+      "city": "Carcassonne",
+      "lat": 43.2104,
+      "lon": 2.3486,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "12 Aveyron",
+      "city": "Rodez",
+      "lat": 44.3524,
+      "lon": 2.5714,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "13 Bouches du Rhône",
+      "city": "Marseille",
+      "lat": 43.2961,
+      "lon": 5.3699,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "14 Calvados",
+      "city": "Caen",
+      "lat": 49.182,
+      "lon": -0.3705,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "15 Cantal",
+      "city": "Aurillac",
+      "lat": 44.9221,
+      "lon": 2.4439,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "16 Charente",
+      "city": "Angoulême",
+      "lat": 45.6486,
+      "lon": 0.156,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "17 Charente Maritime",
+      "city": "La Rochelle",
+      "lat": 46.1603,
+      "lon": -1.1511,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "18 Cher",
+      "city": "Bourges",
+      "lat": 47.0842,
+      "lon": 2.3965,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "19 Corrèze",
+      "city": "Tulle",
+      "lat": 45.2662,
+      "lon": 1.7712,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "2a Corse du Sud",
+      "city": "Ajaccio",
+      "lat": 41.9205,
+      "lon": 8.7397,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "2b Haute Corse",
+      "city": "Bastia",
+      "lat": 42.7011,
+      "lon": 9.4507,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "21 Côte d'Or",
+      "city": "Dijon",
+      "lat": 47.3222,
+      "lon": 5.043,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "22 Côtes d'Armor",
+      "city": "Saint-Brieuc",
+      "lat": 48.5135,
+      "lon": -2.766,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "23 Creuse",
+      "city": "Guéret",
+      "lat": 46.1706,
+      "lon": 1.871,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "24 Dordogne",
+      "city": "Périgueux",
+      "lat": 45.1843,
+      "lon": 0.7208,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "25 Doubs",
+      "city": "Besançon",
+      "lat": 47.2378,
+      "lon": 6.0245,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "26 Drôme",
+      "city": "Valence",
+      "lat": 44.9333,
+      "lon": 4.8917,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "27 Eure",
+      "city": "Évreux",
+      "lat": 49.0234,
+      "lon": 1.1504,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "28 Eure et Loir",
+      "city": "Chartres",
+      "lat": 48.4475,
+      "lon": 1.4883,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "29 Finistère",
+      "city": "Quimper",
+      "lat": 47.9943,
+      "lon": -4.1039,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "30 Gard",
+      "city": "Nîmes",
+      "lat": 43.8368,
+      "lon": 4.3601,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "31 Haute Garonne",
+      "city": "Toulouse",
+      "lat": 43.6045,
+      "lon": 1.4442,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "32 Gers",
+      "city": "Auch",
+      "lat": 43.6465,
+      "lon": 0.5853,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "33 Gironde",
+      "city": "Bordeaux",
+      "lat": 44.8378,
+      "lon": -0.5792,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "34 Hérault",
+      "city": "Montpellier",
+      "lat": 43.6108,
+      "lon": 3.8767,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "35 Ille et Vilaine",
+      "city": "Rennes",
+      "lat": 48.1173,
+      "lon": -1.6778,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "36 Indre",
+      "city": "Châteauroux",
+      "lat": 46.8066,
+      "lon": 1.6917,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "37 Indre et Loire",
+      "city": "Tours",
+      "lat": 47.3941,
+      "lon": 0.6848,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "38 Isère",
+      "city": "Grenoble",
+      "lat": 45.1885,
+      "lon": 5.7245,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "39 Jura",
+      "city": "Lons-le-Saunier",
+      "lat": 46.6713,
+      "lon": 5.556,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "40 Landes",
+      "city": "Mont-de-Marsan",
+      "lat": 43.891,
+      "lon": -0.5005,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "41 Loir et Cher",
+      "city": "Blois",
+      "lat": 47.585,
+      "lon": 1.332,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "42 Loire",
+      "city": "Saint-Étienne",
+      "lat": 45.4397,
+      "lon": 4.3872,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "43 Haute Loire",
+      "city": "Le Puy-en-Velay",
+      "lat": 45.0433,
+      "lon": 3.8852,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "44 Loire Atlantique",
+      "city": "Nantes",
+      "lat": 47.2186,
+      "lon": -1.5541,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "45 Loiret",
+      "city": "Orléans",
+      "lat": 47.9029,
+      "lon": 1.909,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "46 Lot",
+      "city": "Cahors",
+      "lat": 44.4475,
+      "lon": 1.442,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "47 Lot et Garonne",
+      "city": "Agen",
+      "lat": 44.2045,
+      "lon": 0.6133,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "48 Lozère",
+      "city": "Mende",
+      "lat": 44.5167,
+      "lon": 3.5,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "49 Maine et Loire",
+      "city": "Angers",
+      "lat": 47.4784,
+      "lon": -0.5632,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "50 Manche",
+      "city": "Saint-Lô",
+      "lat": 49.1171,
+      "lon": -1.087,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "51 Marne",
+      "city": "Châlons-en-Champagne",
+      "lat": 48.9567,
+      "lon": 4.3725,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "52 Haute Marne",
+      "city": "Chaumont",
+      "lat": 48.107,
+      "lon": 5.136,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "53 Mayenne",
+      "city": "Laval",
+      "lat": 48.0706,
+      "lon": -0.7725,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "54 Meurthe et Moselle",
+      "city": "Nancy",
+      "lat": 48.6936,
+      "lon": 6.1843,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "55 Meuse",
+      "city": "Bar-le-Duc",
+      "lat": 48.7714,
+      "lon": 5.1633,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "56 Morbihan",
+      "city": "Vannes",
+      "lat": 47.6586,
+      "lon": -2.7603,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "57 Moselle",
+      "city": "Metz",
+      "lat": 49.1193,
+      "lon": 6.175,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "58 Nièvre",
+      "city": "Nevers",
+      "lat": 46.992,
+      "lon": 3.161,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "59 Nord",
+      "city": "Lille",
+      "lat": 50.6292,
+      "lon": 3.0573,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "60 Oise",
+      "city": "Beauvais",
+      "lat": 49.4316,
+      "lon": 2.0945,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "61 Orne",
+      "city": "Alençon",
+      "lat": 48.431,
+      "lon": 0.091,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "62 Pas de Calais",
+      "city": "Arras",
+      "lat": 50.2926,
+      "lon": 2.7825,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "63 Puy de Dôme",
+      "city": "Clermont-Ferrand",
+      "lat": 45.7772,
+      "lon": 3.087,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "64 Pyrénées Atlantiques",
+      "city": "Pau",
+      "lat": 43.3006,
+      "lon": -0.3662,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "65 Hautes Pyrénées",
+      "city": "Tarbes",
+      "lat": 43.2323,
+      "lon": 0.0768,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "66 Pyrénées Orientales",
+      "city": "Perpignan",
+      "lat": 42.6888,
+      "lon": 2.8948,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "67 Bas Rhin",
+      "city": "Strasbourg",
+      "lat": 48.5839,
+      "lon": 7.7455,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "68 Haut Rhin",
+      "city": "Colmar",
+      "lat": 48.0792,
+      "lon": 7.3592,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "69 Rhône",
+      "city": "Lyon",
+      "lat": 45.764,
+      "lon": 4.8357,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "70 Haute Saône",
+      "city": "Vesoul",
+      "lat": 47.625,
+      "lon": 6.155,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "71 Saône et Loire",
+      "city": "Mâcon",
+      "lat": 46.306,
+      "lon": 4.832,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "72 Sarthe",
+      "city": "Le Mans",
+      "lat": 48.0077,
+      "lon": 0.1983,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "73 Savoie",
+      "city": "Chambéry",
+      "lat": 45.5645,
+      "lon": 5.9178,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "74 Haute Savoie",
+      "city": "Annecy",
+      "lat": 45.8992,
+      "lon": 6.1294,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "75 Paris",
+      "city": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "76 Seine Maritime",
+      "city": "Rouen",
+      "lat": 49.4432,
+      "lon": 1.0994,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "77 Seine et Marne",
+      "city": "Melun",
+      "lat": 48.539,
+      "lon": 2.654,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "78 Yvelines",
+      "city": "Versailles",
+      "lat": 48.8014,
+      "lon": 2.1301,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "79 Deux Sèvres",
+      "city": "Niort",
+      "lat": 46.3243,
+      "lon": -0.4632,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "80 Somme",
+      "city": "Amiens",
+      "lat": 49.8941,
+      "lon": 2.2958,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "81 Tarn",
+      "city": "Albi",
+      "lat": 43.9298,
+      "lon": 2.1432,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "82 Tarn et Garonne",
+      "city": "Montauban",
+      "lat": 44.0175,
+      "lon": 1.355,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "83 Var",
+      "city": "Toulon",
+      "lat": 43.1242,
+      "lon": 5.928,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "84 Vaucluse",
+      "city": "Avignon",
+      "lat": 43.9493,
+      "lon": 4.806,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "85 Vendée",
+      "city": "La Roche-sur-Yon",
+      "lat": 46.6713,
+      "lon": -1.426,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "86 Vienne",
+      "city": "Poitiers",
+      "lat": 46.5869,
+      "lon": 0.3664,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "87 Haute Vienne",
+      "city": "Limoges",
+      "lat": 45.8336,
+      "lon": 1.2611,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "88 Vosges",
+      "city": "Épinal",
+      "lat": 48.175,
+      "lon": 6.447,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "89 Yonne",
+      "city": "Auxerre",
+      "lat": 47.7885,
+      "lon": 3.568,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "90 Territoire de Belfort",
+      "city": "Belfort",
+      "lat": 47.6406,
+      "lon": 6.8632,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "91 Essonne",
+      "city": "Évry",
+      "lat": 48.6299,
+      "lon": 2.4278,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "92 Hauts de Seine",
+      "city": "Nanterre",
+      "lat": 48.892,
+      "lon": 2.208,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "93 Seine Saint Denis",
+      "city": "Bobigny",
+      "lat": 48.909,
+      "lon": 2.445,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "94 Val de Marne",
+      "city": "Créteil",
+      "lat": 48.796,
+      "lon": 2.45,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "95 Val d'Oise",
+      "city": "Cergy",
+      "lat": 49.035,
+      "lon": 2.071,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "971 Guadeloupe",
+      "city": "Basse-Terre",
+      "lat": 16.002,
+      "lon": -61.705,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "972 Martinique",
+      "city": "Fort-de-France",
+      "lat": 14.608,
+      "lon": -61.073,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "973 Guyane",
+      "city": "Cayenne",
+      "lat": 4.935,
+      "lon": -52.333,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "974 La réunion",
+      "city": "Saint-Denis",
+      "lat": -20.882,
+      "lon": 55.45,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "975 Saint Pierre et Miquelon",
+      "city": "Saint-Pierre",
+      "lat": 46.786,
+      "lon": -56.177,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "976 Mayotte",
+      "city": "Mamoudzou",
+      "lat": -12.78,
+      "lon": 45.22,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "977 Saint Barthelemy",
+      "city": "Gustavia",
+      "lat": 17.895,
+      "lon": -62.84,
+      "type": "Préfecture",
+      "level": "departmental"
+    },
+    {
+      "department": "978 Saint Martin",
+      "city": "Marigot",
+      "lat": 18.067,
+      "lon": -63.085,
+      "type": "Préfecture",
+      "level": "departmental"
+    }
   ],
   "mairies": [
-    { "name": "Mairie de Bourg-en-Bresse", "city": "Bourg-en-Bresse", "lat": 46.2057, "lon": 5.2289, "department": "01 Ain", "level": "communal" },
-    { "name": "Mairie de Laon", "city": "Laon", "lat": 49.5638, "lon": 3.6262, "department": "02 Aisne", "level": "communal" },
-    { "name": "Mairie de Moulins", "city": "Moulins", "lat": 46.5658, "lon": 3.3323, "department": "03 Allier", "level": "communal" },
-    { "name": "Mairie de Digne-les-Bains", "city": "Digne-les-Bains", "lat": 44.0924, "lon": 6.2346, "department": "04 Alpes de Haute Provence", "level": "communal" },
-    { "name": "Mairie de Gap", "city": "Gap", "lat": 44.5615, "lon": 6.0792, "department": "05 Hautes Alpes", "level": "communal" },
-    { "name": "Mairie de Nice", "city": "Nice", "lat": 43.7009, "lon": 7.2625, "department": "06 Alpes Maritimes", "level": "communal" },
-    { "name": "Mairie de Privas", "city": "Privas", "lat": 44.737, "lon": 4.598, "department": "07 Ardèche", "level": "communal" },
-    { "name": "Mairie de Charleville-Mézières", "city": "Charleville-Mézières", "lat": 49.7766, "lon": 4.7265, "department": "08 Ardennes", "level": "communal" },
-    { "name": "Mairie de Foix", "city": "Foix", "lat": 42.9634, "lon": 1.6083, "department": "09 Ariège", "level": "communal" },
-    { "name": "Mairie de Troyes", "city": "Troyes", "lat": 48.2974, "lon": 4.0746, "department": "10 Aube", "level": "communal" },
-    { "name": "Mairie de Carcassonne", "city": "Carcassonne", "lat": 43.2104, "lon": 2.3486, "department": "11 Aude", "level": "communal" },
-    { "name": "Mairie de Rodez", "city": "Rodez", "lat": 44.3524, "lon": 2.5714, "department": "12 Aveyron", "level": "communal" },
-    { "name": "Mairie de Marseille", "city": "Marseille", "lat": 43.2961, "lon": 5.3699, "department": "13 Bouches du Rhône", "level": "communal" },
-    { "name": "Mairie de Caen", "city": "Caen", "lat": 49.182, "lon": -0.3705, "department": "14 Calvados", "level": "communal" },
-    { "name": "Mairie d'Aurillac", "city": "Aurillac", "lat": 44.9221, "lon": 2.4439, "department": "15 Cantal", "level": "communal" },
-    { "name": "Mairie d'Angoulême", "city": "Angoulême", "lat": 45.6486, "lon": 0.156, "department": "16 Charente", "level": "communal" },
-    { "name": "Mairie de La Rochelle", "city": "La Rochelle", "lat": 46.1603, "lon": -1.1511, "department": "17 Charente Maritime", "level": "communal" },
-    { "name": "Mairie de Bourges", "city": "Bourges", "lat": 47.0842, "lon": 2.3965, "department": "18 Cher", "level": "communal" },
-    { "name": "Mairie de Tulle", "city": "Tulle", "lat": 45.2662, "lon": 1.771, "department": "19 Corrèze", "level": "communal" },
-    { "name": "Mairie d'Ajaccio", "city": "Ajaccio", "lat": 41.9205, "lon": 8.7397, "department": "2a Corse du Sud", "level": "communal" },
-    { "name": "Mairie de Bastia", "city": "Bastia", "lat": 42.7011, "lon": 9.4507, "department": "2b Haute Corse", "level": "communal" },
-    { "name": "Mairie de Dijon", "city": "Dijon", "lat": 47.3222, "lon": 5.043, "department": "21 Côte d'Or", "level": "communal" },
-    { "name": "Mairie de Saint-Brieuc", "city": "Saint-Brieuc", "lat": 48.5135, "lon": -2.766, "department": "22 Côtes d'Armor", "level": "communal" },
-    { "name": "Mairie de Guéret", "city": "Guéret", "lat": 46.1706, "lon": 1.871, "department": "23 Creuse", "level": "communal" },
-    { "name": "Mairie de Périgueux", "city": "Périgueux", "lat": 45.1843, "lon": 0.7208, "department": "24 Dordogne", "level": "communal" },
-    { "name": "Mairie de Besançon", "city": "Besançon", "lat": 47.2378, "lon": 6.0245, "department": "25 Doubs", "level": "communal" },
-    { "name": "Mairie de Valence", "city": "Valence", "lat": 44.9333, "lon": 4.8917, "department": "26 Drôme", "level": "communal" },
-    { "name": "Mairie d'Évreux", "city": "Évreux", "lat": 49.0234, "lon": 1.1504, "department": "27 Eure", "level": "communal" },
-    { "name": "Mairie de Chartres", "city": "Chartres", "lat": 48.4475, "lon": 1.4883, "department": "28 Eure et Loir", "level": "communal" },
-    { "name": "Mairie de Quimper", "city": "Quimper", "lat": 47.9943, "lon": -4.1039, "department": "29 Finistère", "level": "communal" },
-    { "name": "Mairie de Nîmes", "city": "Nîmes", "lat": 43.8368, "lon": 4.3601, "department": "30 Gard", "level": "communal" },
-    { "name": "Mairie de Toulouse", "city": "Toulouse", "lat": 43.6045, "lon": 1.4442, "department": "31 Haute Garonne", "level": "communal" },
-    { "name": "Mairie d'Auch", "city": "Auch", "lat": 43.6465, "lon": 0.5853, "department": "32 Gers", "level": "communal" },
-    { "name": "Mairie de Bordeaux", "city": "Bordeaux", "lat": 44.8378, "lon": -0.5792, "department": "33 Gironde", "level": "communal" },
-    { "name": "Mairie de Montpellier", "city": "Montpellier", "lat": 43.6108, "lon": 3.8767, "department": "34 Hérault", "level": "communal" },
-    { "name": "Mairie de Rennes", "city": "Rennes", "lat": 48.1173, "lon": -1.6778, "department": "35 Ille et Vilaine", "level": "communal" },
-    { "name": "Mairie de Châteauroux", "city": "Châteauroux", "lat": 46.8066, "lon": 1.6917, "department": "36 Indre", "level": "communal" },
-    { "name": "Mairie de Tours", "city": "Tours", "lat": 47.3941, "lon": 0.6848, "department": "37 Indre et Loire", "level": "communal" },
-    { "name": "Mairie de Grenoble", "city": "Grenoble", "lat": 45.1885, "lon": 5.7245, "department": "38 Isère", "level": "communal" },
-    { "name": "Mairie de Lons-le-Saunier", "city": "Lons-le-Saunier", "lat": 46.6713, "lon": 5.556, "department": "39 Jura", "level": "communal" },
-    { "name": "Mairie de Mont-de-Marsan", "city": "Mont-de-Marsan", "lat": 43.891, "lon": -0.5005, "department": "40 Landes", "level": "communal" },
-    { "name": "Mairie de Blois", "city": "Blois", "lat": 47.585, "lon": 1.332, "department": "41 Loir et Cher", "level": "communal" },
-    { "name": "Mairie de Saint-Étienne", "city": "Saint-Étienne", "lat": 45.4397, "lon": 4.3872, "department": "42 Loire", "level": "communal" },
-    { "name": "Mairie de Le Puy-en-Velay", "city": "Le Puy-en-Velay", "lat": 45.0433, "lon": 3.8852, "department": "43 Haute Loire", "level": "communal" },
-    { "name": "Mairie de Nantes", "city": "Nantes", "lat": 47.2186, "lon": -1.5541, "department": "44 Loire Atlantique", "level": "communal" },
-    { "name": "Mairie d'Orléans", "city": "Orléans", "lat": 47.9029, "lon": 1.909, "department": "45 Loiret", "level": "communal" },
-    { "name": "Mairie de Cahors", "city": "Cahors", "lat": 44.4475, "lon": 1.442, "department": "46 Lot", "level": "communal" },
-    { "name": "Mairie d'Agen", "city": "Agen", "lat": 44.2045, "lon": 0.6133, "department": "47 Lot et Garonne", "level": "communal" },
-    { "name": "Mairie de Mende", "city": "Mende", "lat": 44.5167, "lon": 3.5, "department": "48 Lozère", "level": "communal" },
-    { "name": "Mairie d'Angers", "city": "Angers", "lat": 47.4784, "lon": -0.5632, "department": "49 Maine et Loire", "level": "communal" },
-    { "name": "Mairie de Saint-Lô", "city": "Saint-Lô", "lat": 49.1171, "lon": -1.087, "department": "50 Manche", "level": "communal" },
-    { "name": "Mairie de Châlons-en-Champagne", "city": "Châlons-en-Champagne", "lat": 48.9567, "lon": 4.3725, "department": "51 Marne", "level": "communal" },
-    { "name": "Mairie de Chaumont", "city": "Chaumont", "lat": 48.107, "lon": 5.136, "department": "52 Haute Marne", "level": "communal" },
-    { "name": "Mairie de Laval", "city": "Laval", "lat": 48.0706, "lon": -0.7725, "department": "53 Mayenne", "level": "communal" },
-    { "name": "Mairie de Nancy", "city": "Nancy", "lat": 48.6936, "lon": 6.1843, "department": "54 Meurthe et Moselle", "level": "communal" },
-    { "name": "Mairie de Bar-le-Duc", "city": "Bar-le-Duc", "lat": 48.7714, "lon": 5.1633, "department": "55 Meuse", "level": "communal" },
-    { "name": "Mairie de Vannes", "city": "Vannes", "lat": 47.6586, "lon": -2.7603, "department": "56 Morbihan", "level": "communal" },
-    { "name": "Mairie de Metz", "city": "Metz", "lat": 49.1193, "lon": 6.175, "department": "57 Moselle", "level": "communal" },
-    { "name": "Mairie de Nevers", "city": "Nevers", "lat": 46.992, "lon": 3.161, "department": "58 Nièvre", "level": "communal" },
-    { "name": "Mairie de Lille", "city": "Lille", "lat": 50.6292, "lon": 3.0573, "department": "59 Nord", "level": "communal" },
-    { "name": "Mairie de Beauvais", "city": "Beauvais", "lat": 49.4316, "lon": 2.0945, "department": "60 Oise", "level": "communal" },
-    { "name": "Mairie d'Alençon", "city": "Alençon", "lat": 48.431, "lon": 0.091, "department": "61 Orne", "level": "communal" },
-    { "name": "Mairie d'Arras", "city": "Arras", "lat": 50.2926, "lon": 2.7825, "department": "62 Pas de Calais", "level": "communal" },
-    { "name": "Mairie de Clermont-Ferrand", "city": "Clermont-Ferrand", "lat": 45.7772, "lon": 3.087, "department": "63 Puy de Dôme", "level": "communal" },
-    { "name": "Mairie de Pau", "city": "Pau", "lat": 43.3006, "lon": -0.3662, "department": "64 Pyrénées Atlantiques", "level": "communal" },
-    { "name": "Mairie de Tarbes", "city": "Tarbes", "lat": 43.2323, "lon": 0.0768, "department": "65 Hautes Pyrénées", "level": "communal" },
-    { "name": "Mairie de Perpignan", "city": "Perpignan", "lat": 42.6888, "lon": 2.8948, "department": "66 Pyrénées Orientales", "level": "communal" },
-    { "name": "Mairie de Strasbourg", "city": "Strasbourg", "lat": 48.5839, "lon": 7.7455, "department": "67 Bas Rhin", "level": "communal" },
-    { "name": "Mairie de Colmar", "city": "Colmar", "lat": 48.0792, "lon": 7.3592, "department": "68 Haut Rhin", "level": "communal" },
-    { "name": "Mairie de Lyon", "city": "Lyon", "lat": 45.764, "lon": 4.8357, "department": "69 Rhône", "level": "communal" },
-    { "name": "Mairie de Vesoul", "city": "Vesoul", "lat": 47.625, "lon": 6.155, "department": "70 Haute Saône", "level": "communal" },
-    { "name": "Mairie de Mâcon", "city": "Mâcon", "lat": 46.306, "lon": 4.832, "department": "71 Saône et Loire", "level": "communal" },
-    { "name": "Mairie de Le Mans", "city": "Le Mans", "lat": 48.0077, "lon": 0.1983, "department": "72 Sarthe", "level": "communal" },
-    { "name": "Mairie de Chambéry", "city": "Chambéry", "lat": 45.5645, "lon": 5.9178, "department": "73 Savoie", "level": "communal" },
-    { "name": "Mairie d'Annecy", "city": "Annecy", "lat": 45.8992, "lon": 6.1294, "department": "74 Haute Savoie", "level": "communal" },
-    { "name": "Mairie de Paris", "city": "Paris", "lat": 48.8566, "lon": 2.3522, "department": "75 Paris", "level": "communal" },
-    { "name": "Mairie de Rouen", "city": "Rouen", "lat": 49.4432, "lon": 1.0994, "department": "76 Seine Maritime", "level": "communal" },
-    { "name": "Mairie de Melun", "city": "Melun", "lat": 48.539, "lon": 2.654, "department": "77 Seine et Marne", "level": "communal" },
-    { "name": "Mairie de Versailles", "city": "Versailles", "lat": 48.8014, "lon": 2.1301, "department": "78 Yvelines", "level": "communal" },
-    { "name": "Mairie de Niort", "city": "Niort", "lat": 46.3243, "lon": -0.4632, "department": "79 Deux Sèvres", "level": "communal" },
-    { "name": "Mairie d'Amiens", "city": "Amiens", "lat": 49.8941, "lon": 2.2958, "department": "80 Somme", "level": "communal" },
-    { "name": "Mairie d'Albi", "city": "Albi", "lat": 43.9298, "lon": 2.1432, "department": "81 Tarn", "level": "communal" },
-    { "name": "Mairie de Montauban", "city": "Montauban", "lat": 44.0175, "lon": 1.355, "department": "82 Tarn et Garonne", "level": "communal" },
-    { "name": "Mairie de Toulon", "city": "Toulon", "lat": 43.1242, "lon": 5.928, "department": "83 Var", "level": "communal" },
-    { "name": "Mairie d'Avignon", "city": "Avignon", "lat": 43.9493, "lon": 4.806, "department": "84 Vaucluse", "level": "communal" },
-    { "name": "Mairie de La Roche-sur-Yon", "city": "La Roche-sur-Yon", "lat": 46.6713, "lon": -1.426, "department": "85 Vendée", "level": "communal" },
-    { "name": "Mairie de Poitiers", "city": "Poitiers", "lat": 46.5869, "lon": 0.3664, "department": "86 Vienne", "level": "communal" },
-    { "name": "Mairie de Limoges", "city": "Limoges", "lat": 45.8336, "lon": 1.2611, "department": "87 Haute Vienne", "level": "communal" },
-    { "name": "Mairie d'Épinal", "city": "Épinal", "lat": 48.175, "lon": 6.447, "department": "88 Vosges", "level": "communal" },
-    { "name": "Mairie d'Auxerre", "city": "Auxerre", "lat": 47.7885, "lon": 3.568, "department": "89 Yonne", "level": "communal" },
-    { "name": "Mairie de Belfort", "city": "Belfort", "lat": 47.6406, "lon": 6.8632, "department": "90 Territoire de Belfort", "level": "communal" },
-    { "name": "Mairie d'Évry", "city": "Évry", "lat": 48.6299, "lon": 2.4278, "department": "91 Essonne", "level": "communal" },
-    { "name": "Mairie de Nanterre", "city": "Nanterre", "lat": 48.892, "lon": 2.208, "department": "92 Hauts de Seine", "level": "communal" },
-    { "name": "Mairie de Bobigny", "city": "Bobigny", "lat": 48.909, "lon": 2.445, "department": "93 Seine Saint Denis", "level": "communal" },
-    { "name": "Mairie de Créteil", "city": "Créteil", "lat": 48.796, "lon": 2.45, "department": "94 Val de Marne", "level": "communal" },
-    { "name": "Mairie de Cergy", "city": "Cergy", "lat": 49.035, "lon": 2.071, "department": "95 Val d'Oise", "level": "communal" },
-    { "name": "Mairie de Basse-Terre", "city": "Basse-Terre", "lat": 16.002, "lon": -61.705, "department": "971 Guadeloupe", "level": "communal" },
-    { "name": "Mairie de Fort-de-France", "city": "Fort-de-France", "lat": 14.608, "lon": -61.073, "department": "972 Martinique", "level": "communal" },
-    { "name": "Mairie de Cayenne", "city": "Cayenne", "lat": 4.935, "lon": -52.333, "department": "973 Guyane", "level": "communal" },
-    { "name": "Mairie de Saint-Denis", "city": "Saint-Denis", "lat": -20.882, "lon": 55.45, "department": "974 La réunion", "level": "communal" },
-    { "name": "Mairie de Saint-Pierre", "city": "Saint-Pierre", "lat": 46.786, "lon": -56.177, "department": "975 Saint Pierre et Miquelon", "level": "communal" },
-    { "name": "Mairie de Mamoudzou", "city": "Mamoudzou", "lat": -12.78, "lon": 45.22, "department": "976 Mayotte", "level": "communal" },
-    { "name": "Mairie de Gustavia", "city": "Gustavia", "lat": 17.895, "lon": -62.84, "department": "977 Saint Barthelemy", "level": "communal" },
-    { "name": "Mairie de Marigot", "city": "Marigot", "lat": 18.067, "lon": -63.085, "department": "978 Saint Martin", "level": "communal" }
+    {
+      "name": "Mairie de Bourg-en-Bresse",
+      "city": "Bourg-en-Bresse",
+      "lat": 46.2057,
+      "lon": 5.2289,
+      "department": "01 Ain",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Laon",
+      "city": "Laon",
+      "lat": 49.5638,
+      "lon": 3.6262,
+      "department": "02 Aisne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Moulins",
+      "city": "Moulins",
+      "lat": 46.5658,
+      "lon": 3.3323,
+      "department": "03 Allier",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Digne-les-Bains",
+      "city": "Digne-les-Bains",
+      "lat": 44.0924,
+      "lon": 6.2346,
+      "department": "04 Alpes de Haute Provence",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Gap",
+      "city": "Gap",
+      "lat": 44.5615,
+      "lon": 6.0792,
+      "department": "05 Hautes Alpes",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Nice",
+      "city": "Nice",
+      "lat": 43.7009,
+      "lon": 7.2625,
+      "department": "06 Alpes Maritimes",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Privas",
+      "city": "Privas",
+      "lat": 44.737,
+      "lon": 4.598,
+      "department": "07 Ardèche",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Charleville-Mézières",
+      "city": "Charleville-Mézières",
+      "lat": 49.7766,
+      "lon": 4.7265,
+      "department": "08 Ardennes",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Foix",
+      "city": "Foix",
+      "lat": 42.9634,
+      "lon": 1.6083,
+      "department": "09 Ariège",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Troyes",
+      "city": "Troyes",
+      "lat": 48.2974,
+      "lon": 4.0746,
+      "department": "10 Aube",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Carcassonne",
+      "city": "Carcassonne",
+      "lat": 43.2104,
+      "lon": 2.3486,
+      "department": "11 Aude",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Rodez",
+      "city": "Rodez",
+      "lat": 44.3524,
+      "lon": 2.5714,
+      "department": "12 Aveyron",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Marseille",
+      "city": "Marseille",
+      "lat": 43.2961,
+      "lon": 5.3699,
+      "department": "13 Bouches du Rhône",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Caen",
+      "city": "Caen",
+      "lat": 49.182,
+      "lon": -0.3705,
+      "department": "14 Calvados",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Aurillac",
+      "city": "Aurillac",
+      "lat": 44.9221,
+      "lon": 2.4439,
+      "department": "15 Cantal",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Angoulême",
+      "city": "Angoulême",
+      "lat": 45.6486,
+      "lon": 0.156,
+      "department": "16 Charente",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de La Rochelle",
+      "city": "La Rochelle",
+      "lat": 46.1603,
+      "lon": -1.1511,
+      "department": "17 Charente Maritime",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Bourges",
+      "city": "Bourges",
+      "lat": 47.0842,
+      "lon": 2.3965,
+      "department": "18 Cher",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Tulle",
+      "city": "Tulle",
+      "lat": 45.2662,
+      "lon": 1.771,
+      "department": "19 Corrèze",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Ajaccio",
+      "city": "Ajaccio",
+      "lat": 41.9205,
+      "lon": 8.7397,
+      "department": "2a Corse du Sud",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Bastia",
+      "city": "Bastia",
+      "lat": 42.7011,
+      "lon": 9.4507,
+      "department": "2b Haute Corse",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Dijon",
+      "city": "Dijon",
+      "lat": 47.3222,
+      "lon": 5.043,
+      "department": "21 Côte d'Or",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Saint-Brieuc",
+      "city": "Saint-Brieuc",
+      "lat": 48.5135,
+      "lon": -2.766,
+      "department": "22 Côtes d'Armor",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Guéret",
+      "city": "Guéret",
+      "lat": 46.1706,
+      "lon": 1.871,
+      "department": "23 Creuse",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Périgueux",
+      "city": "Périgueux",
+      "lat": 45.1843,
+      "lon": 0.7208,
+      "department": "24 Dordogne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Besançon",
+      "city": "Besançon",
+      "lat": 47.2378,
+      "lon": 6.0245,
+      "department": "25 Doubs",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Valence",
+      "city": "Valence",
+      "lat": 44.9333,
+      "lon": 4.8917,
+      "department": "26 Drôme",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Évreux",
+      "city": "Évreux",
+      "lat": 49.0234,
+      "lon": 1.1504,
+      "department": "27 Eure",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Chartres",
+      "city": "Chartres",
+      "lat": 48.4475,
+      "lon": 1.4883,
+      "department": "28 Eure et Loir",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Quimper",
+      "city": "Quimper",
+      "lat": 47.9943,
+      "lon": -4.1039,
+      "department": "29 Finistère",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Nîmes",
+      "city": "Nîmes",
+      "lat": 43.8368,
+      "lon": 4.3601,
+      "department": "30 Gard",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Toulouse",
+      "city": "Toulouse",
+      "lat": 43.6045,
+      "lon": 1.4442,
+      "department": "31 Haute Garonne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Auch",
+      "city": "Auch",
+      "lat": 43.6465,
+      "lon": 0.5853,
+      "department": "32 Gers",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Bordeaux",
+      "city": "Bordeaux",
+      "lat": 44.8378,
+      "lon": -0.5792,
+      "department": "33 Gironde",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Montpellier",
+      "city": "Montpellier",
+      "lat": 43.6108,
+      "lon": 3.8767,
+      "department": "34 Hérault",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Rennes",
+      "city": "Rennes",
+      "lat": 48.1173,
+      "lon": -1.6778,
+      "department": "35 Ille et Vilaine",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Châteauroux",
+      "city": "Châteauroux",
+      "lat": 46.8066,
+      "lon": 1.6917,
+      "department": "36 Indre",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Tours",
+      "city": "Tours",
+      "lat": 47.3941,
+      "lon": 0.6848,
+      "department": "37 Indre et Loire",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Grenoble",
+      "city": "Grenoble",
+      "lat": 45.1885,
+      "lon": 5.7245,
+      "department": "38 Isère",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Lons-le-Saunier",
+      "city": "Lons-le-Saunier",
+      "lat": 46.6713,
+      "lon": 5.556,
+      "department": "39 Jura",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Mont-de-Marsan",
+      "city": "Mont-de-Marsan",
+      "lat": 43.891,
+      "lon": -0.5005,
+      "department": "40 Landes",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Blois",
+      "city": "Blois",
+      "lat": 47.585,
+      "lon": 1.332,
+      "department": "41 Loir et Cher",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Saint-Étienne",
+      "city": "Saint-Étienne",
+      "lat": 45.4397,
+      "lon": 4.3872,
+      "department": "42 Loire",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Le Puy-en-Velay",
+      "city": "Le Puy-en-Velay",
+      "lat": 45.0433,
+      "lon": 3.8852,
+      "department": "43 Haute Loire",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Nantes",
+      "city": "Nantes",
+      "lat": 47.2186,
+      "lon": -1.5541,
+      "department": "44 Loire Atlantique",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Orléans",
+      "city": "Orléans",
+      "lat": 47.9029,
+      "lon": 1.909,
+      "department": "45 Loiret",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Cahors",
+      "city": "Cahors",
+      "lat": 44.4475,
+      "lon": 1.442,
+      "department": "46 Lot",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Agen",
+      "city": "Agen",
+      "lat": 44.2045,
+      "lon": 0.6133,
+      "department": "47 Lot et Garonne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Mende",
+      "city": "Mende",
+      "lat": 44.5167,
+      "lon": 3.5,
+      "department": "48 Lozère",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Angers",
+      "city": "Angers",
+      "lat": 47.4784,
+      "lon": -0.5632,
+      "department": "49 Maine et Loire",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Saint-Lô",
+      "city": "Saint-Lô",
+      "lat": 49.1171,
+      "lon": -1.087,
+      "department": "50 Manche",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Châlons-en-Champagne",
+      "city": "Châlons-en-Champagne",
+      "lat": 48.9567,
+      "lon": 4.3725,
+      "department": "51 Marne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Chaumont",
+      "city": "Chaumont",
+      "lat": 48.107,
+      "lon": 5.136,
+      "department": "52 Haute Marne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Laval",
+      "city": "Laval",
+      "lat": 48.0706,
+      "lon": -0.7725,
+      "department": "53 Mayenne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Nancy",
+      "city": "Nancy",
+      "lat": 48.6936,
+      "lon": 6.1843,
+      "department": "54 Meurthe et Moselle",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Bar-le-Duc",
+      "city": "Bar-le-Duc",
+      "lat": 48.7714,
+      "lon": 5.1633,
+      "department": "55 Meuse",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Vannes",
+      "city": "Vannes",
+      "lat": 47.6586,
+      "lon": -2.7603,
+      "department": "56 Morbihan",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Metz",
+      "city": "Metz",
+      "lat": 49.1193,
+      "lon": 6.175,
+      "department": "57 Moselle",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Nevers",
+      "city": "Nevers",
+      "lat": 46.992,
+      "lon": 3.161,
+      "department": "58 Nièvre",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Lille",
+      "city": "Lille",
+      "lat": 50.6292,
+      "lon": 3.0573,
+      "department": "59 Nord",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Beauvais",
+      "city": "Beauvais",
+      "lat": 49.4316,
+      "lon": 2.0945,
+      "department": "60 Oise",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Alençon",
+      "city": "Alençon",
+      "lat": 48.431,
+      "lon": 0.091,
+      "department": "61 Orne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Arras",
+      "city": "Arras",
+      "lat": 50.2926,
+      "lon": 2.7825,
+      "department": "62 Pas de Calais",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Clermont-Ferrand",
+      "city": "Clermont-Ferrand",
+      "lat": 45.7772,
+      "lon": 3.087,
+      "department": "63 Puy de Dôme",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Pau",
+      "city": "Pau",
+      "lat": 43.3006,
+      "lon": -0.3662,
+      "department": "64 Pyrénées Atlantiques",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Tarbes",
+      "city": "Tarbes",
+      "lat": 43.2323,
+      "lon": 0.0768,
+      "department": "65 Hautes Pyrénées",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Perpignan",
+      "city": "Perpignan",
+      "lat": 42.6888,
+      "lon": 2.8948,
+      "department": "66 Pyrénées Orientales",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Strasbourg",
+      "city": "Strasbourg",
+      "lat": 48.5839,
+      "lon": 7.7455,
+      "department": "67 Bas Rhin",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Colmar",
+      "city": "Colmar",
+      "lat": 48.0792,
+      "lon": 7.3592,
+      "department": "68 Haut Rhin",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Lyon",
+      "city": "Lyon",
+      "lat": 45.764,
+      "lon": 4.8357,
+      "department": "69 Rhône",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Vesoul",
+      "city": "Vesoul",
+      "lat": 47.625,
+      "lon": 6.155,
+      "department": "70 Haute Saône",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Mâcon",
+      "city": "Mâcon",
+      "lat": 46.306,
+      "lon": 4.832,
+      "department": "71 Saône et Loire",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Le Mans",
+      "city": "Le Mans",
+      "lat": 48.0077,
+      "lon": 0.1983,
+      "department": "72 Sarthe",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Chambéry",
+      "city": "Chambéry",
+      "lat": 45.5645,
+      "lon": 5.9178,
+      "department": "73 Savoie",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Annecy",
+      "city": "Annecy",
+      "lat": 45.8992,
+      "lon": 6.1294,
+      "department": "74 Haute Savoie",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Paris",
+      "city": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "department": "75 Paris",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Rouen",
+      "city": "Rouen",
+      "lat": 49.4432,
+      "lon": 1.0994,
+      "department": "76 Seine Maritime",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Melun",
+      "city": "Melun",
+      "lat": 48.539,
+      "lon": 2.654,
+      "department": "77 Seine et Marne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Versailles",
+      "city": "Versailles",
+      "lat": 48.8014,
+      "lon": 2.1301,
+      "department": "78 Yvelines",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Niort",
+      "city": "Niort",
+      "lat": 46.3243,
+      "lon": -0.4632,
+      "department": "79 Deux Sèvres",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Amiens",
+      "city": "Amiens",
+      "lat": 49.8941,
+      "lon": 2.2958,
+      "department": "80 Somme",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Albi",
+      "city": "Albi",
+      "lat": 43.9298,
+      "lon": 2.1432,
+      "department": "81 Tarn",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Montauban",
+      "city": "Montauban",
+      "lat": 44.0175,
+      "lon": 1.355,
+      "department": "82 Tarn et Garonne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Toulon",
+      "city": "Toulon",
+      "lat": 43.1242,
+      "lon": 5.928,
+      "department": "83 Var",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Avignon",
+      "city": "Avignon",
+      "lat": 43.9493,
+      "lon": 4.806,
+      "department": "84 Vaucluse",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de La Roche-sur-Yon",
+      "city": "La Roche-sur-Yon",
+      "lat": 46.6713,
+      "lon": -1.426,
+      "department": "85 Vendée",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Poitiers",
+      "city": "Poitiers",
+      "lat": 46.5869,
+      "lon": 0.3664,
+      "department": "86 Vienne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Limoges",
+      "city": "Limoges",
+      "lat": 45.8336,
+      "lon": 1.2611,
+      "department": "87 Haute Vienne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Épinal",
+      "city": "Épinal",
+      "lat": 48.175,
+      "lon": 6.447,
+      "department": "88 Vosges",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Auxerre",
+      "city": "Auxerre",
+      "lat": 47.7885,
+      "lon": 3.568,
+      "department": "89 Yonne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Belfort",
+      "city": "Belfort",
+      "lat": 47.6406,
+      "lon": 6.8632,
+      "department": "90 Territoire de Belfort",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie d'Évry",
+      "city": "Évry",
+      "lat": 48.6299,
+      "lon": 2.4278,
+      "department": "91 Essonne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Nanterre",
+      "city": "Nanterre",
+      "lat": 48.892,
+      "lon": 2.208,
+      "department": "92 Hauts de Seine",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Bobigny",
+      "city": "Bobigny",
+      "lat": 48.909,
+      "lon": 2.445,
+      "department": "93 Seine Saint Denis",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Créteil",
+      "city": "Créteil",
+      "lat": 48.796,
+      "lon": 2.45,
+      "department": "94 Val de Marne",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Cergy",
+      "city": "Cergy",
+      "lat": 49.035,
+      "lon": 2.071,
+      "department": "95 Val d'Oise",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Basse-Terre",
+      "city": "Basse-Terre",
+      "lat": 16.002,
+      "lon": -61.705,
+      "department": "971 Guadeloupe",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Fort-de-France",
+      "city": "Fort-de-France",
+      "lat": 14.608,
+      "lon": -61.073,
+      "department": "972 Martinique",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Cayenne",
+      "city": "Cayenne",
+      "lat": 4.935,
+      "lon": -52.333,
+      "department": "973 Guyane",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Saint-Denis",
+      "city": "Saint-Denis",
+      "lat": -20.882,
+      "lon": 55.45,
+      "department": "974 La réunion",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Saint-Pierre",
+      "city": "Saint-Pierre",
+      "lat": 46.786,
+      "lon": -56.177,
+      "department": "975 Saint Pierre et Miquelon",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Mamoudzou",
+      "city": "Mamoudzou",
+      "lat": -12.78,
+      "lon": 45.22,
+      "department": "976 Mayotte",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Gustavia",
+      "city": "Gustavia",
+      "lat": 17.895,
+      "lon": -62.84,
+      "department": "977 Saint Barthelemy",
+      "level": "communal"
+    },
+    {
+      "name": "Mairie de Marigot",
+      "city": "Marigot",
+      "lat": 18.067,
+      "lon": -63.085,
+      "department": "978 Saint Martin",
+      "level": "communal"
+    }
   ],
   "elysee_point": {
     "name": "Palais de l'Élysée",
@@ -1281,60 +4392,71 @@
   },
   "financial_flows": [],
   "Partis_Politiques": [
-      {
-          "id": "parti-1",
-          "parnom": "100% ASNIERES",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      },
-      {
-          "id": "910",
-          "parnom": "RENAISSANCE",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      },
-      {
-          "id": "1378",
-          "parnom": "ENSEMBLE ! (MAJORITÉ PRÉSIDENTIELLE)",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      },
-      {
-          "id": "049",
-          "parnom": "RASSEMBLEMENT NATIONAL",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      },
-            {
-          "id": "1038",
-          "parnom": "ENSEMBLE POUR LA RÉPUBLIQUE",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      }
-      ,
-            {
-          "id": "976",
-          "parnom": "LA FRANCE INSOUMISE",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      },
-                  {
-          "id": "647",
-          "parnom": "PARTI PIRATE",
-          "lat": 48.919,
-          "lon": 2.293,
-          "city": "Asnières-sur-Seine"
-      }
+    {
+      "id": "parti-1",
+      "parnom": "100% ASNIERES",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    },
+    {
+      "id": "910",
+      "parnom": "RENAISSANCE",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    },
+    {
+      "id": "1378",
+      "parnom": "ENSEMBLE ! (MAJORITÉ PRÉSIDENTIELLE)",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    },
+    {
+      "id": "049",
+      "parnom": "RASSEMBLEMENT NATIONAL",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    },
+    {
+      "id": "1038",
+      "parnom": "ENSEMBLE POUR LA RÉPUBLIQUE",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    },
+    {
+      "id": "976",
+      "parnom": "LA FRANCE INSOUMISE",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    },
+    {
+      "id": "647",
+      "parnom": "PARTI PIRATE",
+      "lat": 48.919,
+      "lon": 2.293,
+      "city": "Asnières-sur-Seine"
+    }
   ],
   "projections": {
-    "labels": ["Année 1", "Année 2", "Année 3", "Année 4", "Année 5"],
-    "data": [50, 150, 400, 800, 1500]
+    "labels": [
+      "Année 1",
+      "Année 2",
+      "Année 3",
+      "Année 4",
+      "Année 5"
+    ],
+    "data": [
+      500,
+      1500,
+      2400,
+      3200,
+      4200
+    ]
   },
   "team": [
     {
@@ -1352,6 +4474,17 @@
     {
       "role": "Militant / Community Manager",
       "description": "Pour fédérer la communauté et promouvoir le projet de loi."
+    }
+  ],
+  "journal_posts": [
+    {
+      "id": "78116cf9-27e7-4362-84ca-7cf93fefea28",
+      "title": "Voici quelques titres d'articles de journal sur le thème de la démocratie participative, en moins de 10 mots :* **La voix du citoyen : démocratisation active*** **Démocratie Participative : l'avenir se débat*** **Engagez-vous : la démocratie au cœur de vos mains**N'hésitez pas à me donner plus de contexte si vous souhaitez un titre plus précis ! ",
+      "media": "/media/default-article-image.jpg",
+      "article": "<!DOCTYPE html>\n\n<html>\n\n<head>\n  <title>La Voix du Citoyen : Démocratisation Active </title>\n</head>\n\n<body>\n\n<h1>La Voix du Citoyen : Démocratisation Active</h1>\n\n<p>En un monde où les citoyens se sentent souvent désenchantés face aux institutions politiques, l'idée de la démocratie participative gagne en popularité. Plus qu'un simple vote tous les cinq ans, la démocratie participative propose une implication directe des citoyens dans la prise de decisiones qui les concernent. </p>\n\n<p>Cette forme de démocratie, basée sur la collaboration et la concertation, permet aux citoyens d'exprimer leurs besoins, leurs aspirations et leurs craintes. Des initiatives comme les consultations publiques, les référendums locaux et les conseils citoyens offrent de nouvelles voies pour que la voix des citoyens soit réellement entendue et intégrée dans le processus décisionnel.</p>\n\n<p>S'engageons pour une  démocratie plus inclusive et responsive aux besoins de tous.  Il est temps de rendre la démocratie un outil puissant pour le bien commun et de  donner aux citoyens le pouvoir d'agir activement sur leur avenir.</p>\n\n</body>\n\n</html>\n\n\n\n",
+      "date": "2025-09-22T08:01:44.060Z",
+      "isFeatured": false,
+      "views": 0
     }
   ]
 }

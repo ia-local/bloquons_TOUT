@@ -44,24 +44,26 @@ export function initLayerMap(allDataPassed, legendConfigPassed) {
 
             if (points.length > 0) {
                 const layerGroup = L.layerGroup();
-                const firstPoint = points[0];
 
-                const customIcon = L.icon({
-                    iconUrl: `src/img/${subConfig.icon}`,
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 32],
-                    popupAnchor: [0, -32]
+                points.forEach(point => {
+                    const customIcon = L.icon({
+                        iconUrl: `src/img/${subConfig.icon}`,
+                        iconSize: [32, 32],
+                        iconAnchor: [16, 32],
+                        popupAnchor: [0, -32]
+                    });
+
+                    const marker = L.marker([point.lat, point.lon], { icon: customIcon });
+                    
+                    let popupContent = `<b>${point.name || subcategoryName}</b><br>${point.description || ''}`;
+
+                    if (categoryName === "RIC" && point.votes_for !== undefined) {
+                         popupContent += `<br>Votes Pour: ${point.votes_for}<br>Votes Contre: ${point.votes_against}<br>Niveau: ${point.level}<br>Date limite: ${point.deadline}`;
+                    }
+
+                    marker.bindPopup(popupContent);
+                    layerGroup.addLayer(marker);
                 });
-
-                const marker = L.marker([firstPoint.lat, firstPoint.lon], { icon: customIcon });
-                const popupContent = `
-                    <b>${subcategoryName} (${points.length})</b><br>
-                    <ul style="max-height: 200px; overflow-y: scroll; list-style: none; padding: 0;">
-                        ${points.map(p => `<li>- ${p.name}</li>`).join('')}
-                    </ul>
-                `;
-                marker.bindPopup(popupContent);
-                layerGroup.addLayer(marker);
                 
                 markerLayers[subcategoryName] = layerGroup;
                 layerGroup.addTo(mapInstance);
@@ -100,35 +102,33 @@ export function categorizeData(data, config) {
             const items = data[dataKey] ? (Array.isArray(data[dataKey]) ? data[dataKey] : [data[dataKey]]) : [];
 
             items.forEach(item => {
-                // Logique pour les actions de manifestation
-                if (item.actions && item.actions.length > 0) {
+                let subcategoryName = null;
+                const itemType = item.type || item.voteMethod || '';
+
+                if (categoryName === "Manifestations & Actions" && item.actions) {
                     item.actions.forEach(action => {
-                        let actionSubcategoryName = "Opérations Spéciales";
                         const matchingSubcategory = categoryConfig.subcategories?.find(sub => sub.typeFilter && sub.typeFilter.includes(action.type));
                         if (matchingSubcategory) {
-                            actionSubcategoryName = matchingSubcategory.name;
-                        }
-
-                        if (!categorized[categoryName][actionSubcategoryName]) {
-                            categorized[categoryName][actionSubcategoryName] = [];
-                        }
-                        if (action.locations) {
-                            action.locations.forEach(loc => {
-                                categorized[categoryName][actionSubcategoryName].push({
-                                    name: loc.name || loc.city || action.description,
-                                    description: action.description,
-                                    lat: loc.lat,
-                                    lon: loc.lon
+                            subcategoryName = matchingSubcategory.name;
+                            if (!categorized[categoryName][subcategoryName]) { categorized[categoryName][subcategoryName] = []; }
+                            if (action.locations) {
+                                action.locations.forEach(loc => {
+                                    categorized[categoryName][subcategoryName].push({
+                                        name: loc.name || loc.city || action.description,
+                                        description: action.description,
+                                        lat: loc.lat,
+                                        lon: loc.lon
+                                    });
                                 });
-                            });
+                            }
                         }
                     });
-                } 
-                // Logique pour les points de manifestation simples ou les autres catégories
-                else {
-                    let subcategoryName = null;
-                    const itemType = item.type || '';
-                    
+                } else if (categoryName === "RIC" && item.voteMethod) {
+                    subcategoryName = item.voteMethod;
+                }
+                
+                // Logique de catégorisation pour les autres catégories
+                if (!subcategoryName) {
                     const matchingSubcategory = categoryConfig.subcategories?.find(sub => sub.typeFilter && sub.typeFilter.includes(itemType));
                     if (matchingSubcategory) {
                         subcategoryName = matchingSubcategory.name;
@@ -143,29 +143,24 @@ export function categorizeData(data, config) {
                     } else if (categoryName === "Organisations") {
                         if (dataKey === "syndicats") subcategoryName = "Sièges Syndicaux";
                         else if (dataKey === "cnccfp_partis") subcategoryName = "Partis Politiques";
-                    } else if (categoryName === "Pétitions") {
-                        subcategoryName = "Pétitions";
                     }
-                    
-                    if (subcategoryName) {
-                        if (!categorized[categoryName][subcategoryName]) {
-                            categorized[categoryName][subcategoryName] = [];
-                        }
-                        
-                        const points = item.locations ? item.locations : (item.lat && item.lon ? [item] : []);
-                        points.forEach(loc => {
-                            categorized[categoryName][subcategoryName].push({
-                                name: loc.name || loc.city || item.name || item.title,
-                                description: item.description,
-                                lat: loc.lat,
-                                lon: loc.lon
-                            });
+                }
+                
+                if (subcategoryName) {
+                    if (!categorized[categoryName][subcategoryName]) { categorized[categoryName][subcategoryName] = []; }
+                    const points = item.locations ? item.locations : (item.lat && item.lon ? [item] : []);
+                    points.forEach(loc => {
+                        categorized[categoryName][subcategoryName].push({
+                            name: loc.name || loc.city || item.title || item.name,
+                            description: item.description,
+                            lat: loc.lat,
+                            lon: loc.lon,
+                            ... (categoryName === "RIC" ? { votes_for: item.votes_for, votes_against: item.votes_against, level: item.level, deadline: item.deadline } : {})
                         });
-                    }
+                    });
                 }
             });
         });
     });
-
     return categorized;
 }

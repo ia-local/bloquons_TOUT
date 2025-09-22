@@ -140,6 +140,11 @@ https://www.youtube.com/shorts/tBar02V7UiI
 
 
 
+===========
+https://www.youtube.com/shorts/yEePBJnjxnY
+===========
+
+
 https://www.youtube.com/watch?v=GMTiMZSyhGA
 
 [_] Paris : https://www.youtube.com/shorts/h8TX4tdl4FQ
@@ -155,3 +160,10 @@ https://www.youtube.com/shorts/MaO-g6PU9T0
 
 Mobilisation nationale : kinés, pharmaciens, enseignants, ouvriers… tous en grève
 https://www.youtube.com/watch?v=sRby9BnHnlA
+
+
+========
+20 Septembre 2025
+========
+https://www.youtube.com/watch?v=3RDgf_ljx9E&t=93s
+https://www.youtube.com/shorts/DdlEN-G6wOE

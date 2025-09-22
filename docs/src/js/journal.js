@@ -1,13 +1,46 @@
-// Fichier : public/src/js/journal.js
+// Fichier : docs/src/js/journal.js
 
 /**
  * Fonction d'initialisation de la page Journal.
+ * Cette fonction est le point d'entrée pour toutes les pages liées au journal.
+ * @param {string} pageType - Le type de page à charger ('accueil', 'edition', etc.)
  */
-export async function initJournalPage() {
-    console.log("Initialisation de la page Journal...");
+export async function initJournalPage(pageType) {
+    console.log(`Initialisation de la page Journal - Type: ${pageType}...`);
     
-    // Attacher les écouteurs d'événements du menu et du bouton de génération initial
-    document.getElementById('generate-draft-btn')?.addEventListener('click', () => handleGenerateDraft());
+    // On charge la sous-page correspondante
+    switch (pageType) {
+        case 'edition':
+            setupEditionPage();
+            break;
+        case 'quotidien':
+            await fetchAndRenderDailyPosts();
+            break;
+        case 'historique':
+            await fetchAndRenderHistoricalTimeline();
+            break;
+        default: // 'accueil' ou un cas non spécifié
+            await fetchAndRenderFeaturedArticle();
+            break;
+    }
+}
+/**
+ * Configuration de la page d'édition.
+ * Gère l'interface de création et de modification d'articles.
+ */
+function setupEditionPage() {
+    console.log("Initialisation de la page Édition...");
+    
+    // Ajout d'écouteurs d'événements pour le générateur de brouillon
+    const generateBtn = document.getElementById('generate-draft-btn');
+    if (generateBtn) {
+        generateBtn.addEventListener('click', () => {
+            const topic = document.getElementById('journal-title-input').value;
+            handleGenerateDraft(topic);
+        });
+    }
+
+    // Ajout d'écouteurs d'événements pour les thématiques du menu latéral
     document.querySelectorAll('.journal-side-menu nav a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -16,35 +49,15 @@ export async function initJournalPage() {
             handleGenerateDraft(topic);
         });
     });
-
-    await fetchAndRenderPosts();
-}
-
-/**
- * Attache les écouteurs d'événements aux boutons de régénération et de sauvegarde.
- * Cette fonction est appelée APRÈS la génération d'un brouillon.
- */
-function setupRegenerateAndSaveEvents() {
+    
+    // Écouteurs pour les boutons de régénération et de sauvegarde
     const saveBtn = document.getElementById('save-article-btn');
-    const regenerateTitleBtn = document.getElementById('regenerate-title-btn');
-    const regenerateImageBtn = document.getElementById('regenerate-image-btn');
-    const regenerateArticleBtn = document.getElementById('regenerate-article-btn');
-
     if (saveBtn) {
         saveBtn.addEventListener('click', handleSaveArticle);
-        saveBtn.style.display = 'block'; // Afficher le bouton
     }
-
-    if (regenerateTitleBtn) {
-        regenerateTitleBtn.addEventListener('click', () => regenerateContent('title'));
-    }
-    if (regenerateImageBtn) {
-        regenerateImageBtn.addEventListener('click', () => regenerateContent('image'));
-    }
-    if (regenerateArticleBtn) {
-        regenerateArticleBtn.addEventListener('click', () => regenerateContent('article'));
-    }
-    document.querySelector('.regenerate-controls').style.display = 'flex';
+    document.getElementById('regenerate-title-btn')?.addEventListener('click', () => regenerateContent('title'));
+    document.getElementById('regenerate-image-btn')?.addEventListener('click', () => regenerateContent('image'));
+    document.getElementById('regenerate-article-btn')?.addEventListener('click', () => regenerateContent('article'));
 }
 
 /**
@@ -52,11 +65,13 @@ function setupRegenerateAndSaveEvents() {
  * @param {string} topic - La thématique de l'article.
  */
 async function handleGenerateDraft(topic) {
-    const title = document.getElementById('journal-title-input').value;
     const previewArea = document.getElementById('draft-preview');
     const contentArea = document.getElementById('journal-content-textarea');
+    const titleInput = document.getElementById('journal-title-input');
+    
+    const finalTopic = topic;
 
-    if (!title && !topic) {
+    if (!finalTopic) {
         alert("Veuillez entrer un titre ou sélectionner une thématique.");
         return;
     }
@@ -64,20 +79,25 @@ async function handleGenerateDraft(topic) {
     previewArea.innerHTML = '<h3>Aperçu du brouillon</h3><p>Génération en cours par l\'IA...</p>';
     
     try {
-        const response = await fetch(`/journal/generate?topic=${encodeURIComponent(topic || title)}`);
+        const response = await fetch(`/journal/generate?topic=${encodeURIComponent(finalTopic)}`);
+        
         if (!response.ok) {
             const error = await response.json();
-            throw new Error(error.error);
+            throw new Error(error.error || 'Erreur inconnue lors de la génération.');
         }
+        
         const newPost = await response.json();
         
         localStorage.setItem('currentArticle', JSON.stringify(newPost));
         
-        renderDraftPreview(newPost.title, newPost.media, newPost.article);
+        // Mettre à jour le titre et le contenu pour la prévisualisation et l'édition
+        titleInput.value = newPost.title;
         contentArea.value = newPost.article;
 
-        // Appel de la fonction pour attacher les écouteurs des nouveaux boutons
-        setupRegenerateAndSaveEvents();
+        renderDraftPreview(newPost.title, newPost.media, newPost.article);
+
+        document.getElementById('save-article-btn').style.display = 'block';
+        document.querySelector('.regenerate-controls').style.display = 'flex';
         
     } catch (error) {
         console.error('Erreur lors de la génération du brouillon:', error);
@@ -96,7 +116,7 @@ async function regenerateContent(type) {
         return;
     }
 
-    const topic = document.getElementById('journal-title-input').value || currentArticle.title;
+    const topic = document.getElementById('journal-title-input').value;
     let url = '';
     let method = 'GET';
     let body = null;
@@ -172,8 +192,13 @@ async function handleSaveArticle() {
         });
         
         if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error);
+            const errorText = await response.text();
+            try {
+                const errorJson = JSON.parse(errorText);
+                throw new Error(errorJson.error || 'Erreur inconnue');
+            } catch (jsonError) {
+                throw new Error(`Le serveur a renvoyé une erreur: ${response.status} ${response.statusText}. Réponse: ${errorText.substring(0, 50)}...`);
+            }
         }
         
         alert("Article publié avec succès !");
@@ -181,13 +206,10 @@ async function handleSaveArticle() {
         localStorage.removeItem('currentArticle');
         document.getElementById('journal-title-input').value = '';
         document.getElementById('journal-content-textarea').value = '';
-        document.getElementById('draft-preview').innerHTML = '';
+        document.getElementById('draft-preview').innerHTML = '<h3>Aperçu du brouillon</h3>';
 
-        // Masquer les boutons après la sauvegarde
         document.querySelector('.regenerate-controls').style.display = 'none';
         document.getElementById('save-article-btn').style.display = 'none';
-
-        await fetchAndRenderPosts();
         
     } catch (error) {
         console.error('Erreur lors de la publication:', error);
@@ -205,19 +227,78 @@ function renderDraftPreview(title, mediaUrl, content) {
         <div class="draft-content">
             <h4>${title}</h4>
             <img src="${mediaUrl}" alt="Image illustrant le sujet">
-            <div>${content}</div>
+            <div class="post-content">${content}</div>
         </div>
     `;
 }
 
 /**
- * Récupère les articles existants depuis l'API et les rend dans la galerie.
+ * Récupère le contenu d'un article depuis un fichier HTML et l'insère dans le DOM.
+ * @param {string} articlePath - Le chemin d'accès relatif au fichier HTML.
+ * @returns {Promise<string>} Le contenu HTML de l'article.
  */
-async function fetchAndRenderPosts() {
-    const postsContainer = document.getElementById('journal-posts-container');
-    if (!postsContainer) return;
+async function fetchArticleContent(articlePath) {
+    try {
+        if (!articlePath) {
+            return `<p class="error-message">Contenu de l'article non trouvé.</p>`;
+        }
+        const response = await fetch(articlePath);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch article content from ${articlePath}.`);
+        }
+        return await response.text();
+    } catch (error) {
+        console.error('Error fetching article content:', error);
+        return `<p class="error-message">Erreur de chargement de l'article.</p>`;
+    }
+}
+/**
+ * Récupère et rend l'article à la une sur la page d'accueil (journal.html).
+ */
+async function fetchAndRenderFeaturedArticle() {
+    const container = document.getElementById('featured-article-container');
+    if (!container) return;
     
-    postsContainer.innerHTML = '<p>Chargement des articles...</p>';
+    container.innerHTML = '<p>Chargement de l\'article à la une...</p>';
+
+    try {
+        const response = await fetch('/journal/article-du-jour');
+        
+        if (!response.ok) {
+            container.innerHTML = '<p>Aucun article à la une pour le moment.</p>';
+            return;
+        }
+        const post = await response.json();
+        
+        const articleContent = await fetchArticleContent(post.articlePath);
+
+        container.innerHTML = '';
+        const postElement = document.createElement('article');
+        postElement.className = 'journal-post-card featured-article';
+        postElement.innerHTML = `
+            <h3>${post.title}</h3>
+            <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
+            <img src="${post.media}" alt="${post.title}">
+            <div class="post-content">${articleContent}</div>
+        `;
+        container.appendChild(postElement);
+
+    } catch (error) {
+        console.error('Erreur de chargement de l\'article à la une:', error);
+        container.innerHTML = `<p class="error-message">Erreur de chargement : ${error.message}</p>`;
+    }
+}
+
+
+
+/**
+ * Récupère les articles quotidiens et les rend sur la page "Quotidien".
+ */
+async function fetchAndRenderDailyPosts() {
+    const container = document.getElementById('daily-posts-container');
+    if (!container) return;
+    
+    container.innerHTML = '<p>Chargement des articles...</p>';
     
     try {
         const response = await fetch('/journal/posts');
@@ -227,24 +308,79 @@ async function fetchAndRenderPosts() {
         const posts = await response.json();
         
         if (posts.length > 0) {
-            postsContainer.innerHTML = '';
-            posts.forEach(post => {
+            container.innerHTML = '';
+            for (const post of posts) {
+                const articleContent = await fetchArticleContent(post.articlePath);
+                
                 const postElement = document.createElement('article');
                 postElement.className = 'journal-post-card';
                 postElement.innerHTML = `
                     <h3>${post.title}</h3>
                     <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
                     <img src="${post.media}" alt="${post.title}">
-                    <div class="post-content">${post.article}</div>
+                    <div class="post-content">${articleContent}</div>
                 `;
-                postsContainer.appendChild(postElement);
-            });
+                container.appendChild(postElement);
+            }
         } else {
-            postsContainer.innerHTML = '<p>Aucun article n\'a encore été publié.</p>';
+            container.innerHTML = '<p>Aucun article n\'a encore été publié.</p>';
         }
         
     } catch (error) {
         console.error('Erreur de chargement des articles:', error);
-        postsContainer.innerHTML = `<p class="error-message">Erreur de chargement : ${error.message}</p>`;
+        container.innerHTML = `<p class="error-message">Erreur de chargement : ${error.message}</p>`;
+    }
+}
+
+/**
+ * Récupère et rend la chronologie complète et les articles de journal sur la page "Historique".
+ */
+async function fetchAndRenderHistoricalTimeline() {
+    const container = document.getElementById('historique-container');
+    if (!container) return;
+    
+    container.innerHTML = '<p>Chargement de l\'historique...</p>';
+    
+    try {
+        const response = await fetch('/journal/historique');
+        if (!response.ok) {
+            throw new Error('Échec du chargement de l\'historique.');
+        }
+        const historicalData = await response.json();
+
+        if (historicalData.length > 0) {
+            container.innerHTML = '';
+            for (const item of historicalData) {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'timeline-item';
+                
+                let contentHTML = '';
+                if (item.type === 'chronology') {
+                    contentHTML = `
+                        <h4>${item.title} - ${item.subtitle}</h4>
+                        <p class="timeline-date">${new Date(item.start_date).toLocaleDateString()}</p>
+                        <p>${item.description}</p>
+                        <p class="timeline-meta">Lieu : ${item.city}</p>
+                    `;
+                } else if (item.type === 'article') {
+                    const articleContent = await fetchArticleContent(item.articlePath);
+                    contentHTML = `
+                        <h4>Article du Journal : ${item.title}</h4>
+                        <p class="timeline-date">${new Date(item.date).toLocaleDateString()}</p>
+                        <img src="${item.media}" alt="${item.title}">
+                        <div class="post-content">${articleContent}</div>
+                    `;
+                }
+                
+                itemElement.innerHTML = contentHTML;
+                container.appendChild(itemElement);
+            }
+        } else {
+            container.innerHTML = '<p>Aucun événement ou article n\'a encore été enregistré.</p>';
+        }
+        
+    } catch (error) {
+        console.error('Erreur de chargement de l\'historique:', error);
+        container.innerHTML = `<p class="error-message">Erreur de chargement : ${error.message}</p>`;
     }
 }

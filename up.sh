@@ -31,7 +31,7 @@ menu() {
     echo " ║     ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈     ║     ║                                                                                ║";
     echo " ║       [5] Cv numérique              ║     ║                                                                                ║";
     echo " ║       [6] SmartContract             ║     ║                                                                                ║";
-    echo " ║       [7] Machine Learning          ║     ║                                                                                ║";
+    echo " ║       [7] Réseau.                   ║     ║                                                                                ║";
     echo " ║       [8] Journal                   ║     ║                                                                                ║";
     echo " ║                                     ║     ║                                                                                ║";
     echo " ║     ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈     ║     ║                                                                                ║";
@@ -50,24 +50,50 @@ read -p "Entrez votre choix : " commande
 
 case $commande in
 
-        menu)
+        0)
             make menu
             ;;
-        update)
-            make update
+        1)
+            make democratie
+            ;;
+        2)
+            make dashboard
             ;;
         3)
-            make commande3
+            make playground
             ;;
         4)
-            make commande4
+            make missions
             ;;
         5)
-            make commande5
+            make cvnu
             ;;
         6)
-            make commande6
+            make smartContract
             ;;
+        7)
+            make reseau
+            ;;
+        8)
+            make journal
+            ;;
+        9)
+            make tresorie
+            ;;
+        10)
+            make organisation
+            ;;
+        11)
+            make contacts
+            ;;
+        12)
+            make map
+            ;;
+        13)
+        make Exit
+            ;;
+            
+            
         r)
             clear
             menu

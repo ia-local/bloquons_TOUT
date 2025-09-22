@@ -2,7 +2,7 @@
   "financial_flows": [],
   "tresorerieCompteCampagne": 300011,
   "affaires": {
-  "id": "missios = plan de campgne"
+    "id": "missios = plan de campgne"
   },
   "chronology": [
     {
@@ -129,6 +129,69 @@
       "media": "https://ia-local.github.io/Manifest.910-2025/media/generated-image.jpg",
       "article": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Démocratie et Manifestation : Un Droit Sacré ou une Menace pour l'Ordre Public ?</title>\n</head>\n<body>\n\n<h1>Démocratie et Manifestation : Un Droit Sacré ou une Menace pour l'Ordre Public ?</h1>\n\n<p>La manifestation, élément fondamental de la démocratie, trouve ses racines dans le droit fondamental de liberté d'expression et d'assemblée. Elle constitue un outil puissant pour faire entendre les voix citoyennes et exercer un contrôle sur les actions des pouvoirs publics.</p>\n\n<p>Toutefois, la tension entre le droit de manifester et le besoin de maintenir l'ordre public est omniprésente dans les sociétés démocratiques. Face à des manifestations potentiellement violentes ou perturbateurs, les autorités sont  confrontées à un dilemme : respecter la liberté d'expression tout en assurant la sécurité des citoyens.</p>\n\n<h2>Les Facettes du Droit à la Manifestation</h2>\n\n<p>Le droit de manifester, bien que généralement protégé dans les cadres démocratiques, ne constituant pas un droit absolu.  Il est assujetti à certaines restrictions légales pour éviter les abus et protéger les droits des autres citoyens, notamment concernant la sécurité, la liberté de circulation et le bon fonctionnement des services publics.</p>\n\n<p>La législation nationale varie quant aux modalités de manifestation, à l'autorisation préalable, aux zones ou horaires limités. La jurisprudence internationale s'est aussi attachée à trouver un juste équilibre entre la liberté d'expression et la sécurité publique.</p>\n\n<h2>Le Défi de la Communication et du Dialogue</h2>\n\n<p>Dans un contexte de fracture sociale et de polarisation croissante, il devient primordial de favoriser le dialogue et la communication entre les manifestants et les pouvoirs publics. L'écoute des préoccupations et des revendications des citoyens est essentielle pour répondre efficacement et construire des solutions constructives.</p>\n\n<p>Il est également crucial de sensibiliser la population à la dignité et au respect mutuel, même face à des opinions divergentes. Encourageant une attitude de tolérance et d'ouverture, la société civile peut contribuer à l'épanouissement de la démocratie et à la consolidation du lien social.</p>\n\n\n</body>\n</html>\n",
       "date": "2025-09-16T09:39:43.432Z"
+    },
+    {
+      "id": "49f473d0-4b02-4f54-bd84-4eeb620cfadd",
+      "title": "Démocratie Participative",
+      "media": "/media/default-article-image.jpg",
+      "articlePath": "/output/article_49f473d0-4b02-4f54-bd84-4eeb620cfadd.html",
+      "date": "2025-09-22T08:22:02.995Z",
+      "isFeatured": false,
+      "views": 0
+    },
+    {
+      "id": "94f91608-2df4-4ac1-8a85-fa7e4889088c",
+      "title": "Vox Populi : La démocratie participative se déploie ",
+      "media": "/media/image_e93a682a-087a-4974-9bdc-2a093e4e0cfe.webp",
+      "articlePath": "/output/article_94f91608-2df4-4ac1-8a85-fa7e4889088c.html",
+      "date": "2025-09-22T09:17:20.192Z",
+      "isFeatured": false,
+      "views": 0
+    },
+    {
+      "id": "77793f85-bb3a-46bf-bb36-2a0c2139887d",
+      "title": "Démocratie participative : Le pouvoir au peuple !  ",
+      "media": "/media/image_640a7839-33d7-4a86-b5b5-abe548e9d152.webp",
+      "articlePath": "/output/article_77793f85-bb3a-46bf-bb36-2a0c2139887d.html",
+      "date": "2025-09-22T09:29:25.274Z",
+      "isFeatured": false,
+      "views": 0
+    },
+    {
+      "id": "464227a5-d1be-4d08-b9b2-bfb8cd2fa933",
+      "title": "Rassemblement 8 septembre : Bayrou, dehors !  ",
+      "media": "/media/image_3ce13f06-20aa-4857-aa91-5501b0c1d368.webp",
+      "articlePath": "/output/article_464227a5-d1be-4d08-b9b2-bfb8cd2fa933.html",
+      "date": "2025-09-22T09:32:19.958Z",
+      "isFeatured": false,
+      "views": 0
+    },
+    {
+      "id": "02ea3cf2-072f-42df-bf54-90a3fbc30e9b",
+      "title": "REVÊTUMES UN  RVB  POUR  TOUS ?  10 SEPTEMBRE ",
+      "media": "/media/image_da022385-c01a-49ff-ad5e-6dd1e93bab28.webp",
+      "articlePath": "/output/article_02ea3cf2-072f-42df-bf54-90a3fbc30e9b.html",
+      "date": "2025-09-22T09:32:47.144Z",
+      "isFeatured": false,
+      "views": 0
+    },
+    {
+      "id": "6b15ec06-54dc-473b-aa78-f2492d1ae587",
+      "title": "PANCARTE : Justice fiscale, manifeste le 18 septembre. ",
+      "media": "/media/image_f3275b2b-3e7e-440d-bfed-d4144636f63c.webp",
+      "articlePath": "/output/article_6b15ec06-54dc-473b-aa78-f2492d1ae587.html",
+      "date": "2025-09-22T09:33:43.539Z",
+      "isFeatured": false,
+      "views": 0
+    },
+    {
+      "id": "b7f73514-e047-4c60-baac-b6c2e21985bc",
+      "title": "Justice fiscale : PANCARTE mobilise le 18 septembre ",
+      "media": "/media/image_ce6a3839-0161-4033-ba85-8a2f2f144471.webp",
+      "articlePath": "/output/article_b7f73514-e047-4c60-baac-b6c2e21985bc.html",
+      "date": "2025-09-22T09:35:24.970Z",
+      "isFeatured": false,
+      "views": 0
     }
   ],
   "rics": [],
@@ -1841,7 +1904,28 @@
   },
   "beneficiaries": [],
   "cv_contracts": [],
-  "polls": [],
+  "polls": [
+    {
+      "id": "55fc3da9-54f8-479a-a77a-feaae4479304",
+      "messageId": 861,
+      "question": "Quel sujet devrions-nous aborder dans le prochain live ?",
+      "options": [
+        {
+          "text": "Justice Sociale",
+          "votes": 0
+        },
+        {
+          "text": "Justice Fiscale",
+          "votes": 0
+        },
+        {
+          "text": "Justice Climatique",
+          "votes": 0
+        }
+      ],
+      "creatorId": 5715486909
+    }
+  ],
   "organizers": [],
   "manifestation_points": [
     {

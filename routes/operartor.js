@@ -6,30 +6,40 @@ const { getRelevantDataForAI } = require('./utils.js'); // Importez la nouvelle 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-// ... (le reste de vos imports et configurations)
 const { readJsonFile } = require('../serveur.js'); // Assurez-vous d'avoir exporté cette fonction
 /**
  * Génère un résumé des données de l'application via l'IA.
  */
 async function generateSummary() {
-    // Utilisez la fonction utilitaire pour obtenir des données limitées
-    const relevantData = await getRelevantDataForAI();
+    try {
+        const database = await readJsonFile('../database.json');
+        
+        // --- NOUVEAU : Créer un résumé concis des données avant de l'envoyer à l'IA ---
+        const summaryData = {
+            totalMissions: database.missions.length,
+            totalBoycotts: database.boycotts.length,
+            totalRics: database.rics.length,
+            caisseSolde: database.caisse_manifestation.solde
+            // N'incluez pas tout le contenu !
+        };
+        
+        const prompt = `Génère un résumé concis de l'état actuel de notre projet de manifestation.
+        Données clés : ${JSON.stringify(summaryData, null, 2)}
+        Ne dépasse pas 150 mots.`;
 
-    const prompt = `En tant que Pupitre de Contrôle, analyse le rapport suivant et génère un résumé succinct pour l'opérateur. Utilise des informations claires et concises. Les données pertinentes sont : ${JSON.stringify(relevantData)}`;
-
-    const chatCompletion = await groq.chat.completions.create({
-        messages: [{
-            role: "user",
-            content: prompt,
-        }],
-        model: "mixtral-8x7b-32768", // Ou un autre modèle
-        temperature: 0.5,
-        max_tokens: 500, // Limite la taille de la réponse pour éviter des résumés trop longs
-    });
-
-    return chatCompletion.choices[0].message.content;
+        const chatCompletion = await groq.chat.completions.create({
+            messages: [{ role: 'user', content: prompt }],
+            model: 'gemma2-9b-it',
+            temperature: 0.7,
+            max_tokens: 250 // Limitez la réponse pour éviter l'erreur
+        });
+        
+        return chatCompletion.choices[0].message.content;
+    } catch (error) {
+        console.error('Erreur lors de la génération du résumé:', error);
+        throw new Error('Échec de la génération du résumé: ' + error.message);
+    }
 }
-
 /**
  * Génère un plan de développement basé sur les données de l'application.
  */

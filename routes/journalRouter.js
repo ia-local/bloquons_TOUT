@@ -1,3 +1,5 @@
+// Fichier : routes/journal.js
+
 const express = require('express');
 const router = express.Router();
 const Groq = require('groq-sdk');
@@ -6,27 +8,25 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs/promises');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// Clés API
+// Clés API et initialisation
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-
-if (!GROQ_API_KEY) {
-    console.error("GROQ_API_KEY non défini. Le serveur ne pourra pas utiliser l'IA.");
-}
-if (!GEMINI_API_KEY) {
-    console.warn("GEMINI_API_KEY non défini. Le serveur utilisera un lien d'image statique par défaut.");
-}
-
 const groq = new Groq({ apiKey: GROQ_API_KEY });
 const genAI = GEMINI_API_KEY ? new GoogleGenerativeAI(GEMINI_API_KEY) : null;
 
-const DATABASE_FILE_PATH = path.join(__dirname, '..', 'database.json');
-const OUTPUT_DIR = path.join(__dirname, '..', 'output');
+// Chemins des dossiers pour les sauvegardes
+const DATABASE_FILE_PATH = path.join(__dirname, '..', 'data', 'database.json');
+const OUTPUT_DIR = path.join(__dirname, '..', 'docs', 'output'); // Contenus HTML des articles
+const MEDIA_DIR = path.join(__dirname, '..', 'docs', 'media'); // Images des articles
+const DEFAULT_IMAGE_PATH = '/media/default-article-image.jpg';
 
-// Créer le dossier 'output' s'il n'existe pas
+// Créer les dossiers s'ils n'existent pas
 fs.mkdir(OUTPUT_DIR, { recursive: true }).catch(console.error);
+fs.mkdir(MEDIA_DIR, { recursive: true }).catch(console.error);
 
-// Fonction utilitaire pour lire la base de données
+// Fonctions utilitaires pour lire/écrire la base de données
+
+// Fonctions utilitaires pour lire/écrire la base de données
 const readDatabase = async () => {
     try {
         const data = await fs.readFile(DATABASE_FILE_PATH, 'utf8');
@@ -34,14 +34,13 @@ const readDatabase = async () => {
     } catch (error) {
         if (error.code === 'ENOENT') {
             console.warn('Le fichier database.json n\'existe pas, initialisation de la base de données vide.');
-            return { journal_posts: [] };
+            return { journal_posts: [], chronology: [] };
         }
         console.error('Erreur lors de la lecture de database.json:', error);
         throw error;
     }
 };
 
-// Fonction utilitaire pour écrire dans la base de données
 const writeDatabase = async (db) => {
     try {
         await fs.writeFile(DATABASE_FILE_PATH, JSON.stringify(db, null, 2), 'utf8');
@@ -59,22 +58,19 @@ router.get('/generate', async (req, res) => {
     }
 
     try {
-        // Génération du titre
         const titleResponse = await groq.chat.completions.create({
-            messages: [{ role: 'user', content: `Génère un titre d'article de journal sur le thème : ${topic}. Fais moins de 10 mots.` }],
+            messages: [{ role: 'user', content: `Génère un titre d'article de journal sur le thème : ${topic}. Ta réponse doit contenir uniquement le titre et faire moins de 10 mots.` }],
             model: 'gemma2-9b-it'
         });
         const title = titleResponse.choices[0].message.content;
 
-        // Génération du contenu de l'article
         const contentResponse = await groq.chat.completions.create({
             messages: [{ role: 'user', content: `Rédige un article de journal sur le thème '${topic}'. Utilise un style formel et pertinent pour l'actualité citoyenne. Le contenu doit être formaté en HTML.` }],
             model: 'gemma2-9b-it'
         });
         const article = contentResponse.choices[0].message.content;
-        
-        let mediaUrl = 'https://ia-local.github.io/Manifest.910-2025/media/generated-image.jpg';
-        let mediaBase64 = null;
+
+        let imagePath = DEFAULT_IMAGE_PATH;
 
         if (genAI) {
             try {
@@ -83,12 +79,24 @@ router.get('/generate', async (req, res) => {
                 const result = await model.generateContent(imagePrompt);
                 const response = result.response;
                 const parts = response.candidates[0].content.parts;
+                
+                let imageData;
                 for (const part of parts) {
                     if (part.inlineData && part.inlineData.mimeType.startsWith('image/')) {
-                        mediaUrl = `data:image/webp;base64,${part.inlineData.data}`;
-                        mediaBase64 = part.inlineData.data;
+                        imageData = part.inlineData.data;
+                        break;
                     }
                 }
+                
+                if (imageData) {
+                    const idSeed = uuidv4();
+                    const imageFileName = `image_${idSeed}.webp`;
+                    const buffer = Buffer.from(imageData, 'base64');
+                    const imageFilePath = path.join(MEDIA_DIR, imageFileName);
+                    await fs.writeFile(imageFilePath, buffer);
+                    imagePath = `/media/${imageFileName}`;
+                }
+                
             } catch (imageError) {
                 console.error("Erreur lors de la génération de l'image:", imageError);
             }
@@ -97,10 +105,9 @@ router.get('/generate', async (req, res) => {
         const newPost = {
             id: uuidv4(),
             title: title,
-            media: mediaUrl,
+            media: imagePath, // On stocke directement le chemin du fichier
             article: article,
             date: new Date().toISOString(),
-            mediaBase64: mediaBase64
         };
         
         res.json(newPost);
@@ -156,7 +163,7 @@ router.post('/regenerate-image', async (req, res) => {
         const result = await model.generateContent(imagePrompt);
         const response = result.response;
         const parts = response.candidates[0].content.parts;
-        let mediaUrl = 'https://ia-local.github.io/Manifest.910-2025/media/generated-image.jpg';
+        let mediaUrl = DEFAULT_IMAGE_PATH;
         let mediaBase64 = null;
         for (const part of parts) {
             if (part.inlineData && part.inlineData.mimeType.startsWith('image/')) {
@@ -171,41 +178,32 @@ router.post('/regenerate-image', async (req, res) => {
     }
 });
 
-// Route pour récupérer tous les articles du journal
-router.get('/posts', async (req, res) => {
-    try {
-        const db = await readDatabase();
-        res.json(db.journal_posts || []);
-    } catch (error) {
-        res.status(500).json({ error: 'Erreur de lecture de la base de données.' });
-    }
-});
-
+// Route pour sauvegarder un nouvel article de journal
 // Route pour sauvegarder un nouvel article de journal
 router.post('/save-article', async (req, res) => {
-    const { title, content, mediaUrl, mediaBase64 } = req.body;
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const { title, content, mediaUrl } = req.body;
     const idSeed = uuidv4();
 
     if (!title || !content || !mediaUrl) {
-        return res.status(400).json({ error: 'Titre, contenu ou média manquant.' });
+        return res.status(400).json({ error: 'Titre, contenu ou lien vers l\'image manquant.' });
     }
 
     try {
-        // Sauvegarde de l'article en HTML et en Markdown
-        const articleFileName = `article_${timestamp}_${idSeed}.html`;
-        const contentFileName = `content_${timestamp}_${idSeed}.md`;
-        await fs.writeFile(path.join(OUTPUT_DIR, articleFileName), content, 'utf8');
-        await fs.writeFile(path.join(OUTPUT_DIR, contentFileName), content, 'utf8');
+        // Créer un fragment HTML pour l'article
+        const articleHTML = `
+            <article class="journal-post-card">
+                <h3>${title}</h3>
+                <p class="post-date">${new Date().toLocaleDateString()}</p>
+                <img src="${mediaUrl}" alt="${title}">
+                <div class="post-content">${content}</div>
+            </article>
+        `;
 
-        // Sauvegarde de l'image si elle est en Base64
-        let imageFileName = `image_${timestamp}_${idSeed}.png`;
-        if (mediaBase64) {
-            const buffer = Buffer.from(mediaBase64, 'base64');
-            await fs.writeFile(path.join(OUTPUT_DIR, imageFileName), buffer);
-        } else {
-            imageFileName = mediaUrl;
-        }
+        // Enregistrement du contenu HTML dans un fichier
+        const contentFileName = `article_${idSeed}.html`;
+        const contentPath = path.join(OUTPUT_DIR, contentFileName);
+        await fs.writeFile(contentPath, articleHTML, 'utf8');
+        const contentRelativePath = `/output/${contentFileName}`;
 
         // Enregistrement dans la base de données
         const db = await readDatabase();
@@ -216,9 +214,11 @@ router.post('/save-article', async (req, res) => {
         const newPost = {
             id: idSeed,
             title: title,
-            media: imageFileName, // On stocke le nom du fichier image
-            article: content,
-            date: new Date().toISOString()
+            media: mediaUrl,
+            articlePath: contentRelativePath,
+            date: new Date().toISOString(),
+            isFeatured: false,
+            views: 0
         };
         
         db.journal_posts.push(newPost);
@@ -231,13 +231,50 @@ router.post('/save-article', async (req, res) => {
     }
 });
 
-// Route pour la gestion des fichiers dans le dossier output
-router.get('/files', async (req, res) => {
+
+// Route pour récupérer tous les articles du journal
+router.get('/posts', async (req, res) => {
     try {
-        const files = await fs.readdir(OUTPUT_DIR);
-        res.json(files);
+        const db = await readDatabase();
+        const posts = db.journal_posts || [];
+        res.json(posts);
     } catch (error) {
-        res.status(500).json({ error: "Impossible de lister les fichiers." });
+        res.status(500).json({ error: 'Erreur de lecture de la base de données.' });
+    }
+});
+
+// Route pour récupérer l'article à la une
+router.get('/article-du-jour', async (req, res) => {
+    try {
+        const db = await readDatabase();
+        let featuredArticle = db.journal_posts.find(post => post.isFeatured) || null;
+
+        if (!featuredArticle) {
+            featuredArticle = db.journal_posts.sort((a, b) => (b.views || 0) - (a.views || 0))[0];
+        }
+
+        if (featuredArticle) {
+            res.json(featuredArticle);
+        } else {
+            res.status(404).json({ message: "Aucun article à la une trouvé." });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Erreur de lecture de la base de données.' });
+    }
+});
+
+// Route pour récupérer l'historique (chronologie + articles)
+router.get('/historique', async (req, res) => {
+    try {
+        const db = await readDatabase();
+        const historique = [
+            ...(db.chronology || []).map(item => ({ ...item, type: 'chronology' })),
+            ...(db.journal_posts || []).map(item => ({ ...item, type: 'article' }))
+        ];
+        historique.sort((a, b) => new Date(b.date || b.start_date) - new Date(a.date || a.start_date));
+        res.json(historique);
+    } catch (error) {
+        res.status(500).json({ error: 'Erreur lors de la récupération de l\'historique.' });
     }
 });
 

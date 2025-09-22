@@ -1,5 +1,8 @@
-// Fichier : public/src/js/layerLegend.js (Version corrigée)
+// Fichier : public/src/js/layerLegend.js
 
+// Les imports des fonctions `getMapInstance` et `getMarkerLayers` sont supprimés,
+// car elles sont définies dans `layerMap.js`.
+// `categorizeData` est également définie dans `layerMap.js`, donc l'importation ici était redondante.
 import { getMarkerLayers, getMapInstance, categorizeData } from './layerMap.js';
 
 let legendConfig = {};
@@ -17,8 +20,6 @@ export function initLegend(data, fetchedData) {
     categorizedPoints = categorizeData(allData, legendConfig);
     renderCategories();
 }
-
-// ... (fonctions renderCategories) ...
 
 function renderCategories() {
     const legendCategories = document.getElementById('map-categories-legend');
@@ -96,18 +97,22 @@ function renderSublist(categoryConfig, subcategoriesData) {
     
     const subcategories = categoryConfig.subcategories || [{ name: categoryConfig.name, icon: categoryConfig.icon }];
 
+    const sortPointsByVotes = (a, b) => (b.votes_for || 0) - (a.votes_for || 0);
+
     subcategories.forEach(subConfig => {
         const subcategoryName = subConfig.name;
         const subcategoryPoints = subcategoriesData && subcategoriesData[subcategoryName] ? subcategoriesData[subcategoryName] : [];
         const itemCount = subcategoryPoints.length;
 
-        // Créer un bouton pour la sous-catégorie principale
+        const sortedPoints = subcategoryName.includes('RIC') ? subcategoryPoints.sort(sortPointsByVotes) : subcategoryPoints;
+        const totalItems = sortedPoints.length;
+
         const showSubcategoryBtn = document.createElement('li');
         showSubcategoryBtn.className = 'legend-item';
         showSubcategoryBtn.setAttribute('data-category', categoryConfig.name);
         showSubcategoryBtn.setAttribute('data-subcategory', subcategoryName);
         const iconPath = `src/img/${subConfig.icon}`;
-        showSubcategoryBtn.innerHTML = `<span class="legend-icon" style="background-image: url('${iconPath}')"></span>${subcategoryName} (${itemCount})`;
+        showSubcategoryBtn.innerHTML = `<span class="legend-icon" style="background-image: url('${iconPath}')"></span>${subcategoryName} (${totalItems})`;
         
         showSubcategoryBtn.addEventListener('click', () => {
             const layer = getMarkerLayers()[subcategoryName];
@@ -127,21 +132,18 @@ function renderSublist(categoryConfig, subcategoriesData) {
         });
         legendListItems.appendChild(showSubcategoryBtn);
 
-        // NOUVEAU: Ajouter la liste des points individuels si elle n'est pas vide
-        if (subcategoryPoints.length > 0) {
+        if (totalItems > 0) {
             const pointsList = document.createElement('ul');
             pointsList.className = 'legend-item-list';
-            subcategoryPoints.forEach(point => {
+            sortedPoints.forEach(point => {
                 const pointItem = document.createElement('li');
-                pointItem.textContent = point.name;
+                pointItem.textContent = point.name || point.title;
                 pointItem.classList.add('clickable-point');
                 pointItem.addEventListener('click', (event) => {
-                    event.stopPropagation(); // Empêcher l'événement de se propager au parent (le bouton de sous-catégorie)
+                    event.stopPropagation();
                     const map = getMapInstance();
                     if (map) {
                         map.panTo([point.lat, point.lon]);
-                        // Logique pour ouvrir le popup du marqueur si nécessaire
-                        // par exemple, en trouvant le bon marqueur dans la couche
                         const layerGroup = getMarkerLayers()[subcategoryName];
                         if (layerGroup) {
                             layerGroup.eachLayer(marker => {

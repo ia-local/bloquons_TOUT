@@ -3,7 +3,7 @@
     {
       "name": "Manifestations & Actions",
       "icon": "manifestation-icon.png",
-      "dataKeys": ["manifestation_points_10_septembre", "manifestation_points_18_septembre"],
+      "dataKeys": ["manifestation_points","manifestation_points_10_septembre", "manifestation_points_18_septembre"],
       "subcategories": [
         { "name": "Rassemblements", "icon": "manifestation-icon.png", "typeFilter": ["Rassemblement", "Manifestation"] },
         { "name": "Blocages", "icon": "blocage-icon.png", "typeFilter": ["Blocage", "Blocage de lycée"] },
@@ -75,14 +75,21 @@
       "icon": "syndicats.png",
       "dataKeys": ["syndicats", "cnccfp_partis"],
       "subcategories": [
+        { "name": "organisation local", "icon": "syndicats.png" },
         { "name": "Sièges Syndicaux", "icon": "syndicats.png" },
         { "name": "Partis Politiques", "icon": "parti-icon.png" }
       ]
     },
     {
-      "name": "Pétitions",
+      "name": "RIC",
       "icon": "folder-icon.png",
-      "dataKeys": ["petitions"]
+      "dataKeys": ["rics"],
+      "subcategories": [
+        { "name": "RIC Législatif", "icon": "ric-legislatif.png", "voteFilter": "RIC Législatif" },
+        { "name": "RIC Abrogatoire", "icon": "ric-abrogatoire.png", "voteFilter": "RIC Abrogatoire" },
+        { "name": "RIC Constituant", "icon": "ric-constituant.png", "voteFilter": "RIC Constituant" },
+        { "name": "RIC Révocatoire", "icon": "ric-revocatoire.png", "voteFilter": "RIC Révocatoire" }
+      ]
     }
   ]
 }

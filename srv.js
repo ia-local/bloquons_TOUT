@@ -7,9 +7,9 @@ const Groq = require('groq-sdk');
 const { v4: uuidv4 } = require('uuid');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-const Web3 = require('web3'); // Non utilisé, mais laissé si vous en avez besoin
+const Web3 = require('web3');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const axios = require('axios'); // Non utilisé, mais laissé si vous en avez besoin
+const axios = require('axios');
 const cvnuRouter = require('./routes/cvnu.js');
 const reformeRouter = require('./routes/reforme.js');
 const missionsRouter = require('./routes/quests.js');
@@ -21,9 +21,9 @@ const sassMiddleware = require('node-sass-middleware');
 const operator = require('./server_modules/operator.js');
 const { calculateDashboardInsights, calculateUtmi } = require('./server_modules/utms_calculator.js');
 const reseauRouter = require('./routes/reseauRouter.js');
-const journalRouter = require('./routes/journalRouter.js');
+const journalRouter = require('./routes/journalRouter.js'); // Le routeur journal est déjà présent
 const democratieRouter = require('./routes/democratie.js');
-const telegramBot = require('./routes/telegramRouter.js'); // Import du bot
+const telegramBot = require('./routes/telegramRouter.js');
 const google = require('googleapis').google;
 const writeQueue = Promise.resolve();
 let isWriting = false;
@@ -54,7 +54,7 @@ const port = process.env.PORT || 3000;
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 let chatHistory = [];
 const CHAT_HISTORY_FILE = path.join(__dirname, 'data', 'chat_history.json');
-const DATABASE_FILE_PATH = path.join(__dirname, 'data', 'database.json');
+const DATABASE_FILE_PATH = path.join(__dirname,'database.json');
 const BOYCOTT_FILE_PATH = path.join(__dirname, 'data', 'boycott.json');
 const RICS_FILE_PATH = path.join(__dirname, 'data', 'rics.json');
 const STATS_FILE = path.join(__dirname, 'data', 'stats.json');
@@ -86,7 +86,6 @@ async function generateCategoryEmbeddings() {
     const embeddingModel = genAI.getGenerativeModel({ model: "embedding-001" });
     const results = await Promise.all(
         CATEGORIES_TO_CLASSIFY.map(cat => 
-            // CORRECTION: Envoi du contenu dans le format attendu par l'API Gemini
             embeddingModel.embedContent({ 
                 content: { parts: [{ text: cat.text }] }
             })
@@ -120,14 +119,11 @@ app.post('/api/classify', async (req, res) => {
     if (!text) {
         return res.status(400).json({ error: 'Le texte est manquant.' });
     }
-
     try {
         const embeddingModel = genAI.getGenerativeModel({ model: "embedding-001" });
         const textEmbedding = (await embeddingModel.embedContent({ content: text })).embedding.values;
-
         let bestMatch = null;
         let highestSimilarity = -Infinity;
-
         categoryEmbeddings.forEach(category => {
             const similarity = cosineSimilarity(textEmbedding, category.embedding);
             if (similarity > highestSimilarity) {
@@ -135,15 +131,12 @@ app.post('/api/classify', async (req, res) => {
                 bestMatch = category.name;
             }
         });
-        
         res.json({ classifiedCategory: bestMatch });
-
     } catch (error) {
         console.error('Erreur lors de la classification IA:', error);
         res.status(500).json({ error: 'Échec de la classification.' });
     }
 });
-
 
 
 // --- FONCTIONS UTILITAIRES ---
@@ -270,7 +263,7 @@ async function setupGoogleAuth() {
     try {
         const credentials = require(CLIENT_SECRET_FILE);
         const { client_secret, client_id, redirect_uris } = credentials.web;
-        oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
+        oAuth2Client = new google.auth.OAuth2(client_id, client_id, redirect_uris[0]);
     } catch (error) {
         console.error('Erreur lors du chargement des identifiants client OAuth2:', error);
         process.exit(1);
@@ -322,6 +315,7 @@ function calculateTaxAmount(transaction, taxes) {
 
 // --- MIDDLEWARES & ROUTES EXPRESS ---
 app.use(express.json());
+app.use(express.json({ limit: '50mb' })); 
 app.use(cors());
 app.use(sassMiddleware({
     src: path.join(__dirname, 'docs', 'src', 'css'),
@@ -331,11 +325,12 @@ app.use(sassMiddleware({
     prefix: '/src/css'
 }));
 app.use(express.static(path.join(__dirname, 'docs')));
+app.use('/output', express.static(path.join(__dirname, 'output')));
 app.use('/roles', express.static(path.join(__dirname, 'docs', 'roles')));
 
 // Montage des routeurs spécifiques
-app.use('/missions', missionsRouter);
 app.use('/journal', journalRouter);
+app.use('/missions', missionsRouter);
 app.use('/cvnu', cvnuRouter);
 app.use('/map', mapRouter);
 app.use('/reforme', reformeRouter);
@@ -351,6 +346,8 @@ try {
 } catch (error) {
     console.error('Erreur lors du chargement de la documentation Swagger:', error);
 }
+// Le middleware statique doit être après vos routes d'API.
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // Routes pour le Chatbot
 app.get('/api/chat/history', (req, res) => { res.json(chatHistory); });
@@ -700,7 +697,7 @@ initializeDatabase().then(() => {
     readRicsFile();
     loadBoycottData();
     loadChatHistoryFile();
-    generateCategoryEmbeddings(); // 
+    generateCategoryEmbeddings(); 
     // Le bot est lancé ici et est géré par telegramRouter.js
     telegramBot.launch();
     console.log('Bot Telegram démarré.');

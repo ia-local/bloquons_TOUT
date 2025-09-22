@@ -1,0 +1,63 @@
+<div class="journal-container">
+    <aside class="journal-side-menu">
+        <h2>Thématiques</h2>
+        <nav>
+            <ul>
+                <li><a href="#" data-topic="Démocratie et Manifestation">Démocratie</a></li>
+                <li><a href="#" data-topic="Démocratie Participative">Démocratie Participative</a></li>
+                <li><a href="#" data-topic="Démocratie Participative CV Numérique">Démocratie Participative</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestation 10 Septembre PANCARTE CV Numérique ">Démocratie Participative</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestation 10 Septembre PANCARTE CV Numérique Justice">Manif Justice</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestation 10 Septembre PANCARTE CV Numérique Justice social">Manif Justice social</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestation 10 Septembre PANCARTE CV Numérique Justice ficcal">Manif Justice fiscal</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestation 10 Septembre PANCARTE CV ">Démocratie Participative</a></li>
+                <li><a href="#" data-topic="Référendum d'Initiative Citoyenne (RIC)">RIC</a></li>
+                <li><a href="#" data-topic="Économie Circulaire et TVA">Économie Circulaire</a></li>
+                <li><a href="#" data-topic="CV Numérique et Reconnaissance des Compétences">CV Numérique</a></li>
+                <li><a href="#" data-topic="Rapport entre IA et Géo politique">Géopolitique & IA</a></li>
+                <li><a href="#" data-topic="Pancarte Manifestion 10 septembre 2025"> Manifestion 10</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE Transport [sncf,caf_espagne] ">Pancarte Manif Transport</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE Justice,"> Pancarte Manif Justice</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE Education university">Pancarte Manif Justice éduction</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE Education lycée, revenu de base, droit a l'information">Pancarte Manif Justice éduction</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE Education, revenu de base">Pancarte Manif Justice éduction</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE Santé, budget">Manif santé</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE agriculture FNSEA, Loi duplomb">Manif agriculture</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE envirennement,regulation climatique,accord de paris">Manif agriculture</a></li>
+                <li><a href="#" data-topic="Démocratie Participative Manifestaiion 18 Septembre PANCARTE CV ">Démocratie Participative</a></li>
+                <li><a href="#" data-topic="Industrie et Relocalisation">Industrie</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="journal-main-content">
+        <section class="journal-edit-section">
+            <h2>Gestion du Journal</h2>
+            <div class="editor-panel">
+                <input type="text" id="journal-title-input" placeholder="Titre de l'article" required>
+                <textarea id="journal-content-textarea" placeholder="Rédigez votre article ici..." required></textarea>
+                
+                <div class="controls-editor">
+                    <button id="generate-draft-btn" class="primary-btn">Générer un Brouillon IA</button>
+                    <button id="save-article-btn" class="secondary-btn" style="display: none;">Enregistrer l'Article</button>
+                </div>
+            </div>
+            
+            <div id="draft-preview" class="draft-preview">
+                <h3>Aperçu du brouillon</h3>
+                </div>
+            
+            <div class="regenerate-controls" style="display: none;">
+                <button id="regenerate-title-btn" class="secondary-btn">Régénérer le titre</button>
+                <button id="regenerate-image-btn" class="secondary-btn">Régénérer l'image</button>
+                <button id="regenerate-article-btn" class="secondary-btn">Régénérer l'article</button>
+            </div>
+        </section>
+
+        <section class="journal-gallery-section">
+            <h2>Journal (Page Publique)</h2>
+            <div id="journal-posts-container" class="journal-posts-container">
+                </div>
+        </section>
+    </main>
+</div>

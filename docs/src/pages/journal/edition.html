@@ -1,0 +1,40 @@
+<div class="journal-container">
+    <aside class="journal-side-menu">
+        <h2>Thématiques</h2>
+        <nav>
+            <ul>
+                <li><a href="#" data-topic="Démocratie et Manifestation">Démocratie</a></li>
+                <li><a href="#" data-topic="Démocratie Participative">Démocratie Participative</a></li>
+                <li><a href="#" data-topic="Rassemblement 8 septembre MAIRIE, bye bye Bayrou">Bye Bayrou</a></li>
+                <li><a href="#" data-topic="Manifestation 10 Septembre PANCARTE CV revenu de base ">10 Septembre 2025</a></li>
+                <li><a href="#" data-topic="Manifestation 18 Septembre PANCARTE Justice fiscal ">18 Septembre 2025</a></li>
+                <li><a href="#" data-topic="Industrie et Relocalisation">Industrie</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="journal-main-content">
+        <section class="journal-edit-section">
+            <h2>Édition du Journal</h2>
+            <div class="editor-panel">
+                <input type="text" id="journal-title-input" placeholder="Titre de l'article" required>
+                <textarea id="journal-content-textarea" placeholder="Rédigez votre article ici..." required></textarea>
+                
+                <div class="controls-editor">
+                    <button id="generate-draft-btn" class="primary-btn">Générer un Brouillon IA</button>
+                    <button id="save-article-btn" class="secondary-btn" style="display: none;">Enregistrer l'Article</button>
+                </div>
+            </div>
+            
+            <div id="draft-preview" class="draft-preview">
+                <h3>Aperçu du brouillon</h3>
+            </div>
+            
+            <div class="regenerate-controls" style="display: none;">
+                <button id="regenerate-title-btn" class="secondary-btn">Régénérer le titre</button>
+                <button id="regenerate-image-btn" class="secondary-btn">Régénérer l'image</button>
+                <button id="regenerate-article-btn" class="secondary-btn">Régénérer l'article</button>
+            </div>
+        </section>
+    </main>
+</div>
